@@ -1,0 +1,40 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+h2{
+	margin-top: 10px;
+}
+
+ul{
+	list-style: none;
+}
+
+ul li{
+	margin-top: 10px;
+	margin-right: 20px;
+}
+
+.title{
+	padding: 20px;
+	float: left;
+	color: #fff;
+	background: aqua;
+	height: 75vh;
+	margin-right: 20px;
+}
+
+.content{
+	float: left;
+	height: 75vh;
+}
+
+.list1 li{
+	display: inline-block;
+}
+
+
+.sub{
+	font-weight: bold;
+}
