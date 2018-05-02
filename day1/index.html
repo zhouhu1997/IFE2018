@@ -3,69 +3,92 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Title</title>
-	<link rel="stylesheet" href="css/style_2.css">
+	<link rel="stylesheet" href="css/style_1.css" id="selectCss">
 </head>
 <body>
-<div class="title">
-	<h1>简历</h1>
-</div>
-<div class="content">
-	<div class="clearfix">
-		<h2>基本信息</h2>
-		<ul class="list1">
-			<li><p><span class="sub">姓名</span> Nan</p></li>
-			<li><p><span class="sub">性别</span> 男</p></li>
-			<li><p><span class="sub">应聘职位</span> Web前端工程师</p></li>
-		</ul>
+<header>
+	<ul id="menu">
+		<li><a class="style" data-file="style_1">Style 1</a></li>
+		<li><a class="style" data-file="style_2">Style 2</a></li>
+		<li><a class="style" data-file="style_3">Style 3</a></li>
+	</ul>
+</header>
+<main>
+	<div class="title">
+		<h1>简历</h1>
 	</div>
-	<div class="clearfix">
-		<h2>联系方式</h2>
-		<ul class="list1">
-			<li><p><span class="sub">手机</span> 1322222222</p></li>
-			<li><p><span class="sub">Email</span> <a href="mailto:499521010@qq.com">499521010@qq.com</a></p></li>
-			<li><p><span class="sub">个人主页</span> <a href="#">Github</a></p></li>
-		</ul>
-	</div>
-	<div class="clearfix">
-		<h2>能力描述</h2>
-		<ul class="list2">
-			<li>
-				<p class="sub">技术能力</p>
-				<p>数量掌握HTML, CSS, JavaScript</p>
-			</li>
-			<li>
-				<p class="sub">综合能力</p>
-				<p>良好的沟通, 主动积极, 努力勤奋</p>
-			</li>
-		</ul>
-	</div>
-	<div class="clearfix">
-		<h2>教育经历</h2>
-		<ul class="list2">
-			<li>
-				<p class="sub">本科</p>
-				<p>哈尔滨佛教学院</p>
-			</li>
-			<li>
-				<p class="sub">学历B</p>
-				<p>家里蹲大学</p>
-			</li>
-		</ul>
-	</div>
-	<div class="clearfix">
-		<h2>项目经历</h2>
-		<ul class="list2">
-			<li>
-				<p class="sub">项目A</p>
-				<p>作为前端工程师角色参与了ABC组件的开发</p>
-			</li>
-			<li>
-				<p class="sub">项目B</p>
-				<p>作为和尚B参加了哈尔滨化缘行动</p>
-			</li>
-		</ul>
-	</div>
-</div>
 
+	<div class="content">
+		<div class="clearfix">
+			<h2>基本信息</h2>
+			<ul class="list1">
+				<li><p><span class="sub">姓名</span> Nan</p></li>
+				<li><p><span class="sub">性别</span> 男</p></li>
+				<li><p><span class="sub">应聘职位</span> Web前端工程师</p></li>
+			</ul>
+		</div>
+		<div class="clearfix">
+			<h2>联系方式</h2>
+			<ul class="list1">
+				<li><p><span class="sub">手机</span> 1322222222</p></li>
+				<li><p><span class="sub">Email</span> <a href="mailto:499521010@qq.com">499521010@qq.com</a></p></li>
+				<li><p><span class="sub">个人主页</span> <a href="#">Github</a></p></li>
+			</ul>
+		</div>
+		<div class="clearfix">
+			<h2>能力描述</h2>
+			<ul class="list2">
+				<li>
+					<p class="sub">技术能力</p>
+					<p>数量掌握HTML, CSS, JavaScript</p>
+				</li>
+				<li>
+					<p class="sub">综合能力</p>
+					<p>良好的沟通, 主动积极, 努力勤奋</p>
+				</li>
+			</ul>
+		</div>
+		<div class="clearfix">
+			<h2>教育经历</h2>
+			<ul class="list2">
+				<li>
+					<p class="sub">本科</p>
+					<p>哈尔滨佛教学院</p>
+				</li>
+				<li>
+					<p class="sub">学历B</p>
+					<p>家里蹲大学</p>
+				</li>
+			</ul>
+		</div>
+		<div class="clearfix">
+			<h2>项目经历</h2>
+			<ul class="list2">
+				<li>
+					<p class="sub">项目A</p>
+					<p>作为前端工程师角色参与了ABC组件的开发</p>
+				</li>
+				<li>
+					<p class="sub">项目B</p>
+					<p>作为和尚B参加了哈尔滨化缘行动</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<a href="https://nanjiang327.github.io/IFE2018/" id="back">Back to Menu</a>
+</main>
+<script>
+	var cssLink = document.getElementById('selectCss');
+	var btn = document.querySelectorAll('.style');
+
+	var length = btn.length;
+	for(let i = 0; i < length; i++){
+		btn[i].onclick = function () {
+			var fileName = this.dataset.file;
+			cssLink.href = 'css/' + fileName + '.css';
+		}
+	}
+
+</script>
 </body>
 </html>

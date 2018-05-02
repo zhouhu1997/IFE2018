@@ -26,7 +26,6 @@
 	main{
 		height: 400px;
 		text-align: center;
-		overflow: auto;
 	}
 
 	main ul{
@@ -58,13 +57,28 @@
 		background: #FFC620;
 		color: #ffffff;
 	}
+
+	#content{
+		height: 300px;
+		overflow: auto;
+		margin-bottom: 40px;
+	}
+
+	.button{
+		background: #FFC620;
+		color: #ffffff;
+		padding: 20px;
+		font-size: 20px;
+		border-radius: 8px;
+		text-decoration: none;
+	}
 </style>
 <body>
 <header>
 	<h1>IFE 作业</h1>
 </header>
 <main>
-	<div>
+	<div id="content">
 		<ul>
 			<li><a href="https://nanjiang327.github.io/IFE2018/day1/index.html">第五天和第六天 - 3种style的CV</a></li>
 			<li><a href="#">第七和第八天 </a></li>
@@ -77,6 +91,9 @@
 			<li></li>
 			<li></li>
 		</ul>
+	</div>
+	<div>
+		<a href="https://github.com/NanJiang327/IFE2018" class="button">返回Github</a>
 	</div>
 </main>
 <footer>
