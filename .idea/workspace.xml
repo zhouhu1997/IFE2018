@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/day2/exe1/css/style_1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day2/exe1/css/style_2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day2/exe1/css/style_3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day2/exe1/css/style_4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day2/exe1/css/style_5.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day2/exe1/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day1/css/style_1.css" beforeDir="false" afterPath="$PROJECT_DIR$/day1/css/style_1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day1/css/style_2.css" beforeDir="false" afterPath="$PROJECT_DIR$/day1/css/style_2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day1/css/style_3.css" beforeDir="false" afterPath="$PROJECT_DIR$/day1/css/style_3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day2/exe2/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,20 +17,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="74" column="8" lean-forward="true" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
+            <state relative-caret-position="403">
+              <caret line="84" column="90" selection-start-line="84" selection-start-column="90" selection-end-line="84" selection-end-column="90" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day2/exe1/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="577">
               <caret line="34" selection-start-line="34" selection-end-line="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day2/exe2/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -94,8 +94,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -114,11 +114,12 @@
         <option value="$PROJECT_DIR$/day2/index.html" />
         <option value="$PROJECT_DIR$/day2/exe1/css/style_1.css" />
         <option value="$PROJECT_DIR$/day2/exe1/css/style_3.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/day2/exe1/css/style_2.css" />
         <option value="$PROJECT_DIR$/day2/exe1/css/style_5.css" />
         <option value="$PROJECT_DIR$/day2/exe1/css/style_4.css" />
         <option value="$PROJECT_DIR$/day2/exe1/index.html" />
+        <option value="$PROJECT_DIR$/day2/exe2/index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -194,6 +195,12 @@
               <item name="exe1" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+              <item name="day2" type="462c0819:PsiDirectoryNode" />
+              <item name="exe2" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -243,12 +250,12 @@
       <workItem from="1525239551039" duration="9000" />
       <workItem from="1525239818536" duration="169000" />
       <workItem from="1525241301760" duration="406000" />
-      <workItem from="1525241948729" duration="15767000" />
+      <workItem from="1525241948729" duration="15965000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17051000" />
+    <option name="totallyTimeSpent" value="17249000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -353,17 +360,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="74" column="8" lean-forward="true" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day2/exe1/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="577">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day2/exe2/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="84" column="90" selection-start-line="84" selection-start-column="90" selection-end-line="84" selection-end-column="90" />
         </state>
       </provider>
     </entry>
