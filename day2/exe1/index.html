@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="css/style_1.css" id="selectCss">
+</head>
+<body>
+<header>
+	<ul id="menu">
+		<li><a class="style" data-file="style_1">双栏布局 1</a></li>
+		<li><a class="style" data-file="style_2">双栏布局 2</a></li>
+		<li><a class="style" data-file="style_3">双栏布局 3</a></li>
+		<li><a class="style" data-file="style_4">三栏布局 1</a></li>
+		<li><a class="style" data-file="style_5">三栏布局 2</a></li>
+	</ul>
+</header>
+<main>
+	<div class="content clearfix">
+		<div class="left"></div>
+		<div class="center"></div>
+		<div class="right"></div>
+	</div>
+</main>
+
+<script>
+	var cssLink = document.getElementById('selectCss');
+	var btn = document.querySelectorAll('.style');
+
+	var length = btn.length;
+	for(let i = 0; i < length; i++){
+		btn[i].onclick = function () {
+			var fileName = this.dataset.file;
+			cssLink.href = 'css/' + fileName + '.css';
+		}
+	}
+
+</script>
+</body>
+</html>

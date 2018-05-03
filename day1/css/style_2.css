@@ -22,8 +22,7 @@ ul{
 	float: left;
 	display: inline-block;
 	height: 100%;
-	width: 33%;
-	margin-left: 3px;
+	width: calc(100%/3);
 	background: #FFC620;
 }
 

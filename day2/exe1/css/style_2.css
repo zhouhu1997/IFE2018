@@ -4,13 +4,6 @@
 	box-sizing: border-box;
 }
 
-h2{
-	margin-top: 10px;
-}
-
-ul{
-	list-style: none;
-}
 
 #menu{
 	margin-bottom: 5px;
@@ -21,7 +14,7 @@ ul{
 	float: left;
 	display: inline-block;
 	height: 100%;
-	width: calc(100%/3);
+	width: calc(100%/5);
 	background: #FFC620;
 }
 
@@ -38,31 +31,22 @@ ul{
 	background: rebeccapurple;
 }
 
-.content ul li{
-	margin-top: 10px;
+
+.content{
+	position: relative;
 }
 
-.list1 li{
-	display: inline-block;
-	margin-right: 10px;
-}
-
-
-.sub{
-	font-weight: bold;
-}
-
-#back{
-	text-decoration: none;
-	background: #FFC620;
-	color: #ffffff;
-	border-radius: 6px;
-	padding: 10px;
+.left{
+	height: 200px;
+	width: 100px;
 	position: absolute;
-	right: 10px;
-	bottom: 10px;
+	left: 0;
+	background: chartreuse;
 }
 
-#back:hover{
-	background: rebeccapurple;
+.right{
+	height: 200px;
+	margin-left: 100px;
+	width: calc(100% - 100px);
+	background: aqua;
 }
