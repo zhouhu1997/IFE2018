@@ -1,0 +1,197 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul li{
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.clearfix:after{
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+}
+
+.clearfix{
+	*zoom:1;
+}
+
+/*
+	*Nav
+*/
+
+nav{
+	background:#333333;
+}
+
+nav a{
+	color: #ffffff;
+}
+
+nav a:visited{
+	color: #ffffff;
+}
+
+nav .brand{
+	width: 30%;
+	font-size: 2em;
+	float: left;
+}
+
+nav .brand a{
+	display: block;
+	line-height: 3em;
+	padding-left: 4em;
+	text-decoration: none;
+}
+
+nav .details{
+	width: 70%;
+	position: relative;
+	float: left;
+}
+
+nav .details ul{
+	position: absolute;
+	list-style: none;
+	right: 140px;
+	top: 5px;
+}
+
+nav .carousel{
+	position: relative;
+	height: 300px;
+	background: #7DB74B;
+}
+
+nav .carousel ul{
+	position: absolute;
+	right: 140px;
+	bottom: 10px;
+}
+
+nav .carousel ul li{
+	padding: 5px 10px;
+	background: #BCDBA0;
+	color: #77955C;
+	border: 1px solid #61625E;
+}
+
+nav .carousel .active{
+	background: #E4F0D8;
+	padding-top: 20px;
+}
+
+
+/*
+*   Main
+*/
+
+main .title{
+	padding-top: 23px;
+	padding-left: 8em;
+	height: 75px;
+	border-bottom: 1px solid #EBEBEB;
+}
+
+main .title ul li{
+	margin: 0 -6px 0 0;
+	background: #EEEEEE;
+	border-radius: 20px 20px 0  0;
+	border: 1px solid #EAEAEA;
+}
+
+main .title a{
+	display: block;
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	color: #000000;
+}
+
+main .title .active{
+	background: #ffffff;
+	border-bottom: 1px solid #ffffff;
+}
+
+main .contents{
+	padding: 10px 8em 0 8em;
+}
+
+main .contents .item{
+	border: 1px solid #D5D5D5;
+	height: 200px;
+	line-height: 200px;
+	text-align: center;
+}
+
+main .contents .first-item{
+	display: flex;
+	margin-bottom: 10px;
+}
+
+main .contents .first-item .item{
+	flex: calc((100% - 20px)/3) 0 0;
+	margin-right: 10px;
+}
+
+main .contents .second-item{
+	margin-bottom: 10px;
+}
+
+main .contents .second-item .item{
+	float: left;
+	width: calc((100% - 30px)/4);
+	margin-right: 10px;
+}
+
+main .contents .second-item .item:nth-last-child(1){
+	margin-right: 0;
+}
+
+main .contents .third-item {
+	margin-bottom: 20px;
+}
+
+
+main .contents .third-item .main-wrap{
+	width: 100%;
+	float: left;
+}
+
+main .contents .third-item .main-content{
+	margin: 0 260px 0 260px;
+}
+
+main .contents .third-item .sub{
+	width: 250px;
+	float: left;
+	margin-left: -100%;
+}
+
+main .contents .third-item .extra{
+	width: 250px;
+	float: left;
+	margin-left: -250px;
+}
+
+/*
+*   Footer
+*/
+footer {
+	height: 6em;
+	background: #333333;
+}
+
+footer p{
+	padding-top: 10px;
+	text-align: center;
+	color: white;
+}
