@@ -143,25 +143,78 @@ a:visited{
 */
 .support{
 	background: url("../img/bg2.jpg");
-	background-size: 100% 600px;
-	height: 600px;
-	text-align: center;
+	height: 700px;
+	background-size: 100% 700px;
+	text-align: left;
 	color: #ffffff;
 }
 
 #support-left{
 	display: inline-block;
+	padding:0 10% 0 10%;
 	width: 60%;
 }
 
-#support-right{
+#support-left h1{
+	font-weight: 400;
+	font-size: 2em;
+	padding: 4em 35% 0 0;
+}
+
+#support-left p{
+	margin: 30px 0 60px 0;
+	padding-right: 35%;
+	font-weight: 300;
+}
+
+#support-left a{
+	display: inline-block;
+	height: 4em;
+	line-height: 4em;
+	padding: 0 3em;
+	margin-right: 10px;
+	border: 1px solid #808099;
+	border-radius: 5px;
+	font-size: 0.75em;
+	color: #ffffff;
+	background: transparent;
+}
+
+#support-left a:hover{
+	background: #ffffff;
+	color: #808099;
+}
+
+#support-right-wrap{
 	width: 40%;
-	height: 70%;
-	margin-top: 10%;
-	border: 2px solid #534D4C;
-	border-radius: 30px;
+	height: 100%;
 	float: right;
 }
+
+#support-right-content{
+	position: relative;
+	border: 2px solid #534D4C;
+	border-right: none;
+	border-radius: 30px 0 0 30px;
+	margin: 10% 0;
+	height: 80%;
+}
+
+#support-right-content i{
+	position: absolute;
+	top:calc(50% - 1em);
+	left: 1em;
+	color: #808099;
+}
+
+#support-right-content img{
+	position: absolute;
+	right: 0;
+	top:5%;
+	height: 90%;
+	width: calc(100% - 3em);
+}
+
 
 /*
 * More
@@ -443,7 +496,7 @@ footer{
 
 #footer-wrap{
 	height: 400px;
-	padding: 80px 0 80px 0;
+	padding: 70px 0;
 }
 
 footer ul{
