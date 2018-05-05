@@ -1,0 +1,334 @@
+*{
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header{
+	color:#ffffff;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:visited{
+	color: #5E5C4F;
+}
+
+.clearfix:after{
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+}
+
+.clearfix{
+	*zoom:1;
+}
+
+.header-wrap{
+	height: 800px;
+	text-align: center;
+	font-size: 2em;
+	font-weight: 300;
+	background: url("../img/bg1.jpg");
+	background-size: 100% 800px;
+}
+
+.header-wrap h1{
+	font-weight: 300;
+	padding: 2em 0 1em 0;
+}
+
+.header-wrap p{
+	font-size: 0.72em;
+	padding: 0 20% 0 20%;
+}
+
+.header-wrap .account{
+	margin-top: 80px;
+	width: 75%;
+	height: 7em;
+	border: 1px solid #F3F3F3;
+}
+
+.header-wrap .account h4{
+	padding: 1.5em 0 0.25em 0;
+	font-size: 0.72em;
+	font-weight: 300;
+}
+
+.header-wrap .account p{
+	font-size: 0.25em;
+	margin-bottom: 2em;
+	color: #808099;
+}
+
+.header-wrap .account input{
+	width: 28em;
+	padding: 1em;
+	border: 1px solid #F2F2F2;
+	color: #ffffff;
+	background: transparent;
+	font-size: 12px;
+}
+
+.header-wrap .account a{
+	display: inline-block;
+	height: 2.5em;
+	width: 8em;
+	line-height: 2.5em;
+	font-size: 0.5em;
+	border-radius: 5px;
+	color: #333333;
+	background: #ffffff;
+}
+
+/*
+*Main Intro
+*/
+
+.intro{
+	height: 500px;
+}
+
+.intro .intro-header{
+	text-align: center;
+}
+
+.intro .intro-header p{
+	padding: 4em 0 1em 0;
+}
+
+.intro .intro-header h1{
+	padding: 0 30% 0 30%;
+	font-size: 2em;
+	font-weight: 400;
+}
+
+.intro .showcase{
+	padding-left: 20%;
+	margin-top: 2em;
+}
+
+.intro .showcase i{
+	width: 10%;
+	font-size: 3em;
+	font-weight: 100;
+	vertical-align: top;
+}
+
+.intro .showcase .item{
+	width: 50%;
+	float: left;
+	margin-top: 10px;
+}
+
+.intro .showcase .item-description{
+	width: 60%;
+	height: 100px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.intro .showcase .item-description p{
+	margin-top: 5px;
+	font-weight: 100;
+}
+
+/*
+* Support
+*/
+.support{
+	background: url("../img/bg2.jpg");
+	background-size: 100% 600px;
+	height: 600px;
+	text-align: center;
+	color: #ffffff;
+}
+
+#support-left{
+	display: inline-block;
+	width: 60%;
+}
+
+#support-right{
+	width: 40%;
+	height: 70%;
+	margin-top: 10%;
+	border: 2px solid #534D4C;
+	border-radius: 30px;
+	float: right;
+}
+
+/*
+* Crew
+*/
+.crew {
+	height: 800px;
+	border-top: 2px solid #F2F2F2;
+	text-align: center;
+	width: 80%;
+}
+
+.crew .crew-title h1{
+	padding: 20px;
+	font-size: 2em;
+	font-weight: 400;
+}
+
+.crew .crew-title p{
+	width: 52%;
+	font-weight: 200;
+	margin-bottom: 50px;
+}
+
+.crew .member{
+	display: inline-block;
+	width: 40%;
+	height:250px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+.crew .member:nth-child(n){
+	background: url("../img/lego1.jpg");
+	background-size: 100% 250px;
+}
+
+
+/*
+* Contact
+*/
+
+.contact{
+	position: relative;
+	height: 550px;
+	border-top: 2px solid #F2F2F2;
+}
+
+#contact-left{
+	position: absolute;
+	top: 5%;
+	width: 50%;
+	padding-top: 20px;
+	padding-left: 100px;
+	text-align: center;
+}
+
+#contact-left h4{
+	padding: 20px;
+	font-weight: 400;
+}
+
+#contact-left input, textarea{
+	display: block;
+	width: 80%;
+	border: 1px solid #F2F2F2;
+	padding: 10px;
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+
+#contact-left a{
+	display: block;
+	height: 36px;
+	width: 80%;
+	padding: 10px;
+	background: #333333;
+	color: #ffffff;
+}
+
+#contact-left .contact-wrap{
+	border-radius: 5px;
+	border: 1px solid #F2F2F2;
+	width: 60%;
+	height: 450px;
+}
+
+#contact-right{
+	margin-left: 50%;
+	width: 50%;
+	padding-left: 20px;
+}
+
+#contact-right h2{
+	padding-top: 15%;
+	font-size: 2em;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+
+#contact-right p{
+	display: inline-block;
+	width: 50%;
+	margin-bottom: 20px;
+	font-weight: 100;
+}
+
+#contact-right .contact-details{
+	margin-top: 20px;
+}
+
+#contact-right .contact-details .item i{
+	padding: 6px 6px 0 0;
+	vertical-align: top;
+}
+
+#contact-right .contact-details .item p{
+	width: 30%;
+	font-weight: 600;
+}
+
+
+/*
+* Footer
+*/
+footer{
+	background: #333333;
+}
+
+#footer-wrap{
+	height: 400px;
+	padding: 80px 0 80px 0;
+}
+
+footer ul{
+	list-style: none;
+	padding-left: 10%;
+}
+
+footer i{
+	margin-right: 15px;
+	color: #4C4C4C;
+}
+
+footer ul li{
+	vertical-align: top;
+	display: inline-block;
+	width: calc(100%/5);
+}
+
+footer .menu{
+	padding: 0;
+}
+
+footer .menu li{
+	width: 100%;
+	margin-bottom: 25px;
+	display: block;
+
+}
+
+footer .footer-title{
+	font-size: 0.85em;
+	color: #ffffff;
+
+}
+
+footer .footer-title a{
+	text-decoration: none;
+	color: #4C4C4C;
+}
