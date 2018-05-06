@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>No.1 CSS Course</title>
+	<style>
+		*{
+			margin: 0 auto;
+			width: 800px;
+		}
+
+		h1{
+			padding-top: 20px;
+			text-align: center;
+		}
+		.text{
+			position: relative;
+			transition: color 0.4s;
+		}
+		
+		.text:after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			height: 2px;
+			width: 0;
+			background: greenyellow;
+			-webkit-transition: width 0.4s;
+			-moz-transition: width 0.4s;
+			-ms-transition: width 0.4s;
+			-o-transition: width 0.4s;
+			transition: width 0.4s;
+		}
+
+
+		.btn{
+			width: 100px;
+			height: 50px;
+			border-radius: 8px;
+			margin-left: 350px;
+			margin-top: 50px;
+		}
+
+		.text.active {
+			color: greenyellow;
+		}
+
+		.text.active:after{
+			width: 30%;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="text">Hello. It's me.</h1>
+	<button class="btn">Click Me!</button>
+	<script>
+
+		var active = false;
+		var btn = document.querySelector('.btn');
+		var text = document.querySelector('.text');
+
+		btn.onclick = function () {
+			if(!active){
+				active = true;
+				text.classList.add('active');
+			}else{
+				active = false;
+				text.classList.remove('active');
+			}
+		}
+	</script>
+</body>
+</html>
