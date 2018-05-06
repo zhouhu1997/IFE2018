@@ -2,11 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/day3/img/bg3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn CSS/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/fonts/Montserrat-ExtraLight.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/img/check-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/img/fif_pic1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/img/fif_pic2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/img/fir_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/img/hero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/img/iphone-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/img/mail-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/img/map-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/img/pencil-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/img/phone-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/img/portland.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/img/settings-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/img/singleton.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/img/six_pic1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/img/six_pic2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/img/six_pic3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/img/six_pic4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/img/third_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day3/img/third_pic.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/day3/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/day3/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day3/img/bg1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day3/img/bg2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day3/img/bg3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day3/img/bird.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day3/img/lego1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day3/img/lego2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day3/img/lego3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day3/img/lego4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day3/img/small-bg.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/day3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day3/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,20 +51,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/day3/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="117">
-                  <caret line="499" selection-start-line="499" selection-end-line="499" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="290">
-                  <caret line="85" column="68" selection-start-line="85" selection-start-column="68" selection-end-line="85" selection-end-column="68" />
+                <state relative-caret-position="286">
+                  <caret line="408" lean-forward="true" selection-start-line="408" selection-end-line="408" />
                 </state>
               </provider>
             </entry>
@@ -44,22 +64,23 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/day3/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="252">
-                  <caret line="79" column="18" lean-forward="true" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
+                <state relative-caret-position="228">
+                  <caret line="181" column="19" lean-forward="true" selection-start-line="181" selection-start-column="19" selection-end-line="181" selection-end-column="19" />
                   <folding>
-                    <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#section#2;n#main#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#section#3;n#main#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#div#0;n#div#0;n#section#3;n#main#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#div#1;n#div#0;n#section#3;n#main#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#section#4;n#main#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#div#0;n#div#0;n#section#4;n#main#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#section#5;n#main#0;n#body#0;n#html#0;n#!!top" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="425">
+                  <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
                 </state>
               </provider>
             </entry>
@@ -98,9 +119,10 @@
         <option value="$PROJECT_DIR$/text.html" />
         <option value="$PROJECT_DIR$/day2/exe2/css/style.css" />
         <option value="$PROJECT_DIR$/day2/exe2/index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/day3/index.html" />
         <option value="$PROJECT_DIR$/day3/css/style.css" />
-        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -111,9 +133,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="222" />
     <option name="y" value="23" />
-    <option name="width" value="1218" />
+    <option name="width" value="1440" />
     <option name="height" value="873" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -157,26 +178,7 @@
             <path>
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="day3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="day3" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="day3" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="font-awesome.css" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="day3" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="Learn CSS" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -198,7 +200,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Learn CSS" />
       <recent name="$PROJECT_DIR$/day3/img" />
+      <recent name="$PROJECT_DIR$/day3/fonts" />
       <recent name="$PROJECT_DIR$/day3" />
       <recent name="$PROJECT_DIR$/day3/css" />
     </key>
@@ -232,24 +236,24 @@
       <workItem from="1525239551039" duration="9000" />
       <workItem from="1525239818536" duration="169000" />
       <workItem from="1525241301760" duration="406000" />
-      <workItem from="1525241948729" duration="49022000" />
+      <workItem from="1525241948729" duration="58623000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50306000" />
+    <option name="totallyTimeSpent" value="59907000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="222" y="23" width="1218" height="873" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24895573" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49871135" visible="true" weight="0.15856236" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Structure" order="1" sideWeight="0.50128865" side_tool="true" visible="true" weight="0.15856236" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -373,35 +377,43 @@
     <entry file="file://$PROJECT_DIR$/day3/css/font-awesome.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/day3/css/style.css">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="499" selection-start-line="499" selection-end-line="499" />
+        <state relative-caret-position="273">
+          <caret line="85" column="18" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/day3/img/portland.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day3/img/iphone-icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day3/img/map-icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day3/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="85" column="68" selection-start-line="85" selection-start-column="68" selection-end-line="85" selection-end-column="68" />
+        <state relative-caret-position="286">
+          <caret line="408" lean-forward="true" selection-start-line="408" selection-end-line="408" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day3/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="79" column="18" lean-forward="true" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
+        <state relative-caret-position="228">
+          <caret line="181" column="19" lean-forward="true" selection-start-line="181" selection-start-column="19" selection-end-line="181" selection-end-column="19" />
           <folding>
-            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#2;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#3;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#section#3;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#section#3;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#4;n#main#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#div#0;n#section#4;n#main#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#5;n#main#0;n#body#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
