@@ -3,48 +3,22 @@
 ## 设计学院 (8个课程)
 
 * ### 1. 制作一个简单的菜单
-<a href="http://ife.baidu.com/course/detail/id/28">课程</a> <a href="">Demo</a> <a href="">笔记</a>
 
 * ### 2. 初步接触CSS 3D变形
 
-   <a href="http://ife.baidu.com/course/detail/id/29">课程</a> <a href="">Demo</a> <a href="">笔记</a>
-
 * ### 3. CSS transition 和 transform 配合制作动画
+* ### 4. 3D 控件的卡片翻转特效
 
-   <a href="http://ife.baidu.com/course/detail/id/30">课程</a> <a href="">Demo</a> <a href="">笔记</a>
 
-### 4.
-<a href="">课程</a>
+* ### 5. 纯CSS制作绕中轴旋转的立方体
 
-<a href="">Demo</a>
 
-<a href="">笔记</a>
+* ### 6. 利用CSS animation制作一个酷炫的Slider
 
-### 5.
-<a href="">课程</a>
 
-<a href="">Demo</a>
+* ### 7. 利用animate.css 实现一个优雅的登录框
 
-<a href="">笔记</a>
 
-### 6.
-<a href="">课程</a>
+* ### 8. 把AE动画转换成Web原生动画
 
-<a href="">Demo</a>
-
-<a href="">笔记</a>
-
-### 7.
-<a href="">课程</a>
-
-<a href="">Demo</a>
-
-<a href="">笔记</a>
-
-### 8.
-<a href="">课程</a>
-
-<a href="">Demo</a>
-
-<a href="">笔记</a>
 
