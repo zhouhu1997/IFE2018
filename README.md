@@ -31,4 +31,24 @@
 
 * #### 3. CSS transition 和 transform 配合制作动画
 
+   <a href="http://ife.baidu.com/course/detail/id/30">课程</a> <a href="https://nanjiang327.github.io/IFE2018/Learn%20CSS/No.3%20-%20CSS%20transition%20%E5%92%8C%20transform%20%E9%85%8D%E5%90%88%E5%88%B6%E4%BD%9C%E5%8A%A8%E7%94%BB/">Demo</a> <a href="">笔记</a>
+
+* #### 4. 3D 空间的卡片翻转动效
+   <a href="http://ife.baidu.com/course/detail/id/30">课程</a> <a href="https://nanjiang327.github.io/IFE2018/Learn%20CSS/No.4%20-%203D%20%E7%A9%BA%E9%97%B4%E7%9A%84%E5%8D%A1%E7%89%87%E7%BF%BB%E8%BD%AC%E7%89%B9%E6%95%88/">Demo</a> <a href="">笔记</a>
+
+* #### 5. 纯 CSS 制作绕中轴旋转的立方体
+
+   <a href="http://ife.baidu.com/course/detail/id/30">课程</a> <a href="https://nanjiang327.github.io/IFE2018/Learn%20CSS/No.5%20-%20%E7%BA%AFCSS%E5%88%B6%E4%BD%9C%E7%BB%95%E4%B8%AD%E8%BD%B4%E6%97%8B%E8%BD%AC%E7%9A%84%E7%AB%8B%E6%96%B9%E4%BD%93/">Demo</a> <a href="">笔记</a>
+
+* #### 6. 利用 CSS animation 制作一个炫酷的 Slider
+
+   <a href="http://ife.baidu.com/course/detail/id/30">课程</a> <a href="https://nanjiang327.github.io/IFE2018/Learn%20CSS/No.6%20-%20%E5%88%A9%E7%94%A8%20CSS%20animation%20%E5%88%B6%E4%BD%9Cslider/">Demo</a> <a href="">笔记</a>
+
+* #### 7. 使用 animate.css 实现一个优雅的登录框
+
+   <a href="http://ife.baidu.com/course/detail/id/30">课程</a> <a href="https://nanjiang327.github.io/IFE2018/Learn%20CSS/No.7%20-%20%E4%BD%BF%E7%94%A8%20animate.css%20%E5%AE%9E%E7%8E%B0%E7%99%BB%E5%BD%95%E6%A1%86/">Demo</a> <a href="http://www.jq22.com/jquery-info819">笔记</a>
+   
+* #### 8. 把 AE 动画转换成 Web 原生动画
+
    <a href="http://ife.baidu.com/course/detail/id/30">课程</a> <a href="">Demo</a> <a href="">笔记</a>
+
