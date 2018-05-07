@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>No.5 - 立方体</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+
+		@keyframes boxRotate {
+			from {
+				transform: rotateY(0);
+			}
+			to {
+				transform: rotateY(-360deg);
+			}
+
+		}
+
+		.viewport{
+			perspective: 400px;
+		}
+
+		.cube {
+			position: relative;
+			width: 400px;
+			height: 400px;
+			margin: 100px auto;
+			transform-style: preserve-3d;
+		}
+
+		.cube:hover{
+			animation: boxRotate 5s linear infinite;
+		}
+
+		.side{
+			position: absolute;
+			top: 25%;
+			left: 25%;
+			width: 200px;
+			height: 200px;
+			border: 2px solid #BCDBA0;
+
+		}
+
+		.side:nth-child(1){
+			transform: translateZ(100px);
+		}
+
+		.side:nth-child(2){
+			transform:rotateX(90deg) translateZ(100px);
+		}
+		.side:nth-child(3){
+			transform: rotateX(180deg) translateZ(100px);
+		}
+
+		.side:nth-child(4){
+			transform: rotateX(90deg) translateZ(-100px);
+		}
+
+		.side:nth-child(5){
+			border: 2px solid red;
+			transform: rotateY(90deg) translateZ(100px);
+		}
+
+		.side:nth-child(6){
+			border: 2px solid rebeccapurple;
+			transform: rotateY(90deg) translateZ(-100px);
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="viewport">
+			<div class="cube">
+				<div class="side"></div>
+				<div class="side"></div>
+				<div class="side"></div>
+				<div class="side"></div>
+				<div class="side"></div>
+				<div class="side"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
