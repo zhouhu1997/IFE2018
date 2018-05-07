@@ -20,3 +20,15 @@
 
 ---
 ### 设计学院
+
+* #### 1. 制作一个简单的菜单
+
+   <a href="http://ife.baidu.com/course/detail/id/28">课程</a> <a href="">Demo</a> <a href="">笔记</a>
+   
+* ### 2. 初步接触CSS 3D变形
+
+   <a href="http://ife.baidu.com/course/detail/id/29">课程</a> <a href="">Demo</a> <a href="">笔记</a>
+
+* ### 3. CSS transition 和 transform 配合制作动画
+
+   <a href="http://ife.baidu.com/course/detail/id/30">课程</a> <a href="">Demo</a> <a href="">笔记</a>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2D 变形</title>
+	<style>
+		.box{
+			display: inline-block;
+			width: 30px;
+			padding: 20px;
+			margin-top: 100px;
+			margin-right: 100px;
+			text-align: center;
+			border: 1px solid rebeccapurple;
+			background: #7DB74B;
+		}
+
+		/* 向左倾斜30度 */
+		.box1{
+			-webkit-transform: skew(30deg);
+			-moz-transform: skew(30deg);
+			-ms-transform: skew(30deg);
+			-o-transform: skew(30deg);
+			transform: skew(30deg);
+		}
+		/* 压缩2倍 */
+		.box2{
+			-webkit-transform: scaleX(0.5);
+			-moz-transform: scaleX(0.5);
+			-ms-transform: scaleX(0.5);
+			-o-transform: scaleX(0.5);
+			transform: scaleX(0.5);
+		}
+		/* 旋转45度 */
+		.box3{
+			-webkit-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+		/* x轴位移10px, y轴位移20px */
+		.box4{
+			-webkit-transform: translate(10px,20px);
+			-moz-transform: translate(10px,20px);
+			-ms-transform: translate(10px,20px);
+			-o-transform: translate(10px,20px);
+			transform: translate(10px,20px);
+		}
+		/* 向左倾斜30度, 旋转45度, 压缩2倍, x轴位移10px, y轴位移20px */
+		.box5{
+			-webkit-transform: translate(10px, 20px) scaleX(0.5) skewX(30deg) rotate(45deg);
+			-moz-transform: translate(10px, 20px) scaleX(0.5) skewX(30deg) rotate(45deg);
+			-ms-transform: translate(10px, 20px) scaleX(0.5) skewX(30deg) rotate(45deg);
+			-o-transform: translate(10px, 20px) scaleX(0.5) skewX(30deg) rotate(45deg);
+			transform: translate(10px, 20px) scaleX(0.5) skewX(30deg) rotate(45deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="box box0">box0</div>
+	<div class="box box1">box1</div>
+	<div class="box box2">box2</div>
+	<div class="box box3">box3</div>
+	<div class="box box4">box4</div>
+	<div class="box box5">box5</div>
+</body>
+</html>

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Learn CSS/first/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn CSS/No.2 - 初步接触 CSS 2D 变形/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn CSS/No.3 - CSS transition 和 transform 配合制作动画/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learn CSS/first/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Learn CSS/No.1 - 制作一个简单的菜单动画效果/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,11 +40,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Learn CSS/first/index.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Learn CSS/No.1 - 制作一个简单的菜单动画效果/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="561">
+              <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Learn CSS/No.2 - 初步接触 CSS 2D 变形/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-53">
+              <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Learn CSS/No.3 - CSS transition 和 transform 配合制作动画/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3553">
+              <caret line="209" column="7" selection-start-line="209" selection-start-column="7" selection-end-line="209" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -52,8 +72,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -85,6 +105,10 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Learn CSS/first/style.css" />
         <option value="$PROJECT_DIR$/Learn CSS/first/index.html" />
+        <option value="$PROJECT_DIR$/Learn CSS/second/index.html" />
+        <option value="$PROJECT_DIR$/Learn CSS/No.2 - 初步接触 CSS 2D 变形/index.html" />
+        <option value="$PROJECT_DIR$/Learn CSS/No.1 - 制作一个简单的菜单动画效果/index.html" />
+        <option value="$PROJECT_DIR$/Learn CSS/No.3 - CSS transition 和 transform 配合制作动画/index.html" />
       </list>
     </option>
   </component>
@@ -146,7 +170,13 @@
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
               <item name="Learn CSS" type="462c0819:PsiDirectoryNode" />
-              <item name="first" type="462c0819:PsiDirectoryNode" />
+              <item name="No.2 - 初步接触 CSS 2D 变形" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+              <item name="Learn CSS" type="462c0819:PsiDirectoryNode" />
+              <item name="No.3 - CSS transition 和 transform 配合制作动画" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -204,12 +234,12 @@
       <workItem from="1525239551039" duration="9000" />
       <workItem from="1525239818536" duration="169000" />
       <workItem from="1525241301760" duration="406000" />
-      <workItem from="1525241948729" duration="61012000" />
+      <workItem from="1525241948729" duration="62599000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62296000" />
+    <option name="totallyTimeSpent" value="63883000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -388,10 +418,24 @@
     <entry file="file://$PROJECT_DIR$/Learn CSS/first/style.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Learn CSS/first/index.html">
+    <entry file="file://$PROJECT_DIR$/Learn CSS/No.1 - 制作一个简单的菜单动画效果/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        <state relative-caret-position="561">
+          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Learn CSS/No.2 - 初步接触 CSS 2D 变形/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-53">
+          <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Learn CSS/No.3 - CSS transition 和 transform 配合制作动画/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3553">
+          <caret line="209" column="7" selection-start-line="209" selection-start-column="7" selection-end-line="209" selection-end-column="7" />
         </state>
       </provider>
     </entry>
