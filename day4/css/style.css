@@ -59,6 +59,14 @@ a{
 	color: #BABABA;
 }
 
+.user-info > .user-details i{
+	vertical-align: top;
+	margin: 0 5px 0 0;
+	padding-top: 5px;
+	font-size: 0.9em;
+	color: #008FE8;
+}
+
 /* Common icon setting */
 .notification{
 	float: right;
