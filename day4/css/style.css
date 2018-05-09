@@ -43,7 +43,6 @@ a{
 
 .user-info .user-details h2 {
 	font-size: 0.9em;
-	color: #008FE8;
 }
 
 .user-info .user-details p{
@@ -256,7 +255,7 @@ a{
 .user-info.title{
 	position: absolute;
 	top: 10px;
-	right: 20px;
+	right: 35px;
 }
 
 /* Content position setting */
@@ -338,6 +337,10 @@ a{
 	padding-top: 10px;
 }
 
+#friend-list .user-info .active{
+	color: #008FE8;
+}
+
 #friend-list .message{
 	padding: 5px 20px;
 	margin:3px 0 6px 0;
@@ -350,3 +353,162 @@ a{
 	margin-left: -30px;
 	padding-bottom: 5px;
 }
+
+/* Status info*/
+#status-info{
+	height: 60px;
+	width: 100%;
+	border-bottom: 1px solid #E7E9EC;
+}
+
+#status-info h2{
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 34%;
+	padding: 19px;
+	font-weight: normal;
+	font-size: 1em;
+}
+
+#status-info h2 i{
+	margin-left: 8px;
+	color: #5BB54A;
+}
+
+.btn-set{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 14px;
+	border: 1px solid #E7E9EC;
+	border-radius: 3px;
+}
+
+.btn-set a{
+	float: left;
+	background:#F9FAFB;
+}
+
+.btn-set i{
+	height: 30px;
+	width: 34px;
+	padding: 7px 10px;
+	font-size: 16px;
+	color: #CED0D9;
+}
+
+.btn-set.left a:nth-child(-n+2){
+	border-right: 1px solid #E7E9EC;
+}
+
+.btn-set.left i{
+	padding: 8px 11px;
+}
+
+.btn-set.right i{
+	padding: 8px 15px;
+}
+
+.btn-set.right a:first-child{
+	border-right: 1px solid #E7E9EC;
+}
+
+#status-info .page{
+	display: inline-block;
+	vertical-align: top;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 20px;
+	margin: 15px 20px 0 20px;
+	font-weight: bold;
+	font-size: 0.8em;
+	color: #7F8DA1;
+	border-left: 1px solid #E7E9EC;
+}
+
+/*User Post*/
+
+#user-post #first{
+	border-bottom: 1px solid;
+}
+
+#user-post .notification-time{
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 8px;
+	width: 80px;
+	padding-top: 2px;
+	font-weight: bold;
+	font-size: 0.75em;
+	color: #7F8DA1;
+}
+
+#user-post .breakline-with-detail{
+	margin: 15px 0 5px 0;
+	font-size: 0;
+}
+
+#user-post .breakline-with-detail hr{
+	display: inline-block;
+	border: 1px solid #E7E9EC;
+	width: 40%;
+	margin: 0;
+}
+
+#user-post .breakline-with-detail p{
+	text-align: center;
+	width: 20%;
+	display: inline-block;
+	font-size: 12px;
+	color: #A7B1BE;
+}
+
+#user-post .breakline-with-detail.new p{
+	color: #4796E8;
+}
+
+#user-post .breakline-with-detail.new hr{
+	border: 1px solid #4796E8;
+}
+
+#user-post .user-info{
+	margin-left: 20px;
+	padding: 12px 55px 0 0;
+}
+
+#user-post .user-details{
+	width: calc(100% - 70px);
+}
+
+#user-post .user-details h2{
+	display: inline-block;
+	vertical-align: top;
+}
+
+#user-post .user-details p{
+	color: #A4A6AD;
+}
+
+.img-post{
+	margin-top: 10px;
+}
+
+.img-post img{
+	height: 80px;
+	width: 140px;
+	margin-right: 10px;
+	border-radius: 5px;
+}
+
+#third .reply{
+	width: 95%;
+	height: 50px;
+	border: 1px solid #E7E9EC;
+	border-radius: 5px;
+}
+
+#third .reply span:first-child{
+	padding: 17px;
+	border-right: 1px solid #E7E9EC;
+}
+
+
