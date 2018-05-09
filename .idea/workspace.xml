@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/day4/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/day4/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day4/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day4/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,7 +21,7 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/day4/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="566">
+                <state relative-caret-position="640">
                   <caret line="159" column="49" selection-start-line="159" selection-start-column="49" selection-end-line="159" selection-end-column="49" />
                   <folding>
                     <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -39,8 +37,8 @@
           <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/day4/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="488">
-                  <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+                <state relative-caret-position="538">
+                  <caret line="314" column="12" selection-start-line="314" selection-start-column="12" selection-end-line="314" selection-end-column="12" />
                 </state>
               </provider>
             </entry>
@@ -93,8 +91,8 @@
         <option value="$PROJECT_DIR$/Learn CSS/No.5 - 纯CSS制作绕中轴旋转的立方体/index.html" />
         <option value="$PROJECT_DIR$/Learn CSS/No.6 - 利用 CSS animation 制作slider/index.html" />
         <option value="$PROJECT_DIR$/Learn CSS/No.7 - 使用 animate.css 实现登录框/index.html" />
-        <option value="$PROJECT_DIR$/day4/css/style.css" />
         <option value="$PROJECT_DIR$/day4/index.html" />
+        <option value="$PROJECT_DIR$/day4/css/style.css" />
       </list>
     </option>
   </component>
@@ -250,12 +248,12 @@
       <workItem from="1525239551039" duration="9000" />
       <workItem from="1525239818536" duration="169000" />
       <workItem from="1525241301760" duration="406000" />
-      <workItem from="1525241948729" duration="101034000" />
+      <workItem from="1525241948729" duration="101352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102318000" />
+    <option name="totallyTimeSpent" value="102636000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -494,20 +492,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day4/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day4/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
+        <state relative-caret-position="640">
           <caret line="159" column="49" selection-start-line="159" selection-start-column="49" selection-end-line="159" selection-end-column="49" />
           <folding>
             <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day4/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="314" column="12" selection-start-line="314" selection-start-column="12" selection-end-line="314" selection-end-column="12" />
         </state>
       </provider>
     </entry>

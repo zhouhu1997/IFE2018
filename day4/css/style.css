@@ -302,13 +302,17 @@ a{
 }
 
 /* friend list*/
+#friend-list .user-details{
+	display: inline-block;
+	width: 180px;
+}
 
 #friend-list .notification-time{
 	display: inline-block;
 	vertical-align: top;
 	text-align: right;
-	margin-left: 60px;
-	width: 120px;
+	margin-left: 10px;
+	width: 80px;
 	padding-top: 10px;
 	font-weight: bold;
 	font-size: 0.75em;
