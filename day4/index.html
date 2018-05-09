@@ -23,18 +23,19 @@
 
 		<section id="mid">
 			<div id="menu">
-				<p>MENU</p>
+				<p>MENU <span class="notification"><i class="fa fa-cog"></i></span></p>
 				<ul>
 					<li><a href="">Overview</a></li>
-					<li><a href="" class="notification">Sales</a></li>
+					<li><a href="">Sales<span class="notification normal">54</span></a></li>
 					<li><a href="">Your Staff</a></li>
 					<li><a href="">Analytics & Targeting</a></li>
 					<li><a href="">What's New</a></li>
 					<li></li>
 				</ul>
 			</div>
+			<hr class="breakline">
 			<div id="products">
-				<p>YOUR PRODUCTS</p>
+				<p>YOUR PRODUCTS <span class="notification"><i class="fa fa-cog"></i></span></p>
 				<ul>
 					<li><a href=""><i class="fa fa-book"></i>Books</a></li>
 					<li><a href=""><i class="fa fa-video-camera"></i>Tutorials</a></li>
@@ -43,18 +44,20 @@
 					<li></li>
 				</ul>
 			</div>
+			<hr class="breakline">
 			<div id="dashboard">
-				<p>DASHBOARD<i class="fa fa-cog"></i></p>
+				<p>DASHBOARD<span class="notification"><i class="fa fa-cog"></i></span></p>
 				<ul>
-					<li><a href="" class="notification">Messages</a></li>
+					<li><a href="">Messages <span class="notification normal">21</span></a></li>
 					<li><a href="">Connections</a></li>
-					<li><a href="" class="notification">Integrations</a></li>
+					<li><a href="">Integrations <span class="notification danger">!</span></a></li>
 					<li><a href="">Account Settings</a></li>
 					<li><a href="">App Settings</a></li>
 				</ul>
 			</div>
 			<div id="monthly-goals">
-				<p>Monthly Goals <span>$580/$3200</span></p>
+				<p>Monthly Goals</p>
+				<span>$580/$3200</span>
 				<progress value="22" max="100"></progress>
 			</div>
 		</section>
@@ -62,18 +65,105 @@
 		<section id="right">
 			<div id="right-title">
 				<h1>Messages</h1>
-				<div id="user-info">
-
+				<div class="user-info title">
+					<img src="img/six_pic2.png" alt="">
+					<div class="user-details">
+						<h2>Jordan J.</h2>
+						<p>Administrator</p>
+					</div>
+					<i class="fa fa-angle-down"></i>
 				</div>
 			</div>
 
-			<div id="right-content">
+			<div id="right-content" class="clearfix">
 				<section id="content-left">
 					<div id="search-bar">
-
+						<input type="text" placeholder="Search">
+						<a href=""><i class="fa fa-search"></i></a>
 					</div>
-					<div id="user-list">
-
+					<div id="friend-list">
+						<ul>
+							<li>
+								<div class="user-info">
+									<img src="img/six_pic1.png" alt="">
+									<div class="user-details">
+										<h2>Jordan J.</h2>
+										<p>Administrator</p>
+									</div>
+									<p class="notification-time">3m</p>
+								</div>
+								<p class="message">I pay for the 4MB/sec down, 512kb/sec up service from O2. In fact, it's relatively quick, and stable...</p>
+								<div class="notification-wrapper">
+									<span class="notification user">4</span>
+								</div>
+							</li>
+							<li>
+								<div class="user-info">
+									<img src="img/six_pic2.png" alt="">
+									<div class="user-details">
+										<h2>Jordan J.</h2>
+										<p>Administrator</p>
+									</div>
+									<p class="notification-time">8m</p>
+								</div>
+								<p class="message">I shared this on my fb wall a few months back, and I thought I'd share it here again because it's such a great...</p>
+							</li>
+							<li>
+								<div class="user-info">
+									<img src="img/six_pic3.png" alt="">
+									<div class="user-details">
+										<h2>Jordan J.</h2>
+										<p>Administrator</p>
+									</div>
+									<p class="notification-time">Yesterday</p>
+								</div>
+								<p class="message">If there is anyone who needs an invitation please add yourself in the comments of this post!</p>
+							</li>
+							<li>
+								<div class="user-info">
+									<img src="img/six_pic4.png" alt="">
+									<div class="user-details">
+										<h2>Jordan J.</h2>
+										<p>Administrator</p>
+									</div>
+									<p class="notification-time">Yesterday</p>
+								</div>
+								<p class="message">BruteDC is a peer-to-peer movie+tv series sharing and downloading platform which works on intranet inside...</p>
+							</li>
+							<li>
+								<div class="user-info">
+									<img src="img/six_pic3.png" alt="">
+									<div class="user-details">
+										<h2>Jordan J.</h2>
+										<p>Administrator</p>
+									</div>
+									<p class="notification-time">13 Jun</p>
+								</div>
+								<p class="message">Yes, p2p traffic is often filtered (QoSed). Although i do use BT on O2 wires, and in good days dl speed...</p>
+							</li>
+							<li>
+								<div class="user-info">
+									<img src="img/six_pic2.png" alt="">
+									<div class="user-details">
+										<h2>Jordan J.</h2>
+										<p>Administrator</p>
+									</div>
+									<p class="notification-time">12 Jun</p>
+								</div>
+								<p class="message">Yes, it's O2: 'internet extreme', which is no longer offered.</p>
+							</li>
+							<li>
+								<div class="user-info">
+									<img src="img/six_pic1.png" alt="">
+									<div class="user-details">
+										<h2>Jordan J.</h2>
+										<p>Administrator</p>
+									</div>
+									<p class="notification-time">9 Jun</p>
+								</div>
+								<p class="message">I change my service from this 4Mb plan to their much</p>
+							</li>
+						</ul>
 					</div>
 				</section>
 

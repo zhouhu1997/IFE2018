@@ -15,6 +15,93 @@ a{
 	text-decoration: none;
 }
 
+.clearfix:after{
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+}
+
+.clearfix{
+	*zoom:1;
+}
+
+/*Common user info*/
+.user-info img{
+	border-radius: 50%;
+	height: 45px;
+	width: 45px;
+}
+
+.user-info .user-details{
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+	padding-top: 3px;
+}
+
+.user-info .user-details h2 {
+	font-size: 0.9em;
+	color: #008FE8;
+}
+
+.user-info .user-details p{
+	font-size: 0.8em;
+	color: #BABABA;
+}
+
+.user-info i{
+	vertical-align: top;
+	margin-left: 50px;
+	padding-top: 10px;
+	font-size: 1.5em;
+	color: #BABABA;
+}
+
+/* Common icon setting */
+.notification{
+	float: right;
+	width: 27px;
+	height: 22px;
+	line-height: 22px;
+	text-align: center;
+}
+
+.notification a{
+	display: inline-block;
+}
+
+.notification i{
+	font-size: 2em;
+	padding-left: 12px;
+}
+
+.notification.normal{
+	border-radius: 40%;
+	color: #ffffff;
+	background: #4796E8;
+}
+
+.notification.user{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	color: #ffffff;
+	background: #4796E8;
+}
+
+.notification.danger{
+	background: #CB4B33;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	border-radius: 50%;
+	font-weight: bold;
+}
+
+
+
 /* left section*/
 #left{
 	position: relative;
@@ -25,6 +112,7 @@ a{
 	background: #1F2530;
 }
 
+/*Top icons setting*/
 #top{
 	position: absolute;
 	top: 2.5%;
@@ -60,7 +148,7 @@ a{
 	border: 3px solid #303948;
 }
 
-
+/* Bottom Icons setting */
 #bottom{
 	position: absolute;
 	width: 100%;
@@ -80,12 +168,13 @@ a{
 	position: relative;
 	float: left;
 	height: 100vh;
-	width: 15.5%;
+	width: 250px;
 	padding: 25px;
 	background: #242C3B;
 }
 
-#mid p, a{
+/* middle section common setting*/
+#mid p, a, span{
 	font-size: 0.75em;
 }
 
@@ -100,20 +189,36 @@ a{
 
 
 #menu p, #products p, #dashboard p{
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	color: #4A5463;
 }
 
+/* break line*/
+#mid .breakline{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 0.5px solid #2C3545;
+}
 
+
+/* mid monthly-goals setting*/
 #monthly-goals{
 	position: absolute;
 	bottom: 1.5%;
 	left: 20px;
+	width: 200px;
+	color: #ffffff;
 }
 
 #monthly-goals p{
+	display: inline-block;
+	vertical-align: top;
 	margin-bottom: 5px;
-	color: #ffffff;
+	margin-right: 42px;
+}
+
+#monthly-goals span{
+	vertical-align: top;
 }
 
 #monthly-goals progress{
@@ -124,5 +229,112 @@ a{
 #right{
 	float: left;
 	height: 100vh;
-	width: 78%;
+	width: calc(93.5% - 250px);
+	overflow: hidden;
+}
+
+/* Right section title*/
+#right-title{
+	position: relative;
+	border-bottom: 1px solid #E7E9EC;
+}
+
+#right-title h1{
+	padding: 18px 0 18px 30px;
+	font-weight: normal;
+}
+
+/* User information */
+.user-info.title{
+	position: absolute;
+	top: 10px;
+	right: 20px;
+}
+
+/* Content position setting */
+#right-content{
+	width: 100%;
+	height: calc(100vh - 70px);
+}
+
+#content-left{
+	float: left;
+	width: 370px;
+	height: 100%;
+	border-right: 1px solid #E7E9EC;
+}
+
+#content-right{
+	float: left;
+	width: calc(100% - 370px);
+	height: 100%;
+}
+
+/*Left content*/
+#search-bar{
+	position: relative;
+	height: 60px;
+	padding: 15px 30px;
+	border-bottom: 1px solid #E7E9EC;
+}
+
+#search-bar input{
+	width: 100%;
+	padding: 5px 5px 5px 10px;
+	border: 1px solid #E7E9EC;
+	border-radius: 3px;
+}
+
+#search-bar a{
+	font-size: 1.2em;
+	position: absolute;
+	top: 16px;
+	right: 40px;
+	color: #E7E9EC;
+}
+
+/* friend list*/
+
+#friend-list .notification-time{
+	display: inline-block;
+	vertical-align: top;
+	text-align: right;
+	margin-left: 60px;
+	width: 120px;
+	padding-top: 10px;
+	font-weight: bold;
+	font-size: 0.75em;
+	color: #7F8DA1;
+}
+
+#friend-list ul li{
+	border-bottom: 1px solid #E7E9EC;
+}
+
+#friend-list ul li:first-child{
+	border-left: 3px solid #4796E8;
+}
+
+#friend-list ul li:first-child .message{
+	display: inline-block;
+	width: 90%;
+}
+
+
+#friend-list .user-info{
+	margin-left: 10px;
+	padding-top: 10px;
+}
+
+#friend-list .message{
+	padding: 5px 20px;
+	margin:3px 0 6px 0;
+	font-size: 0.75em;
+}
+
+.notification-wrapper{
+	display: inline-block;
+	width: 10%;
+	margin-left: -30px;
+	padding-bottom: 5px;
 }
