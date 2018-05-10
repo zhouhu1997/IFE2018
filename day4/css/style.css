@@ -15,6 +15,15 @@ a{
 	text-decoration: none;
 }
 
+.wrapper{
+	height: 100%;
+	min-width: 1366px;
+	min-height: 732px;
+	overflow: hidden;
+}
+
+
+/* 清楚浮动 */
 .clearfix:after{
 	content: ".";
 	display: block;
@@ -112,32 +121,31 @@ a{
 
 #top a{
 	display: block;
-	height: 2em;
-	line-height: 2em;
-	width: 2em;
-	border: 1px solid transparent;
-	border-radius: 50%;
+	width: 60px;
+	height: 60px;
 	margin-bottom: 20px;
-	color: #F2F2F2;
-	font-size: 1.5em;
-}
-
-#top a:nth-child(1){
-	background: #4796E8;
+	background: url("../img/icon--app.png");
 }
 
 #top a:nth-child(2){
-	background: #8A7CDD;
+	background-position: 0 -80px;
 }
 
 #top a:nth-child(3){
-	background: #BB3922;
+	background-position: 0 bottom;
 }
 
 #top a:nth-child(4){
+	background: transparent;
+	line-height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	margin-bottom: 20px;
+	font-size: 1.5em;
 	color: #303948;
 	border: 3px solid #303948;
 }
+
 
 /* Bottom Icons setting */
 #bottom{
@@ -162,6 +170,11 @@ a{
 	width: 250px;
 	padding: 25px;
 	background: #242C3B;
+	overflow-y: auto;
+}
+
+#mid::-webkit-scrollbar{
+	width: 0;
 }
 
 /* middle section common setting*/
@@ -212,8 +225,45 @@ a{
 	vertical-align: top;
 }
 
-#monthly-goals progress{
+#dashboard .menu-item{
+	position: relative;
+}
+
+#dashboard .active{
+	color: #ffffff;
+}
+
+#dashboard .active:after{
+	content: '';
+	position: absolute;
+	top: 60%;
+	left: -22px;
+	transform: translateY(-50%);
+	width: 4px;
+	height: 4px;
+	background: #2399f1;
+	box-shadow: 0 0 10px 2px rgba(35, 153, 241, .47);
+	border-radius: 50%;
+}
+
+#monthly-goals .progress{
+	position: relative;
+	height: 4px;
 	width: 100%;
+	border-radius: 2px;
+	background: #2d3848;
+	overflow: hidden;
+}
+
+#monthly-goals .progress:after{
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: '';
+	width: 20%;
+	height: 100%;
+	border-radius: 2px;
+	background: linear-gradient(to right, #7f5be6, #9d8fe3);
 }
 
 /* right section */
@@ -221,7 +271,6 @@ a{
 	float: left;
 	height: 100vh;
 	width: calc(93.5% - 250px);
-	overflow: hidden;
 }
 
 /* Right section title*/
@@ -233,6 +282,28 @@ a{
 #right-title h1{
 	padding: 18px 0 18px 30px;
 	font-weight: normal;
+}
+
+#right-title .user-info.title:before{
+	content: '';
+	position: absolute;
+	right: 170px;
+	bottom: 4px;
+	width: 20px;
+	height: 20px;
+	background: #ffffff;
+	border-radius: 50%;
+}
+
+#right-title .user-info.title:after{
+	content: '';
+	position: absolute;
+	right: 172px;
+	bottom: 6px;
+	width: 10px;
+	height: 10px;
+	border: 3px solid #38a76a;
+	border-radius: 50%;
 }
 
 /* User information */
@@ -254,7 +325,7 @@ a{
 /* Content position setting */
 #right-content{
 	width: 100%;
-	height: calc(100vh - 70px);
+	height: calc(100% - 70px);
 }
 
 #content-left{
@@ -294,6 +365,15 @@ a{
 }
 
 /* friend list*/
+#friend-list{
+	height: calc(100% - 60px);
+	overflow-y: auto;
+}
+
+#friend-list::-webkit-scrollbar{
+	width: 0;
+}
+
 #friend-list .user-details{
 	display: inline-block;
 	width: 180px;
@@ -353,6 +433,7 @@ a{
 	padding-bottom: 5px;
 }
 
+
 /* Status info*/
 #status-info{
 	height: 60px;
@@ -363,7 +444,7 @@ a{
 #status-info h2{
 	display: inline-block;
 	vertical-align: top;
-	margin-right: 34%;
+	margin-right: 225px;
 	padding: 19px;
 	font-weight: normal;
 	font-size: 1em;
@@ -425,6 +506,15 @@ a{
 }
 
 /*User Post*/
+
+#user-post{
+	height: calc(100% - 60px);
+	overflow-y: auto;
+}
+
+#user-post::-webkit-scrollbar{
+	width: 0;
+}
 
 #user-post #first{
 	border-bottom: 1px solid;
@@ -494,20 +584,20 @@ a{
 .img-wrapper{
 	display: inline-block;
 	position: relative;
-	height: 80px;
-	width: 140px;
+	height: 90px;
+	width: 150px;
 	margin-right: 10px;
 	border-radius: 5px;
 }
 
 .img-wrapper:nth-child(1){
-	background: url("../img/1.jpg");
-	background-size: 140px 80px;
+	background: url("../img/pic_1.png");
+	background-size: 150px 90px;
 }
 
 .img-wrapper:nth-child(2){
-	background: url("../img/6.jpg");
-	background-size: 140px 80px;
+	background: url("../img/pic_2.png");
+	background-size: 150px 90px;
 }
 
 .img-wrapper .content{
@@ -528,8 +618,8 @@ a{
 	position: absolute;
 	display: block;
 	padding: 6px 8px;
-	top:25px;
-	left: 55px;
+	top:30px;
+	left: 60px;
 	border: 1px solid transparent;
 	border-radius: 50%;
 	background: rgba(206, 208, 216, 0.9);
