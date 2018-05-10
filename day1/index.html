@@ -76,10 +76,12 @@
 		</div>
 	</div>
 	<a href="https://nanjiang327.github.io/IFE2018/" id="back">Back to Menu</a>
+	<button id="about-me">About Me</button>
 </main>
 <script>
 	var cssLink = document.getElementById('selectCss');
 	var btn = document.querySelectorAll('.style');
+	var about_me = document.getElementById("about-me");
 
 	var length = btn.length;
 	for(let i = 0; i < length; i++){
@@ -87,6 +89,10 @@
 			var fileName = this.dataset.file;
 			cssLink.href = 'css/' + fileName + '.css';
 		}
+	}
+
+	about_me.onclick = function () {
+		alert('我的兴趣爱好是听歌');
 	}
 
 </script>

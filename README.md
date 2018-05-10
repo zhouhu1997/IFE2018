@@ -15,13 +15,18 @@
 
 * #### 2018.5.6 练习3 (做一个漂亮的网站).
 
-    <a href="//ife.baidu.com/course/detail/id/43">作业</a>
- <a href="//nanjiang327.github.io/IFE2018/day3/index.html">Demo<a/>
+    <a href="//ife.baidu.com/course/detail/id/43">作业</a>  <a href="//nanjiang327.github.io/IFE2018/day3/index.html">Demo<a/>
+ 
 
-* #### 2018.5.6 练习4 (复杂页面的实现).
+* #### 2018.5.9 练习4 (复杂页面的实现).
 
-    <a href="//ife.baidu.com/course/detail/id/44">作业</a>
- <a href="//nanjiang327.github.io/IFE2018/day4/index.html">Demo<a/>
+    <a href="//ife.baidu.com/course/detail/id/45">作业</a>  <a href="//nanjiang327.github.io/IFE2018/day1/index.html">Demo<a/>
+
+
+* #### 2018.5.10 练习5 (开始学习JS).
+
+    <a href="//ife.baidu.com/course/detail/id/44">作业</a> <a href="//nanjiang327.github.io/IFE2018/day4/index.html">Demo<a/>
+ 
 
 ---
 ### 设计学院

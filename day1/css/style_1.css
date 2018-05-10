@@ -66,3 +66,17 @@ ul{
 #back:hover{
 	background: rebeccapurple;
 }
+
+#about-me{
+	background: #FFC620;
+	color: #ffffff;
+	border-radius: 6px;
+	padding: 10px;
+	position: absolute;
+	right: 180px;
+	bottom: 10px;
+}
+
+#about-me:hover{
+	background: rebeccapurple;
+}
