@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/day4/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/day4/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day4/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day4/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,24 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/day4/css/style.css">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="459" column="13" selection-start-line="459" selection-start-column="13" selection-end-line="459" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day4/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="172" column="44" selection-start-line="172" selection-start-column="44" selection-end-line="172" selection-end-column="44" />
-              <folding>
-                <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="533">
+              <caret line="86" column="85" selection-start-line="86" selection-start-column="85" selection-end-line="86" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -52,8 +38,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>overflow</find>
-      <find>btn-s</find>
       <find>btn</find>
+      <find>btn-s</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -90,10 +76,10 @@
         <option value="$PROJECT_DIR$/Learn CSS/No.5 - 纯CSS制作绕中轴旋转的立方体/index.html" />
         <option value="$PROJECT_DIR$/Learn CSS/No.6 - 利用 CSS animation 制作slider/index.html" />
         <option value="$PROJECT_DIR$/Learn CSS/No.7 - 使用 animate.css 实现登录框/index.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/day3/css/style.css" />
         <option value="$PROJECT_DIR$/day4/index.html" />
         <option value="$PROJECT_DIR$/day4/css/style.css" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -145,34 +131,6 @@
             <path>
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="day3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="day3" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="day4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="day4" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="day4" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -231,12 +189,12 @@
       <workItem from="1525239551039" duration="9000" />
       <workItem from="1525239818536" duration="169000" />
       <workItem from="1525241301760" duration="406000" />
-      <workItem from="1525241948729" duration="121430000" />
+      <workItem from="1525241948729" duration="121628000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122714000" />
+    <option name="totallyTimeSpent" value="122912000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -463,13 +421,6 @@
     <entry file="file://$PROJECT_DIR$/Learn CSS/No.6 - 利用 CSS animation 制作slider/3.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="892">
-          <caret line="96" column="14" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day3/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6092">
@@ -489,8 +440,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day4/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="172" column="44" selection-start-line="172" selection-start-column="44" selection-end-line="172" selection-end-column="44" />
+        <state relative-caret-position="2108">
+          <caret line="169" column="44" lean-forward="true" selection-start-line="169" selection-start-column="44" selection-end-line="169" selection-end-column="44" />
           <folding>
             <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -500,8 +451,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day4/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="459" column="13" selection-start-line="459" selection-start-column="13" selection-end-line="459" selection-end-column="13" />
+        <state relative-caret-position="312">
+          <caret line="460" column="13" lean-forward="true" selection-start-line="460" selection-start-column="13" selection-end-line="460" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="86" column="85" selection-start-line="86" selection-start-column="85" selection-end-line="86" selection-end-column="85" />
         </state>
       </provider>
     </entry>
