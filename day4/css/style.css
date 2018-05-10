@@ -436,6 +436,7 @@ a{
 
 /* Status info*/
 #status-info{
+	position: relative;
 	height: 60px;
 	width: 100%;
 	border-bottom: 1px solid #E7E9EC;
@@ -444,7 +445,6 @@ a{
 #status-info h2{
 	display: inline-block;
 	vertical-align: top;
-	margin-right: 225px;
 	padding: 19px;
 	font-weight: normal;
 	font-size: 1em;
@@ -456,9 +456,14 @@ a{
 }
 
 .btn-set{
+	position: absolute;
+	right: 25px;
+	top:14px;
+}
+
+.btn-left, .btn-right{
 	display: inline-block;
 	vertical-align: top;
-	margin-top: 14px;
 	border: 1px solid #E7E9EC;
 	border-radius: 3px;
 }
@@ -476,29 +481,30 @@ a{
 	color: #CED0D9;
 }
 
-.btn-set.left a:nth-child(-n+2){
+
+.btn-left a:nth-child(-n+2){
 	border-right: 1px solid #E7E9EC;
 }
 
-.btn-set.left i{
+.btn-left i{
 	padding: 8px 11px;
 }
 
-.btn-set.right i{
+.btn-right i{
 	padding: 8px 15px;
 }
 
-.btn-set.right a:first-child{
+.btn-right a:first-child{
 	border-right: 1px solid #E7E9EC;
 }
 
 #status-info .page{
 	display: inline-block;
 	vertical-align: top;
-	height: 30px;
-	line-height: 30px;
+	height: 32px;
+	line-height: 32px;
 	padding-left: 20px;
-	margin: 15px 20px 0 20px;
+	margin: 0 20px;
 	font-weight: bold;
 	font-size: 0.8em;
 	color: #7F8DA1;
