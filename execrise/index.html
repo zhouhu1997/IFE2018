@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>
+    <h1>编码练习 1</h1>       
+    <input id="first-number" type="number" value="0" placeholder="第一个数字">
+    <input id="second-number" type="number" value="0" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+    <p id="mess"></p>
+    <hr>
+    <h1>编码练习 2</h1>
+    <input id="dec-number" type="number" placeholder="输入一个十进制非负整数" value="0" >
+    <button id="trans-btn">转化为二进制</button>
+    <p id="result">运算结果</p>
+    <!-- 练习 1 -->
+    <script>
+        // 练习 1
+        var add = document.getElementById('add-btn');
+        var sub = document.getElementById('minus-btn');
+        var mult = document.getElementById('times-btn');
+        var div= document.getElementById('divide-btn');
+        var result = document.getElementById('result');
+        add.onclick = function(){
+            printResult(compute('add'));
+        };
+       sub.onclick = function(){
+            printResult(compute('sub'));
+        };
+        mult.onclick = function(){
+            printResult(compute('mult'));
+        };
+        div.onclick = function(){            
+            printResult(compute('div'));
+        };
+
+        function compute(type){
+                var value1 = document.getElementById('first-number').value;
+                var value2 = document.getElementById('second-number').value;
+                value1 = parseInt(value1);
+                value2 = parseInt(value2);
+                switch(type){
+                case 'add' :
+                            var value = value1 + value2 ;
+                            break;
+                case 'sub' :
+                          var value = value1 - value2 ;
+                            break;
+                case 'mult':
+                           var value = value1 * value2;
+                            break;
+                case 'div':
+                            try {
+                                if(value2 === 0) throw "被除数不能为0";
+                                else{
+                                    var value = value1 / value2;
+                                }
+                            } catch (err) {
+                                var y=document.getElementById("mess");
+                                y.innerHTML="Error: " + err + "."; 
+                            }  
+                            break;
+                default:
+                    break;                         
+                            
+            }
+            return value;
+            
+        }
+        
+        function printResult(str){
+            if(str === undefined){
+                result.innerHTML = `运算错误`; 
+            }else{
+                result.innerHTML = `运算结果是 ${str}`;
+            }
+        }
+    </script>
+    <!-- 练习 2 -->
+    <script>
+        var input = document.getElementById('dec-number').value;
+        var btn = document.getElementById("trans-btn");
+        var result = document.getElementById("result");
+        var inputValue = parseInt(input);
+        function dec2bin(decNumber) {
+        // 在这里实现你的转化方法，注意需要判断输入必须为一个非负整数
+            if(inputValue <= 0 && inputValue % 1 ===0 ){
+                console.log("输入必须为一个非负整数");
+            }
+        }
+        btn.onclick = function(){
+            alert(inputValue);
+            dec2bin(inputValue);
+        }
+    </script>
+</body>
+</html>
