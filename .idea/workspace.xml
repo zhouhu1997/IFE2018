@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/day1/css/style_1.css" beforeDir="false" afterPath="$PROJECT_DIR$/day1/css/style_1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day1/css/style_2.css" beforeDir="false" afterPath="$PROJECT_DIR$/day1/css/style_2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day1/css/style_3.css" beforeDir="false" afterPath="$PROJECT_DIR$/day1/css/style_3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/execrise/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/exercise/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,48 +15,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="202">
-              <caret line="79" column="6" lean-forward="true" selection-start-line="79" selection-start-column="6" selection-end-line="79" selection-end-column="6" />
+              <caret line="79" column="6" selection-start-line="79" selection-start-column="6" selection-end-line="79" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/day1/index.html">
+        <entry file="file://$PROJECT_DIR$/exercise/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="94" column="27" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style_1.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day1/css/style_1.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="69" selection-start-line="69" selection-end-line="81" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style_2.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day1/css/style_2.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="695">
-              <caret line="97" column="1" selection-start-line="97" selection-start-column="1" selection-end-line="97" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style_3.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day1/css/style_3.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="695">
-              <caret line="117" column="1" selection-start-line="117" selection-start-column="1" selection-end-line="117" selection-end-column="1" />
+            <state relative-caret-position="355">
+              <caret line="86" column="12" lean-forward="true" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -119,6 +89,8 @@
         <option value="$PROJECT_DIR$/day1/css/style_2.css" />
         <option value="$PROJECT_DIR$/day1/css/style_3.css" />
         <option value="$PROJECT_DIR$/day1/index.html" />
+        <option value="$PROJECT_DIR$/execrise/index.html" />
+        <option value="$PROJECT_DIR$/exercise/index.html" />
       </list>
     </option>
   </component>
@@ -174,13 +146,7 @@
             <path>
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="day1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="day1" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="exercise" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -225,6 +191,14 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/IFE2018/execrise/index.html" />
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -240,33 +214,34 @@
       <workItem from="1525239818536" duration="169000" />
       <workItem from="1525241301760" duration="406000" />
       <workItem from="1525241948729" duration="122061000" />
+      <workItem from="1526137184281" duration="327000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123345000" />
+    <option name="totallyTimeSpent" value="123672000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49871135" visible="true" weight="0.26145172" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49871135" visible="true" weight="0.26145172" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3298969" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.50128865" side_tool="true" weight="0.15856236" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39948454" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,240 +251,51 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day2/exe1/css/style_1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day2/exe1/css/style_2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day2/exe1/css/style_3.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day2/exe1/css/style_4.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day2/exe1/css/style_5.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="55" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day2/exe1/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/text.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day2/exe2/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day3/css/font-awesome.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day3/img/portland.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day3/img/iphone-icon.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day3/img/map-icon.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Learn CSS/first/style.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Learn CSS/No.1 - 制作一个简单的菜单动画效果/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Learn CSS/No.2 - 初步接触 CSS 2D 变形/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-53">
-          <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Learn CSS/No.3 - CSS transition 和 transform 配合制作动画/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4012">
-          <caret line="236" column="27" selection-start-line="236" selection-start-column="27" selection-end-line="236" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Learn CSS/No.4 - 3D 空间的卡片翻转特效/正面.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Learn CSS/No.7 - 使用 animate.css 实现登录框/animate.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10109" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Learn CSS/No.4 - 3D 空间的卡片翻转特效/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Learn CSS/No.7 - 使用 animate.css 实现登录框/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="156" column="33" selection-start-line="156" selection-start-column="33" selection-end-line="156" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Learn CSS/No.5 - 纯CSS制作绕中轴旋转的立方体/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day4/css/font-awesome.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day2/exe2/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Learn CSS/No.6 - 利用 CSS animation 制作slider/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="128" column="36" lean-forward="true" selection-start-line="128" selection-start-column="12" selection-end-line="128" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Learn CSS/No.6 - 利用 CSS animation 制作slider/1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Learn CSS/No.6 - 利用 CSS animation 制作slider/6.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Learn CSS/No.6 - 利用 CSS animation 制作slider/4.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Learn CSS/No.6 - 利用 CSS animation 制作slider/3.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day3/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6092">
-          <caret line="367" column="19" selection-start-line="367" selection-start-column="19" selection-end-line="367" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day3/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#section#4;n#main#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day4/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2108">
-          <caret line="169" column="44" lean-forward="true" selection-start-line="169" selection-start-column="44" selection-end-line="169" selection-end-column="44" />
-          <folding>
-            <element signature="n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day4/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="460" column="13" lean-forward="true" selection-start-line="460" selection-start-column="13" selection-end-line="460" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day1/css/style_1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="69" selection-start-line="69" selection-end-line="81" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day1/css/style_2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="97" column="1" selection-start-line="97" selection-start-column="1" selection-end-line="97" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day1/css/style_3.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="117" column="1" selection-start-line="117" selection-start-column="1" selection-end-line="117" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
+        <state relative-caret-position="1343">
           <caret line="79" column="6" lean-forward="true" selection-start-line="79" selection-start-column="6" selection-end-line="79" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day1/index.html">
+    <entry file="file://$PROJECT_DIR$/test.html" />
+    <entry file="file://$PROJECT_DIR$/day2/exe1/css/style_1.css" />
+    <entry file="file://$PROJECT_DIR$/day2/exe1/css/style_2.css" />
+    <entry file="file://$PROJECT_DIR$/day2/exe1/css/style_3.css" />
+    <entry file="file://$PROJECT_DIR$/day2/exe1/css/style_4.css" />
+    <entry file="file://$PROJECT_DIR$/day2/exe1/css/style_5.css" />
+    <entry file="file://$PROJECT_DIR$/day2/exe1/index.html" />
+    <entry file="file://$PROJECT_DIR$/text.html" />
+    <entry file="file://$PROJECT_DIR$/day2/exe2/index.html" />
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/Learn CSS/No.1 - 制作一个简单的菜单动画效果/index.html" />
+    <entry file="file://$PROJECT_DIR$/Learn CSS/No.2 - 初步接触 CSS 2D 变形/index.html" />
+    <entry file="file://$PROJECT_DIR$/Learn CSS/No.3 - CSS transition 和 transform 配合制作动画/index.html" />
+    <entry file="file://$PROJECT_DIR$/Learn CSS/No.7 - 使用 animate.css 实现登录框/animate.css" />
+    <entry file="file://$PROJECT_DIR$/Learn CSS/No.4 - 3D 空间的卡片翻转特效/index.html" />
+    <entry file="file://$PROJECT_DIR$/Learn CSS/No.7 - 使用 animate.css 实现登录框/index.html" />
+    <entry file="file://$PROJECT_DIR$/Learn CSS/No.5 - 纯CSS制作绕中轴旋转的立方体/index.html" />
+    <entry file="file://$PROJECT_DIR$/day2/exe2/css/style.css" />
+    <entry file="file://$PROJECT_DIR$/Learn CSS/No.6 - 利用 CSS animation 制作slider/index.html" />
+    <entry file="file://$PROJECT_DIR$/day3/css/style.css" />
+    <entry file="file://$PROJECT_DIR$/day3/index.html" />
+    <entry file="file://$PROJECT_DIR$/day4/index.html" />
+    <entry file="file://$PROJECT_DIR$/day4/css/style.css" />
+    <entry file="file://$PROJECT_DIR$/day1/css/style_1.css" />
+    <entry file="file://$PROJECT_DIR$/day1/css/style_2.css" />
+    <entry file="file://$PROJECT_DIR$/day1/css/style_3.css" />
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="94" column="27" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
+        <state relative-caret-position="202">
+          <caret line="79" column="6" selection-start-line="79" selection-start-column="6" selection-end-line="79" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day1/index.html" />
+    <entry file="file://$PROJECT_DIR$/exercise/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="86" column="12" lean-forward="true" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="12" />
         </state>
       </provider>
     </entry>
