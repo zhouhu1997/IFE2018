@@ -18,7 +18,7 @@
     <h1>编码练习 2</h1>
     <input id="dec-number" type="number" placeholder="输入一个十进制非负整数" value="0" >
     <button id="trans-btn">转化为二进制</button>
-    <p id="result">运算结果</p>
+    <p id="result2">运算结果</p>
     <!-- 练习 1 -->
     <script>
         // 练习 1
@@ -85,18 +85,38 @@
     <!-- 练习 2 -->
     <!--Doing exercise 2-->
     <script>
-        var input = document.getElementById('dec-number').value;
-        var btn = document.getElementById("trans-btn");
-        var result = document.getElementById("result");
-        var inputValue = parseInt(input);
+	    var btn = document.getElementById("trans-btn");
+        var result2 = document.getElementById("result2");
+
         function dec2bin(decNumber) {
-            if(inputValue <= 0 && inputValue % 1 ===0 ){
-                console.log("输入必须为一个非负整数");
+	        var numberInTwo = "";
+	        var tempResult = "";
+            if(decNumber <= 0 && decNumber % 1 === 0 ){
+	            result2.innerText = `请输入一个非负整数`;
+            }else{
+            	while (decNumber >= 2){
+            		tempResult = decNumber % 2;
+            		console.log(("Result: " +tempResult+"  Decnumber:"+decNumber));
+            		if(tempResult === 1){
+			            decNumber = (decNumber - 1)/2;
+                    }else{
+            			decNumber = decNumber / 2;
+                    }
+
+                    if (tempResult === 0) {
+	                    numberInTwo = 1 + numberInTwo;
+                    }else{
+            			numberInTwo = 0 + numberInTwo;
+                    }
+                }
             }
+            return numberInTwo;
         }
         btn.onclick = function(){
-            alert(inputValue);
-            dec2bin(inputValue);
+	        var input = document.getElementById('dec-number').value;
+	        input = parseInt(input);
+        	result2 = dec2bin(input);
+        	result2.innerText = `运算结果为 ${result2}`;
         }
     </script>
 </body>
