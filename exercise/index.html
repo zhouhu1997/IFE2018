@@ -17,6 +17,7 @@
     <hr>
     <h1>编码练习 2</h1>
     <input id="dec-number" type="number" placeholder="输入一个十进制非负整数" value="0" >
+    <input id="bin-bit" type="number" placeholder="输入转化后二进制数字位数">
     <button id="trans-btn">转化为二进制</button>
     <p id="result2">运算结果</p>
     <!-- 练习 1 -->
@@ -81,42 +82,36 @@
                 result.innerHTML = `运算结果是 ${str}`;
             }
         }
-    </script>
     <!-- 练习 2 -->
     <!--Doing exercise 2-->
-    <script>
 	    var btn = document.getElementById("trans-btn");
         var result2 = document.getElementById("result2");
-
         function dec2bin(decNumber) {
 	        var numberInTwo = "";
 	        var tempResult = "";
-            if(decNumber <= 0 && decNumber % 1 === 0 ){
-	            result2.innerText = `请输入一个非负整数`;
+            // 判断非负整数
+            if(decNumber <= 0 || Math.floor(decNumber) !== decNumber){
+	            result2.innerHTML = `请输入一个非负整数`;
             }else{
             	while (decNumber >= 2){
             		tempResult = decNumber % 2;
-            		console.log(("Result: " +tempResult+"  Decnumber:"+decNumber));
             		if(tempResult === 1){
 			            decNumber = (decNumber - 1)/2;
-                    }else{
+			            numberInTwo = 1 + numberInTwo;
+		            }else{
             			decNumber = decNumber / 2;
-                    }
-
-                    if (tempResult === 0) {
-	                    numberInTwo = 1 + numberInTwo;
-                    }else{
-            			numberInTwo = 0 + numberInTwo;
-                    }
+			            numberInTwo = 0 + numberInTwo;
+		            }
                 }
+	            numberInTwo = (decNumber === 1) ?  1 + numberInTwo : 0 + numberInTwo;
+	            result2.innerHTML = ` 运算结果为 ${numberInTwo}`;
             }
-            return numberInTwo;
-        }
-        btn.onclick = function(){
+
+            if
+        }       btn.onclick = function(){
 	        var input = document.getElementById('dec-number').value;
-	        input = parseInt(input);
-        	result2 = dec2bin(input);
-        	result2.innerText = `运算结果为 ${result2}`;
+	        input = parseFloat(input);
+        	dec2bin(input);
         }
     </script>
 </body>
