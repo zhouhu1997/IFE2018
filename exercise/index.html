@@ -15,12 +15,140 @@
     <p id="result">运算结果</p>
     <p id="mess"></p>
     <hr>
-    <h1>编码练习 2</h1>
+    <h1>编码练习 2和3</h1>
     <input id="dec-number" type="number" placeholder="输入一个十进制非负整数" value="0" >
     <input id="bin-bit" type="number" placeholder="输入转化后二进制数字位数">
     <button id="trans-btn">转化为二进制</button>
     <p id="result2">运算结果</p>
-    <!-- 练习 1 -->
+    <hr>
+    <h1>编码练习 4</h1>
+    <button id="threegame">开始输出3的小游戏</button>
+    <hr>
+    <h1>编码练习 5</h1>
+    <table border="1" cellpadding="10px" cellspacing="10px">
+	    <caption>九九乘法表</caption>
+        <tr>
+            <td>&nbsp;</td>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td id="cfb11"></td>
+            <td id="cfb12"></td>
+            <td id="cfb13"></td>
+            <td id="cfb14"></td>
+            <td id="cfb15"></td>
+            <td id="cfb16"></td>
+            <td id="cfb17"></td>
+            <td id="cfb18"></td>
+            <td id="cfb19"></td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td id="cfb21"></td>
+            <td id="cfb22"></td>
+            <td id="cfb23"></td>
+            <td id="cfb24"></td>
+            <td id="cfb25"></td>
+            <td id="cfb26"></td>
+            <td id="cfb27"></td>
+            <td id="cfb28"></td>
+            <td id="cfb29"></td>
+        </tr>
+        <tr>
+            <th>3</th>
+            <td id="cfb31"></td>
+            <td id="cfb32"></td>
+            <td id="cfb33"></td>
+            <td id="cfb34"></td>
+            <td id="cfb35"></td>
+            <td id="cfb36"></td>
+            <td id="cfb37"></td>
+            <td id="cfb38"></td>
+            <td id="cfb39"></td>
+        </tr>
+        <tr>
+            <th>4</th>
+            <td id="cfb41"></td>
+            <td id="cfb42"></td>
+            <td id="cfb43"></td>
+            <td id="cfb44"></td>
+            <td id="cfb45"></td>
+            <td id="cfb46"></td>
+            <td id="cfb47"></td>
+            <td id="cfb48"></td>
+            <td id="cfb49"></td>
+        </tr>
+        <tr>
+            <th>5</th>
+            <td id="cfb51"></td>
+            <td id="cfb52"></td>
+            <td id="cfb53"></td>
+            <td id="cfb54"></td>
+            <td id="cfb55"></td>
+            <td id="cfb56"></td>
+            <td id="cfb57"></td>
+            <td id="cfb58"></td>
+            <td id="cfb59"></td>
+        </tr>
+        <tr>
+            <th>6</th>
+            <td id="cfb61"></td>
+            <td id="cfb62"></td>
+            <td id="cfb63"></td>
+            <td id="cfb64"></td>
+            <td id="cfb65"></td>
+            <td id="cfb66"></td>
+            <td id="cfb67"></td>
+            <td id="cfb68"></td>
+            <td id="cfb69"></td>
+        </tr>
+        <tr>
+            <th>7</th>
+            <td id="cfb71"></td>
+            <td id="cfb72"></td>
+            <td id="cfb73"></td>
+            <td id="cfb74"></td>
+            <td id="cfb75"></td>
+            <td id="cfb76"></td>
+            <td id="cfb77"></td>
+            <td id="cfb78"></td>
+            <td id="cfb79"></td>
+        </tr>
+        <tr>
+            <th>8</th>
+            <td id="cfb81"></td>
+            <td id="cfb82"></td>
+            <td id="cfb83"></td>
+            <td id="cfb84"></td>
+            <td id="cfb85"></td>
+            <td id="cfb86"></td>
+            <td id="cfb87"></td>
+            <td id="cfb88"></td>
+            <td id="cfb89"></td>
+        </tr>
+        <tr>
+            <th>9</th>
+            <td id="cfb91"></td>
+            <td id="cfb92"></td>
+            <td id="cfb93"></td>
+            <td id="cfb94"></td>
+            <td id="cfb95"></td>
+            <td id="cfb96"></td>
+            <td id="cfb97"></td>
+            <td id="cfb98"></td>
+            <td id="cfb99"></td>
+        </tr>
+    </table>
+
     <script>
         // 练习 1
         var add = document.getElementById('add-btn');
@@ -125,10 +253,36 @@
 
         }
 
+        //练习 4
+        var btn3 = document.getElementById("threegame");
+        function threeGame(){
+        	for (var i = 1; i <= 100; i++){
+        		if(i % 3 === 0 || i.toString().includes("3")){
+        			console.log("PA");
+                }else{
+        			console.log(i);
+                }
+            }
+        }
+
+        //练习 5
+        (function cfb(){
+        	for (var i = 1; i <=9; i++){
+		        for (var j = 1; j <=9; j++){
+			        document.getElementById('cfb'+i+''+j).innerHTML = `${i*j}`;
+
+		        }
+            }
+        })();
+
         btn.onclick = function(){
 	        var input = document.getElementById('dec-number').value;
 	        input = parseFloat(input);
         	dec2bin(input);
+        }
+
+        btn3.onclick = function () {
+            threeGame();
         }
     </script>
 </body>
