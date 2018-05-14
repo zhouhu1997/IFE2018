@@ -104,11 +104,28 @@
 		            }
                 }
 	            numberInTwo = (decNumber === 1) ?  1 + numberInTwo : 0 + numberInTwo;
-	            result2.innerHTML = ` 运算结果为 ${numberInTwo}`;
+	            result2.innerHTML = ` 运算结果为 ${checkLength(numberInTwo)}`;
+            }
+        }
+
+        // 练习 3
+        function checkLength(compareNumber){
+        	var binBit = document.getElementById("bin-bit").value;
+        	var diff = binBit - compareNumber.toString().length;
+        	if(diff < 0){
+        		console.log(`bin bit lenght ${binBit}   --- CompareNumber length  = ${compareNumber.toString().length}`);
+        		console.log("Bin-bit小于二进制位数" +diff);
+            }else{
+        		for (var i = 0; i < diff; i++){
+        			compareNumber = 0 + compareNumber;
+                }
             }
 
-            if
-        }       btn.onclick = function(){
+            return compareNumber;
+
+        }
+
+        btn.onclick = function(){
 	        var input = document.getElementById('dec-number').value;
 	        input = parseFloat(input);
         	dec2bin(input);
