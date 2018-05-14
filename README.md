@@ -2,30 +2,33 @@
 
 ### 零基础学院
 
-* #### 2018.5.2 练习1 (简历). 
+* #### 2018.05.02 练习1 (简历). 
 
-    <a href="//ife.baidu.com/course/detail/id/28">作业</a>
- <a href="//nanjiang327.github.io/IFE2018/day1/index.html">Demo<a/>
+    <a href="//ife.baidu.com/course/detail/id/28">作业</a> <a href="//nanjiang327.github.io/IFE2018/day1/index.html">Demo<a/>
 
 
-* #### 2018.5.4 练习2 (3种简历和布局任务).
+* #### 2018.05.04 练习2 (3种简历和布局任务).
 
     <a href="//ife.baidu.com/course/detail/id/40">作业</a> <a href="//nanjiang327.github.io/IFE2018/day2/exe1/index.html">Demo 1<a/> <a href="//nanjiang327.github.io/IFE2018/day2/exe2/index.html">Demo 2<a/>
 
 
-* #### 2018.5.6 练习3 (做一个漂亮的网站).
+* #### 2018.05.06 练习3 (做一个漂亮的网站).
 
     <a href="//ife.baidu.com/course/detail/id/43">作业</a>  <a href="//nanjiang327.github.io/IFE2018/day3/index.html">Demo<a/>
  
 
-* #### 2018.5.9 练习4 (复杂页面的实现).
+* #### 2018.05.09 练习4 (复杂页面的实现).
 
-    <a href="//ife.baidu.com/course/detail/id/45">作业</a>  <a href="//nanjiang327.github.io/IFE2018/day1/index.html">Demo<a/>
+    <a href="//ife.baidu.com/course/detail/id/44">作业</a>  <a href="//nanjiang327.github.io/IFE2018/day4/index.html">Demo<a/>
 
 
-* #### 2018.5.10 练习5 (开始学习JS).
+* #### 2018.05.10 练习5 (开始学习JS).
 
-    <a href="//ife.baidu.com/course/detail/id/44">作业</a> <a href="//nanjiang327.github.io/IFE2018/day4/index.html">Demo<a/>
+    <a href="//ife.baidu.com/course/detail/id/45">作业</a> <a href="//nanjiang327.github.io/IFE2018/day1/index.html">Demo<a/>
+    
+* #### 2018.05.14 练习6 (如果可以'重来')
+
+    <a href="//ife.baidu.com/course/detail/id/46">作业</a> <a href="//nanjiang327.github.io/IFE2018/day%2017%20-%2018/index.html">Demo<a/>
  
 
 ---
