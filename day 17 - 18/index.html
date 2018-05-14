@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>IFE ECMAScript</title>
+	<style>
+		.box {
+			border: 1px solid greenyellow;
+			padding: 10px;
+			margin-bottom: 10px;
+		}
+
+		table {
+			margin-top: 10px;
+			border-left: 1px solid #BCDBA0;
+			border-bottom: 1px solid #BCDBA0;
+		}
+
+		td {
+			padding: 2px 5px;
+			border-top: 1px solid #BCDBA0;
+			border-right: 1px solid #BCDBA0;
+			font-size: 14px;
+			/* word-wrap: none*/
+			white-space: nowrap;
+
+		}
+
+		p {
+			word-break: break-all;
+		}
+
+
+	</style>
+</head>
+<body>
+	<!--练习 1-->
+	<div class="box">
+		<h1>编码练习 1</h1>
+		<input id="first-number" type="number" value="0" placeholder="第一个数字">
+		<input id="second-number" type="number" value="0" placeholder="第二个数字">
+		<button id="add-btn">加</button>
+		<button id="minus-btn">减</button>
+		<button id="times-btn">乘</button>
+		<button id="divide-btn">除</button>
+		<p id="result">运算结果</p>
+		<p id="mess"></p>
+	</div>
+
+	<!--练习 2,3-->
+	<div class="box">
+		<h1>编码练习 2和3</h1>
+		<input id="dec-number" type="number" placeholder="输入一个十进制非负整数" value="0">
+		<input id="bin-bit" type="number" placeholder="输入转化后二进制数字位数">
+		<button id="trans-btn">转化为二进制</button>
+		<p id="result2">运算结果</p>
+	</div>
+
+	<!--练习 4-->
+	<div class="box">
+		<h1>编码练习 4</h1>
+		<button id="threegame">开始输出3的小游戏</button>
+		<p id="result3game"></p>
+	</div>
+
+	<!--练习 5-->
+	<div class="box">
+		<h1>编码练习 5</h1>
+		<button id="9times9">九九乘法表</button>
+		<table id="table" cellspacing="0"></table>
+		</table>
+	</div>
+
+	<!--练习 6-->
+	<div class="box">
+		<h1>编码练习 6</h1>
+		<button id="cv">点击前往</button>
+	</div>
+
+	<script>
+		// 练习 1
+		var add = document.getElementById('add-btn');
+		var sub = document.getElementById('minus-btn');
+		var mult = document.getElementById('times-btn');
+		var div = document.getElementById('divide-btn');
+		var result = document.getElementById('result');
+		add.onclick = function () {
+			printResult(compute('add'));
+		};
+		sub.onclick = function () {
+			printResult(compute('sub'));
+		};
+		mult.onclick = function () {
+			printResult(compute('mult'));
+		};
+		div.onclick = function () {
+			printResult(compute('div'));
+		};
+
+		function compute(type) {
+			var value1 = document.getElementById('first-number').value;
+			var value2 = document.getElementById('second-number').value;
+			value1 = parseInt(value1);
+			value2 = parseInt(value2);
+			switch (type) {
+				case 'add' :
+					var value = value1 + value2;
+					break;
+				case 'sub' :
+					var value = value1 - value2;
+					break;
+				case 'mult':
+					var value = value1 * value2;
+					break;
+				case 'div':
+					try {
+						if (value2 === 0) throw "被除数不能为0";
+						else {
+							var value = value1 / value2;
+						}
+					} catch (err) {
+						var y = document.getElementById("mess");
+						y.innerHTML = "Error: " + err + ".";
+					}
+					break;
+				default:
+					break;
+
+			}
+			return value;
+
+		}
+
+		function printResult(str) {
+			if (str === undefined) {
+				result.innerHTML = `运算错误`;
+			} else {
+				result.innerHTML = `运算结果是 ${str}`;
+			}
+		}
+
+		<!-- 练习 2 -->
+		<!--Doing day 17 - 18 2-->
+		var btn = document.getElementById("trans-btn");
+		var result2 = document.getElementById("result2");
+
+		function dec2bin(decNumber) {
+			var numberInTwo = "";
+			var tempResult = "";
+			// 判断非负整数
+			if (decNumber <= 0 || Math.floor(decNumber) !== decNumber) {
+				result2.innerHTML = `请输入一个非负整数`;
+			} else {
+				while (decNumber >= 2) {
+					tempResult = decNumber % 2;
+					if (tempResult === 1) {
+						decNumber = (decNumber - 1) / 2;
+						numberInTwo = 1 + numberInTwo;
+					} else {
+						decNumber = decNumber / 2;
+						numberInTwo = 0 + numberInTwo;
+					}
+				}
+				numberInTwo = (decNumber === 1) ? 1 + numberInTwo : 0 + numberInTwo;
+				// 调用方法checklength进行位数检查 - 超过报错, 不足补0
+				result2.innerHTML = ` 运算结果为 ${checkLength(numberInTwo)}`;
+			}
+		}
+
+		btn.onclick = function () {
+			var input = document.getElementById('dec-number').value;
+			input = parseFloat(input);
+			dec2bin(input);
+		}
+
+		// 练习 3
+		function checkLength(compareNumber) {
+			var binBit = document.getElementById("bin-bit").value;
+			var diff = binBit - compareNumber.toString().length;
+			// 检查位数
+			if (diff < 0) {
+				// 位数超过报错
+				console.log("Bin-bit小于二进制位数" + diff);
+			} else {
+				// 位数不够, 补0
+				for (var i = 0; i < diff; i++) {
+					compareNumber = 0 + compareNumber;
+				}
+			}
+
+			return compareNumber;
+
+		}
+
+		//练习 4
+		var btn3 = document.getElementById("threegame");
+		var result3game = document.getElementById("result3game");
+
+		function threeGame() {
+			var html = [];
+			for (var i = 1; i <= 100; i++) {
+				if (i % 3 === 0 || i.toString().includes("3")) {
+					html.push('PA');
+				} else {
+					html.push(i);
+				}
+			}
+			result3game.innerHTML = html.join(',');
+		}
+
+		btn3.onclick = function () {
+			threeGame();
+		}
+
+		//练习 5
+		var btn4 = document.getElementById('9times9');
+		var table = document.getElementById('table');
+		btn4.addEventListener('click', function () {
+			var html = '';
+			for (var i = 1; i <= 9; i++) {
+				html += '<tr>';
+				for (var j = 1; j <= i; j++) {
+					html += '<td>' + i + ' * ' + j + ' = ' + i * j + '</td>';
+				}
+				html += '</rd>';
+			}
+			table.innerHTML = html;
+		});
+
+		//  练习 6
+		var btn6 = document.getElementById('cv');
+		// 点击前往cv作业
+		btn6.addEventListener('click', function () {
+			window.open('https://nanjiang327.github.io/IFE2018/day1/cv/index.html')
+		})
+
+
+	</script>
+</body>
+</html>

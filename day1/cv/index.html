@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Nan的简历</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main class="wrap">
+	<header class="header">
+		<h1>Nan的简历</h1>
+		<span class="header_ft"></span>
+		<!-- <nav class="nav">
+		  <a href="#info" class="nav-item">个人介绍</a>
+		  <a href="#educate"class="nav-item">教育经历</a>
+		  <a href="#experience" class="nav-item">项目经验</a>
+		</nav> -->
+	</header>
+	<section class="card">
+		<h2 style="display: none">个人信息</h2>
+		<div class="card-hd">
+			<div alt="某番茄头像" class="card-avatar"></div>
+			<address class="card-info">
+				<p>姓名 : Nna</p>
+				<p>电话 : 1666666666</p>
+				<p>地址 : <a href="https://github.com/NanJiang327" target="_blank">github.com/NanJiang327</a></p>
+			</address>
+		</div>
+		<p class="card-ft">刚开始学习的渣渣</p>
+	</section>
+	<div class="tips">
+		<p class="tips-text">o(*￣▽￣*)o想了解更多么? 戳这戳这 >></p>
+	</div>
+	<article class="info hide">
+		<section class="box">
+			<h2 class="box-title">教育经历</h2>
+			<section class="box-main">
+				<table class="box-table">
+					<tr>
+						<td>2018.4 ~ 至今</td>
+						<td>百度前端技术学院 - 零基础学院</td>
+					</tr>
+				</table>
+			</section>
+		</section>
+		<section class="box">
+			<h2 class="box-title">项目经验</h2>
+			<section class="box-main">
+				<dl>
+					<dt><h3>在线简历</h3></dt>
+					<dd>
+						<ul>
+							<li>工&nbsp;&nbsp;&nbsp;具：WebStorm</li>
+							<li>Demo：<a href="https://nanjiang327.github.io/IFE2018/day1/cv/index.html" target="_blank">https://nanjiang327.github.io/IFE2018/day1/cv/index.html</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</section>
+		</section>
+		<section class="box">
+			<h2 class="box-title">技能清单</h2>
+			<section class="box-main">
+				<dl>
+					<dt><h3>前端</h3></dt>
+					<dd>
+						<ul>
+							<li>HTML</li>
+							<li>JavaScript</li>
+							<li>CSS</li>
+						</ul>
+					</dd>
+				</dl>
+			</section>
+		</section>
+	</article>
+	<footer>
+		<p>Copyright © 2018 Nan</p>
+	</footer>
+</main>
+<script>
+	// 根据进入时间问候
+	var date = new Date();
+	var hour = date.getHours();
+	var sdate = date.toDateString();
+	var greet = hour > 18 || hour < 6 ? '晚上好' : hour < 12 ? '早上好' : '下午好';
+	document.querySelector('.header_ft').innerHTML = greet + '，' + sdate;
+	// 点击了解更多时显示信息
+	document.querySelector('.tips-text').addEventListener('click', function() {
+		// console.log(222);
+		document.querySelector('.tips').classList.add('hide');
+		document.querySelector('.info').classList.remove('hide');
+	})
+</script>
+</body>
+</html>
