@@ -77,11 +77,13 @@
 	</div>
 	<a href="https://nanjiang327.github.io/IFE2018/" id="back">Back to Menu</a>
 	<button id="about-me">About Me</button>
+	<button id="greeting">你好</button>
 </main>
 <script>
 	var cssLink = document.getElementById('selectCss');
 	var btn = document.querySelectorAll('.style');
 	var about_me = document.getElementById("about-me");
+	var greeting = document.getElementById("greeting");
 
 	var length = btn.length;
 	for(let i = 0; i < length; i++){
@@ -93,6 +95,44 @@
 
 	about_me.onclick = function () {
 		alert('我的兴趣爱好是听歌');
+	}
+
+	greeting.onclick = function () {
+		var time = new Date();
+		switch (time.getHours()){
+			case 0:
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+			case 5:
+			case 6:
+			case 7:
+			case 8:
+			case 9:
+			case 10:
+			case 11:
+			case 12:
+				alert('good morning');
+				break;
+			case 13:
+			case 14:
+			case 15:
+			case 16:
+				alert('good afternoon');
+				break;
+			case 17:
+			case 18:
+			case 19:
+			case 20:
+			case 21:
+			case 22:
+			case 23:
+				alert('good evening');
+				break;
+			default:
+				break;
+		}
 	}
 
 </script>

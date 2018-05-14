@@ -113,6 +113,16 @@ h2{
 	bottom: 10px;
 }
 
-#about-me:hover{
+#greeting{
+	background: #FFC620;
+	color: #ffffff;
+	border-radius: 6px;
+	padding: 10px;
+	position: absolute;
+	right: 280px;
+	bottom: 10px;
+}
+
+#about-me:hover, #greeting:hover{
 	background: rebeccapurple;
 }

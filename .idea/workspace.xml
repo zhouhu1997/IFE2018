@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/exercise/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/exercise/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day1/css/style_1.css" beforeDir="false" afterPath="$PROJECT_DIR$/day1/css/style_1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day1/css/style_2.css" beforeDir="false" afterPath="$PROJECT_DIR$/day1/css/style_2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day1/css/style_3.css" beforeDir="false" afterPath="$PROJECT_DIR$/day1/css/style_3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day1/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,7 +28,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exercise/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="387">
@@ -33,6 +36,42 @@
               <folding>
                 <element signature="e#880#886#1" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day1/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1717">
+              <caret line="101" selection-start-line="101" selection-end-line="101" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style_1.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day1/css/style_1.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style_2.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day1/css/style_2.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="627">
+              <caret line="107" column="1" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style_3.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day1/css/style_3.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="695">
+              <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -88,12 +127,12 @@
         <option value="$PROJECT_DIR$/day4/index.html" />
         <option value="$PROJECT_DIR$/day4/css/style.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/execrise/index.html" />
+        <option value="$PROJECT_DIR$/exercise/index.html" />
         <option value="$PROJECT_DIR$/day1/css/style_1.css" />
         <option value="$PROJECT_DIR$/day1/css/style_2.css" />
         <option value="$PROJECT_DIR$/day1/css/style_3.css" />
         <option value="$PROJECT_DIR$/day1/index.html" />
-        <option value="$PROJECT_DIR$/execrise/index.html" />
-        <option value="$PROJECT_DIR$/exercise/index.html" />
       </list>
     </option>
   </component>
@@ -145,6 +184,17 @@
             <path>
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+              <item name="day1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+              <item name="day1" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
@@ -219,12 +269,12 @@
       <workItem from="1525241948729" duration="122061000" />
       <workItem from="1526137184281" duration="327000" />
       <workItem from="1526224750592" duration="4528000" />
-      <workItem from="1526230853213" duration="3041000" />
+      <workItem from="1526230853213" duration="3836000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131241000" />
+    <option name="totallyTimeSpent" value="132036000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -317,9 +367,6 @@
     <entry file="file://$PROJECT_DIR$/day3/index.html" />
     <entry file="file://$PROJECT_DIR$/day4/index.html" />
     <entry file="file://$PROJECT_DIR$/day4/css/style.css" />
-    <entry file="file://$PROJECT_DIR$/day1/css/style_1.css" />
-    <entry file="file://$PROJECT_DIR$/day1/css/style_2.css" />
-    <entry file="file://$PROJECT_DIR$/day1/css/style_3.css" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1343">
@@ -327,7 +374,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day1/index.html" />
     <entry file="file://$PROJECT_DIR$/exercise/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
@@ -335,6 +381,34 @@
           <folding>
             <element signature="e#880#886#1" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day1/css/style_1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day1/css/style_2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="107" column="1" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day1/css/style_3.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day1/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1717">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
         </state>
       </provider>
     </entry>
