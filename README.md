@@ -29,7 +29,12 @@
 * #### 2018.05.14 练习6 (如果可以'重来')
 
     <a href="//ife.baidu.com/course/detail/id/46">作业</a> <a href="//nanjiang327.github.io/IFE2018/day%2017%20-%2018/index.html">Demo<a/>
+    
  
+* #### 2018.05.15 练习7 (找到那个DOM)
+
+    <a href="//ife.baidu.com/course/detail/id/47">作业</a> <a href="//nanjiang327.github.io/IFE2018/day19/index.html">Demo<a/>
+    
 
 ---
 ### 设计学院

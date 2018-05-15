@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/day19/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day19/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,8 +21,17 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="84" column="100" selection-start-line="84" selection-start-column="100" selection-end-line="84" selection-end-column="100" />
+            <state relative-caret-position="295">
+              <caret line="80" column="22" lean-forward="true" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day4/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2489">
+              <caret line="94" column="142" selection-start-line="94" selection-start-column="142" selection-end-line="94" selection-end-column="142" />
             </state>
           </provider>
         </entry>
@@ -28,8 +39,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day19/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="148" column="36" selection-start-line="148" selection-start-column="36" selection-end-line="148" selection-end-column="36" />
+            <state relative-caret-position="373">
+              <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -237,12 +248,12 @@
       <workItem from="1525241948729" duration="122061000" />
       <workItem from="1526137184281" duration="327000" />
       <workItem from="1526224750592" duration="4528000" />
-      <workItem from="1526230853213" duration="10955000" />
+      <workItem from="1526230853213" duration="11135000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139155000" />
+    <option name="totallyTimeSpent" value="139335000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -379,13 +390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day4/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="94" column="142" selection-start-line="94" selection-start-column="142" selection-end-line="94" selection-end-column="142" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day 17 - 18/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1809">
@@ -395,15 +399,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="84" column="100" selection-start-line="84" selection-start-column="100" selection-end-line="84" selection-end-column="100" />
+        <state relative-caret-position="295">
+          <caret line="80" column="22" lean-forward="true" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day4/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2489">
+          <caret line="94" column="142" selection-start-line="94" selection-start-column="142" selection-end-line="94" selection-end-column="142" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day19/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="148" column="36" selection-start-line="148" selection-start-column="36" selection-end-line="148" selection-end-column="36" />
+        <state relative-caret-position="373">
+          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
         </state>
       </provider>
     </entry>
