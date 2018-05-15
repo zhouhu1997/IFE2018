@@ -33,10 +33,18 @@
 		<p class="">Some Text</p>
 	</div>
 	<div id="buttonSet">
+		<h2>练习 1</h2>
 		<button id="allLi">需求1</button>
 		<button id="spans">需求2</button>
 		<button id="secondSpans">需求3</button>
 		<button id="classActive">需求4</button>
+	</div>
+	<div id="buttonSet2">
+		<h2>练习 2</h2>
+		<button id="allLi2">需求1</button>
+		<button id="spans2">需求2</button>
+		<button id="secondSpans2">需求3</button>
+		<button id="classActive2">需求4</button>
 	</div>
 </div>
 <script>
@@ -44,7 +52,13 @@
 	var btn2 = document.querySelector('#spans');
 	var btn3 = document.querySelector('#secondSpans');
 	var btn4 = document.querySelector('#classActive');
+	var btn5 = document.querySelector('#allLi2');
+	var btn6 = document.querySelector('#spans2');
+	var btn7 = document.querySelector('#secondSpans2');
+	var btn8 = document.querySelector('#classActive2');
 
+
+	// 练习 1
 	function getAllListItem() {
 		// 返回页面中所有li标签
 		var allLis = document.getElementsByTagName('li');
@@ -86,6 +100,7 @@
 		}
 	}
 
+	// 练习 1 按钮事件
 	btn1.addEventListener('click',function () {
 		getAllListItem();
 	})
@@ -103,6 +118,66 @@
 
 	btn4.addEventListener('click',function () {
 		getActiveLinkContent('news-normal');
+	})
+
+	//练习 2
+	function getAllListItem2() {
+		// 返回页面中所有li标签
+		var allLi = document.querySelectorAll('li');
+		console.log(allLi);
+	}
+
+	function findAllHtmlSpanInOneSection2(sectionId) {
+		// 返回某个section下所有span中内容为HTML的span标签
+		var allSpans = document.querySelectorAll('#'+sectionId+' span');
+		var arr = [];
+		for (var i in allSpans){
+			if (allSpans[i].innerText === 'HTML'){
+				arr.push(allSpans[i]);
+			}
+		}
+		console.log(arr);
+
+	}
+
+	function findListItem2(sectionId, spanCont) {
+		// 返回某个section下，所有所包含span内容为spanCont的LI标签
+		var allSpans = document.querySelectorAll('#'+sectionId+' span');
+		var arr = [];
+		for (var i in allSpans){
+			if (allSpans[i].innerText === spanCont){
+				arr.push(allSpans[i].parentNode);
+			}
+		}
+		console.log(arr);
+	}
+
+	function getActiveLinkContent2(sectionId) {
+		// 返回某个section下，class为active的链接中包含的文字内容
+		var classActive = document.querySelectorAll('#'+sectionId+' .active');
+		for (var i = 0;  i < classActive.length; i++){
+			console.log(classActive[i].textContent)
+		}
+	}
+
+	// 练习 2 按钮事件
+	btn5.addEventListener('click',function () {
+		getAllListItem2();
+	})
+
+
+	btn6.addEventListener('click',function () {
+		findAllHtmlSpanInOneSection2('news-normal');
+	})
+
+
+	btn7.addEventListener('click',function () {
+		findListItem2('news-normal','CSS');
+	})
+
+
+	btn8.addEventListener('click',function () {
+		getActiveLinkContent2('news-normal');
 	})
 
 </script>
