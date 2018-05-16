@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第二十到第二十一天 - 让你和页面对话</title>
+</head>
+<body>
+	<div>
+		<input type="text" id="name" onkeypress="key(event)">
+		<button id="submit-btn">Submit</button>
+	</div>
+	<script>
+		var submitBtn = document.querySelector('#submit-btn');
+		var input = document.querySelector('#name');
+
+		submitBtn.addEventListener('click', function () {
+			console.log(input.value);
+			input.value = '';
+		})
+		
+		function key(event) {
+			if (event.keyCode == 27) {  // 27 是 ESC 键
+				input.value = '';
+			}
+
+			if (event.keyCode === 13) {  // 27 是 ESC 键
+				console.log(input.value);
+				input.value = '';
+			}
+		}
+	</script>
+</body>
+</html>
