@@ -79,6 +79,13 @@
 
 		<p class="color-picker"></p>
 	</div>
+
+	<!--练习 4-->
+	<div class="box">
+		<h1>练习 4</h1>
+		<div id="fade-obj" style="width:300px;height:300px;background:#000;opacity: 1;"></div>
+		<button id="fade-btn">淡出</button>
+	</div>
 	<script>
 		// 练习 1
 		var submitBtn = document.querySelector('#submit-btn');
@@ -130,6 +137,34 @@
 			}
 		}
 
+		//练习 4
+		var btn4 = document.querySelector('#fade-btn');
+		var obj4 = document.querySelector('#fade-obj');
+		var isFadeOut = true; //控制淡入还是淡出
+		var num, step;
+		btn4.addEventListener('click',function () {
+			var style = obj4.style;
+			// 根据fadeout的true or false 判断增加还是减少opacity
+			step = isFadeOut ? -0.125 : 0.125;
+			num = isFadeOut ? 1 : 0;
+			// 设置按钮不可点击
+			btn4.disabled = true;
+			//定时器
+			var interval = setInterval(function () {
+				style.opacity = num;
+				// 有个困惑就是 如果获得的是var style = obj4.style.opacity的话, obj4.style.opacity !== style;
+				var true2 = (style === obj4.style.opacity) ? 'yes':'no';
+				num = num + step;
+				// 判断定时器结束条件
+				if (num < 0 || num >1){
+					// 设置按钮可点击
+					btn4.disabled = false;
+					btn4.textContent = isFadeOut ? '淡入':'淡出';
+					isFadeOut = !isFadeOut;
+					clearInterval(interval);
+				}
+			}, 200);
+		})
 	</script>
 </body>
 </html>
