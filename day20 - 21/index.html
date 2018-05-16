@@ -3,13 +3,47 @@
 <head>
 	<meta charset="UTF-8">
 	<title>第二十到第二十一天 - 让你和页面对话</title>
+	<style>
+		select {
+			display: none;
+		}
+
+		.active{
+			display: block;
+		}
+	</style>
 </head>
 <body>
 	<div>
+		<h1>练习 1</h1>
 		<input type="text" id="name" onkeypress="key(event)">
 		<button id="submit-btn">Submit</button>
 	</div>
+
+	<div>
+		<h1>练习 2</h1>
+		<label>
+			<input id="school" name="status" type="radio">
+			School
+		</label>
+		<label>
+			<input id="company" name="status" type="radio">
+			Company
+		</label>
+
+		<select id="school-select" >
+			<option>北京邮电大学</option>
+			<option>黑龙江大学</option>
+			<option>华中科技大学</option>
+		</select>
+
+		<select id="company-select">
+			<option>百度</option>
+			<option>爱奇艺</option>
+		</select>
+	</div>
 	<script>
+		// 练习 1
 		var submitBtn = document.querySelector('#submit-btn');
 		var input = document.querySelector('#name');
 
@@ -17,17 +51,35 @@
 			console.log(input.value);
 			input.value = '';
 		})
-		
+
+		//设置按键函数
 		function key(event) {
 			if (event.keyCode == 27) {  // 27 是 ESC 键
 				input.value = '';
 			}
 
-			if (event.keyCode === 13) {  // 27 是 ESC 键
+			if (event.keyCode === 13) {  // 13 是 Enter 键
 				console.log(input.value);
 				input.value = '';
 			}
 		}
+
+		//练习 2
+		var school = document.querySelector('#school');
+		var company = document.querySelector('#company');
+		var schoolList = document.querySelector('#school-select');
+		var companyList = document.querySelector('#company-select');
+
+		school.addEventListener('click',function () {
+			schoolList.className = 'active';
+			companyList.className = '';
+		})
+
+		company.addEventListener('click',function () {
+			companyList.className = 'active';
+			schoolList.className = '';
+		})
+
 	</script>
 </body>
 </html>
