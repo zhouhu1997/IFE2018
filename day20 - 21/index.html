@@ -141,17 +141,17 @@
 		})
 
 		//练习 3
-		var list = document.querySelectorAll("li");
-		for (var i = i = 0, len = list.length; i < len; i++) {
-			list[i].onclick = function(e) {
-				var t = e.target;
-				var c = t.style.backgroundColor;
-				var p = document.getElementsByClassName("color-picker")[0]
-				p.innerHTML = c;
-				p.style.color = c;
-
+		var list = document.querySelector(".palette");
+		list.onclick = function () {
+			var ev = ev || window.event;
+			var target = ev.target || ev.srcElement;
+			if (target.nodeName.toLocaleLowerCase() === 'li'){
+				var p = document.getElementsByClassName("color-picker")[0];
+				p.innerHTML = target.style.backgroundColor;
+				p.style.color = target.style.backgroundColor;
 			}
 		}
+		
 
 		//练习 4
 		var btn4 = document.querySelector('#fade-btn');
