@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.box{
+			margin: 0 auto 10px auto;
+			border: 1px solid chartreuse;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<h1>练习 1</h1>
+		<div id="inputArea">
+			<label>Number A:<input id="radio-a" type="radio" name="math-obj" value="a"></label><input id="num-a" type="text">
+			<label>Number B:<input id="radio-b" type="radio" name="math-obj" value="b"></label><input id="num-b" type="text">
+		</div>
+		<div id="btn-set">
+			<button id="btn1">判断当前选中的输入框输入内容是否为数字</button>
+			<button id="btn2">把 A 四舍五入为 B 个小数位数的数字</button>
+			<button id="btn3">当前选中数字的绝对值</button>
+			<button id="btn4">对当前选中的数字进行上舍入</button>
+			<button id="btn5">对当前选中的数字进行下舍入</button>
+			<button id="btn6">把当前选中的数字四舍五入为最接近的整数</button>
+			<button id="btn7">返回 A 和 B 中的最高值</button>
+			<button id="btn8">返回 A 和 B 中的最低值</button>
+		</div>
+		<p id="result"></p>
+	</div>
+</body>
+<script>
+	<!-- 练习 1-->
+	var result = document.querySelector('#result');
+	var numberABtn = document.querySelector('#radio-a');
+	var numberBBtn = document.querySelector('#radio-b');
+
+	var checkNum = function(numA, numB){
+		var resultSet = [];
+		resultSet[0] = isNaN(numA) ? '输出不为数字, 请重新输入' : (typeof numA === 'number' ? '输出为数字' : '输出不为数字, 请重新输入');
+		resultSet[1] = isNaN(numB) ? '输出不为数字, 请重新输入' : (typeof numB === 'number' ? '输出为数字' : '输出不为数字, 请重新输入');
+		return resultSet;
+	};
+
+	// 用时间代理的方式绑定按钮
+	document.querySelector('#btn-set').addEventListener('click',function () {
+		var numberA = document.querySelector('#num-a');
+		var numberB = document.querySelector('#num-b');
+		// 判断哪个按钮选中
+		var checkedBtn = numberABtn.checked ? 'A' : 'B';
+		//获取a和b的输入值
+		numberA = parseFloat(numberA.value);
+		numberB = parseFloat(numberB.value);
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+
+		if (target.nodeName.toLocaleLowerCase() === 'button'){
+			switch (target.id){
+				case 'btn1':
+					if (checkedBtn === 'A'){
+						result.textContent = checkNum(numberA, numberB)[0];
+					}else{
+						result.textContent = checkNum(numberA, numberB)[1];
+					}
+					break;
+				case 'btn2':
+
+					break;
+				case 'btn3':
+
+					break;
+				case 'btn4':
+
+					break;
+				case 'btn5':
+
+					break;
+				case 'btn6':
+
+					break;
+				case 'btn7':
+
+					break;
+				case 'btn8':
+
+					break;
+				default:
+					break;
+			}
+		}
+	})
+</script>
+</html>
