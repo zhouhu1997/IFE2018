@@ -34,7 +34,10 @@
 * #### 2018.05.15 练习7 (找到那个DOM)
 
     <a href="//ife.baidu.com/course/detail/id/47">作业</a> <a href="//nanjiang327.github.io/IFE2018/day19/index.html">Demo<a/>
-    
+
+* #### 2018.05.18 练习8 (让你和页面对话)
+
+    <a href="//ife.baidu.com/course/detail/id/48">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2020%20-%2021/index.html">Demo<a/>
 
 ---
 ### 设计学院
