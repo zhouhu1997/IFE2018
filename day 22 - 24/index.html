@@ -48,45 +48,49 @@
 		var numberA = document.querySelector('#num-a');
 		var numberB = document.querySelector('#num-b');
 		// 判断哪个按钮选中
-		var checkedBtn = numberABtn.checked ? 'A' : 'B';
+		var checkedBtn = (numberABtn.checked === false && numberBBtn.checked === false) ? 'noBtnChecked' : numberABtn.checked ? 'A' : 'B';
 		//获取a和b的输入值
 		numberA = parseFloat(numberA.value);
 		numberB = parseFloat(numberB.value);
 		var ev = ev || window.event;
 		var target = ev.target || ev.srcElement;
 
-		if (target.nodeName.toLocaleLowerCase() === 'button'){
-			switch (target.id){
-				case 'btn1':
-					if (checkedBtn === 'A'){
-						result.textContent = checkNum(numberA, numberB)[0];
-					}else{
-						result.textContent = checkNum(numberA, numberB)[1];
-					}
-					break;
-				case 'btn2':
+		if (checkedBtn === 'noBtnChecked'){
+			alert('没有选中radio按钮');
+		} else{
+			if (target.nodeName.toLocaleLowerCase() === 'button'){
+				switch (target.id){
+					case 'btn1':
+						if (checkedBtn === 'A'){
+							result.textContent = checkNum(numberA, numberB)[0];
+						}else{
+							result.textContent = checkNum(numberA, numberB)[1];
+						}
+						break;
+					case 'btn2':
 
-					break;
-				case 'btn3':
+						break;
+					case 'btn3':
 
-					break;
-				case 'btn4':
+						break;
+					case 'btn4':
 
-					break;
-				case 'btn5':
+						break;
+					case 'btn5':
 
-					break;
-				case 'btn6':
+						break;
+					case 'btn6':
 
-					break;
-				case 'btn7':
+						break;
+					case 'btn7':
 
-					break;
-				case 'btn8':
+						break;
+					case 'btn8':
 
-					break;
-				default:
-					break;
+						break;
+					default:
+						break;
+				}
 			}
 		}
 	})
