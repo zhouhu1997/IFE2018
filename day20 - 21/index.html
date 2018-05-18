@@ -29,6 +29,14 @@
 			border: 1px solid #000;
 			cursor: pointer;
 		}
+
+		.img{
+			background-image: url("erik_ce204002.jpg");
+			background-repeat: no-repeat;
+			background-position: 0 -480px;
+			width: 480px;
+			height: 480px;
+		}
 	</style>
 </head>
 <body>
@@ -85,6 +93,14 @@
 		<h1>练习 4</h1>
 		<div id="fade-obj" style="width:300px;height:300px;background:#000;opacity: 1;"></div>
 		<button id="fade-btn">淡出</button>
+	</div>
+
+	<!--练习 5-->
+	<div class="box">
+		<h1>练习 5</h1>
+		<div class="img"></div>
+		<button id="picMove">动</button>
+		<button id="picStop">停</button>
 	</div>
 	<script>
 		// 练习 1
@@ -164,6 +180,34 @@
 					clearInterval(interval);
 				}
 			}, 200);
+		})
+
+		//练习 5
+		var btn5 = document.querySelector('#picMove');
+		var picBg = document.querySelector('.img');
+		var forward = true;
+		var picPosition = 0;
+		var interval = null;
+
+		btn5.addEventListener('click',function () {
+			interval = setInterval(function () {
+				// 判断是否继续正方向改变图片位置还是反方向改变图片位置
+				picPosition = forward ? picPosition - 480 : picPosition + 480;
+				// 如果达到最后一个画幅, 则设置forward为false
+				if (picPosition === -7680){
+					forward = false;
+				}
+				// 如果达到第一个画幅, 则设置forward为true;
+				if (picPosition === 0){
+					forward = true;
+				}
+				// 设置picBg的background position
+				picBg.style.backgroundPosition = '0 '+picPosition+'px';
+			}, 100)
+		})
+		// 停止timeInterval
+		document.querySelector('#picStop').addEventListener('click',function () {
+			clearInterval(interval);
 		})
 	</script>
 </body>
