@@ -38,8 +38,8 @@
 
 	var checkNum = function(numA, numB){
 		var resultSet = [];
-		resultSet[0] = isNaN(numA) ? '输出不为数字, 请重新输入' : (typeof numA === 'number' ? '输出为数字' : '输出不为数字, 请重新输入');
-		resultSet[1] = isNaN(numB) ? '输出不为数字, 请重新输入' : (typeof numB === 'number' ? '输出为数字' : '输出不为数字, 请重新输入');
+		resultSet[0] = isNaN(numA) ? false : typeof numA === 'number';
+		resultSet[1] = isNaN(numB) ? false : typeof numB === 'number';
 		return resultSet;
 	};
 
@@ -62,31 +62,57 @@
 				switch (target.id){
 					case 'btn1':
 						if (checkedBtn === 'A'){
-							result.textContent = checkNum(numberA, numberB)[0];
+							result.textContent = checkNum(numberA, numberB)[0] ? `输出为 ${numberA}` : '输入不为数字, 请重新输入';
 						}else{
-							result.textContent = checkNum(numberA, numberB)[1];
+							result.textContent = checkNum(numberA, numberB)[1] ? `输出为 ${numberB}` : '输入不为数字, 请重新输入';
 						}
 						break;
 					case 'btn2':
-
+						result.textContent = checkNum(numberA, numberB)[0] ? `输出为 ${numberA.toFixed(numberB)}` : '输入不为数字, 请重新输入';
 						break;
+					//绝对值
 					case 'btn3':
-
+						if (checkedBtn === 'A'){
+							result.textContent = checkNum(numberA, numberB)[0] ? `输出为 ${Math.abs(numberA)}` : '输入不为数字, 请重新输入';
+						}else{
+							result.textContent = checkNum(numberA, numberB)[1] ? `输出为 ${Math.abs(numberB)}` : '输入不为数字, 请重新输入';
+						}
 						break;
+					//向上进行四舍五入
 					case 'btn4':
-
+						if (checkedBtn === 'A'){
+							result.textContent = checkNum(numberA, numberB)[0] ? `输出为 ${Math.ceil(numberA)}` : '输入不为数字, 请重新输入';
+						}else{
+							result.textContent = checkNum(numberA, numberB)[1] ? `输出为 ${Math.ceil(numberB)}` : '输入不为数字, 请重新输入';
+						}
 						break;
+					//向下进行四舍五入
 					case 'btn5':
-
+						if (checkedBtn === 'A'){
+							result.textContent = checkNum(numberA, numberB)[0] ? `输出为 ${Math.floor(numberA)}` : '输入不为数字, 请重新输入';
+						}else{
+							result.textContent = checkNum(numberA, numberB)[1] ? `输出为 ${Math.floor(numberB)}` : '输入不为数字, 请重新输入';
+						}
 						break;
+					//把数四舍五入为最接近的整数
 					case 'btn6':
-
+						if (checkedBtn === 'A'){
+							result.textContent = checkNum(numberA, numberB)[0] ? `输出为 ${Math.round(numberA)}` : '输入不为数字, 请重新输入';
+						}else{
+							result.textContent = checkNum(numberA, numberB)[1] ? `输出为 ${Math.round(numberB)}` : '输入不为数字, 请重新输入';
+						}
 						break;
+					// 取A 和 B 中的 最大值
 					case 'btn7':
-
+						if(checkNum(numberA,numberB)[0] && checkNum(numberA,numberB)){
+							result.textContent = numberA > numberB ? `输出为 ${numberA}` : `输出为 ${numberB}`;
+						}
 						break;
+					// 取A 和 B 中的 最小值
 					case 'btn8':
-
+						if(checkNum(numberA,numberB)[0] && checkNum(numberA,numberB)){
+							result.textContent = numberA > numberB ? `输出为 ${numberB}` : `输出为 ${numberA}`;
+						}
 						break;
 					default:
 						break;
