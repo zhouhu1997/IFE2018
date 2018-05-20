@@ -60,6 +60,11 @@
 		</div>
 		<p id="result2"></p>
 	</div>
+
+	<div class="box">
+		<h1>练习 3</h1>
+		<p>在控制台中查看</p>
+	</div>
 </body>
 <script>
 	//公用方法
@@ -265,10 +270,7 @@
 	暂时不需要学习和使用正则表达式的方式
 	*/
 	function diyTrim(str) {
-		var result = "";
-
-		str.replace(/ 　/g,'');
-
+		var result = str.replace(/\s/g,'');
 		return result;
 	}
 
@@ -288,15 +290,11 @@
 	*/
 	function removeRepetition(str) {
 		var result = "";
-		var first = str.charAt(1) || false;
-		for (var i = 1; i < str.length; i++){
-			if (first){
-
-			} else{
-				result = "";
+		for (var i = 0; i < str.length; i++){
+			if (result.indexOf(str.charAt(i)) < 0){
+				result += str.charAt(i);
 			}
 		}
-
 		return result;
 	}
 
