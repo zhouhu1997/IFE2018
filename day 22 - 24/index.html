@@ -267,12 +267,13 @@
 	function diyTrim(str) {
 		var result = "";
 
-		// do something
+		str.replace(/ 　/g,'');
 
-		return result
+		return result;
 	}
 
 	// 测试用例
+	console.log('测试1');
 	console.log(diyTrim(' a f b    ')); // ->a f b
 	console.log(diyTrim('    ffdaf    ')); // ->ffdaf
 	console.log(diyTrim('1    ')); // ->1
@@ -290,7 +291,7 @@
 		var first = str.charAt(1) || false;
 		for (var i = 1; i < str.length; i++){
 			if (first){
-				 
+
 			} else{
 				result = "";
 			}
