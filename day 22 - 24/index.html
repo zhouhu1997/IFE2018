@@ -65,7 +65,20 @@
 		<h1>练习 3</h1>
 		<p>在控制台中查看</p>
 	</div>
+
+	<div class="box">
+		<h1>练习 5</h1>
+		<input id="queue-input" type="text">
+		<p id="queue-cont">队列内容：apple-&gt;pear</p>
+		<div id="exe5BtnSet">
+			<button id="in-btn">入队</button>
+			<button id="out-btn">出队</button>
+			<button id="font-btn">打印队头元素内容</button>
+			<button id="empty-btn">判断队列是否为空</button>
+		</div>
+	</div>
 </body>
+<!--练习 1-->
 <script>
 	//公用方法
 	var checkBtn = function(btnA, btnB){
@@ -162,7 +175,10 @@
 			}
 		}
 	})
+</script>
 
+<!--//练习 2-->
+<script>
 	//练习 2
 	var result2 = document.querySelector('#result2');
 	var numberABtn2 = document.querySelector('#radio-a2');
@@ -262,13 +278,15 @@
 			}
 		}
 	})
+</script>
 
-	//练习 3
+<!--//练习 3-->
+<script>
 	/*
-	实现一个字符串头尾去除空格的函数
-	注意需要去除的空格，包括全角、半角空格
-	暂时不需要学习和使用正则表达式的方式
-	*/
+实现一个字符串头尾去除空格的函数
+注意需要去除的空格，包括全角、半角空格
+暂时不需要学习和使用正则表达式的方式
+*/
 	function diyTrim(str) {
 		var result = str.replace(/\s/g,'');
 		return result;
@@ -304,6 +322,46 @@
 	console.log(removeRepetition("aabbaabb")); // ->abab
 	console.log(removeRepetition("")); // ->
 	console.log(removeRepetition("abc")); // ->abc
+
+</script>
+
+<!--练习 5-->
+<script>
+	var stack = ["apple", "pear"];
+	var exe5Result = document.querySelector('#queue-cont');
+
+	// 添加事件委托
+	document.querySelector('#exe5BtnSet').addEventListener('click',function () {
+		var input = document.querySelector('#queue-input').value;
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		switch (target.id){
+			// 推入队列
+			case 'in-btn':
+				if (input !== ''){
+					stack.push(input);
+					exe5Result.textContent = `队列为 ${stack.join('->')}`;
+				}else{
+					exe5Result.textContent = `输入不能为空`
+				}
+				break;
+			// 推出队列
+			case 'out-btn':
+				stack.pop();
+				exe5Result.textContent = `队列为 ${stack.join('->')}`;
+				break;
+			// 检查队列
+			case 'empty-btn':
+				exe5Result.textContent = stack.length === 0 ? '队列为空' : '队列不为空';
+				break;
+			// 队列头
+			case 'font-btn':
+				exe5Result.textContent = `队列头为 ${stack[0]}`;
+				break;
+			default:
+				break;
+		}
+	})
 
 </script>
 </html>
