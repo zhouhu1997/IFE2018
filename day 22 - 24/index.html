@@ -67,7 +67,7 @@
 	</div>
 
 	<div class="box">
-		<h1>练习 5</h1>
+		<h1>练习 5 - 队列头在右侧</h1>
 		<input id="queue-input" type="text">
 		<p id="queue-cont">队列内容：apple-&gt;pear</p>
 		<div id="exe5BtnSet">
@@ -77,6 +77,49 @@
 			<button id="empty-btn">判断队列是否为空</button>
 		</div>
 	</div>
+
+	<div class="box">
+		<h1>练习 6 - 队列头在左侧</h1>
+		<input id="queue-input2" type="text">
+		<p id="queue-cont2">队列内容：apple&lt;-pear</p>
+		<div id="exe5BtnSet2">
+			<button id="in-btn2">入队</button>
+			<button id="out-btn2">出队</button>
+			<button id="font-btn2">打印队头元素内容</button>
+			<button id="empty-btn2">判断队列是否为空</button>
+		</div>
+	</div>
+
+	<div class="box">
+		<h1>练习 7 - 栈头在右侧</h1>
+		<input id="queue-input3" type="text">
+		<p id="queue-cont3">队列内容：apple&gt;-pear</p>
+		<div id="exe5BtnSet3">
+			<button id="in-btn3">进栈</button>
+			<button id="out-btn3">退栈</button>
+			<button id="font-btn3">打印栈头元素内容</button>
+			<button id="empty-btn3">判断队列是否为空</button>
+		</div>
+	</div>
+
+	<div class="box">
+		<h1>练习 8 - 栈头在左侧</h1>
+		<input id="queue-input4" type="text">
+		<p id="queue-cont4">队列内容：apple&lt;-pear</p>
+		<div id="exe5BtnSet4">
+			<button id="in-btn4">进栈</button>
+			<button id="out-btn4">退栈</button>
+			<button id="font-btn4">打印栈头元素内容</button>
+			<button id="empty-btn4">判断队列是否为空</button>
+		</div>
+	</div>
+
+	<div class="box">
+		<h1>练习 9</h1>
+		<p>在控制台中查看</p>
+	</div>
+
+
 </body>
 <!--练习 1-->
 <script>
@@ -325,6 +368,94 @@
 
 </script>
 
+<!--练习 4-->
+<script>
+	var tree = {
+		"id": 0,
+		"name": "root",
+		"left": {
+			"id": 1,
+			"name": "Simon",
+			"left": {
+				"id": 3,
+				"name": "Carl",
+				"left": {
+					"id": 7,
+					"name": "Lee",
+					"left": {
+						"id": 11,
+						"name": "Fate"
+					}
+				},
+				"right": {
+					"id": 8,
+					"name": "Annie",
+					"left": {
+						"id": 12,
+						"name": "Saber"
+					}
+				}
+			},
+			"right": {
+				"id": 4,
+				"name": "Tony",
+				"left": {
+					"id": 9,
+					"name": "Candy"
+				}
+			}
+		},
+		"right": {
+			"id": 2,
+			"name": "right",
+			"left": {
+				"id": 5,
+				"name": "Carl",
+			},
+			"right": {
+				"id": 6,
+				"name": "Carl",
+				"right": {
+					"id": 10,
+					"name": "Kai"
+				}
+			}
+		}
+	}
+	findIdByName();
+	console.log(tree.left.name);
+	// 假设id和name均不会重复，根据输入name找到对应的id
+	function findIdByName(name) {
+		for (var i in tree){
+			if (typeof tree[i] !== 'object'){
+
+			}else{
+
+			}
+		}
+	}
+
+	// 假设id和name均不会重复，根据输入id找到对应的name
+	function findNameById(id) {
+
+	}
+
+	// 把这个对象中所有的名字以“前序遍历”的方式全部输出到console中
+	function getListWithDLR() {
+
+	}
+
+	// 把这个对象中所有的名字以“中序遍历”的方式全部输出到console中
+	function getListWithLDR() {
+
+	}
+
+	// 把这个对象中所有的名字以“后序遍历”的方式全部输出到console中
+	function getListWithLRD() {
+
+	}
+</script>
+
 <!--练习 5-->
 <script>
 	var stack = ["apple", "pear"];
@@ -356,7 +487,7 @@
 				break;
 			// 队列头
 			case 'font-btn':
-				exe5Result.textContent = `队列头为 ${stack[0]}`;
+				exe5Result.textContent = `队列头为 ${stack[stack.length - 1]}`;
 				break;
 			default:
 				break;
@@ -364,4 +495,194 @@
 	})
 
 </script>
+
+<!--练习 6-->
+<script>
+	var stack6 = ["apple", "pear"];
+	var exe5Result2 = document.querySelector('#queue-cont2');
+
+	// 添加事件委托
+	document.querySelector('#exe5BtnSet2').addEventListener('click',function () {
+		var input = document.querySelector('#queue-input2').value;
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		switch (target.id){
+			// 推入队列
+			case 'in-btn2':
+				if (input !== ''){
+					stack6.unshift(input)
+					exe5Result2.textContent = `队列为 ${stack6.join('<-')}`;
+				}else{
+					exe5Result2.textContent = `输入不能为空`
+				}
+				break;
+			// 推出队列
+			case 'out-btn2':
+				stack6.shift();
+				exe5Result2.textContent = `队列为 ${stack6.join('<-')}`;
+				break;
+			// 检查队列
+			case 'empty-btn2':
+				exe5Result2.textContent = stack6.length === 0 ? '队列为空' : '队列不为空';
+				break;
+			// 队列头
+			case 'font-btn2':
+				exe5Result2.textContent = `队列头为 ${stack6[0]}`;
+				break;
+			default:
+				break;
+		}
+	})
+
+</script>
+
+<!--练习 7-->
+<script>
+	var stack7 = ["apple", "pear"];
+	var exe5Result3 = document.querySelector('#queue-cont3');
+
+	// 添加事件委托
+	document.querySelector('#exe5BtnSet3').addEventListener('click',function () {
+		var input = document.querySelector('#queue-input3').value;
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		switch (target.id){
+			// 推入队列
+			case 'in-btn3':
+				if (input !== ''){
+					stack7.push(input)
+					exe5Result3.textContent = `栈为 ${stack7.join('->')}`;
+				}else{
+					exe5Result3.textContent = `输入不能为空`
+				}
+				break;
+			// 推出队列
+			case 'out-btn3':
+				stack7.pop();
+				exe5Result3.textContent = `栈为 ${stack7.join('->')}`;
+				break;
+			// 检查队列
+			case 'empty-btn3':
+				exe5Result3.textContent = stack7.length === 0 ? '栈为空' : '栈不为空';
+				break;
+			// 队列头
+			case 'font-btn3':
+				exe5Result3.textContent = `栈头为 ${stack7[0]}`;
+				break;
+			default:
+				break;
+		}
+	})
+
+</script>
+
+<!--练习 8-->
+<script>
+	var stack8 = ["apple", "pear"];
+	var exe5Result4 = document.querySelector('#queue-cont4');
+
+	// 添加事件委托
+	document.querySelector('#exe5BtnSet4').addEventListener('click',function () {
+		var input = document.querySelector('#queue-input4').value;
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		switch (target.id){
+			// 推入队列
+			case 'in-btn4':
+				if (input !== ''){
+					stack8.unshift(input)
+					exe5Result4.textContent = `栈为 ${stack8.join('<-')}`;
+				}else{
+					exe5Result4.textContent = `输入不能为空`
+				}
+				break;
+			// 推出队列
+			case 'out-btn4':
+				stack8.shift();
+				exe5Result4.textContent = `栈为 ${stack8.join('<-')}`;
+				break;
+			// 检查队列
+			case 'empty-btn4':
+				exe5Result4.textContent = stack8.length === 0 ? '栈为空' : '栈不为空';
+				break;
+			// 队列头
+			case 'font-btn4':
+				exe5Result4.textContent = `栈头为 ${stack8[0]}`;
+				break;
+			default:
+				break;
+		}
+	})
+
+</script>
+
+<!-- 练习 9-->
+<script>
+	var arr1 = ['apple', 'dog', 'cat', 'car', 'zoo', 'orange', 'airplane'];
+	var arr2 = [43, 54, 4, -4, 84, 100, 58, 27, 140];
+	var arr3 = [[10, 14], [16, 60], [7, 44], [26, 35], [22, 63]];
+	var arr4 = [
+		{
+			id: 1,
+			name: 'candy',
+			value: 40
+		}, {
+			id: 2,
+			name: 'Simon',
+			value: 50
+		}, {
+			id: 3,
+			name: 'Tony',
+			value: 45
+		}, {
+			id: 4,
+			name: 'Annie',
+			value: 60
+		}
+	];
+	console.log('----练习 9-----');
+	console.log('9.1');
+	console.log(arr1.sort());
+	console.log(arr1.reverse());
+
+	console.log('9.2');
+	var sortArr1 = arr2.sort(function (x,y) {
+		if (x > y){
+			return 1;
+		}else if (x < y){
+			return -1;
+		}else{
+			return 0;
+		}
+	})
+	console.log(sortArr1);
+	var sortArr2 = arr2.sort(function (x,y) {
+		if (x > y){
+			return -1;
+		}else if (x < y){
+			return 1;
+		}else{
+			return 0;
+		}
+	})
+	console.log(sortArr2);
+	console.log('9.2');
+	var sortArr3 = arr3.sort(function (x,y) {
+		if (x[1] > y[1]){
+			return -1;
+		}else if (x[1] < y[1]){
+			return 1;
+		}else{
+			return 0;
+		}
+	})
+	console.log(sortArr3);
+	console.log('9.3');
+	var sortArr4 = arr4.sort(function (x,y) {
+		return x.value -y.value;
+	})
+	console.log(sortArr4);
+
+</script>
+
 </html>
