@@ -340,7 +340,7 @@
 	}
 
 	// 测试用例
-	console.log('测试1');
+	console.log('\n\n\n 练习3 \n\n\n');
 	console.log(diyTrim(' a f b    ')); // ->a f b
 	console.log(diyTrim('    ffdaf    ')); // ->ffdaf
 	console.log(diyTrim('1    ')); // ->1
@@ -374,6 +374,7 @@
 
 <!--练习 4-->
 <script>
+	console.log('\n\n\n 练习4 \n\n\n');
 	var tree = {
 		"id": 0,
 		"name": "root",
@@ -427,28 +428,28 @@
 		}
 	}
 	//根据名字找id
-	console.log('根据name找到对应的id：');
+	console.log('\n根据name找到对应的id：');
 	console.log('name:root, id:' + findIdByName('root')); // ->0
     console.log('name:Carl, id:' + findIdByName('Carl')); // ->3
     console.log('name:Annie, id:' + findIdByName('Annie')); // ->8
     console.log('name:Kai, id:' + findIdByName('Kai')); // ->10
 	
 	//根据id找名字
-	console.log('根据id找到对应的name：');
+	console.log('\n根据id找到对应的name：');
     console.log('id:2, name:' + findNameById(1)); // ->Simon
     console.log('id:10, name:' + findNameById(10)); // ->Kai
     console.log('id:12, name:' + findNameById(12)); // ->Saber
 
     //前序遍历
-	console.log('所有名字前序遍历：');
+	console.log('\n所有名字前序遍历：');
     getListWithDLR();
     
 	//中序遍历
-    console.log('所有名字中序遍历：');
+    console.log('\n所有名字中序遍历：');
     getListWithLDR();
     
 	//后续遍历
-    console.log('所有名字后序遍历：');
+    console.log('\n所有名字后序遍历：');
     getListWithLRD();
 	
 	// 假设id和name均不会重复，根据输入name找到对应的id
@@ -697,12 +698,12 @@
 			value: 60
 		}
 	];
-	console.log('----练习 9-----');
-	console.log('9.1');
+	console.log('\n\n\n 练习 9 \n\n\n');
+	console.log('\n 9.1 \n\n');
 	console.log(arr1.sort());
 	console.log(arr1.reverse());
 
-	console.log('9.2');
+	console.log('\n 9.2 \n\n');
 	var sortArr1 = arr2.sort(function (x,y) {
 		if (x > y){
 			return 1;
@@ -723,7 +724,6 @@
 		}
 	})
 	console.log(sortArr2);
-	console.log('9.2');
 	var sortArr3 = arr3.sort(function (x,y) {
 		if (x[1] > y[1]){
 			return -1;
@@ -734,7 +734,7 @@
 		}
 	})
 	console.log(sortArr3);
-	console.log('9.3');
+	console.log('\n 9.3 \n\n');
 	var sortArr4 = arr4.sort(function (x,y) {
 		return x.value -y.value;
 	})
