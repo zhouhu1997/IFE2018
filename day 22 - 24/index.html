@@ -728,5 +728,47 @@
 		[7, "Area1-2-3", 4],
 		[8, "Area2-2-1", 6],
 	];
+
+	
+    // 遍历数组组装对象，不处理数据异常情况
+    var menuObject = {};
+        
+    // 循环查找父级元素
+    var objectLoop = function(obj, id) {
+    	// 存放元素
+   		var parent = null;
+    	// 根据id查找key
+        for(key in obj) {
+            if (key === id) {
+              // 存在key但并非对象，需先处理成对象
+              if (!obj[key]) obj[key] = {};
+              // 找到后退出循环
+              parent = obj[key];
+              break;
+            } else if (obj[key].subMenu) {
+              // 继续查找子级
+              parent = objectLoop(obj[key].subMenu, id);
+              // 找到后退出循环
+              if (parent) break;
+            }
+        }
+        return parent;
+    }
+    menuArr.map(function(item) {
+        // key转化为字符串
+        var keyP = item[2].toString(); // 父级key
+        var keyC = item[0].toString(); // 数据对应key值
+        // 查找父级
+        var parentObj = objectLoop(menuObject, keyP);
+        // 无父级时，父级为根对象
+        if (!parentObj) {
+        	menuObject[keyC] = { name: item[1] };
+        } else {
+        // 若subMenu非对象，需先处理成对象
+        if (!parentObj.subMenu) parentObj.subMenu = {};
+            parentObj.subMenu[keyC] = { name: item[1] };
+          }
+        })
+	console.log(menuObject);
 </script>
 </html>
