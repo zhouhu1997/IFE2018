@@ -37,9 +37,14 @@
 
 * #### 2018.05.18 练习8 (让你和页面对话)
 
-    <a href="//ife.baidu.com/course/detail/id/48">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day20%20-%2021/index.html">Demo<a/>
+    <a href="//ife.baidu.com/course/detail/id/49">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day20%20-%2021/index.html">Demo<a/>
+
+* #### 2018.05.22 练习9 (JavaScript里面的居民们)
+
+    <a href="//ife.baidu.com/course/detail/id/50">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2022%20-%2024/index.html">Demo<a/>
 
 ---
+
 ### 设计学院
 
 * #### 1. 制作一个简单的菜单
