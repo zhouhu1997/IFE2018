@@ -7,40 +7,22 @@
 		.box{
 			margin: 0 auto 10px auto;
 			border: 1px solid cornflowerblue;
+			padding: 10px;
 		}
 	</style>
 </head>
 <body>
-<!--我们现在来做一个最简单的时钟，通过小练习来学习 Date，复习定时，然后再练习一下函数的封装-->
-<!--具体需求如下：-->
-
-<!--在页面中显示当前日期及时间，按秒更新-->
-<!--格式为 YYYY 年 MM 月 DD 日 星期 D HH:mm:ss-->
-<!--注意位数的补齐，比如：-->
-<!--&#45;&#45; 假设时间为2008年10月10日星期一的12点12分12秒，显示2008年10月10日星期一 12:12:12-->
-<!--&#45;&#45; 假设时间为2008年1月1日星期一的3点2分2秒，显示2008年01月01日星期一 03:02:02-->
-<!--编码过程中，我们希望你注意对函数的封装，尽量让一个函数就做一个事情，而不要把所有的功能、代码揉在一起：-->
-
-<!--封装一个函数，来根据某个日期返回这一天是星期几-->
-<!--封装一个函数，把月、日、小时等出现个位数的情况前面补充0，补充为两位，比如1变为01-->
-<!--封装一个函数，把最后的日期时间，按照要求的格式进行包装-->
-<!--可能不止上面这些，尽可能地进行功能的解耦和拆解-->
 	<div class="box">
+		<h1>编码练习 1.1</h1>
 		<p id="time"></p>
 	</div>
 	<div class="box">
+		<h1>编码练习 1.2</h1>
 		<p id="time2"></p>
 	</div>
-<!--现在我们要做一个稍微复杂的东西，如下HTML，有一堆Select用于选择日期和时间，在选择后，实时在 id 为 result-wrapper 的 p 标签中显示所选时间和当前时间的差值。-->
 
-<!--使用上方的HTML结构（可以根据需要自行微调）为基础编写JavaScript代码-->
-<!--当变更任何一个select选择时，更新 result-wrapper 的内容-->
-<!--当所选时间早于现在时间时，文案为 现在距离 "所选时间" 已经过去 xxxx-->
-<!--当所选时间晚于现在时间时，文案为 现在距离 "所选时间" 还有 xxxx-->
-<!--注意当前时间经过所选时间时候的文案变化-->
-<!--注意选择不同月份的时候，日期的可选范围不一样，比如1月可以选31天，11月只有30天，注意闰年-->
-<!--同样，需要注意，通过优雅的函数封装，使得代码更加可读且可维护-->
 	<div class="box" id="selections">
+		<h1>编码练习 2</h1>
 		<select id="year-select">
 		</select>
 
@@ -53,7 +35,7 @@
 		<select id="hour-select">
 		</select>
 
-		<select id="minite-select">
+		<select id="minute-select">
 		</select>
 
 		<select id="second-select">
@@ -61,38 +43,9 @@
 
 		<p id="result-wrapper"></p>
 	</div>
+
 <script>
-	var time = document.querySelector('#time');
-	var time2 = document.querySelector('#time2');
-	var weekday= ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
-	var weekday2 = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-	var date = new Date();
-	//time.textContent = displayTime('cn');
-	//time2.textContent = displayTime('-');
-
-	//设置 timeInterval
-	setInterval(function () {
-		//time.textContent = displayTime('cn');
-		//time2.textContent = displayTime('-');
-	},1000)
-
-	// 输出时间
-	function displayDate(form) {
-		var result = '';
-		switch (form){
-			case 'cn':
-				result = `现在时间是 ${date.getFullYear()} 年 ${date.getMonth()} 月 ${date.getDate()} 日 ${weekDays(date.getDay(), 'cn')}`;
-				break;
-			case '-':
-				result = `现在时间是 ${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${weekDays(date.getDay(), 'en')} ${checkTime(date.getHours())}:${checkTime(date.getMinutes())}:${checkTime(date.getSeconds())}`;
-				break;
-			default:
-				break;
-		}
-		return result;
-	}
-
-
+    // 公用方法
 	// 位数补全
 	function checkTime(i)
 	{
@@ -116,14 +69,50 @@
 		}
 		return day;
 	}
-</script>
 
-<script>
+
+	// 练习 1
+    //定义变量
+	var time = document.querySelector('#time');
+	var time2 = document.querySelector('#time2');
+	var weekday= ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+	var weekday2 = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+
+	//设置 timeInterval
+	setInterval(function () {
+		var date = new Date();
+		time.textContent = displayTime(':','cn',date);
+		time2.textContent = displayTime('-','en',date);
+	},100)
+
+	// 输出时间 设置timeFormat可以设置年月日输出格式, weekdayFormat可以设置星期的输出格式, date为输入时间
+	function displayTime(timeFormat,weekdayFormat,date) {
+		var result = '';
+		//选择年月日输出格式
+		switch (timeFormat){
+			case ':':
+				result = `现在时间是 ${date.getFullYear()} 年 ${checkTime(date.getMonth())} 月 ${checkTime(date.getDate())} 日 ${weekDays(date.getDay(), weekdayFormat)} ${checkTime(date.getHours())}:${checkTime(date.getMinutes())}:${checkTime(date.getSeconds())}`;
+				break;
+			case '-':
+				//选择小时输出格式
+				var hours =  '';
+				hours = (0 < date.getHours() <=12) ? `${checkTime(date.getHours())}:${checkTime(date.getMinutes())}:${checkTime(date.getSeconds())} AM` : `${checkTime(date.getHours() - 12)}:${checkTime(date.getMinutes())}:${checkTime(date.getSeconds())} PM`;
+				result = `现在时间是 ${date.getFullYear()}-${checkTime(date.getMonth())}-${checkTime(date.getDate())} ${weekDays(date.getDay(), weekdayFormat)} ${hours}`;
+				break;
+			default:
+				break;
+		}
+		return result;
+	}
+
+	// 练习 2
+    //定义变量
 	var year = document.querySelector('#year-select');
 	var month = document.querySelector('#month-select');
 	var day = document.querySelector('#day-select');
 	var hour = document.querySelector('#hour-select');
-	var minute = document.querySelector('#minite-select');
+	var minute = document.querySelector('#minute-select');
 	var second = document.querySelector('#second-select');
 	var selections = document.querySelector('#selections');
 	var result = document.querySelector('#result-wrapper');
@@ -174,7 +163,7 @@
 		}
 	},100);
 
-	// 为select的添加时间委托以减少代码量
+	// 为select添加事件委托以减少代码量
 	selections.addEventListener('change',function () {
 		var ev = ev || window.event;
 		var target = ev.target || ev.srcElement;
@@ -208,7 +197,8 @@
 			}
 		}
 	})
-	// 判断闰年
+
+	// 判断是否为闰年
 	function month29Day() {
 		if ((year.value % 4 === 0 && year.value % 100 !== 0) || year.value % 400 === 0){
 			day.innerHTML = dateSelector(1,29);
