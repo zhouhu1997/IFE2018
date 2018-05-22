@@ -13,16 +13,22 @@
 </head>
 <body>
 	<div class="box">
-		<h1>编码练习 1.1</h1>
+		<h1>练习 1</h1>
+		<p>结果看console</p>
+		<button id="btn1"> Go</button>
+	</div>
+
+	<div class="box">
+		<h1>编码练习 2.1</h1>
 		<p id="time"></p>
 	</div>
 	<div class="box">
-		<h1>编码练习 1.2</h1>
+		<h1>编码练习 2.2</h1>
 		<p id="time2"></p>
 	</div>
 
 	<div class="box" id="selections">
-		<h1>编码练习 2</h1>
+		<h1>编码练习 3</h1>
 		<select id="year-select">
 		</select>
 
@@ -45,6 +51,44 @@
 	</div>
 
 <script>
+	// go
+	function Go() {
+		console.log("Go");
+	}
+	// 走走走
+	function GoSteps(n) {
+		console.log('----- GoStep(' + n + ') -----')
+		// 缺少参数默认执行一次Go()
+		if (n === undefined) {
+			return Go();
+		}
+		// 当n < 0为真才继续执行
+		if (n < 0) return false;
+		// 参数处理成整数，向下取整
+		n = Math.floor(n);
+		// 循环触发
+		while (n--) {
+			Go();
+		}
+	}
+	// 点击触发
+	document.getElementById('btn1').onclick = function () {
+		GoSteps(10); // Go 10次
+		GoSteps(1); // Go 1次
+		GoSteps(); // Go 1次，认为缺少参数时，默认参数为1
+		GoSteps(0);  // 0次
+		GoSteps(-1);  // 0次
+		GoSteps(1.4);  // Go 1次
+		GoSteps(1.6);  // Go 1次
+		GoSteps(-1);  // 0次
+		GoSteps(true);  // Go 1次
+		GoSteps(false);  // 0次
+		GoSteps("Test");  // 0次
+		GoSteps(NaN);  // 0次
+		GoSteps(null);  // 0次
+	}
+
+	// 练习 2
     // 公用方法
 	// 位数补全
 	function checkTime(i)
@@ -55,7 +99,7 @@
 	}
 
 	// 转换星期格式
-	function weekDays(i, form) {
+    function weekDays(i, form) {
 		var day = '';
 		switch (form){
 			case 'cn':
@@ -71,8 +115,8 @@
 	}
 
 
-	// 练习 1
     //定义变量
+
 	var time = document.querySelector('#time');
 	var time2 = document.querySelector('#time2');
 	var weekday= ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
@@ -106,7 +150,7 @@
 		return result;
 	}
 
-	// 练习 2
+	// 练习 3
     //定义变量
 	var year = document.querySelector('#year-select');
 	var month = document.querySelector('#month-select');
@@ -141,6 +185,8 @@
 		resultDate.setHours(hour.value);
 		resultDate.setMinutes(minute.value);
 		resultDate.setSeconds(second.value);
+		//resultDate = year.value + '-' + month.value - 1 + '-' + day.value + ' '
+		//	+ hour.value + ':' + minute.value + ':' + second.value;
 	}
 
 	setInterval(function () {
