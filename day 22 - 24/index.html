@@ -453,7 +453,7 @@
     getListWithLRD();
 	
 	// 假设id和name均不会重复，根据输入name找到对应的id
-	function findIdByName(name, obj) {
+	function findIdByName(name) {
 		var loop = function (obj) {
           // 对象不存在时返回
           if (!obj) return false;
@@ -468,7 +468,7 @@
 	}
 
 	// 假设id和name均不会重复，根据输入id找到对应的name
-	function findNameById(id, obj) {
+	function findNameById(id) {
 		//  创建循环方法
         var loop = function (obj) {
           // 对象不存在时返回

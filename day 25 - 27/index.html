@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第二十五天到第二十七天 倒数开始 滴答滴 滴答滴</title>
+	<style>
+		.box{
+			margin: 0 auto 10px auto;
+			border: 1px solid cornflowerblue;
+		}
+	</style>
+</head>
+<body>
+<!--我们现在来做一个最简单的时钟，通过小练习来学习 Date，复习定时，然后再练习一下函数的封装-->
+<!--具体需求如下：-->
+
+<!--在页面中显示当前日期及时间，按秒更新-->
+<!--格式为 YYYY 年 MM 月 DD 日 星期 D HH:mm:ss-->
+<!--注意位数的补齐，比如：-->
+<!--&#45;&#45; 假设时间为2008年10月10日星期一的12点12分12秒，显示2008年10月10日星期一 12:12:12-->
+<!--&#45;&#45; 假设时间为2008年1月1日星期一的3点2分2秒，显示2008年01月01日星期一 03:02:02-->
+<!--编码过程中，我们希望你注意对函数的封装，尽量让一个函数就做一个事情，而不要把所有的功能、代码揉在一起：-->
+
+<!--封装一个函数，来根据某个日期返回这一天是星期几-->
+<!--封装一个函数，把月、日、小时等出现个位数的情况前面补充0，补充为两位，比如1变为01-->
+<!--封装一个函数，把最后的日期时间，按照要求的格式进行包装-->
+<!--可能不止上面这些，尽可能地进行功能的解耦和拆解-->
+	<div class="box">
+		<p id="time"></p>
+	</div>
+	<div class="box">
+		<p id="time2"></p>
+	</div>
+<!--现在我们要做一个稍微复杂的东西，如下HTML，有一堆Select用于选择日期和时间，在选择后，实时在 id 为 result-wrapper 的 p 标签中显示所选时间和当前时间的差值。-->
+
+<!--使用上方的HTML结构（可以根据需要自行微调）为基础编写JavaScript代码-->
+<!--当变更任何一个select选择时，更新 result-wrapper 的内容-->
+<!--当所选时间早于现在时间时，文案为 现在距离 "所选时间" 已经过去 xxxx-->
+<!--当所选时间晚于现在时间时，文案为 现在距离 "所选时间" 还有 xxxx-->
+<!--注意当前时间经过所选时间时候的文案变化-->
+<!--注意选择不同月份的时候，日期的可选范围不一样，比如1月可以选31天，11月只有30天，注意闰年-->
+<!--同样，需要注意，通过优雅的函数封装，使得代码更加可读且可维护-->
+	<div class="box" id="selections">
+		<select id="year-select">
+		</select>
+
+		<select id="month-select">
+		</select>
+
+		<select id="day-select">
+		</select>
+
+		<select id="hour-select">
+		</select>
+
+		<select id="minite-select">
+		</select>
+
+		<select id="second-select">
+		</select>
+
+		<p id="result-wrapper"></p>
+	</div>
+<script>
+	var time = document.querySelector('#time');
+	var time2 = document.querySelector('#time2');
+	var weekday= ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+	var weekday2 = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+	var date = new Date();
+	//time.textContent = displayTime('cn');
+	//time2.textContent = displayTime('-');
+
+	//设置 timeInterval
+	setInterval(function () {
+		//time.textContent = displayTime('cn');
+		//time2.textContent = displayTime('-');
+	},1000)
+
+	// 输出时间
+	function displayDate(form) {
+		var result = '';
+		switch (form){
+			case 'cn':
+				result = `现在时间是 ${date.getFullYear()} 年 ${date.getMonth()} 月 ${date.getDate()} 日 ${weekDays(date.getDay(), 'cn')}`;
+				break;
+			case '-':
+				result = `现在时间是 ${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${weekDays(date.getDay(), 'en')} ${checkTime(date.getHours())}:${checkTime(date.getMinutes())}:${checkTime(date.getSeconds())}`;
+				break;
+			default:
+				break;
+		}
+		return result;
+	}
+
+
+	// 位数补全
+	function checkTime(i)
+	{
+		if (i<10)
+		{i="0" + i}
+		return i;
+	}
+
+	// 转换星期格式
+	function weekDays(i, form) {
+		var day = '';
+		switch (form){
+			case 'cn':
+				day = weekday[i];
+				break;
+			case 'en':
+				day = weekday2[i];
+				break;
+			default:
+				break;
+		}
+		return day;
+	}
+</script>
+
+<script>
+	var year = document.querySelector('#year-select');
+	var month = document.querySelector('#month-select');
+	var day = document.querySelector('#day-select');
+	var hour = document.querySelector('#hour-select');
+	var minute = document.querySelector('#minite-select');
+	var second = document.querySelector('#second-select');
+	var selections = document.querySelector('#selections');
+	var result = document.querySelector('#result-wrapper');
+	var resultDate = new Date();
+
+	// 写入html option
+	function dateSelector(startNumber, endNumber){
+		var string = '';
+		for (var i = startNumber; i <= endNumber; i++){
+			string += '\<option value\='+i+'\>'+checkTime(i)+'\<\/option\>\n';
+		}
+		return string;
+	}
+
+	year.innerHTML = dateSelector(2001,2032);
+	month.innerHTML = dateSelector(1,12);
+	day.innerHTML = dateSelector(1,31);
+	hour.innerHTML =  dateSelector(0,23);
+	minute.innerHTML =  dateSelector(0,59);
+	second.innerHTML =  dateSelector(0,59);
+
+	function setTime(){
+		resultDate.setFullYear(year.value);
+		resultDate.setMonth(month.value - 1);
+		resultDate.setDate(day.value);
+		resultDate.setHours(hour.value);
+		resultDate.setMinutes(minute.value);
+		resultDate.setSeconds(second.value);
+	}
+
+	setInterval(function () {
+		// 设置resultDate为输入框时间
+		setTime();
+		// 获得现在时间
+		var now = new Date();
+		// 判断日期是过去还是将来
+		var timeDiff = now > resultDate ? new Date(now - resultDate) : new Date(resultDate - now);
+		// 获取距离选中日期的天数, 小时数, 分钟数, 秒数 - 向下取整
+		var dayDiff = Math.floor(timeDiff/(1000 * 60 * 60 * 24));
+		var hoursDiff = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minDiff = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+		var secDiff = Math.floor((timeDiff % (1000 * 60)) / 1000);
+		// 根据日期的将来还是过去为result设置输出
+		if (now > resultDate){
+			result.textContent =  `现在距离 ${year.value}年${checkTime(month.value)}月${checkTime(day.value)}日 ${weekDays(resultDate.getDay(), 'cn')} ${checkTime(hour.value)}:${checkTime(minute.value)}:${checkTime(second.value)} 已经过去了 ${dayDiff} 天 ${hoursDiff} 小时 ${minDiff} 分 ${secDiff} 秒`;
+		}else {
+			result.textContent =  `现在距离 ${year.value}年${checkTime(month.value)}月${checkTime(day.value)}日 ${weekDays(resultDate.getDay(), 'cn')} ${checkTime(hour.value)}:${checkTime(minute.value)}:${checkTime(second.value)} 还有 ${dayDiff} 天 ${hoursDiff} 小时 ${minDiff} 分 ${secDiff} 秒`;
+		}
+	},100);
+
+	// 为select的添加时间委托以减少代码量
+	selections.addEventListener('change',function () {
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		if (target.nodeName.toLowerCase() === 'select'){
+			switch (target.id){
+				case 'year-select':
+					if (month.value === '2'){
+						// 判断闰年
+						month29Day();
+					}
+					setTime();
+					break;
+				case 'month-select':
+					// 有31号的月份
+					var month31days = ['1','3','5','7','8','10','12'];
+					if (month.value === '2'){
+						// 调用判断闰年的方法
+						month29Day();
+					} else if (month31days.indexOf(month.value) > 0){
+						//设置天数为31天
+						day.innerHTML = dateSelector(1,31);
+					}else{
+						//设置天数为30天
+						day.innerHTML = dateSelector(1,30);
+					}
+					setTime();
+					break;
+				default:
+					setTime();
+					break;
+			}
+		}
+	})
+	// 判断闰年
+	function month29Day() {
+		if ((year.value % 4 === 0 && year.value % 100 !== 0) || year.value % 400 === 0){
+			day.innerHTML = dateSelector(1,29);
+		}else{
+			day.innerHTML = dateSelector(1,28);
+		}
+	}
+
+</script>
+</body>
+</html>
