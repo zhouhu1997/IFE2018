@@ -160,10 +160,9 @@
 	var second = document.querySelector('#second-select');
 	var selections = document.querySelector('#selections');
 	var result = document.querySelector('#result-wrapper');
-	var resultDate = new Date();
-
-	// 写入html option
-	function dateSelector(startNumber, endNumber){
+	var dayLength = 31;
+	var timeInterval = null;
+	var initHtml = function dateSelector(startNumber, endNumber){
 		var string = '';
 		for (var i = startNumber; i <= endNumber; i++){
 			string += '\<option value\='+i+'\>'+checkTime(i)+'\<\/option\>\n';
@@ -171,56 +170,59 @@
 		return string;
 	}
 
-	year.innerHTML = dateSelector(2001,2032);
-	month.innerHTML = dateSelector(1,12);
-	day.innerHTML = dateSelector(1,31);
-	hour.innerHTML =  dateSelector(0,23);
-	minute.innerHTML =  dateSelector(0,59);
-	second.innerHTML =  dateSelector(0,59);
-
-	function setTime(){
-		resultDate.setFullYear(year.value);
-		resultDate.setMonth(month.value - 1);
-		resultDate.setDate(day.value);
-		resultDate.setHours(hour.value);
-		resultDate.setMinutes(minute.value);
-		resultDate.setSeconds(second.value);
-		//resultDate = year.value + '-' + month.value - 1 + '-' + day.value + ' '
-		//	+ hour.value + ':' + minute.value + ':' + second.value;
+	// 写入html函数
+	function init() {
+		year.innerHTML = initHtml(2001,2032);
+		month.innerHTML = initHtml(1,12);
+		day.innerHTML = initHtml(1,31);
+		hour.innerHTML =  initHtml(0,23);
+		minute.innerHTML =  initHtml(0,59);
+		second.innerHTML =  initHtml(0,59);
+		showTime();
 	}
+	//初始化, 写入html
+	init();
 
-	setInterval(function () {
-		// 设置resultDate为输入框时间
-		setTime();
-		// 获得现在时间
-		var now = new Date();
-		// 判断日期是过去还是将来
-		var timeDiff = now > resultDate ? new Date(now - resultDate) : new Date(resultDate - now);
-		// 获取距离选中日期的天数, 小时数, 分钟数, 秒数 - 向下取整
-		var dayDiff = Math.floor(timeDiff/(1000 * 60 * 60 * 24));
-		var hoursDiff = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		var minDiff = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-		var secDiff = Math.floor((timeDiff % (1000 * 60)) / 1000);
-		// 根据日期的将来还是过去为result设置输出
-		if (now > resultDate){
-			result.textContent =  `现在距离 ${year.value}年${checkTime(month.value)}月${checkTime(day.value)}日 ${weekDays(resultDate.getDay(), 'cn')} ${checkTime(hour.value)}:${checkTime(minute.value)}:${checkTime(second.value)} 已经过去了 ${dayDiff} 天 ${hoursDiff} 小时 ${minDiff} 分 ${secDiff} 秒`;
-		}else {
-			result.textContent =  `现在距离 ${year.value}年${checkTime(month.value)}月${checkTime(day.value)}日 ${weekDays(resultDate.getDay(), 'cn')} ${checkTime(hour.value)}:${checkTime(minute.value)}:${checkTime(second.value)} 还有 ${dayDiff} 天 ${hoursDiff} 小时 ${minDiff} 分 ${secDiff} 秒`;
-		}
-	},100);
+	// 计算时间
+	function showTime(){
+		var dateString = year.value + '-' + month.value + '-' + day.value + ' ' + hour.value + ':' + minute.value + ':' + second.value;
+		var resultDate = new Date(dateString);
+		timeInterval = setInterval(function () {
+			// 获得现在时间
+			var now = new Date();
+			// 计算天时分秒相差值
+			var diff = now.getTime() / 1000 - resultDate.getTime() / 1000;
+			if (diff < 0) diff = Math.abs(diff);
+			var dayDiff = parseInt(diff / 86400, 10); // 一天86400秒
+			diff = diff % 86400;
+			var hoursDiff = parseInt(diff / 3600, 10); // 一小时 3600 秒
+			diff = diff % 3600;
+			var minDiff = parseInt(diff / 60, 10); // 一分钟 60 秒
+			diff = diff % 60;
+			var secDiff = parseInt(diff % 60, 10);
+
+			// 根据日期的将来还是过去为result设置输出
+			if (now > resultDate){
+				result.textContent =  `现在距离 ${year.value}年${checkTime(month.value)}月${checkTime(day.value)}日 ${weekDays(resultDate.getDay(), 'cn')} ${checkTime(hour.value)}:${checkTime(minute.value)}:${checkTime(second.value)} 已经过去了 ${dayDiff} 天 ${hoursDiff} 小时 ${minDiff} 分 ${secDiff} 秒`;
+			}else {
+				result.textContent =  `现在距离 ${year.value}年${checkTime(month.value)}月${checkTime(day.value)}日 ${weekDays(resultDate.getDay(), 'cn')} ${checkTime(hour.value)}:${checkTime(minute.value)}:${checkTime(second.value)} 还有 ${dayDiff} 天 ${hoursDiff} 小时 ${minDiff} 分 ${secDiff} 秒`;
+			}
+		},100);
+	}
 
 	// 为select添加事件委托以减少代码量
 	selections.addEventListener('change',function () {
 		var ev = ev || window.event;
 		var target = ev.target || ev.srcElement;
 		if (target.nodeName.toLowerCase() === 'select'){
+			if (timeInterval) window.clearInterval(timeInterval);//清楚计时器
 			switch (target.id){
 				case 'year-select':
 					if (month.value === '2'){
 						// 判断闰年
 						month29Day();
 					}
-					setTime();
+					showTime();
 					break;
 				case 'month-select':
 					// 有31号的月份
@@ -230,27 +232,50 @@
 						month29Day();
 					} else if (month31days.indexOf(month.value) > 0){
 						//设置天数为31天
-						day.innerHTML = dateSelector(1,31);
+						// 通过添加dom, 而不是更新整个dom来尽量减少dom操作
+						changeDay(31)
 					}else{
 						//设置天数为30天
-						day.innerHTML = dateSelector(1,30);
+						changeDay(30);
 					}
-					setTime();
+					showTime();
 					break;
 				default:
-					setTime();
+					showTime();
 					break;
 			}
 		}
 	})
 
-	// 判断是否为闰年
+	// 判断是否为闰年函数
 	function month29Day() {
 		if ((year.value % 4 === 0 && year.value % 100 !== 0) || year.value % 400 === 0){
-			day.innerHTML = dateSelector(1,29);
+			//设置天数为29天
+			changeDay(29);
 		}else{
-			day.innerHTML = dateSelector(1,28);
+			//设置天数为28天
+			changeDay(28);
 		}
+	}
+
+	// 动态添加或者删除dom , 而不是更改整个dom, 以此减少dom的操作
+	function changeDay(setDay) {
+		var dayDiff = 0;
+		// 判断是添加日期还是删除日期
+		if (setDay > dayLength){
+			dayDiff = setDay - dayLength
+			for (var i = 0; i < dayDiff; i++){
+				day.options.add(new Option((dayLength + 1).toString(),(dayLength + 1).toString()));
+				dayLength++;
+			}
+		} else if(setDay < dayLength){
+			dayDiff = dayLength - setDay;
+			for (var i = 0; i < dayDiff; i++){
+				day.options.remove(dayLength - 1);
+				dayLength--;
+			}
+		}
+
 	}
 
 </script>
