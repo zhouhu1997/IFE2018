@@ -42,6 +42,10 @@
 * #### 2018.05.22 练习9 (JavaScript里面的居民们)
 
     <a href="//ife.baidu.com/course/detail/id/50">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2022%20-%2024/index.html">Demo<a/>
+    
+* #### 2018.05.23 练习10 (倒数开始 滴答滴 滴答滴)
+
+    <a href="//ife.baidu.com/course/detail/id/51">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2025%20-%2027/index.html">Demo<a/>
 
 ---
 
