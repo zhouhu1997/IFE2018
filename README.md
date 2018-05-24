@@ -46,6 +46,10 @@
 * #### 2018.05.23 练习10 (倒数开始 滴答滴 滴答滴)
 
     <a href="//ife.baidu.com/course/detail/id/51">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2025%20-%2027/index.html">Demo<a/>
+    
+* #### 2018.05.24 练习11 (给爱的人发个邮件吧)
+
+    <a href="//ife.baidu.com/course/detail/id/52">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2028%20-%2030/index.html">Demo<a/>
 
 ---
 
