@@ -50,6 +50,14 @@
 		color: #C6C9C5;
 	}
 
+	#email-sug-wrapper li .selected{
+		background: #C5DDEB;
+	}
+
+	#email-sug-wrapper li:hover{
+		background: #F5C7CF;
+	}
+
 </style>
 <body>
 <div class="wrapper">
@@ -69,6 +77,9 @@
 	var sug = document.querySelector('#email-sug-wrapper');
 	var lis = document.getElementsByTagName('li');
 
+	// 默认获取焦点
+	input.focus();
+
 	input.addEventListener('input',function () {
 		displayPostfixList();
 		(input.value).toString().trim() === '' ? sug.style.display = 'none' : sug.style.display = 'block';
@@ -79,12 +90,13 @@
 	}
 
 
-
+	// 添加li
 	function createLi(obj) {
 		sug.innerHTML = '';
 		for(var i  = 0; i < obj.length; i++){
 			var li=document.createElement("li");
-			li.textContent = getUserInput().indexOf('@') >= 0 ? getUserInput() + obj[i] : getUserInput() +'@'+ obj[i];
+			var arr = getUserInput().split('@');
+			li.textContent = arr.length > 1 ?  arr[0] + '@' +obj[i] : getUserInput() +'@'+ obj[i];
 			sug.appendChild(li);
 		}
 	}
@@ -92,19 +104,25 @@
 	function displayPostfixList(){
 		var filterList = [];
 		//用来拼接的用户输入内容 = 获取用户输入
-		var keyPosition = getUserInput().indexOf('@');
-		var lengthAfterKey = getUserInput().length - keyPosition - 1;
-		// 判断用户有没输入 @ 或 @后面有没有输入内容
-		if (lengthAfterKey === 0 || keyPosition < 0){
-			createLi(postfixList);
-		} else {
-			var sliceStr = getUserInput().slice(keyPosition + 1);
+		var str = getUserInput().split('@')[1];
+		// 不存在的话 li为整个postfixList
+		if (!str) createLi(postfixList);
+		else{
+			var strl = str.length;
 			for (var i in postfixList){
-				if (postfixList[i].match(sliceStr)){
-					filterList.push(postfixList[i]);
+				var val = postfixList[i];
+				// 挨个字符对比
+				for (var j = 0; j < strl; j ++) {
+					if (val[j] !== str[j]) break;
+					// 匹配最后一个字符成功后添加符合项
+					if (j === strl - 1) filterList.push(postfixList[i]);
 				}
 			}
-			createLi(filterList);
+			// 匹配不成功返回所有后缀
+			if (!filterList.length) createLi(postfixList);
+			else{
+				createLi(filterList);
+			}
 		}
 
 	}
