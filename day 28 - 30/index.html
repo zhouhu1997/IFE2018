@@ -203,12 +203,8 @@
 					if (j === strl - 1) filterList.push(postfixList[i]);
 				}
 			}
-			// 匹配不成功返回postfixList
-			if (!filterList.length) return sug.innerHTML = createLi(postfixList);
-			else{
-				// 匹配成功返回filterList
-				return sug.innerHTML = createLi(filterList);
-			}
+			// 匹配成功返回filterList
+			return sug.innerHTML = createLi(filterList);
 		}
 	}
 
