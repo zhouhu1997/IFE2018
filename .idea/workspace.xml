@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/day 25 - 27/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day 25 - 27/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day 28 - 30/流程图.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day 28 - 30/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day 28 - 30/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,20 +27,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day 28 - 30/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="241" column="15" selection-start-line="241" selection-start-column="15" selection-end-line="241" selection-end-column="15" />
+            <state relative-caret-position="-757">
+              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day 25 - 27/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="251" column="60" selection-start-line="251" selection-start-column="60" selection-end-line="251" selection-end-column="60" />
+            <state relative-caret-position="436">
+              <caret line="267" column="53" lean-forward="true" selection-start-line="267" selection-start-column="53" selection-end-line="267" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -111,8 +113,8 @@
         <option value="$PROJECT_DIR$/day 25 - 27/index2.html" />
         <option value="$PROJECT_DIR$/day20 - 21/index.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/day 28 - 30/index.html" />
         <option value="$PROJECT_DIR$/day 25 - 27/index.html" />
+        <option value="$PROJECT_DIR$/day 28 - 30/index.html" />
       </list>
     </option>
   </component>
@@ -200,17 +202,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/day20 - 21" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/day2/exe1" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/day4/img" />
       <recent name="$PROJECT_DIR$/day4" />
       <recent name="$PROJECT_DIR$/day4/css" />
       <recent name="$PROJECT_DIR$/Learn CSS/No.7 - 使用 animate.css 实现登录框" />
       <recent name="$PROJECT_DIR$/Learn CSS/No.6 - 利用 CSS animation 制作slider" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/day 28 - 30" />
+      <recent name="$PROJECT_DIR$/day20 - 21" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/day2/exe1" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -251,12 +254,12 @@
       <workItem from="1526137184281" duration="327000" />
       <workItem from="1526224750592" duration="4528000" />
       <workItem from="1526230853213" duration="87051000" />
-      <workItem from="1527164049740" duration="2440000" />
+      <workItem from="1527164049740" duration="3452000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217691000" />
+    <option name="totallyTimeSpent" value="218703000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -461,17 +464,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day 28 - 30/index.html">
+    <entry file="file://$PROJECT_DIR$/day 25 - 27/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="241" column="15" selection-start-line="241" selection-start-column="15" selection-end-line="241" selection-end-column="15" />
+        <state relative-caret-position="436">
+          <caret line="267" column="53" lean-forward="true" selection-start-line="267" selection-start-column="53" selection-end-line="267" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day 25 - 27/index.html">
+    <entry file="file://$PROJECT_DIR$/day 28 - 30/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="251" column="60" selection-start-line="251" selection-start-column="60" selection-end-line="251" selection-end-column="60" />
+        <state relative-caret-position="-757">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
         </state>
       </provider>
     </entry>
