@@ -136,13 +136,13 @@
 		//选择年月日输出格式
 		switch (timeFormat){
 			case ':':
-				result = `现在时间是 ${date.getFullYear()} 年 ${checkTime(date.getMonth())} 月 ${checkTime(date.getDate())} 日 ${weekDays(date.getDay(), weekdayFormat)} ${checkTime(date.getHours())}:${checkTime(date.getMinutes())}:${checkTime(date.getSeconds())}`;
+				result = `现在时间是 ${date.getFullYear()} 年 ${checkTime(date.getMonth() + 1)} 月 ${checkTime(date.getDate())} 日 ${weekDays(date.getDay(), weekdayFormat)} ${checkTime(date.getHours())}:${checkTime(date.getMinutes())}:${checkTime(date.getSeconds())}`;
 				break;
 			case '-':
 				//选择小时输出格式
 				var hours =  '';
-				hours = (0 < date.getHours() <=12) ? `${checkTime(date.getHours())}:${checkTime(date.getMinutes())}:${checkTime(date.getSeconds())} AM` : `${checkTime(date.getHours() - 12)}:${checkTime(date.getMinutes())}:${checkTime(date.getSeconds())} PM`;
-				result = `现在时间是 ${date.getFullYear()}-${checkTime(date.getMonth())}-${checkTime(date.getDate())} ${weekDays(date.getDay(), weekdayFormat)} ${hours}`;
+				hours = date.getHours() <=12 ? `${checkTime(date.getHours())}:${checkTime(date.getMinutes())}:${checkTime(date.getSeconds())} AM` : `${checkTime(date.getHours() - 12)}:${checkTime(date.getMinutes())}:${checkTime(date.getSeconds())} PM`;
+				result = `现在时间是 ${date.getFullYear()}-${checkTime(date.getMonth()+ 1)}-${checkTime(date.getDate())} ${weekDays(date.getDay(), weekdayFormat)} ${hours}`;
 				break;
 			default:
 				break;
