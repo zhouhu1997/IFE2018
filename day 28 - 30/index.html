@@ -29,6 +29,7 @@
 		border: 1px solid #E1E1E1;
 	}
 
+	/* 取消input在有焦点的情况下的outline*/
 	#email-input:focus{
 		outline:none;
 	}
@@ -55,6 +56,7 @@
 		color: #C6C9C5;
 		overflow-x: hidden;
 	}
+
 	/* 选中li的样式*/
 	#email-sug-wrapper .selected{
 		background: #C5DDEB;
@@ -69,14 +71,8 @@
 </style>
 <body>
 <div class="wrapper">
-	<!--根据下面需求实现如示意图所示的邮箱输入提示功能，注意，根据要求只需实现下面功能-->
-
-	<!--当用户没有任何输入时，提示框消失-->
-	<!--当用户输入字符后，显示提示框，并且把用户输入的内容自动拼上邮箱后缀进行显示-->
-	<!--暂时不用考虑示意图中的红色和蓝色背景色的逻辑-->
-	<!--注意用户输入中前后空格需要去除-->
 	<h1>第二十八天到第三十天 给爱的人发个邮件吧</h1>
-	<input id="email-input" type="text">
+	<input id="email-input" type="text" placeholder="Enter your e-mail">
 	<ul id="email-sug-wrapper" class="email-sug">
 	</ul>
 </div>
@@ -149,8 +145,6 @@
 		}
 	});
 
-
-
 	// 获取用户输入内容并trim后返回
 	function getUserInput(){
 		return (input.value).toString().trim();
@@ -160,7 +154,6 @@
 	var resetSelectTipIndex = function() {
 		nowSelectTipIndex = 0;
 	}
-
 
 	// 构建生成提示列表
 	function createLi(obj) {
@@ -174,10 +167,8 @@
 			html.push(li);
 		}
 		// 拼接所有li
-		console.log(html.join(''));
 		return html.join('');
 	}
-
 
 	// 生成列表
 	function displayPostfixList(){
@@ -221,28 +212,34 @@
 
 	// html转码
 	var htmlEncode = function(html) {
-		var temp = document.createElement('div');
-		if(html.length === 0) return "";
-		var str = html.replace(/&/g,"&");
-		str = str.replace(/</g,"<");
-		str = str.replace(/>/g,">");
-		str = str.replace(/ /g," ");
-		str = str.replace(/'/g,"\'");
-		str = str.replace(/"/g,"\"");
-		temp.textContent != undefined ? temp.textContent = str : temp.innerText = str;
-		return temp.innerHTML;
+		var s = "";
+		if (html.length === 0) return "";
+		s = html.replace(/&/g, "&amp;");
+		s = s.replace(/</g, "&lt;");
+		s = s.replace(/>/g, "&gt;");
+		s = s.replace(/ /g, "&nbsp;");
+		s = s.replace(/\'/g, "&#39;");
+		s = s.replace(/\"/g, "&quot;");
+		return s;
 	}
 
 	// html解码
 	var htmlDecode = function(html) {
-		var temp = document.createElement('div');
-		temp.innerHTML = html;
-		return temp.innerText || temp.textContent;
+		var s = "";
+		if (html.length === 0) return "";
+		s = html.replace(/&amp;/g, "&");
+		s = s.replace(/&lt;/g, "<");
+		s = s.replace(/&gt;/g, ">");
+		s = s.replace(/&nbsp;/g, " ");
+		s = s.replace(/&#39;/g, "\'");
+		s = s.replace(/&quot;/g, "\"");
+		return s;
 	}
 
 	// 用户选择提示并显示在input
 	var choiceTip = function(val) {
 		input.value = htmlDecode(val);
+		// 获取焦点
 		input.focus();
 	}
 
