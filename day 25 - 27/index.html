@@ -249,7 +249,7 @@
 
 	// 判断是否为闰年函数
 	function month29Day() {
-		if ((year.value % 4 === 0 && year.value % 100 !== 0) || year.value % 400 === 0){
+		if ((year.value % 4 === 0 && year.value % 100 !== 0)){
 			//设置天数为29天
 			changeDay(29);
 		}else{
