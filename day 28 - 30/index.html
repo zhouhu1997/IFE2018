@@ -6,18 +6,23 @@
 </head>
 <style>
 	.wrapper{
+		background: #2C3545;
+		border-radius: 20px;
 		position: relative;
 		width: 800px;
-		height: 200px;
+		height: 300px;
 		margin: 0 auto;
 		padding: 10px;
-		border: 1px solid salmon;
+	}
+
+	.wrapper h1{
+		color: #ffffff;
 	}
 
 	#email-input{
 		position: absolute;
 		left: 50px;
-		top: 15px;
+		top: 85px;
 		width: 200px;
 		padding: 8px;
 		font-size: 12px;
@@ -34,7 +39,7 @@
 		padding-left: 0;
 		position: absolute;
 		left: 50px;
-		top: 48px;
+		top: 118px;
 		border-left: 1px solid #E1E1E1;
 		border-right: 1px solid #E1E1E1;
 		border-bottom: 1px solid #E1E1E1;
@@ -48,14 +53,17 @@
 		padding: 0 8px;
 		font-size: 12px;
 		color: #C6C9C5;
+		overflow-x: hidden;
 	}
-
-	#email-sug-wrapper li .selected{
+	/* 选中li的样式*/
+	#email-sug-wrapper .selected{
 		background: #C5DDEB;
+		color: #ffffff;
 	}
-
+	/*鼠标hover的样式*/
 	#email-sug-wrapper li:hover{
 		background: #F5C7CF;
+		color: #ffffff;
 	}
 
 </style>
@@ -67,6 +75,7 @@
 	<!--当用户输入字符后，显示提示框，并且把用户输入的内容自动拼上邮箱后缀进行显示-->
 	<!--暂时不用考虑示意图中的红色和蓝色背景色的逻辑-->
 	<!--注意用户输入中前后空格需要去除-->
+	<h1>第二十八天到第三十天 给爱的人发个邮件吧</h1>
 	<input id="email-input" type="text">
 	<ul id="email-sug-wrapper" class="email-sug">
 	</ul>
@@ -75,39 +84,112 @@
 	var postfixList = ['163.com', 'gmail.com', '126.com', 'qq.com', '263.net'];
 	var input = document.querySelector('#email-input');
 	var sug = document.querySelector('#email-sug-wrapper');
-	var lis = document.getElementsByTagName('li');
+	var nowSelectTipIndex = 0;
 
 	// 默认获取焦点
 	input.focus();
 
 	input.addEventListener('input',function () {
 		displayPostfixList();
-		(input.value).toString().trim() === '' ? sug.style.display = 'none' : sug.style.display = 'block';
+		// 根据input里的内容判断是否隐藏菜单
+		(input.value).toString().trim() === '' ? hideList() : displayList();
 	})
 
+	// 用ul做为事件代理, 获取捕获按下li的行为
+	sug.addEventListener('click', function () {
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		if (target.nodeName.toLowerCase() === 'li'){
+			//设置input value为选中li的内容
+			choiceTip(target.innerHTML);
+			//隐藏菜单
+			hideList();
+		}
+	});
+
+	// 为input添加keydown的事件监听
+	input.addEventListener('keydown',function (e) {
+		// 获取keycode
+		var keyCode = e.keyCode;
+		if (keyCode === 27){
+			// 阻止事件传递
+			e.preventDefault();
+			// 按下Esc键(27) 全选输入框内容
+			return input.select();
+		} else if (/^13|38|40$/.test(keyCode)) {
+			//获取所有 li
+			var lis = document.getElementsByTagName('li');
+			// 获取选中项
+			var selectedIndex = lis[nowSelectTipIndex];
+			// 获取li的最后一项的index
+			var lisLastIndex = lis.length - 1;
+			// 按下回去 将所选内容添加到输入框
+			if (keyCode === 13){
+				// 阻止事件传递
+				e.preventDefault();
+				//将input的value设置为选中内容
+				choiceTip(selectedIndex.innerHTML);
+				//回车后隐藏菜单
+				return hideList();
+			}
+
+			//在判断 上下 按键之前移除选中项的selected class属性
+			selectedIndex.classList.remove('selected');
+
+			if (keyCode === 40){
+				//按下如果是最后一项 返回第一项
+				nowSelectTipIndex = nowSelectTipIndex === lisLastIndex ? 0 : nowSelectTipIndex + 1;
+			} else{
+				//按上如果是第一项放回最后一项
+				nowSelectTipIndex = nowSelectTipIndex === 0 ? lisLastIndex : nowSelectTipIndex - 1;
+			}
+			// 为选中项添加 selected class 属性
+			lis[nowSelectTipIndex].classList.add('selected');
+
+		}
+	});
+
+
+
+	// 获取用户输入内容并trim后返回
 	function getUserInput(){
 		return (input.value).toString().trim();
 	}
 
-
-	// 添加li
-	function createLi(obj) {
-		sug.innerHTML = '';
-		for(var i  = 0; i < obj.length; i++){
-			var li=document.createElement("li");
-			var arr = getUserInput().split('@');
-			li.textContent = arr.length > 1 ?  arr[0] + '@' +obj[i] : getUserInput() +'@'+ obj[i];
-			sug.appendChild(li);
-		}
+	// 重置选中状态
+	var resetSelectTipIndex = function() {
+		nowSelectTipIndex = 0;
 	}
 
+
+	// 构建生成提示列表
+	function createLi(obj) {
+		var arr = getUserInput().split('@');
+		var l = obj.length;
+		var html = [];
+		for (var i = 0; i < l; i ++) {
+			var str = arr.length > 1 ?  arr[0] + '@' +obj[i] : getUserInput() +'@'+ obj[i];
+			// 默认第一项选中状态
+			var li = (i === nowSelectTipIndex ? '<li class="selected">' : '<li>') + htmlEncode(str) + '</li>';
+			html.push(li);
+		}
+		// 拼接所有li
+		console.log(html.join(''));
+		return html.join('');
+	}
+
+
+	// 生成列表
 	function displayPostfixList(){
 		var filterList = [];
+		// 重置选中状态
+		resetSelectTipIndex();
 		//用来拼接的用户输入内容 = 获取用户输入
 		var str = getUserInput().split('@')[1];
 		// 不存在的话 li为整个postfixList
-		if (!str) createLi(postfixList);
+		if (!str) return sug.innerHTML = createLi(postfixList);
 		else{
+			// 获得用户输入的值的长度
 			var strl = str.length;
 			for (var i in postfixList){
 				var val = postfixList[i];
@@ -118,23 +200,52 @@
 					if (j === strl - 1) filterList.push(postfixList[i]);
 				}
 			}
-			// 匹配不成功返回所有后缀
-			if (!filterList.length) createLi(postfixList);
+			// 匹配不成功返回postfixList
+			if (!filterList.length) return sug.innerHTML = createLi(postfixList);
 			else{
-				createLi(filterList);
+				// 匹配成功返回filterList
+				return sug.innerHTML = createLi(filterList);
 			}
 		}
-
 	}
 
-	sug.addEventListener('click', function () {
-		var ev = ev || window.event;
-		var target = ev.target || ev.srcElement;
-		if (target.nodeName.toLowerCase() === 'li'){
-			input.value = target.textContent;
-			sug.style.display = 'none';
-		}
-	})
+	// 隐藏菜单
+	function hideList() {
+		sug.style.display = 'none';
+	}
+
+	//显示菜单
+	function displayList() {
+		sug.style.display = 'block';
+	}
+
+	// html转码
+	var htmlEncode = function(html) {
+		var temp = document.createElement('div');
+		if(html.length === 0) return "";
+		var str = html.replace(/&/g,"&");
+		str = str.replace(/</g,"<");
+		str = str.replace(/>/g,">");
+		str = str.replace(/ /g," ");
+		str = str.replace(/'/g,"\'");
+		str = str.replace(/"/g,"\"");
+		temp.textContent != undefined ? temp.textContent = str : temp.innerText = str;
+		return temp.innerHTML;
+	}
+
+	// html解码
+	var htmlDecode = function(html) {
+		var temp = document.createElement('div');
+		temp.innerHTML = html;
+		return temp.innerText || temp.textContent;
+	}
+
+	// 用户选择提示并显示在input
+	var choiceTip = function(val) {
+		input.value = htmlDecode(val);
+		input.focus();
+	}
+
 </script>
 </body>
 </html>
