@@ -49,36 +49,88 @@
 </head>
 <body>
 	<div class="box">
-		<div class="area">
+		<div id="area">
 			<p class="sub-title">地区</p>
 			<input type="checkbox" name="area" value="huabei" /> 华北
 			<input type="checkbox" name="area" value="huanan" /> 华南
-			<input type="checkbox" name="area" value="huadong" /> 华东<br />
+			<input type="checkbox" name="area" value="huadong" /> 华东
 		</div>
-
+		<div id="product">
+			<p class="sub-title">产品</p>
+			<input type="checkbox" name="product" value="mobile" /> 手机
+			<input type="checkbox" name="product" value="laptop" /> 笔记本
+			<input type="checkbox" name="product" value="speaker" /> 智能音箱
+		</div>
 		<div id="table-wrapper">
 		</div>
 	</div>
 	<script src="ife31data.js"></script>
 	<script>
-		var area = document.querySelector('.area');
+		var area = document.querySelector('#area');
 		area.addEventListener('click',function () {
+			var str = '';
 			var ev = ev || window.event;
 			var target = ev.target || ev.srcElement;
-			var table = '<table class="dataintable"><tr><th>商品</th><th>地图</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
 			if (target.nodeName.toLowerCase() === 'input'){
 				if (target.checked){
 					switch (target.value){
-
+						case 'huabei':
+							addToTable('area','华北');
+							break;
+						case 'huanan':
+							addToTable('area','华南');
+							break;
+						case 'huadong':
+							addToTable('area','华东');
+							break;
+						case 'mobile':
+							addToTable('product','华东');
+							break;
+						case 'laptop':
+							addToTable('product','华东');
+							break;
+						case 'speaker':
+							addToTable('product','华东');
+							break;
+						default:
+							break;
 					}
-					console.log(sourceData)
-
 				} else{
-					console.log('uncheck');
+					document.querySelector('#table-wrapper').innerHTML = '';
 				}
 			}
-			document.querySelector('#table-wrapper').innerHTML = table + '</table>';
 		})
+
+		function addToTable(type, region, product) {
+			var str = '',
+				product = '',
+				sale = [],
+				table = '<table class="dataintable"><tr><th>商品</th><th>地区</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
+			switch (type){
+				case 'area':
+					for (var i in sourceData){
+						if (sourceData[i].region === region){
+							sale = sourceData[i].sale;
+							product = sourceData[i].product;
+							str += '<tr><td>'+product+'</td><td>'+sourceData[i].region+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>'
+						}
+					}
+					break;
+				case 'product':
+					for (var i in sourceData){
+						if (sourceData[i].product === product){
+							sale = sourceData[i].sale;
+							product = sourceData[i].product;
+							str += '<tr><td>'+product+'</td><td>'+sourceData[i].region+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>'
+						}
+					}
+					break;
+				default:
+					break;
+			}
+			table += str;
+			return document.querySelector('#table-wrapper').innerHTML = table + '</table>';
+		}
 	</script>
 </body>
 </html>
