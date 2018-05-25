@@ -66,70 +66,87 @@
 	</div>
 	<script src="ife31data.js"></script>
 	<script>
+		var tableWrapper = document.querySelector('#table-wrapper');
 		var area = document.querySelector('#area');
+		var product = document.querySelector('#product');
+		var clickedBtns = {
+			area: {
+				'huabei': false,
+				'huanan': false,
+				'huadong': false
+			},
+			product: {
+				'mobile': false,
+				'laptop': false,
+				'speaker': false
+			}
+		};
+
 		area.addEventListener('click',function () {
-			var str = '';
+			var ev = ev || window.event;
+			var target = ev.target || ev.srcElement;
+			if (target.nodeName.toLowerCase() === 'input') {
+				switch (target.value) {
+					case 'huabei':
+						clickedItems('area','huabei',target.checked);
+						break;
+					case 'huanan':
+						clickedItems('area','huanan',target.checked);
+						break;
+					case 'huadong':
+						clickedItems('area','huadong',target.checked);
+						break;
+					default:
+						break;
+				}
+				console.log(clickedBtns);
+			}
+		})
+
+		product.addEventListener('click',function () {
 			var ev = ev || window.event;
 			var target = ev.target || ev.srcElement;
 			if (target.nodeName.toLowerCase() === 'input'){
-				if (target.checked){
 					switch (target.value){
-						case 'huabei':
-							addToTable('area','华北');
-							break;
-						case 'huanan':
-							addToTable('area','华南');
-							break;
-						case 'huadong':
-							addToTable('area','华东');
-							break;
 						case 'mobile':
-							addToTable('product','华东');
+							clickedItems('product','mobile',target.checked);
 							break;
 						case 'laptop':
-							addToTable('product','华东');
+							clickedItems('product','laptop',target.checked);
 							break;
 						case 'speaker':
-							addToTable('product','华东');
+							clickedItems('product','speaker',target.checked);
 							break;
 						default:
 							break;
 					}
-				} else{
-					document.querySelector('#table-wrapper').innerHTML = '';
-				}
+				console.log(clickedBtns);
 			}
 		})
 
-		function addToTable(type, region, product) {
+		function addToTable() {
 			var str = '',
 				product = '',
 				sale = [],
 				table = '<table class="dataintable"><tr><th>商品</th><th>地区</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
-			switch (type){
-				case 'area':
-					for (var i in sourceData){
-						if (sourceData[i].region === region){
-							sale = sourceData[i].sale;
-							product = sourceData[i].product;
-							str += '<tr><td>'+product+'</td><td>'+sourceData[i].region+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>'
-						}
-					}
-					break;
-				case 'product':
-					for (var i in sourceData){
-						if (sourceData[i].product === product){
-							sale = sourceData[i].sale;
-							product = sourceData[i].product;
-							str += '<tr><td>'+product+'</td><td>'+sourceData[i].region+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>'
-						}
-					}
-					break;
-				default:
-					break;
+
+			return tableWrapper.innerHTML = table + '</table>';
+		}
+
+		function clickedItems(type, targetValue, checked) {
+			if (checked){
+				if (type === 'area'){
+					clickedBtns.area[targetValue] = true;
+				}else{
+					clickedBtns.product[targetValue] = true;
+				}
+			} else {
+				if (type === 'area'){
+					clickedBtns.area[targetValue] = false;
+				}else{
+					clickedBtns.product[targetValue] = false;
+				}
 			}
-			table += str;
-			return document.querySelector('#table-wrapper').innerHTML = table + '</table>';
 		}
 	</script>
 </body>
