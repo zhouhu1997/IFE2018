@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我是精明的小卖家（一)</title>
+	<style>
+		.box{
+			width: 800px;
+			margin: 0 auto;
+			padding: 10px;
+			border: 1px solid seagreen;
+		}
+
+		.sub-title{
+			font-size: 20px;
+		}
+
+		table.dataintable {
+			margin-top:15px;
+			border-collapse:collapse;
+			border:1px solid #aaa;
+			width:100%;
+		}
+
+		table.dataintable th {
+			vertical-align:baseline;
+			padding:5px 15px 5px 6px;
+			background-color:#3F3F3F;
+			border:1px solid #3F3F3F;
+			text-align:left;
+			color:#fff;
+		}
+
+		table.dataintable td {
+			vertical-align:text-top;
+			padding:6px 15px 6px 6px;
+			border:1px solid #aaa;
+		}
+
+		table.dataintable tr:nth-child(odd) {
+			background-color:#F5F5F5;
+		}
+
+		table.dataintable tr:nth-child(even) {
+			background-color:#fff;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="area">
+			<p class="sub-title">地区</p>
+			<input type="checkbox" name="area" value="huabei" /> 华北
+			<input type="checkbox" name="area" value="huanan" /> 华南
+			<input type="checkbox" name="area" value="huadong" /> 华东<br />
+		</div>
+
+		<div id="table-wrapper">
+		</div>
+	</div>
+	<script src="ife31data.js"></script>
+	<script>
+		var area = document.querySelector('.area');
+		area.addEventListener('click',function () {
+			var ev = ev || window.event;
+			var target = ev.target || ev.srcElement;
+			var table = '<table class="dataintable"><tr><th>商品</th><th>地图</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
+			if (target.nodeName.toLowerCase() === 'input'){
+				if (target.checked){
+					switch (target.value){
+
+					}
+					console.log(sourceData)
+
+				} else{
+					console.log('uncheck');
+				}
+			}
+			document.querySelector('#table-wrapper').innerHTML = table + '</table>';
+		})
+	</script>
+</body>
+</html>

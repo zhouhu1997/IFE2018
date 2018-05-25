@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/day 31 - 33/ife31data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day 31 - 33/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day 28 - 30/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day 28 - 30/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,31 +18,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day19/index.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day 31 - 33/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1490">
-              <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+            <state relative-caret-position="472">
+              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day 28 - 30/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="610">
-              <caret line="206" column="56" selection-start-line="206" selection-start-column="56" selection-end-line="206" selection-end-column="56" />
+            <state relative-caret-position="-874">
+              <caret line="107" column="8" selection-start-line="107" selection-start-column="8" selection-end-line="108" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day 25 - 27/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="267" column="53" lean-forward="true" selection-start-line="267" selection-start-column="53" selection-end-line="267" selection-end-column="53" />
-            </state>
-          </provider>
+      <file leaf-file-name="ife31data.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day 31 - 33/ife31data.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -114,6 +111,7 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/day 25 - 27/index.html" />
         <option value="$PROJECT_DIR$/day 28 - 30/index.html" />
+        <option value="$PROJECT_DIR$/day 31 - 33/index.html" />
       </list>
     </option>
   </component>
@@ -123,9 +121,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1224" />
+    <option name="width" value="1440" />
     <option name="height" value="873" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -168,17 +166,12 @@
             <path>
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="day19" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="day 25 - 27" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
               <item name="day 28 - 30" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+              <item name="day 31 - 33" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -201,18 +194,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/day4/img" />
-      <recent name="$PROJECT_DIR$/day4" />
-      <recent name="$PROJECT_DIR$/day4/css" />
-      <recent name="$PROJECT_DIR$/Learn CSS/No.7 - 使用 animate.css 实现登录框" />
-      <recent name="$PROJECT_DIR$/Learn CSS/No.6 - 利用 CSS animation 制作slider" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/day 28 - 30" />
       <recent name="$PROJECT_DIR$/day20 - 21" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/day2/exe1" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/day 31 - 33" />
+      <recent name="$PROJECT_DIR$/day4/img" />
+      <recent name="$PROJECT_DIR$/day4" />
+      <recent name="$PROJECT_DIR$/day4/css" />
+      <recent name="$PROJECT_DIR$/Learn CSS/No.7 - 使用 animate.css 实现登录框" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -253,12 +246,13 @@
       <workItem from="1526137184281" duration="327000" />
       <workItem from="1526224750592" duration="4528000" />
       <workItem from="1526230853213" duration="87051000" />
-      <workItem from="1527164049740" duration="4578000" />
+      <workItem from="1527164049740" duration="4636000" />
+      <workItem from="1527213597717" duration="2124000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219829000" />
+    <option name="totallyTimeSpent" value="222011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -295,6 +289,27 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/day19/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 25 - 27/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4539">
+          <caret line="267" column="53" lean-forward="true" selection-start-line="267" selection-start-column="53" selection-end-line="267" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 28 - 30/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1768">
@@ -428,13 +443,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day20 - 21/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="148" column="32" selection-start-line="148" selection-start-column="32" selection-end-line="148" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day 22 - 24/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -456,13 +464,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day19/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1490">
-          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day 25 - 27/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="436">
@@ -470,10 +471,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/day 31 - 33/ife31data.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day20 - 21/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1018">
+          <caret line="148" column="32" selection-start-line="148" selection-start-column="32" selection-end-line="148" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day19/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-344">
+          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/day 28 - 30/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="206" column="56" selection-start-line="206" selection-start-column="56" selection-end-line="206" selection-end-column="56" />
+        <state relative-caret-position="-874">
+          <caret line="107" column="8" selection-start-line="107" selection-start-column="8" selection-end-line="108" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 31 - 33/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
         </state>
       </provider>
     </entry>
