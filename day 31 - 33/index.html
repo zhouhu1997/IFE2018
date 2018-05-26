@@ -182,6 +182,7 @@
 			var str = '',
 				product = '',
 				sale = [],
+				region = '',
 				table = '<table class="dataintable"><tr><th>商品</th><th>地区</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
 			getSelectedBtns();
 			if (selectedProduct.length === 0&& selectedArea.length === 0){
@@ -191,18 +192,19 @@
 				var areL = selectedArea.length;
 				for (var i in sourceData){
 					sale = sourceData[i].sale;
+					region = sourceData[i].region;
 					product = sourceData[i].product;
 					if (productL > 0 && areL > 0){
 						if (selectedProduct.indexOf(sourceData[i].product) >= 0 && selectedArea.indexOf(sourceData[i].region) >= 0){
-							str += '<tr><td>'+product+'</td><td>'+sourceData[i].region+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>';
+							str += '<tr><td class="head">'+product+'</td><td>'+region+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>';
 						}
 					} else if (productL > 0 && areL === 0){
 						if (selectedProduct.indexOf(sourceData[i].product) >= 0){
-							str += '<tr><td>'+product+'</td><td>'+sourceData[i].region+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>';
+							str += '<tr><td class="head">'+product+'</td><td>'+region+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>';
 						}
 					} else if (areL > 0 && productL === 0){
 						if (selectedArea.indexOf(sourceData[i].region) >= 0){
-							str += '<tr><td rowspan="3">'+product+'</td><td>'+sourceData[i].region+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>';
+							str += '<tr><td class="head">'+region+'</td><td>'+product+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>';
 						}
 					}
 				}
