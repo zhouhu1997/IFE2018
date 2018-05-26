@@ -54,12 +54,14 @@
 			<input type="checkbox" name="area" value="huabei" /> 华北
 			<input type="checkbox" name="area" value="huanan" /> 华南
 			<input type="checkbox" name="area" value="huadong" /> 华东
+			<input type="checkbox" name="areaAll" value="area-all" /> 全选
 		</div>
 		<div id="product">
 			<p class="sub-title">产品</p>
 			<input type="checkbox" name="product" value="mobile" /> 手机
 			<input type="checkbox" name="product" value="laptop" /> 笔记本
 			<input type="checkbox" name="product" value="speaker" /> 智能音箱
+			<input type="checkbox" name="productAll" value="product-all" /> 全选
 		</div>
 		<div id="table-wrapper">
 		</div>
@@ -68,17 +70,21 @@
 	<script>
 		var tableWrapper = document.querySelector('#table-wrapper');
 		var area = document.querySelector('#area');
+		var areaBtn = area.getElementsByTagName('input');
 		var product = document.querySelector('#product');
+		var productBtn = product.getElementsByTagName('input');
+		var selectedProduct = [];
+		var selectedArea = [];
 		var clickedBtns = {
 			area: {
-				'huabei': false,
-				'huanan': false,
-				'huadong': false
+				'华北': false,
+				'华南': false,
+				'华东': false
 			},
 			product: {
-				'mobile': false,
-				'laptop': false,
-				'speaker': false
+				'手机': false,
+				'笔记本': false,
+				'智能音箱': false
 			}
 		};
 
@@ -88,18 +94,28 @@
 			if (target.nodeName.toLowerCase() === 'input') {
 				switch (target.value) {
 					case 'huabei':
-						clickedItems('area','huabei',target.checked);
+						clickedItems('area','华北',target.checked);
 						break;
 					case 'huanan':
-						clickedItems('area','huanan',target.checked);
+						clickedItems('area','华南',target.checked);
 						break;
 					case 'huadong':
-						clickedItems('area','huadong',target.checked);
+						clickedItems('area','华东',target.checked);
+						break;
+					case 'area-all':
+						if (target.checked){
+							checkAll(areaBtn);
+						} else{
+							uncheckAll(areaBtn);
+						}
 						break;
 					default:
 						break;
 				}
-				console.log(clickedBtns);
+				if (checkSelectedAll(areaBtn)){
+					checkAll(areaBtn);
+				}
+				addToTable();
 			}
 		})
 
@@ -109,28 +125,90 @@
 			if (target.nodeName.toLowerCase() === 'input'){
 					switch (target.value){
 						case 'mobile':
-							clickedItems('product','mobile',target.checked);
+							clickedItems('product','手机',target.checked);
 							break;
 						case 'laptop':
-							clickedItems('product','laptop',target.checked);
+							clickedItems('product','笔记本',target.checked);
 							break;
 						case 'speaker':
-							clickedItems('product','speaker',target.checked);
+							clickedItems('product','智能音箱',target.checked);
+							break;
+						case 'product-all':
+							if (target.checked){
+								checkAll(productBtn);
+							} else{
+								uncheckAll(productBtn);
+							}
 							break;
 						default:
 							break;
 					}
-				console.log(clickedBtns);
+				if (checkSelectedAll(productBtn)){
+					checkAll(productBtn);
+				}
+				addToTable();
 			}
 		})
+
+		function getSelectedBtns() {
+			// 获取area中选中的选项
+			for (var i in clickedBtns.area) {
+				if (clickedBtns.area[i]) {
+					if (selectedArea.indexOf(i) < 0){
+						selectedArea.push(i);
+					}
+
+				}else{
+					if (selectedArea.indexOf(i) >= 0){
+						selectedArea.splice(selectedArea.indexOf(i), 1);
+					}
+				}
+			}
+			// 获取product中选中的选项
+			for (var i in clickedBtns.product){
+				if (clickedBtns.product[i]) {
+					if (selectedProduct.indexOf(i) < 0){
+						selectedProduct.push(i);
+					}
+				}else{
+					if (selectedProduct.indexOf(i) >= 0){
+						selectedProduct.splice(selectedProduct.indexOf(i), 1);
+					}
+				}
+			}
+		}
 
 		function addToTable() {
 			var str = '',
 				product = '',
 				sale = [],
 				table = '<table class="dataintable"><tr><th>商品</th><th>地区</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
-
-			return tableWrapper.innerHTML = table + '</table>';
+			getSelectedBtns();
+			if (selectedProduct.length === 0&& selectedArea.length === 0){
+				return tableWrapper.innerHTML = '';
+			} else {
+				var productL = selectedProduct.length;
+				var areL = selectedArea.length;
+				for (var i in sourceData){
+					sale = sourceData[i].sale;
+					product = sourceData[i].product;
+					if (productL > 0 && areL > 0){
+						if (selectedProduct.indexOf(sourceData[i].product) >= 0 && selectedArea.indexOf(sourceData[i].region) >= 0){
+							str += '<tr><td>'+product+'</td><td>'+sourceData[i].region+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>';
+						}
+					} else if (productL > 0 && areL === 0){
+						if (selectedProduct.indexOf(sourceData[i].product) >= 0){
+							str += '<tr><td>'+product+'</td><td>'+sourceData[i].region+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>';
+						}
+					} else if (areL > 0 && productL === 0){
+						if (selectedArea.indexOf(sourceData[i].region) >= 0){
+							str += '<tr><td rowspan="3">'+product+'</td><td>'+sourceData[i].region+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>';
+						}
+					}
+				}
+				table += str;
+				return tableWrapper.innerHTML = table + '</table>';
+			}
 		}
 
 		function clickedItems(type, targetValue, checked) {
@@ -147,6 +225,58 @@
 					clickedBtns.product[targetValue] = false;
 				}
 			}
+		}
+
+		function checkAllItems(obj) {
+			if (obj === areaBtn){
+				for (var i in clickedBtns.area){
+					clickedBtns.area[i] = true;
+				}
+			} else{
+				for (var i in clickedBtns.product){
+					clickedBtns.product[i] = true;
+				}
+			}
+		}
+
+		function uncheckAllItems(obj) {
+			if (obj === areaBtn){
+				for (var i in clickedBtns.area){
+					clickedBtns.area[i] = false;
+				}
+			} else{
+				for (var i in clickedBtns.product){
+					clickedBtns.product[i] = false;
+				}
+			}
+		}
+
+		function checkAll(obj) {
+			for (var i in obj){
+				obj[i].checked = true;
+			}
+			checkAllItems(obj);
+		}
+
+		function uncheckAll(obj) {
+			for (var i in obj){
+				obj[i].checked = false;
+			}
+			uncheckAllItems(obj);
+		}
+
+		function checkSelectedAll(obj){
+			for (var i = 0; i < obj.length; i++){
+				if (i === 3){
+					break;
+				}
+
+				if (!obj[i].checked){
+					obj[3].checked = false;
+					return false;
+				}
+			}
+			return true;
 		}
 	</script>
 </body>
