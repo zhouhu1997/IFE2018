@@ -51,7 +51,7 @@
 	<div class="box">
 		<div id="area">
 			<p class="sub-title">地区</p>
-			<input type="checkbox" name="area" value="huabei" /> 华北
+			<input type="checkbox" name="area" value="huabei"/> 华北
 			<input type="checkbox" name="area" value="huanan" /> 华南
 			<input type="checkbox" name="area" value="huadong" /> 华东
 			<input type="checkbox" name="areaAll" value="area-all" /> 全选
@@ -73,6 +73,7 @@
 		var areaBtn = area.getElementsByTagName('input');
 		var product = document.querySelector('#product');
 		var productBtn = product.getElementsByTagName('input');
+		var head = document.getElementsByClassName('head');
 		var selectedProduct = [];
 		var selectedArea = [];
 		var clickedBtns = {
@@ -116,6 +117,25 @@
 					checkAll(areaBtn);
 				}
 				addToTable();
+				// if (selectedArea.length > 1 && selectedProduct.length > 1) {
+				// 	for (var i in head){
+				//
+				// 	}
+				// }
+				if (selectedArea.length === 1 && selectedProduct.length >= 0){
+					var plength = selectedProduct.length === 0 ? 3 : selectedProduct.length;
+					for (var i = 0; i < plength; i++){
+						console.log(head[i]);
+						if (i === 0){
+							console.log('hi')
+							head[i].setAttribute('rowspan', plength.toString());
+						}else{
+							head[i].style.display = 'none';
+						}
+					}
+				}else {
+
+				}
 			}
 		})
 
@@ -147,6 +167,20 @@
 					checkAll(productBtn);
 				}
 				addToTable();
+				if (selectedArea.length === 1 && selectedProduct.length >= 0){
+					var plength = selectedProduct.length === 0 ? 3 : selectedProduct.length;
+					for (var i = 0; i < plength; i++){
+						console.log(head[i]);
+						if (i === 0){
+							console.log('hi')
+							head[i].setAttribute('rowspan', plength.toString());
+						}else{
+							head[i].style.display = 'none';
+						}
+					}
+				}else {
+
+				}
 			}
 		})
 
