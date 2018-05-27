@@ -51,17 +51,17 @@
 	<div class="box">
 		<div id="area">
 			<p class="sub-title">地区</p>
-			<input type="checkbox" name="area" value="huabei"/> 华北
+			<input type="checkbox" name="area" value="huabei" checked="checked"/> 华北
 			<input type="checkbox" name="area" value="huanan" /> 华南
 			<input type="checkbox" name="area" value="huadong" /> 华东
-			<input type="checkbox" name="areaAll" value="area-all" /> 全选
+			<input type="checkbox" name="areaAll" value="all" /> 全选
 		</div>
 		<div id="product">
 			<p class="sub-title">产品</p>
-			<input type="checkbox" name="product" value="mobile" /> 手机
+			<input type="checkbox" name="product" value="mobile" checked="checked"/> 手机
 			<input type="checkbox" name="product" value="laptop" /> 笔记本
 			<input type="checkbox" name="product" value="speaker" /> 智能音箱
-			<input type="checkbox" name="productAll" value="product-all" /> 全选
+			<input type="checkbox" name="productAll" value="all" /> 全选
 		</div>
 		<div id="table-wrapper">
 		</div>
@@ -78,16 +78,18 @@
 		var selectedArea = [];
 		var clickedBtns = {
 			area: {
-				'华北': false,
+				'华北': true,
 				'华南': false,
 				'华东': false
 			},
 			product: {
-				'手机': false,
+				'手机': true,
 				'笔记本': false,
 				'智能音箱': false
 			}
 		};
+		var selectionNumber = 0;
+		addToTable();
 
 		area.addEventListener('click',function () {
 			var ev = ev || window.event;
@@ -95,15 +97,15 @@
 			if (target.nodeName.toLowerCase() === 'input') {
 				switch (target.value) {
 					case 'huabei':
-						clickedItems('area','华北',target.checked);
+						clickedItems('area','华北',target);
 						break;
 					case 'huanan':
-						clickedItems('area','华南',target.checked);
+						clickedItems('area','华南',target);
 						break;
 					case 'huadong':
-						clickedItems('area','华东',target.checked);
+						clickedItems('area','华东',target);
 						break;
-					case 'area-all':
+					case 'all':
 						if (target.checked){
 							checkAll(areaBtn);
 						} else{
@@ -127,7 +129,6 @@
 					for (var i = 0; i < plength; i++){
 						console.log(head[i]);
 						if (i === 0){
-							console.log('hi')
 							head[i].setAttribute('rowspan', plength.toString());
 						}else{
 							head[i].style.display = 'none';
@@ -145,15 +146,15 @@
 			if (target.nodeName.toLowerCase() === 'input'){
 					switch (target.value){
 						case 'mobile':
-							clickedItems('product','手机',target.checked);
+							clickedItems('product','手机',target);
 							break;
 						case 'laptop':
-							clickedItems('product','笔记本',target.checked);
+							clickedItems('product','笔记本',target);
 							break;
 						case 'speaker':
-							clickedItems('product','智能音箱',target.checked);
+							clickedItems('product','智能音箱',target);
 							break;
-						case 'product-all':
+						case 'all':
 							if (target.checked){
 								checkAll(productBtn);
 							} else{
@@ -163,9 +164,8 @@
 						default:
 							break;
 					}
-				if (checkSelectedAll(productBtn)){
-					checkAll(productBtn);
-				}
+				if (checkSelectedAll(productBtn)) checkAll(productBtn);
+
 				addToTable();
 				if (selectedArea.length === 1 && selectedProduct.length >= 0){
 					var plength = selectedProduct.length === 0 ? 3 : selectedProduct.length;
@@ -247,19 +247,24 @@
 			}
 		}
 
-		function clickedItems(type, targetValue, checked) {
-			if (checked){
-				if (type === 'area'){
-					clickedBtns.area[targetValue] = true;
-				}else{
-					clickedBtns.product[targetValue] = true;
+		function checkLastSelection(type) {
+			selectionNumber = 0;
+			for (var i = 0 ; i < type.length; i++){
+				if (type[i].value !== 'all'){
+					if (type[i].checked) selectionNumber += 1;
 				}
-			} else {
-				if (type === 'area'){
-					clickedBtns.area[targetValue] = false;
-				}else{
-					clickedBtns.product[targetValue] = false;
-				}
+			}
+			console.log('check last  '+selectionNumber);
+			return selectionNumber < 1;
+		}
+
+		function clickedItems(type, targetValue, target) {
+			if (type === 'area'){
+				if (checkLastSelection(areaBtn)) return target.checked = true;
+				if (target.checked) return clickedBtns.area[targetValue] = true;
+			}else{
+				if (checkLastSelection(productBtn)) return target.checked = true;
+				if (target.checked) return clickedBtns.product[targetValue] = true;
 			}
 		}
 
@@ -288,14 +293,15 @@
 		}
 
 		function checkAll(obj) {
-			for (var i in obj){
+			for (var i = 0; i < obj.length; i++){
 				obj[i].checked = true;
 			}
 			checkAllItems(obj);
 		}
 
 		function uncheckAll(obj) {
-			for (var i in obj){
+			selectionNumber = 0;
+			for (var i = 1; i < obj.length; i++){
 				obj[i].checked = false;
 			}
 			uncheckAllItems(obj);
