@@ -51,6 +51,10 @@
 
     <a href="//ife.baidu.com/course/detail/id/52">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2028%20-%2030/index.html">Demo<a/>
 
+* #### 2018.05.27 练习12 (我是精明的小卖家（一)
+
+    <a href="//ife.baidu.com/course/detail/id/53">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2031%20-%2033/index.html">Demo<a/>
+
 ---
 
 ### 设计学院
