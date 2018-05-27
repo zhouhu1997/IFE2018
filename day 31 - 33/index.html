@@ -49,19 +49,11 @@
 </head>
 <body>
 	<div class="box">
+		<h3>地区</h3>
 		<div id="area">
-			<p class="sub-title">地区</p>
-			<input type="checkbox" name="area" value="huabei" checked="checked"/> 华北
-			<input type="checkbox" name="area" value="huanan" /> 华南
-			<input type="checkbox" name="area" value="huadong" /> 华东
-			<input type="checkbox" name="areaAll" value="all" /> 全选
 		</div>
+		<h3>产品</h3>
 		<div id="product">
-			<p class="sub-title">产品</p>
-			<input type="checkbox" name="product" value="mobile" checked="checked"/> 手机
-			<input type="checkbox" name="product" value="laptop" /> 笔记本
-			<input type="checkbox" name="product" value="speaker" /> 智能音箱
-			<input type="checkbox" name="productAll" value="all" /> 全选
 		</div>
 		<div id="table-wrapper">
 		</div>
@@ -73,7 +65,6 @@
 		var areaBtn = area.getElementsByTagName('input');
 		var product = document.querySelector('#product');
 		var productBtn = product.getElementsByTagName('input');
-		//用querySelector - 获得实时更新的对象
 		var selectedProduct = [];
 		var selectedArea = [];
 		var clickedBtns = {
@@ -88,7 +79,18 @@
 				'智能音箱': false
 			}
 		};
+		var areaArr = [{name:'area', value:'huabei', text:'华北'},
+			{name:'area', value:'huanan', text:'华南'},
+			{name:'area', value:'huadong', text:'华东'},
+			{name:'area', value:'all', text:'全选'}];
+
+		var productArr = [{name:'prodcut', value:'mobile', text:'手机'},
+			{name:'product', value:'laptop', text:'笔记本'},
+			{name:'product', value:'speaker', text:'智能音箱'},
+			{name:'product', value:'all', text:'全选'}];
 		var selectionNumber = 0;
+		generateCheckboxs(area,areaArr);
+		generateCheckboxs(product,productArr);
 		addToTable();
 
 		area.addEventListener('click',function () {
@@ -119,13 +121,6 @@
 					checkAll(areaBtn);
 				}
 				addToTable();
-				combineTable();
-				// if (selectedArea.length > 1 && selectedProduct.length > 1) {
-				// 	for (var i in head){
-				//
-				// 	}
-				// }
-
 			}
 		})
 
@@ -155,7 +150,6 @@
 					}
 				if (checkSelectedAll(productBtn)) checkAll(productBtn);
 				addToTable();
-				combineTable()
 			}
 		})
 
@@ -272,6 +266,7 @@
 			getSelectedBtns();
 			var str = '';
 			var table = '<table class="dataintable"><tr><th>商品</th><th>地区</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
+			var combineFactor = 'productArea';
 			var arrL = [selectedArea.length,selectedProduct.length];
 			if (arrL[0] === 0 && arrL[1] === 0){
 				return tableWrapper.innerHTML = '';
@@ -284,6 +279,7 @@
 						case '1m':
 							table = '<table class="dataintable"><tr><th>地区</th><th>商品</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
 							str += tableStr('areaProduct', sourceData[i]);
+							combineFactor = 'areaProduct';
 							break;
 						case 'm1':
 							str += tableStr('productArea', sourceData[i]);
@@ -297,7 +293,8 @@
 					}
 				}
 				table += str;
-				return tableWrapper.innerHTML = table + '</table>';
+				tableWrapper.innerHTML = table + '</table>';
+				return combineTable(combineFactor);
 			}
 		}
 
@@ -321,31 +318,34 @@
 			return str;
 		}
 
-		function combineTable() {
-
+		function combineTable(combineFactor) {
 			var head = document.querySelectorAll('.header');
 			var productL = selectedProduct.length;
 			var areaL = selectedArea.length;
-			var spanHead = [0,3,6];
 			var totalRows = productL * areaL;
-			var spanL = productL > areaL ? productL : areaL;
-			for (var i = 0; i < totalRows; i++){
-				// if (spanHead.indexOf(i) >= 0){
-				// 	head[i].setAttribute('rowspan', spanL.toString());
-				// }else{
-				// 	head[i].style.display = 'none';
-				// }
-			}
+			var element = combineFactor === 'productArea' ? areaL : productL;
+			var length = combineFactor === 'productArea' ? productL : areaL;
 			var arr = [];
-				for (var i = 0; i < totalRows; i++){
-					if (spanHead.indexOf(i) >= 0){
-						head[i].setAttribute('rowspan', spanL.toString());
-					}else{
-						head[i].style.display = 'none';
-					}
-					arr.push(head[i])
+			for (var i = 0; i < length; i++){
+				arr.push(element * i);
+			}
+
+			for (var i = 0; i < totalRows; i++){
+				if (arr.indexOf(i) >= 0){
+					head[i].setAttribute('rowspan', element.toString());
+				}else{
+					head[i].style.display = 'none';
 				}
-			console.log(arr);
+			}
+		}
+
+		function generateCheckboxs(parent, checkbox) {
+			var innerCheckbox= '';
+			for (var i in checkbox){
+				var check = i === '0' ? 'checked=checked': '';
+				innerCheckbox += '<input type=checkbox name='+checkbox[i].name+' value='+checkbox[i].value+' '+check+' />'+checkbox[i].text+' ';
+			}
+			parent.innerHTML = innerCheckbox;
 		}
 
 	</script>
