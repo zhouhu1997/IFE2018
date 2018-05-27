@@ -118,27 +118,13 @@
 				if (checkSelectedAll(areaBtn)){
 					checkAll(areaBtn);
 				}
-				console.log(clickedBtns);
-
 				addToTable();
 				// if (selectedArea.length > 1 && selectedProduct.length > 1) {
 				// 	for (var i in head){
 				//
 				// 	}
 				// }
-				if (selectedArea.length === 1 && selectedProduct.length >= 0){
-					var plength = selectedProduct.length === 0 ? 3 : selectedProduct.length;
-					for (var i = 0; i < plength; i++){
-						console.log(head[i]);
-						if (i === 0){
-							head[i].setAttribute('rowspan', plength.toString());
-						}else{
-							head[i].style.display = 'none';
-						}
-					}
-				}else {
 
-				}
 			}
 		})
 
@@ -167,20 +153,7 @@
 							break;
 					}
 				if (checkSelectedAll(productBtn)) checkAll(productBtn);
-				console.log(clickedBtns);
 				addToTable();
-				if (selectedArea.length === 1 && selectedProduct.length >= 0){
-					var plength = selectedProduct.length === 0 ? 3 : selectedProduct.length;
-					for (var i = 0; i < plength; i++){
-						if (i === 0){
-							head[i].setAttribute('rowspan', plength.toString());
-						}else{
-							head[i].style.display = 'none';
-						}
-					}
-				}else {
-
-				}
 			}
 		})
 
@@ -209,41 +182,6 @@
 						selectedProduct.splice(selectedProduct.indexOf(i), 1);
 					}
 				}
-			}
-		}
-
-		function addToTable() {
-			var str = '',
-				product = '',
-				sale = [],
-				region = '',
-				table = '<table class="dataintable"><tr><th>商品</th><th>地区</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
-			getSelectedBtns();
-			if (selectedProduct.length === 0&& selectedArea.length === 0){
-				return tableWrapper.innerHTML = '';
-			} else {
-				var productL = selectedProduct.length;
-				var areL = selectedArea.length;
-				for (var i in sourceData){
-					sale = sourceData[i].sale;
-					region = sourceData[i].region;
-					product = sourceData[i].product;
-					if (productL > 0 && areL > 0){
-						if (selectedProduct.indexOf(sourceData[i].product) >= 0 && selectedArea.indexOf(sourceData[i].region) >= 0){
-							str += '<tr><td class="head">'+product+'</td><td>'+region+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>';
-						}
-					} else if (productL > 0 && areL === 0){
-						if (selectedProduct.indexOf(sourceData[i].product) >= 0){
-							str += '<tr><td class="head">'+product+'</td><td>'+region+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>';
-						}
-					} else if (areL > 0 && productL === 0){
-						if (selectedArea.indexOf(sourceData[i].region) >= 0){
-							str += '<tr><td class="head">'+region+'</td><td>'+product+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>';
-						}
-					}
-				}
-				table += str;
-				return tableWrapper.innerHTML = table + '</table>';
 			}
 		}
 
@@ -327,6 +265,81 @@
 			}
 			return true;
 		}
+
+
+
+
+
+
+		function addToTable() {
+			var str = '';
+			var table = '<table class="dataintable"><tr><th>商品</th><th>地区</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
+
+			getSelectedBtns();
+
+			if (selectedProduct.length === 0&& selectedArea.length === 0){
+				return tableWrapper.innerHTML = '';
+			} else {
+				var arrL = [selectedArea.length,selectedProduct.length];
+				for (var i in sourceData){
+					switch(arrL.join('').replace(/[2-999]/g, 'm')){
+						case '11':
+							str += tableStr('productArea', sourceData[i]);
+							break;
+						case '1m':
+							table = '<table class="dataintable"><tr><th>地区</th><th>商品</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
+							str += tableStr('areaProduct', sourceData[i]);
+							break;
+						case 'm1':
+							str += tableStr('productArea', sourceData[i]);
+							break;
+						case 'mm':
+							str += tableStr('productArea', sourceData[i]);
+							break;
+						default:
+							break;
+
+					}
+				}
+				table += str;
+				return tableWrapper.innerHTML = table + '</table>';
+			}
+		}
+
+		function tableStr(order, obj) {
+			var str = '',
+				product = obj.product,
+				sale = obj.sale,
+				region = obj.region;
+			if (selectedArea.indexOf(region) >= 0 && selectedProduct.indexOf(product) >= 0){
+				switch (order){
+					case 'productArea':
+						str += '<tr><td class="head">'+product+'</td><td>'+region+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>';
+						break;
+					case'areaProduct':
+						str += '<tr><td class="head">'+region+'</td><td>'+product+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>';
+						break;
+					default:
+						break;
+				}
+			}
+			return str;
+		}
+
+
+		// if (selectedArea.length === 1 && selectedProduct.length >= 0){
+		// 	var plength = selectedProduct.length === 0 ? 3 : selectedProduct.length;
+		// 	for (var i = 0; i < plength; i++){
+		// 		if (i === 0){
+		// 			head[i].setAttribute('rowspan', plength.toString());
+		// 		}else{
+		// 			head[i].style.display = 'none';
+		// 		}
+		// 	}
+		// }else {
+		//
+		// }
+
 	</script>
 </body>
 </html>
