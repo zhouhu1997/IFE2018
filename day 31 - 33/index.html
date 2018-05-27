@@ -73,7 +73,7 @@
 		var areaBtn = area.getElementsByTagName('input');
 		var product = document.querySelector('#product');
 		var productBtn = product.getElementsByTagName('input');
-		var head = document.getElementsByClassName('head');
+		//用querySelector - 获得实时更新的对象
 		var selectedProduct = [];
 		var selectedArea = [];
 		var clickedBtns = {
@@ -119,6 +119,7 @@
 					checkAll(areaBtn);
 				}
 				addToTable();
+				combineTable();
 				// if (selectedArea.length > 1 && selectedProduct.length > 1) {
 				// 	for (var i in head){
 				//
@@ -154,6 +155,7 @@
 					}
 				if (checkSelectedAll(productBtn)) checkAll(productBtn);
 				addToTable();
+				combineTable()
 			}
 		})
 
@@ -266,21 +268,14 @@
 			return true;
 		}
 
-
-
-
-
-
 		function addToTable() {
+			getSelectedBtns();
 			var str = '';
 			var table = '<table class="dataintable"><tr><th>商品</th><th>地区</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
-
-			getSelectedBtns();
-
-			if (selectedProduct.length === 0&& selectedArea.length === 0){
+			var arrL = [selectedArea.length,selectedProduct.length];
+			if (arrL[0] === 0 && arrL[1] === 0){
 				return tableWrapper.innerHTML = '';
 			} else {
-				var arrL = [selectedArea.length,selectedProduct.length];
 				for (var i in sourceData){
 					switch(arrL.join('').replace(/[2-999]/g, 'm')){
 						case '11':
@@ -314,10 +309,10 @@
 			if (selectedArea.indexOf(region) >= 0 && selectedProduct.indexOf(product) >= 0){
 				switch (order){
 					case 'productArea':
-						str += '<tr><td class="head">'+product+'</td><td>'+region+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>';
+						str += '<tr><td class="header">'+product+'</td><td>'+region+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>';
 						break;
 					case'areaProduct':
-						str += '<tr><td class="head">'+region+'</td><td>'+product+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>';
+						str += '<tr><td class="header">'+region+'</td><td>'+product+'</td><td>'+sale[0]+'</td><td>'+sale[1]+'</td><td>'+sale[2]+'</td><td>'+sale[3]+'</td><td>'+sale[4]+'</td><td>'+sale[5]+'</td><td>'+sale[6]+'</td><td>'+sale[7]+'</td><td>'+sale[8]+'</td><td>'+sale[9]+'</td><td>'+sale[10]+'</td><td>'+sale[11]+'</td></tr>';
 						break;
 					default:
 						break;
@@ -326,19 +321,32 @@
 			return str;
 		}
 
+		function combineTable() {
 
-		// if (selectedArea.length === 1 && selectedProduct.length >= 0){
-		// 	var plength = selectedProduct.length === 0 ? 3 : selectedProduct.length;
-		// 	for (var i = 0; i < plength; i++){
-		// 		if (i === 0){
-		// 			head[i].setAttribute('rowspan', plength.toString());
-		// 		}else{
-		// 			head[i].style.display = 'none';
-		// 		}
-		// 	}
-		// }else {
-		//
-		// }
+			var head = document.querySelectorAll('.header');
+			var productL = selectedProduct.length;
+			var areaL = selectedArea.length;
+			var spanHead = [0,3,6];
+			var totalRows = productL * areaL;
+			var spanL = productL > areaL ? productL : areaL;
+			for (var i = 0; i < totalRows; i++){
+				// if (spanHead.indexOf(i) >= 0){
+				// 	head[i].setAttribute('rowspan', spanL.toString());
+				// }else{
+				// 	head[i].style.display = 'none';
+				// }
+			}
+			var arr = [];
+				for (var i = 0; i < totalRows; i++){
+					if (spanHead.indexOf(i) >= 0){
+						head[i].setAttribute('rowspan', spanL.toString());
+					}else{
+						head[i].style.display = 'none';
+					}
+					arr.push(head[i])
+				}
+			console.log(arr);
+		}
 
 	</script>
 </body>
