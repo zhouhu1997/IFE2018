@@ -118,6 +118,8 @@
 				if (checkSelectedAll(areaBtn)){
 					checkAll(areaBtn);
 				}
+				console.log(clickedBtns);
+
 				addToTable();
 				// if (selectedArea.length > 1 && selectedProduct.length > 1) {
 				// 	for (var i in head){
@@ -165,14 +167,12 @@
 							break;
 					}
 				if (checkSelectedAll(productBtn)) checkAll(productBtn);
-
+				console.log(clickedBtns);
 				addToTable();
 				if (selectedArea.length === 1 && selectedProduct.length >= 0){
 					var plength = selectedProduct.length === 0 ? 3 : selectedProduct.length;
 					for (var i = 0; i < plength; i++){
-						console.log(head[i]);
 						if (i === 0){
-							console.log('hi')
 							head[i].setAttribute('rowspan', plength.toString());
 						}else{
 							head[i].style.display = 'none';
@@ -254,17 +254,24 @@
 					if (type[i].checked) selectionNumber += 1;
 				}
 			}
-			console.log('check last  '+selectionNumber);
 			return selectionNumber < 1;
 		}
 
 		function clickedItems(type, targetValue, target) {
 			if (type === 'area'){
-				if (checkLastSelection(areaBtn)) return target.checked = true;
-				if (target.checked) return clickedBtns.area[targetValue] = true;
-			}else{
-				if (checkLastSelection(productBtn)) return target.checked = true;
-				if (target.checked) return clickedBtns.product[targetValue] = true;
+				if (checkLastSelection(areaBtn))  target.checked = true;
+				if (target.checked){
+					clickedBtns.area[targetValue] = true;
+				}else {
+					clickedBtns.area[targetValue] = false;
+				}
+			}else {
+				if (checkLastSelection(productBtn)) target.checked = true;
+				if (target.checked) {
+					clickedBtns.product[targetValue] = true;
+				} else{
+					clickedBtns.product[targetValue] = false;
+				}
 			}
 		}
 
@@ -283,11 +290,11 @@
 		function uncheckAllItems(obj) {
 			if (obj === areaBtn){
 				for (var i in clickedBtns.area){
-					clickedBtns.area[i] = false;
+					clickedBtns.area[i] = i === '华北';
 				}
 			} else{
-				for (var i in clickedBtns.product){
-					clickedBtns.product[i] = false;
+				for (var i  in clickedBtns.product){
+					clickedBtns.product[i] = i === '手机';
 				}
 			}
 		}
