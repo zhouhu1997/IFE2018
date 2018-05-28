@@ -34,10 +34,10 @@
 	</div>
 	<div id="buttonSet">
 		<h2>练习 1</h2>
-		<button id="allLi">需求1</button>
-		<button id="spans">需求2</button>
-		<button id="secondSpans">需求3</button>
-		<button id="classActive">需求4</button>
+		<button id="allLi" name="btn1">需求1</button>
+		<button id="spans" name="btn2">需求2</button>
+		<button id="secondSpans" name="btn3">需求3</button>
+		<button id="classActive" name="btn4">需求4</button>
 	</div>
 	<div id="buttonSet2">
 		<h2>练习 2</h2>
@@ -49,16 +49,6 @@
 	<p><strong>输出请看控制台</strong></p>
 </div>
 <script>
-	var btn1 = document.querySelector('#allLi');
-	var btn2 = document.querySelector('#spans');
-	var btn3 = document.querySelector('#secondSpans');
-	var btn4 = document.querySelector('#classActive');
-	var btn5 = document.querySelector('#allLi2');
-	var btn6 = document.querySelector('#spans2');
-	var btn7 = document.querySelector('#secondSpans2');
-	var btn8 = document.querySelector('#classActive2');
-
-
 	// 练习 1
 	function getAllListItem() {
 		// 返回页面中所有li标签
@@ -102,23 +92,27 @@
 	}
 
 	// 练习 1 按钮事件
-	btn1.addEventListener('click',function () {
-		getAllListItem();
-	})
-
-
-	btn2.addEventListener('click',function () {
-		findAllHtmlSpanInOneSection('news-normal');
-	})
-
-
-	btn3.addEventListener('click',function () {
-		findListItem('news-normal','CSS');
-	})
-
-
-	btn4.addEventListener('click',function () {
-		getActiveLinkContent('news-normal');
+	document.getElementById('buttonSet').addEventListener('click',function () {
+		var ev = ev || window.event;
+		var target = ev.target || ev.elements;
+		if (target.nodeName.toLowerCase() === 'button'){
+			switch (target.id){
+				case 'allLi':
+					getAllListItem();
+					break;
+				case 'spans':
+					findAllHtmlSpanInOneSection('news-normal');
+					break;
+				case 'secondSpans':
+					findListItem('news-normal','CSS');
+					break;
+				case 'classActive':
+					getActiveLinkContent('news-normal');
+					break;
+				default:
+					break;
+			}
+		}
 	})
 
 	//练习 2
@@ -162,23 +156,27 @@
 	}
 
 	// 练习 2 按钮事件
-	btn5.addEventListener('click',function () {
-		getAllListItem2();
-	})
-
-
-	btn6.addEventListener('click',function () {
-		findAllHtmlSpanInOneSection2('news-normal');
-	})
-
-
-	btn7.addEventListener('click',function () {
-		findListItem2('news-normal','CSS');
-	})
-
-
-	btn8.addEventListener('click',function () {
-		getActiveLinkContent2('news-normal');
+	document.getElementById('buttonSet2').addEventListener('click',function () {
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		if (target.nodeName.toLowerCase() === 'button'){
+			switch (target.id){
+				case 'allLi2':
+					getAllListItem2();
+					break;
+				case 'spans2':
+					findAllHtmlSpanInOneSection2('news-normal');
+					break;
+				case 'secondSpans2':
+					findListItem2('news-normal','CSS');
+					break;
+				case 'classActive2':
+					getActiveLinkContent2('news-normal');
+					break;
+				default:
+					break;
+			}
+		}
 	})
 
 </script>
