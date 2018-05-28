@@ -130,7 +130,12 @@
 		time2.textContent = displayTime('-','en',date);
 	},100)
 
-	// 输出时间 设置timeFormat可以设置年月日输出格式, weekdayFormat可以设置星期的输出格式, date为输入时间
+	/*
+	 * @param {string} timeFormat
+	 * @param {string} weekdayFormat
+	 * @param {Date} date
+	 **输出时间 设置timeFormat可以设置年月日输出格式, weekdayFormat可以设置星期的输出格式, date为输入时间
+	 */
 	function displayTime(timeFormat,weekdayFormat,date) {
 		var result = '';
 		//选择年月日输出格式
