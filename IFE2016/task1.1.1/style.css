@@ -145,9 +145,18 @@ aside .tip{
 	color: #979495;
 }
 
+aside .inputs{
+	margin-bottom: 10px;
+}
+
 aside textarea{
 	margin-left: 5px;
-	width: 400px;
+	width: 50%;
+	font-size: 20px;
+}
+
+aside label{
+	vertical-align: top;
 }
 
 aside button{
@@ -163,6 +172,10 @@ aside input[type=text]{
 	margin: 0 0 10px 5px;
 	padding: 5px;
 	width: 170px;
+}
+
+aside input, select{
+	margin-left: 8px;
 }
 
 aside .content-wrapper{
