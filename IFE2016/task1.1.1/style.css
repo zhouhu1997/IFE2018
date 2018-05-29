@@ -1,0 +1,179 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h3{
+	font-size: 25px;
+}
+
+header{
+	position: relative;
+	background: #333333;
+}
+
+
+header img{
+	margin: 10px 0 10px 80px;
+	display: inline-block;
+	width: 180px;
+	height: 70px;
+}
+
+header ul{
+	position: absolute;
+	right: 20px;
+	top: 35px;
+}
+
+header li{
+	display: inline-block;
+	color: #ffffff;
+	margin-right: 10px;
+}
+
+main{
+	padding: 30px;
+	background: #DEDEDE;
+}
+
+main ul{
+	list-style: none;
+}
+
+main ul li{
+	padding-left: 20px;
+	margin-top: 10px;
+}
+
+main img{
+	margin: 20px 0;
+	width: 350px;
+	height: 250px;
+}
+
+main ol{
+	padding-left: 60px;
+	font-weight: 500;
+}
+
+main ol li{
+	margin: 10px 0;
+}
+
+main table{
+	border-collapse:collapse;
+	width: 100%;
+	text-align: left;
+}
+
+main table th{
+	padding: 5px 0 5px 10px;
+	color: #ffffff;
+	background: #333333;
+	border: 1px solid #E7E9EC;
+}
+
+main table td{
+	padding: 5px 0 5px 10px;
+	border: 1px solid #E7E9EC;
+
+}
+
+main table tr:last-child{
+	font-weight: 500;
+	background: #E7E9EC;
+}
+
+.box{
+	padding: 30px 20px;
+	margin:  0 auto 20px auto;
+	width: 100%;
+	background: #ffffff;
+	border: 1px solid #8A8A8A;
+	border-right: 3px solid #8A8A8A;
+	border-bottom: 3px solid #8A8A8A;
+}
+
+main .box > p:first-letter{
+	padding-left: 10px;
+}
+
+main .sub-title{
+	margin: 10px 0;
+	font-size: 18px;
+	color: #979495;
+}
+
+main .post-time{
+	margin-bottom: 10px;
+	font-size: 12px;
+	color: #979495;
+}
+
+main .img-wrapper{
+	width: 150px;
+	margin: 25px 0 10px 50px;
+	padding: 10px 10px 8px 10px;
+	border: 1px solid #E7E9EC;
+}
+
+main .img-wrapper > p{
+	text-align: center;
+}
+
+main .img-wrapper > img{
+	width: 120px;
+	height: 100px;
+	margin: 10px 0 0 0;
+}
+
+aside label{
+	display: inline-block;
+	width: 400px;
+	text-align: right;
+}
+
+aside .title-left{
+	border-left: 3px solid #CCCCCC;
+	padding-left: 15px;
+}
+
+aside .tip{
+	padding: 10px 0 10px 410px;
+	color: #979495;
+}
+
+aside textarea{
+	margin-left: 5px;
+	width: 400px;
+}
+
+aside button{
+	padding: 10px 0;
+	font-size: 20px;
+	width: 100%;
+	border-radius: 10px;
+	background: #3759C8;
+	color: #ffffff;
+}
+
+aside input[type=text]{
+	margin: 0 0 10px 5px;
+	padding: 5px;
+	width: 170px;
+}
+
+aside .content-wrapper{
+	margin-top: 20px;
+	padding-left: 10%;
+}
+
+footer{
+	padding-top: 30px;
+	background: #333333;
+	color: #ffffff;
+	height: 100px;
+	text-align: center;
+}
