@@ -2,9 +2,50 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Title</title>
+	<title>task1.4.1</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+
+		#content{
+			margin: calc((100vh - 200px)/2) auto;
+			position: relative;
+			width: 400px;
+			height: 200px;
+			background: #ccc;
+			overflow: hidden;
+		}
+
+		.radius-1{
+			position: absolute;
+			top:-50px;
+			left: -50px;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			background: #fc0;
+		}
+
+		.radius-2{
+			position: absolute;
+			width: 100px;
+			bottom: -50px;
+			right: -50px;
+			height: 100px;
+			border-radius: 50%;
+			background: #fc0;
+		}
+	</style>
 </head>
 <body>
-
+	<div class="wrapper">
+		<div id="content">
+			<div class="radius-1"></div>
+			<div class="radius-2"></div>
+		</div>
+	</div>
 </body>
 </html>
