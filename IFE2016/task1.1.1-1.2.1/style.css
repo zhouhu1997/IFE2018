@@ -1,95 +1,95 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 
 }
 
-h3{
+h3 {
 	font-size: 18px;
 }
 
 
-header{
+header {
 	position: relative;
 	background: #333333;
 }
 
 
-header img{
-	margin: 10px 0 10px 80px;
+header img {
 	display: inline-block;
+	margin: 10px 0 10px 80px;
 	width: 180px;
 	height: 70px;
 }
 
-header ul{
+header ul {
 	position: absolute;
 	right: 20px;
 	top: 35px;
 }
 
-header li{
+header li {
 	display: inline-block;
 	color: #ffffff;
 	margin-right: 10px;
 }
 
-main{
+main {
 	display: flex;
 	padding: 30px;
 	background: #DEDEDE;
 }
 
-main ul{
+main ul {
 	list-style: none;
 }
 
-main ul li{
+main ul li {
 	padding-left: 20px;
 	margin-top: 10px;
 }
 
-main img{
+main img {
 	margin: 20px 0;
 	width: 350px;
 	height: 250px;
 }
 
-main ol{
+main ol {
 	padding-left: 60px;
-	font-weight: 500;
+	font-weight: 700;
 }
 
-main ol li{
+main ol li {
 	margin: 10px 0;
 }
 
-main table{
+main table {
 	border-collapse:collapse;
 	width: 100%;
 	text-align: left;
 }
 
-main table th{
+main table th {
 	padding: 5px 0 5px 10px;
 	color: #ffffff;
 	background: #333333;
 	border: 1px solid #E7E9EC;
 }
 
-main table td{
+main table td {
 	padding: 5px 0 5px 10px;
 	border: 1px solid #E7E9EC;
 
 }
 
-main table tr:last-child{
+main table tr:last-child {
 	font-weight: 500;
 	background: #E7E9EC;
 }
 
-.box{
+.box {
 	padding: 30px 20px;
 	margin:  0 auto 20px auto;
 	width: 100%;
@@ -99,114 +99,115 @@ main table tr:last-child{
 	border-bottom: 3px solid #8A8A8A;
 }
 
-main .box > p:first-letter{
+main .box > p:first-letter {
 }
 
-main .sub-title{
+main .sub-title {
 	margin: 10px 0;
 	font-size: 18px;
 	color: #979495;
 }
 
-main .post-time{
+main .post-time {
 	margin-bottom: 10px;
 	font-size: 12px;
 	color: #979495;
 }
 
-main .img-wrapper{
+main .img-wrapper {
 	width: 140px;
 	margin: 25px 20px 10px 0;
 	padding: 10px 10px 8px 10px;
 	border: 1px solid #E7E9EC;
 }
 
-main .img-wrapper > p{
+main .img-wrapper > p {
 	text-align: center;
 }
 
-main .img-wrapper > img{
+main .img-wrapper > img {
 	width: 120px;
 	height: 100px;
 	margin: 10px 0 0 0;
 }
 
-main .article-wrapper{
-	width: 68%;
+main .article-wrapper {
 	flex-grow: 0;
 	flex-shrink: 0;
+	width: 68%;
 	margin-right: 2%;
 }
 
-main .img-container{
+main .img-container {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-aside{
+aside {
 	font-size: 12px;
 	width: 30%;
 	flex-grow: 0;
 	flex-shrink: 0;
 }
 
-aside label{
+aside label {
 	display: inline-block;
 	width: 120px;
 	text-align: right;
 }
 
-aside .title-left{
+aside .title-left {
 	border-left: 3px solid #CCCCCC;
 	padding-left: 15px;
 }
 
-aside .tip{
+aside .tip {
 	padding: 10px 0 10px 130px;
 	color: #979495;
 }
 
-aside .inputs{
+aside .inputs {
 	margin-bottom: 10px;
 }
 
-aside textarea{
+aside textarea {
 	margin-left: 5px;
 	width: 60%;
 	font-size: 20px;
 }
 
-aside label{
+aside label {
 	vertical-align: top;
 }
 
-aside button{
+aside button {
 	padding: 10px 0;
-	font-size: 20px;
 	width: 100%;
 	border-radius: 10px;
+	font-size: 20px;
 	background: #3759C8;
-	color: #ffffff;
+	color: #fff;
 }
 
-aside input[type=text]{
+aside input[type="text"] {
 	margin: 0 0 10px 5px;
 	padding: 5px;
 	width: 150px;
 }
 
-aside input, select{
+aside input,
+select {
 	margin-left: 8px;
 }
 
-aside .content-wrapper{
+aside .content-wrapper {
 	margin-top: 20px;
 }
 
-footer{
-	padding-top: 30px;
-	background: #333333;
-	color: #ffffff;
+footer {
 	height: 100px;
+	padding-top: 30px;
 	text-align: center;
+	background: #333;
+	color: #fff;
 }
