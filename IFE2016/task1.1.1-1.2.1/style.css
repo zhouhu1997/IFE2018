@@ -2,11 +2,13 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+
 }
 
 h3{
-	font-size: 25px;
+	font-size: 18px;
 }
+
 
 header{
 	position: relative;
@@ -34,6 +36,7 @@ header li{
 }
 
 main{
+	display: flex;
 	padding: 30px;
 	background: #DEDEDE;
 }
@@ -97,7 +100,6 @@ main table tr:last-child{
 }
 
 main .box > p:first-letter{
-	padding-left: 10px;
 }
 
 main .sub-title{
@@ -113,8 +115,8 @@ main .post-time{
 }
 
 main .img-wrapper{
-	width: 150px;
-	margin: 25px 0 10px 50px;
+	width: 140px;
+	margin: 25px 20px 10px 0;
 	padding: 10px 10px 8px 10px;
 	border: 1px solid #E7E9EC;
 }
@@ -129,9 +131,28 @@ main .img-wrapper > img{
 	margin: 10px 0 0 0;
 }
 
+main .article-wrapper{
+	width: 68%;
+	flex-grow: 0;
+	flex-shrink: 0;
+	margin-right: 2%;
+}
+
+main .img-container{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+aside{
+	font-size: 12px;
+	width: 30%;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
 aside label{
 	display: inline-block;
-	width: 400px;
+	width: 120px;
 	text-align: right;
 }
 
@@ -141,7 +162,7 @@ aside .title-left{
 }
 
 aside .tip{
-	padding: 10px 0 10px 410px;
+	padding: 10px 0 10px 130px;
 	color: #979495;
 }
 
@@ -151,7 +172,7 @@ aside .inputs{
 
 aside textarea{
 	margin-left: 5px;
-	width: 50%;
+	width: 60%;
 	font-size: 20px;
 }
 
@@ -171,7 +192,7 @@ aside button{
 aside input[type=text]{
 	margin: 0 0 10px 5px;
 	padding: 5px;
-	width: 170px;
+	width: 150px;
 }
 
 aside input, select{
@@ -180,7 +201,6 @@ aside input, select{
 
 aside .content-wrapper{
 	margin-top: 20px;
-	padding-left: 10%;
 }
 
 footer{
