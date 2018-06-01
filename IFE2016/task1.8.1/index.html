@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task 1.7.1</title>
+	<style>
+		#first {
+			display: grid;
+			width: 960px;
+			margin: 0 auto;
+			padding: 20px;
+			grid-gap: 20px;
+			grid-template-columns: repeat(12,1fr);
+			background: #000;
+			border: 1px solid #999;
+		}
+
+		#first div{
+			height: 50px;
+			background: #eee;
+			border: 1px solid #999;
+		}
+
+		#first div:nth-child(1){
+			grid-column: 1/5;
+		}
+
+		#first div:nth-child(2){
+			grid-column: 5/9;
+		}
+
+		#first div:nth-child(3){
+			grid-column: 9/13;
+		}
+
+		#first div:nth-child(4){
+			grid-column: 1/4;
+		}
+
+		#first div:nth-child(5){
+			grid-column: 4/10;
+		}
+
+		#first div:nth-child(6){
+			grid-column: 10/13;
+		}
+
+
+		#first div:nth-child(9){
+			grid-column: 3/5;
+		}
+
+		#first div:nth-child(10){
+			grid-column: 5/7;
+		}
+
+		#first div:nth-child(11){
+			grid-column: 7/13;
+		}
+		
+		@media screen and (max-width: 768px) {
+			#first {
+				display: grid;
+				width: 80%;
+				margin: 0 auto;
+				padding: 20px;
+				grid-gap: 20px;
+				grid-template-columns: repeat(12, 1fr);
+				grid-template-areas: "one one one one one one two two two two two two"
+				"three three three three three three three three three three three three"
+				"four four four five five five five five five six six six"
+				"sev sev eig eig nine nine nine nine nine nine nine nine"
+				"ten ten ten ele ele ele . . . . . ."
+			}
+
+			#first div:nth-child(1){
+				grid-area: one;
+			}
+
+			#first div:nth-child(2){
+				grid-area: two;
+			}
+
+			#first div:nth-child(3){
+				grid-area: three;
+			}
+
+			#first div:nth-child(4){
+				grid-area: four;
+			}
+
+			#first div:nth-child(5){
+				grid-area: five;
+			}
+
+			#first div:nth-child(6){
+				grid-area: six;
+			}
+
+			#first div:nth-child(7){
+				grid-area: sev;
+			}
+
+			#first div:nth-child(8){
+				grid-area: eig;
+			}
+
+			#first div:nth-child(9){
+				grid-area: nine;
+			}
+
+			#first div:nth-child(10){
+				grid-area: ten;
+			}
+
+			#first div:nth-child(11){
+				grid-area: ele;
+			}
+
+		}
+
+	</style>
+</head>
+<body>
+	<div id="first">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</body>
+</html>
