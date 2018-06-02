@@ -56,7 +56,7 @@
     <a href="//ife.baidu.com/course/detail/id/53">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2031%20-%2033/index.html">Demo<a/>
     
 * #### 2018.05.29 - 2018.06.02
- 学习JavaScript
+    学习JavaScript
 
 ---
 
