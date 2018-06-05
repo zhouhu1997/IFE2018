@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单美化</title>
+</head>
+<style>
+	body, div, dl, dd, dt {
+		padding: 0;
+		margin: 0;
+	}
+
+	fieldset, img {
+		border: 0;
+	}
+
+	table{
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+	ol, ul {
+		list-style: none;
+	}
+
+	address, caption, cite, code, dfn, em, strong, th, var {
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	caption, th {
+		text-align: left;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: normal;
+		font-size: 100%;
+	}
+
+
+
+	.type{
+		width: 400px;
+		height: 100px;
+		border: 1px solid #DFDFDF;
+		margin: 30px auto;
+	}
+
+	.type dl {
+		height: 32px;
+		line-height: 32px;
+	}
+
+	.type dt{
+		float: left;
+	}
+
+	.type dd{
+		float: left;
+		margin: 0 10px 0 8px;
+	}
+
+	.type dd a{
+		position: relative;
+		padding-left: 23px;
+		color: #000;
+		text-decoration: none;
+	}
+
+	.type dd a:hover {
+		color: #CC0000;
+		text-decoration: underline;
+	}
+
+	.type dd b {
+		background: #cd4a48;
+		position: absolute;
+		top:3px;
+		left: 0;
+		display: block;
+		width: 20px;
+		height: 20px;
+
+	}
+
+	.type dd a:hover b{
+		background: #BCDBA0;
+	}
+
+	.type .active b, .type .active a:hover b{
+		background: #BCDBA0;
+	}
+</style>
+<body>
+	<div class="type">
+		<form action="#" name="typeForm">
+			<label for="">配送类型</label>
+			<input type="radio" name="type" checked><label for="">全部</label>
+			<input type="radio" name="type"><label for="">京东配送</label>
+			<input type="radio" name="type"><label for="">第三方配送</label>
+		</form>
+
+		<dl id="type">
+			<dt>配送类型:</dt>
+			<dd class="active"><a href="#"><b></b>全部</a></dd>
+			<dd><a href="#"><b></b>京东配送</a></dd>
+			<dd><a href="#"><b></b>第三方配送</a></dd>
+		</dl>
+	</div>
+	<script>
+		var dl = document.getElementById('type');
+		var dds = document.querySelectorAll('dd');
+		dl.addEventListener('click',function () {
+			var ev = ev || window.event;
+			var target = ev.target || ev.srcElement;
+			for (var i = 0; i < dds.length; i++){
+				dds[i].classList.remove('active');
+			}
+			
+
+			if (target.nodeName.toLowerCase() === 'dd'){
+				target.classList.add('active');
+
+			}
+		})
+	</script>
+</body>
+</html>
