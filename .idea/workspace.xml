@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/IFE2016/task1.10.1/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/手风琴效果/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -17,11 +18,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/IFE2016/task1.10.1/index.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/手风琴效果/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+            <state relative-caret-position="-1600">
+              <caret line="58" column="38" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day 31 - 33/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day 28 - 30/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1449">
+              <caret line="173" column="22" lean-forward="true" selection-start-line="173" selection-start-column="22" selection-end-line="173" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -56,8 +75,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Learn CSS/No.2 - 初步接触 CSS 2D 变形/index.html" />
-        <option value="$PROJECT_DIR$/Learn CSS/No.1 - 制作一个简单的菜单动画效果/index.html" />
         <option value="$PROJECT_DIR$/Learn CSS/No.3 - CSS transition 和 transform 配合制作动画/index.html" />
         <option value="$PROJECT_DIR$/Learn CSS/No.4 - 3D 空间的卡片翻转特效/index.html" />
         <option value="$PROJECT_DIR$/Learn CSS/No.5 - 纯CSS制作绕中轴旋转的立方体/index.html" />
@@ -107,6 +124,8 @@
         <option value="$PROJECT_DIR$/IFE2016/task1.6.1/style.css" />
         <option value="$PROJECT_DIR$/IFE2016/task1.8.1/index.html" />
         <option value="$PROJECT_DIR$/IFE2016/task1.10.1/index.html" />
+        <option value="$PROJECT_DIR$/JavaScriptExrcises/2/index.html" />
+        <option value="$PROJECT_DIR$/JavaScriptExrcises/手风琴效果/index.html" />
       </list>
     </option>
   </component>
@@ -116,8 +135,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="39" />
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="873" />
@@ -174,6 +192,22 @@
             <path>
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+              <item name="day 28 - 30" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+              <item name="day 31 - 33" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+              <item name="day 31 - 33" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
               <item name="IFE2016" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -185,19 +219,13 @@
             <path>
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="Learn CSS" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaScriptExrcises" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="Learn CSS" type="462c0819:PsiDirectoryNode" />
-              <item name="No.5 - 纯CSS制作绕中轴旋转的立方体" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="Learn CSS" type="462c0819:PsiDirectoryNode" />
-              <item name="No.6 - 利用 CSS animation 制作slider" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaScriptExrcises" type="462c0819:PsiDirectoryNode" />
+              <item name="手风琴效果" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -280,10 +308,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="317118000" />
+    <option name="totallyTimeSpent" value="322206000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="39" y="23" width="1440" height="873" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49871135" visible="true" weight="0.12684989" />
@@ -317,9 +345,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/text.html" />
-    <entry file="file://$PROJECT_DIR$/Learn CSS/No.1 - 制作一个简单的菜单动画效果/index.html" />
-    <entry file="file://$PROJECT_DIR$/Learn CSS/No.2 - 初步接触 CSS 2D 变形/index.html" />
     <entry file="file://$PROJECT_DIR$/Learn CSS/No.3 - CSS transition 和 transform 配合制作动画/index.html" />
     <entry file="file://$PROJECT_DIR$/Learn CSS/No.7 - 使用 animate.css 实现登录框/animate.css" />
     <entry file="file://$PROJECT_DIR$/Learn CSS/No.4 - 3D 空间的卡片翻转特效/index.html" />
@@ -488,13 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day 28 - 30/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-767">
-          <caret line="173" column="22" lean-forward="true" selection-start-line="173" selection-start-column="22" selection-end-line="173" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/learningWebPack/pulic/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -513,13 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day 31 - 33/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -607,10 +618,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/1/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/2/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="60" column="27" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/IFE2016/task1.10.1/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
           <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/手风琴效果/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1600">
+          <caret line="58" column="38" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 31 - 33/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 28 - 30/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1449">
+          <caret line="173" column="22" lean-forward="true" selection-start-line="173" selection-start-column="22" selection-end-line="173" selection-end-column="22" />
         </state>
       </provider>
     </entry>
