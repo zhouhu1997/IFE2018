@@ -2,8 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/表单美化/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/img/music_disc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/img/music_pointer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/img/p1_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/img/p1_imooc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/img/p1_lantern.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/img/p2_2016.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/img/p2_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/img/p2_circle_inner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/img/p2_circle_middle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/img/p2_circle_outer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/img/p3_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/img/p3_blessing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/img/p3_couplet_first.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/img/p3_couplet_second.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/img/p3_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/img/p3_title.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScriptExrcises/表单美化/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScriptExrcises/表单美化/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,33 +35,50 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/表单美化/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="118" column="12" selection-start-line="118" selection-start-column="12" selection-end-line="118" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day 28 - 30/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="107" column="8" selection-start-line="107" selection-start-column="8" selection-end-line="114" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="83">
+                  <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/script.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="561">
+                  <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/style.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="223">
+                  <caret line="293" column="12" selection-start-line="293" selection-start-column="12" selection-end-line="293" selection-end-column="12" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -65,9 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Learn CSS/No.4 - 3D 空间的卡片翻转特效/index.html" />
-        <option value="$PROJECT_DIR$/Learn CSS/No.5 - 纯CSS制作绕中轴旋转的立方体/index.html" />
-        <option value="$PROJECT_DIR$/Learn CSS/No.6 - 利用 CSS animation 制作slider/index.html" />
         <option value="$PROJECT_DIR$/Learn CSS/No.7 - 使用 animate.css 实现登录框/index.html" />
         <option value="$PROJECT_DIR$/day3/css/style.css" />
         <option value="$PROJECT_DIR$/day4/css/style.css" />
@@ -116,6 +149,9 @@
         <option value="$PROJECT_DIR$/JavaScriptExrcises/2/index.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/手风琴效果/index.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/表单美化/index.html" />
+        <option value="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/script.js" />
+        <option value="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/index.html" />
+        <option value="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/style.css" />
       </list>
     </option>
   </component>
@@ -182,22 +218,6 @@
             <path>
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="day 28 - 30" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="day 31 - 33" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="day 31 - 33" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
               <item name="IFE2016" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -210,6 +230,19 @@
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
               <item name="JavaScriptExrcises" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaScriptExrcises" type="462c0819:PsiDirectoryNode" />
+              <item name="HTML对联练习" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaScriptExrcises" type="462c0819:PsiDirectoryNode" />
+              <item name="HTML对联练习" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
@@ -244,11 +277,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/img" />
       <recent name="$PROJECT_DIR$/IFE2016/task1.6.1" />
       <recent name="$PROJECT_DIR$/IFE2016/task1.1.1" />
       <recent name="$PROJECT_DIR$/day 31 - 33" />
       <recent name="$PROJECT_DIR$/day4/img" />
-      <recent name="$PROJECT_DIR$/day4" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/IFE2016/task1.4.1" />
@@ -304,7 +337,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="324424000" />
+    <option name="totallyTimeSpent" value="331884000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -341,9 +374,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Learn CSS/No.7 - 使用 animate.css 实现登录框/animate.css" />
-    <entry file="file://$PROJECT_DIR$/Learn CSS/No.4 - 3D 空间的卡片翻转特效/index.html" />
-    <entry file="file://$PROJECT_DIR$/Learn CSS/No.5 - 纯CSS制作绕中轴旋转的立方体/index.html" />
     <entry file="file://$PROJECT_DIR$/day2/exe2/css/style.css" />
     <entry file="file://$PROJECT_DIR$/Learn CSS/No.6 - 利用 CSS animation 制作slider/index.html" />
     <entry file="file://$PROJECT_DIR$/day3/css/style.css" />
@@ -648,17 +678,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day 28 - 30/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="107" column="8" selection-start-line="107" selection-start-column="8" selection-end-line="114" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/表单美化/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
-          <caret line="118" column="12" selection-start-line="118" selection-start-column="12" selection-end-line="118" selection-end-column="12" />
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 28 - 30/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2178">
+          <caret line="90" column="8" lean-forward="true" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="293" column="12" selection-start-line="293" selection-start-column="12" selection-end-line="293" selection-end-column="12" />
         </state>
       </provider>
     </entry>
