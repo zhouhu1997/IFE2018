@@ -125,14 +125,14 @@
 	</div>
 
 </body>
-<!--练习 1-->
+<!--练习 倒计时-->
 <script>
 	//公用方法
 	var checkBtn = function(btnA, btnB){
 		return (btnA.checked === false && btnB.checked === false) ? 'noBtnChecked' : btnA.checked ? 'A' : 'B';;
 	};
 
-	//练习 1
+	//练习 倒计时
 	var result = document.querySelector('#result');
 	var numberABtn = document.querySelector('#radio-a');
 	var numberBBtn = document.querySelector('#radio-b');
@@ -306,7 +306,7 @@
 	console.log('\n\n\n 练习3 \n\n\n');
 	console.log(diyTrim(' a f b    ')); // ->a f b
 	console.log(diyTrim('    ffdaf    ')); // ->ffdaf
-	console.log(diyTrim('1    ')); // ->1
+	console.log(diyTrim('1    ')); // ->倒计时
 	console.log(diyTrim('　　f')); // ->f
 	console.log(diyTrim('  　  a f b 　　 ')); // ->a f b
 	console.log(diyTrim(' ')); // ->

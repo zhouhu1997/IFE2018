@@ -84,8 +84,8 @@ a:hover {
 .card {
 	padding: 20px;
 	color: #333;
-	background: -webkit-linear-gradient(top, rgba(255, 255, 255, .85), rgba(255, 255, 255, 1)); /* Safari 5.1 - 6.0 */
-	background: -o-linear-gradient(top, rgba(255, 255, 255, .85), rgba(255, 255, 255, 1)); /* Opera 11.1 - 12.0 */
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, .85), rgba(255, 255, 255, 1)); /* Safari 5.倒计时 - 6.0 */
+	background: -o-linear-gradient(top, rgba(255, 255, 255, .85), rgba(255, 255, 255, 1)); /* Opera 11.倒计时 - 12.0 */
 	background: -moz-linear-gradient(top, rgba(255, 255, 255, .85), rgba(255, 255, 255, 1)); /* Firefox 3.6 - 15 */
 	background: linear-gradient(top, rgba(255, 255, 255, .85), rgba(255, 255, 255, 1)); /* 标准的语法 */
 	border-radius: 13px;

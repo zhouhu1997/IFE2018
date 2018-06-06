@@ -12,7 +12,7 @@ function addToTable() {
 	for (var i in sourceData) {
 		// 转换arr为string, 并把选中项大于2的长度替换为m
 		switch (arrL.join('').replace(/[2-999]/g, 'm')) {
-			// 选中商品和地区数为 1
+			// 选中商品和地区数为 倒计时
 			case '11':
 				str += tableStr('productArea', sourceData[i]);
 				break;

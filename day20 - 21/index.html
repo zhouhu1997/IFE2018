@@ -40,7 +40,7 @@
 	</style>
 </head>
 <body>
-	<!--练习 1-->
+	<!--练习 倒计时-->
 	<div class="box">
 		<h1>练习 1</h1>
 		<input type="text" id="name" onkeypress="key(event)">
@@ -103,7 +103,7 @@
 		<button id="picStop">停</button>
 	</div>
 	<script>
-		// 练习 1
+		// 练习 倒计时
 		var submitBtn = document.querySelector('#submit-btn');
 		var input = document.querySelector('#name');
 
@@ -178,7 +178,7 @@
 				style.opacity = num;
 				// 有个困惑就是 如果获得的是var style = obj4.style.opacity的话, obj4.style.opacity !== style;
 				/*
-				**  1. var style = obj4.style.opacity获得的是opacity的值 (string类型)
+				**  倒计时. var style = obj4.style.opacity获得的是opacity的值 (string类型)
 				*   2. var style = obj4.style 获得的是style对象(object类型)
 				*   第一个 使用num = num + step修改的是string的值 而不是style对象中的opacity所以不生效.
 				 */
