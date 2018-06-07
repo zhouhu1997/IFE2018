@@ -182,6 +182,7 @@ evilCircle.setControll();
 
   function loop() {
     ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+    // 用黑色覆盖之前的画布
     ctx.fillRect(0, 0, width, height);
   
     while (balls.length < 20) {

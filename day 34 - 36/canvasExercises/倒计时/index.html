@@ -5,15 +5,23 @@
 	<title>倒计时</title>
 </head>
 <body>
-	<p id="time"></p>
-</body>
-<script>
-	var time = document.querySelector("#time");
-	setInterval(function () {
-		var now = new Date();
-		console.log(now.getHours());
-		time.textContent = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
-	}, 1000);
+<div class="box" id="selections">
+	<h1>设置计时</h1>
+	<select id="hour-select">
+	</select>时
 
-</script>
+	<select id="minute-select">
+	</select>分
+
+	<select id="second-select">
+	</select>秒
+
+	<p id="result-wrapper"></p>
+</div>
+	<canvas id="canvas"></canvas>
+	<canvas id="canvas2"></canvas>
+</body>
+<script src="js/digit.js"></script>
+<script src="js/countdown.js"></script>
+<script src="js/canvaStar.js"></script>
 </html>

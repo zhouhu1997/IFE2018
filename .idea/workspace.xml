@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/index2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/js/canvaStar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/js/countdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/js/digit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScriptExrcises/1/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScriptExrcises/1/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learningWebPack/pulic/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/learningWebPack/pulic/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,11 +30,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+            <state relative-caret-position="255">
+              <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="digit.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/js/digit.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="406">
+              <caret line="121" column="10" lean-forward="true" selection-start-line="121" selection-start-column="10" selection-end-line="121" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="countdown.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/js/countdown.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="156" column="73" selection-start-line="156" selection-start-column="73" selection-end-line="156" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="canvaStar.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/js/canvaStar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="559">
+              <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -43,8 +72,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -67,10 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/day3/css/style.css" />
-        <option value="$PROJECT_DIR$/day4/css/style.css" />
-        <option value="$PROJECT_DIR$/execrise/index.html" />
-        <option value="$PROJECT_DIR$/day1/css/style_1.css" />
         <option value="$PROJECT_DIR$/day1/css/style_2.css" />
         <option value="$PROJECT_DIR$/day1/css/style_3.css" />
         <option value="$PROJECT_DIR$/day1/index.html" />
@@ -91,7 +116,6 @@
         <option value="$PROJECT_DIR$/day19/index.html" />
         <option value="$PROJECT_DIR$/day20 - 21/index.html" />
         <option value="$PROJECT_DIR$/day 22 - 24/index.html" />
-        <option value="$PROJECT_DIR$/day 25 - 27/index.html" />
         <option value="$PROJECT_DIR$/learningWebPack/index.html" />
         <option value="$PROJECT_DIR$/learningWebPack/pulic/index.html" />
         <option value="$PROJECT_DIR$/learningWebPack/app/Greeter.js" />
@@ -117,7 +141,12 @@
         <option value="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/script.js" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/index.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/style.css" />
+        <option value="$PROJECT_DIR$/JavaScriptExrcises/1/main.js" />
+        <option value="$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/js/digit.js" />
+        <option value="$PROJECT_DIR$/day 25 - 27/index.html" />
+        <option value="$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/js/countdown.js" />
         <option value="$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/index.html" />
+        <option value="$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/js/canvaStar.js" />
       </list>
     </option>
   </component>
@@ -127,7 +156,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="873" />
@@ -184,6 +213,16 @@
             <path>
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+              <item name="day 25 - 27" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+              <item name="day 28 - 30" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
               <item name="day 34 - 36" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -202,6 +241,14 @@
             <path>
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+              <item name="day 34 - 36" type="462c0819:PsiDirectoryNode" />
+              <item name="canvasExercises" type="462c0819:PsiDirectoryNode" />
+              <item name="倒计时" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
               <item name="IFE2016" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -214,6 +261,12 @@
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
               <item name="JavaScriptExrcises" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaScriptExrcises" type="462c0819:PsiDirectoryNode" />
+              <item name="1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
@@ -248,11 +301,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/js" />
       <recent name="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/img" />
       <recent name="$PROJECT_DIR$/IFE2016/task1.6.1" />
       <recent name="$PROJECT_DIR$/IFE2016/task1.1.1" />
       <recent name="$PROJECT_DIR$/day 31 - 33" />
-      <recent name="$PROJECT_DIR$/day4/img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/IFE2016/task1.4.1" />
@@ -308,10 +361,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="333619000" />
+    <option name="totallyTimeSpent" value="349946000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49871135" visible="true" weight="0.12684989" />
@@ -345,35 +398,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/day3/css/style.css" />
-    <entry file="file://$PROJECT_DIR$/day1/css/style_1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day1/css/style_2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="107" column="1" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day1/css/style_3.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day1/cv/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="123" column="11" selection-start-line="123" selection-start-column="4" selection-end-line="123" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day1/cv/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="559">
@@ -483,20 +507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
           <caret line="215" column="38" selection-start-line="215" selection-start-column="38" selection-end-line="215" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day 25 - 27/index2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-155">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day 25 - 27/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2261">
-          <caret line="133" column="21" selection-start-line="133" selection-start-column="21" selection-end-line="133" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -612,13 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/1/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/2/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="562">
@@ -654,13 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day 28 - 30/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2178">
-          <caret line="90" column="8" lean-forward="true" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
@@ -682,6 +678,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/1/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/1/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2856">
+          <caret line="184" column="17" selection-start-line="184" selection-start-column="17" selection-end-line="184" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 28 - 30/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="90" column="8" lean-forward="true" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 25 - 27/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/1/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 25 - 27/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="224" column="35" lean-forward="true" selection-start-line="224" selection-start-column="35" selection-end-line="224" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/index2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -691,8 +725,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        <state relative-caret-position="255">
+          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/js/digit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="121" column="10" lean-forward="true" selection-start-line="121" selection-start-column="10" selection-end-line="121" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/js/countdown.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="156" column="73" selection-start-line="156" selection-start-column="73" selection-end-line="156" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/js/canvaStar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
         </state>
       </provider>
     </entry>
