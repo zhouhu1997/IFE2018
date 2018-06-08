@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas</title>
+	<style>
+		#canvas {
+			border: 1px solid #e3e3e3;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+</body>
+<script>
+	var canvas = document.getElementById("canvas");
+	var WIDTH = 800;
+	var HEIGHT = 800;
+	var RADIUS = 200;
+	canvas.height = HEIGHT;
+	canvas.width = WIDTH;
+	var cxt = canvas.getContext("2d");
+
+	function drawBg(){
+		cxt.save();
+		cxt.translate(WIDTH / 2, HEIGHT / 2);
+		cxt.beginPath();
+		cxt.arc(0, 0, RADIUS, 0, Math.PI * 2);
+		cxt.lineWidth = 5;
+		cxt.strokeStyle = "#000";
+		cxt.stroke();
+
+		var num = [3,4,5,6,7,8,9,10,11,12,1,2];
+		cxt.fillStyle = "#000";
+		cxt.font = "45px Arial";
+		cxt.textAlign = "center";
+		cxt.textBaseline = "middle";
+		num.forEach(function (number, i) {
+			var rad = Math.PI * 2 / 12 * i;
+			var x = Math.cos(rad) * (RADIUS - 50);
+			var y = Math.sin(rad) * (RADIUS - 50);
+			cxt.fillText(number, x, y);
+		})
+
+		for (var i = 0; i < 60; i++){
+			cxt.beginPath();
+			var rad = Math.PI * 2 / 60 * i;
+			var x = Math.cos(rad) * (RADIUS - 18);
+			var y = Math.sin(rad) * (RADIUS - 18);
+			cxt.arc(x,y, 4, 0, Math.PI * 2);
+			cxt.fillStyle = i % 5 === 0 ? "#000" : "#ccc";
+			cxt.fill();
+		}
+
+	}
+
+	function drawHour(hour, min){
+		cxt.save();
+		cxt.beginPath();
+		cxt.strokeStyle = "#000";
+		var rad = 2 * Math.PI / 12 * hour;
+		var mrad = 2 * Math.PI / 60 /12 * min;
+		cxt.rotate(rad + mrad);
+		cxt.lineWidth = 6;
+		cxt.lineCap = "round";
+		cxt.moveTo(0,0);
+		cxt.lineTo(0, - RADIUS / 2);
+		cxt.stroke();
+		cxt.restore();
+	}
+
+	function drawMinutes(min){
+		cxt.save();
+		cxt.beginPath();
+		cxt.strokeStyle = "#ccc";
+		var rad = 2 * Math.PI / 60 * min;
+		cxt.rotate(rad);
+		cxt.lineWidth = 4;
+		cxt.lineCap = "round";
+		cxt.moveTo(0,0);
+		cxt.lineTo(0, - RADIUS + 30);
+		cxt.stroke();
+		cxt.restore();
+	}
+
+	function drawSec(sec){
+		cxt.save();
+		cxt.beginPath();
+		cxt.strokeStyle = "#BB3922";
+		var rad = 2 * Math.PI / 60 * sec;
+		cxt.rotate(rad);
+		cxt.lineWidth = 4;
+		cxt.lineCap = "round";
+		cxt.moveTo(0,0);
+		cxt.lineTo(0, - RADIUS + 30);
+		cxt.stroke();
+		cxt.restore();
+	}
+
+	setInterval(function () {
+		var now = new Date();
+		var hour = now.getHours();
+		var min = now.getMinutes();
+		var sec = now.getSeconds();
+
+		cxt.moveTo(0,0);
+		cxt.clearRect(0,0, WIDTH, HEIGHT);
+		drawBg();
+		drawHour(hour, min);
+		drawMinutes(min);
+		drawSec(sec);
+		
+		cxt.beginPath();
+		cxt.fillStyle = "#000";
+		cxt.arc(0, 0, 10, 0, Math.PI * 2);
+		cxt.fill();
+		cxt.restore();
+
+	}, 50)
+</script>
+</html>
