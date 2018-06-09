@@ -31,7 +31,6 @@
 	// 画正方形
 	cxt.beginPath();
 	cxt.fillRect(400,400,100,100);
-	cxt.beginPath();
 	// 画圆
 	cxt.beginPath();
 	cxt.arc(10,10, 10, 0, Math.PI * 2);
@@ -41,6 +40,102 @@
 	cxt.font = "40px Arial";
 	cxt.fillText("Hello IFE 2018", 500,700);
 	cxt.fill();
+
+
+	function drawHour(hour, min){
+		cxt.save();
+		cxt.beginPath();
+		cxt.strokeStyle = "#000";
+		var rad = 2 * Math.PI / 12 * hour;
+		var mrad = 2 * Math.PI / 60 /12 * min;
+		cxt.rotate(rad + mrad);
+		cxt.lineWidth = 6;
+		cxt.lineCap = "round";
+		cxt.lineTo(0, - 50);
+		cxt.stroke();
+		cxt.restore();
+	}
+
+
+
+	function drawMinutes(min){
+		cxt.save();
+		cxt.beginPath();
+		cxt.strokeStyle = "#ccc";
+		var rad = 2 * Math.PI / 60 * min;
+		cxt.rotate(rad);
+		cxt.lineWidth = 4;
+		cxt.lineCap = "round";
+		cxt.lineTo(0, - 80);
+		cxt.stroke();
+		cxt.restore();
+	}
+
+	function drawSec(sec){
+		cxt.save();
+		cxt.beginPath();
+		cxt.strokeStyle = "#BB3922";
+		var rad = 2 * Math.PI / 60 * sec;
+		cxt.rotate(rad);
+		cxt.lineWidth = 4;
+		cxt.lineCap = "round";
+		cxt.lineTo(0, -85);
+		cxt.stroke();
+		cxt.restore();
+	}
+
+	function drawBg(){
+		// 画时钟
+		cxt.save();
+		cxt.beginPath();
+		cxt.font = "20px Arial";
+		cxt.textBaseline = "middle";
+		cxt.textAlign = "center";
+		cxt.arc(300, 300, 100, 0, Math.PI * 2);
+		cxt.stroke();
+		var num = [3,4,5,6,7,8,9,10,11,12,1,2];
+		for (var i = 0; i < num.length; i++){
+			cxt.beginPath();
+			var rad = Math.PI * 2 / 12 * i;
+			var x = Math.cos(rad) * 80;
+			var y = Math.sin(rad) * 80;
+			cxt.fillText(num[i], x ,y);
+		}
+
+		for (var i = 0; i < 60; i++){
+			cxt.beginPath();
+			var rad = Math.PI * 2 / 60 * i;
+			var x = Math.cos(rad) * 95;
+			var y = Math.sin(rad) * 95;
+			cxt.arc(x,y, 2, 0, Math.PI * 2);
+			cxt.fillStyle = i % 5 === 0 ? "#000" : "#ccc";
+			cxt.fill();
+		}
+
+		cxt.fillStyle = "green";
+		cxt.arc(0,0, 5, 0, Math.PI * 2);
+		cxt.fill();
+		cxt.restore();
+
+	}
+	cxt.beginPath();
+	cxt.translate(300,300);
+	var now = new Date();
+	var hour = now.getHours();
+	var min = now.getMinutes();
+	var sec = now.getSeconds();
+
+	drawBg();
+	cxt.moveTo(0,0);
+	drawHour(hour, min);
+	drawMinutes(min);
+	drawSec(sec);
+
+	setInterval(function () {
+
+
+
+	}, 500)
 
 </script>
 </html>
