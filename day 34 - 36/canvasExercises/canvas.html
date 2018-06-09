@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas</title>
+	<h2>练习Canvas</h2>
+	<canvas id="canvas"></canvas>
+</head>
+<body>
+
+</body>
+<script>
+	var canvas = document.getElementById("canvas");
+	canvas.width = 800;
+	canvas.height = 800;
+	var cxt = canvas.getContext("2d");
+
+	var grad = cxt.createLinearGradient(100,100,500,100);
+	grad.addColorStop(0.0, "#000");
+	grad.addColorStop(0.5, "#ED2D02");
+	grad.addColorStop(1.0, "green");
+
+	cxt.fillStyle = grad;
+	cxt.strokeStyle = grad;
+
+	// 画直线
+	cxt.beginPath();
+	cxt.moveTo(100,100);
+	cxt.lineTo(500,100);
+	cxt.stroke();
+	// 画正方形
+	cxt.beginPath();
+	cxt.fillRect(400,400,100,100);
+	cxt.beginPath();
+	// 画圆
+	cxt.beginPath();
+	cxt.arc(10,10, 10, 0, Math.PI * 2);
+	cxt.fill();
+	// 显示文字
+	cxt.beginPath();
+	cxt.font = "40px Arial";
+	cxt.fillText("Hello IFE 2018", 500,700);
+	cxt.fill();
+
+</script>
+</html>
