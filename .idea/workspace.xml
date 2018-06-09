@@ -58,8 +58,8 @@
       <file leaf-file-name="canvas.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day 34 - 36/canvasExercises/canvas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+            <state relative-caret-position="610">
+              <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
             </state>
           </provider>
         </entry>
@@ -380,12 +380,12 @@
       <workItem from="1527213597717" duration="73789000" />
       <workItem from="1527652044687" duration="1011000" />
       <workItem from="1527653167165" duration="22431000" />
-      <workItem from="1528428495870" duration="28394000" />
+      <workItem from="1528428495870" duration="30408000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="384950000" />
+    <option name="totallyTimeSpent" value="386964000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="39" y="23" width="1440" height="873" extended-state="0" />
@@ -774,8 +774,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day 34 - 36/canvasExercises/canvas.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+        <state relative-caret-position="610">
+          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
         </state>
       </provider>
     </entry>

@@ -96,7 +96,7 @@
 		cxt.textBaseline = "middle";
 		cxt.textAlign = "center";
 		cxt.arc(300, 300, 100, 0, Math.PI * 2);
-		cxt.stroke();
+
 		var num = [3,4,5,6,7,8,9,10,11,12,1,2];
 		for (var i = 0; i < num.length; i++){
 			cxt.beginPath();
@@ -116,13 +116,13 @@
 			cxt.fill();
 		}
 
-		cxt.fillStyle = "green";
+		cxt.fillStyle = "#000";
 		cxt.arc(0,0, 5, 0, Math.PI * 2);
 		cxt.fill();
 
 	}
 	cxt.beginPath();
-	cxt.translate(300,300);
+	cxt.translate(200,200);
 
 	setInterval(function () {
 		var now = new Date();
@@ -142,6 +142,16 @@
 
 
 	}, 500)
+
+	cxt.moveTo(-100, 400);
+	cxt.bezierCurveTo(0,200,100,400,200,350);
+	cxt.lineCap = "round";
+	cxt.arc(200,400, 50, Math.PI * 2 / 4, Math.PI / 2 * 3, true);
+	cxt.fillStyle = "gray";
+	cxt.moveTo(200,450);
+	cxt.lineTo(-100,400);
+	cxt.lineTo(200,350);
+	cxt.fill();
 
 </script>
 </html>
