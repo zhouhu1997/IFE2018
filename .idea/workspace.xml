@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/day 34 - 36/canvasExercises/canvas.html" beforeDir="false" afterPath="$PROJECT_DIR$/day 34 - 36/canvasExercises/canvas.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -58,8 +59,8 @@
       <file leaf-file-name="canvas.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day 34 - 36/canvasExercises/canvas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="440">
+              <caret line="133" column="21" lean-forward="true" selection-start-line="133" selection-start-column="21" selection-end-line="133" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -380,12 +381,12 @@
       <workItem from="1527213597717" duration="73789000" />
       <workItem from="1527652044687" duration="1011000" />
       <workItem from="1527653167165" duration="22431000" />
-      <workItem from="1528428495870" duration="27554000" />
+      <workItem from="1528428495870" duration="27782000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="384110000" />
+    <option name="totallyTimeSpent" value="384338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="39" y="23" width="1440" height="873" extended-state="0" />
@@ -774,8 +775,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/day 34 - 36/canvasExercises/canvas.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="440">
+          <caret line="133" column="21" lean-forward="true" selection-start-line="133" selection-start-column="21" selection-end-line="133" selection-end-column="21" />
         </state>
       </provider>
     </entry>
