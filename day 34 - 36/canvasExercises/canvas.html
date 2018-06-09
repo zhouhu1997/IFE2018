@@ -119,23 +119,25 @@
 		cxt.fillStyle = "green";
 		cxt.arc(0,0, 5, 0, Math.PI * 2);
 		cxt.fill();
-		cxt.restore();
 
 	}
 	cxt.beginPath();
 	cxt.translate(300,300);
-	var now = new Date();
-	var hour = now.getHours();
-	var min = now.getMinutes();
-	var sec = now.getSeconds();
-
-	drawBg();
-	drawHour(hour, min);
-	drawMinutes(min);
-	drawSec(sec);
-
 
 	setInterval(function () {
+		var now = new Date();
+		var hour = now.getHours();
+		var min = now.getMinutes();
+		var sec = now.getSeconds();
+		cxt.save();
+		cxt.translate(-100,-100);
+		cxt.clearRect(0,0, 200,200);
+		cxt.restore();
+		drawHour(hour, min);
+		drawMinutes(min);
+		drawSec(sec);
+		drawBg();
+		cxt.restore();
 
 
 
