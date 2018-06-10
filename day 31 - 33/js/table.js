@@ -4,7 +4,7 @@ function addToTable() {
 	getSelectedBtns();
 	var str = '';
 	//设置表头
-	var table = '<table class="dataintable" id="table"><tr><th>商品</th><th>地区</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
+	var table = '<table class="dataintable" id="table"><tr><th class="product">商品</th><th class="region">地区</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
 	// 初始化融合表格参数为商品列在前, 地区列在后
 	var combineFactor = 'productArea';
 	var arrL = [selectedArea.length, selectedProduct.length];
@@ -19,7 +19,7 @@ function addToTable() {
 			// 选中地区数为1 , 商品数大于2
 			case '1m':
 				// 更改表头为地区前, 商品后
-				table = '<table class="dataintable" id="table"><tr><th>地区</th><th>商品</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
+				table = '<table class="dataintable" id="table"><tr><th class="region">地区</th><th class="product">商品</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
 				str += tableStr('areaProduct', sourceData[i]);
 				// 设置融合表格参数为地区在前, 商品在后
 				combineFactor = 'areaProduct';
@@ -56,11 +56,11 @@ function tableStr(order, obj) {
 		switch (order) {
 			// 生成商品在前, 地区在后的数据行
 			case 'productArea':
-				str += '<tr><td class="header">' + product + '</td><td>' + region + '</td><td>' + sale[0] + '</td><td>' + sale[1] + '</td><td>' + sale[2] + '</td><td>' + sale[3] + '</td><td>' + sale[4] + '</td><td>' + sale[5] + '</td><td>' + sale[6] + '</td><td>' + sale[7] + '</td><td>' + sale[8] + '</td><td>' + sale[9] + '</td><td>' + sale[10] + '</td><td>' + sale[11] + '</td></tr>';
+				str += '<tr><td class="header product">' + product + '</td><td class="region">' + region + '</td><td>' + sale[0] + '</td><td>' + sale[1] + '</td><td>' + sale[2] + '</td><td>' + sale[3] + '</td><td>' + sale[4] + '</td><td>' + sale[5] + '</td><td>' + sale[6] + '</td><td>' + sale[7] + '</td><td>' + sale[8] + '</td><td>' + sale[9] + '</td><td>' + sale[10] + '</td><td>' + sale[11] + '</td></tr>';
 				break;
 			// 生成地区在前, 商品在后的数据行
 			case'areaProduct':
-				str += '<tr><td class="header">' + region + '</td><td>' + product + '</td><td>' + sale[0] + '</td><td>' + sale[1] + '</td><td>' + sale[2] + '</td><td>' + sale[3] + '</td><td>' + sale[4] + '</td><td>' + sale[5] + '</td><td>' + sale[6] + '</td><td>' + sale[7] + '</td><td>' + sale[8] + '</td><td>' + sale[9] + '</td><td>' + sale[10] + '</td><td>' + sale[11] + '</td></tr>';
+				str += '<tr><td class="header region">' + region + '</td><td class="product">' + product + '</td><td>' + sale[0] + '</td><td>' + sale[1] + '</td><td>' + sale[2] + '</td><td>' + sale[3] + '</td><td>' + sale[4] + '</td><td>' + sale[5] + '</td><td>' + sale[6] + '</td><td>' + sale[7] + '</td><td>' + sale[8] + '</td><td>' + sale[9] + '</td><td>' + sale[10] + '</td><td>' + sale[11] + '</td></tr>';
 				break;
 			default:
 				break;

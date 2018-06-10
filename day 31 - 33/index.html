@@ -41,7 +41,28 @@
 			background-color:#fff;
 		}
 
+		#graph {
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: 10px;
+		}
+
+		#canvas-wrapper {
+			flex: 0 0 50%;
+			min-width: 600px;
+		}
+
+		#svg-wrapper {
+			box-sizing: border-box;
+			flex: 0 0 50%;
+			padding: 10px;
+			height: 450px;
+			min-width: 600px;
+			background: #7DB74B;
+		}
+
 	</style>
+
 </head>
 <body>
 	<div class="box">
@@ -54,14 +75,18 @@
 		<div id="table-wrapper">
 		</div>
 	</div>
-	<div>
-		<canvas id="canvas"></canvas>
+	<div id="graph">
+		<div id="canvas-wrapper">
+			<canvas id="canvas"></canvas>
+		</div>
+		<div id="svg-wrapper"></div>
 	</div>
-	<script src="js/ife31data.js"></script>
 	<script src="js/variables.js"></script>
+	<script src="js/ife31data.js"></script>
 	<script src="js/table.js"></script>
 	<script src="js/checkbox.js"></script>
 	<script src="js/line.js"></script>
 	<script src="js/app.js"></script>
+	<script src="js/bar.js"></script>
 </body>
 </html>

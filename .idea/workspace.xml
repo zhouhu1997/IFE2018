@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/day 31 - 33/js/line.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day 31 - 33/js/bar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/day 31 - 33/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day 31 - 33/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/day 31 - 33/js/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/day 31 - 33/js/table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day 34 - 36/canvasExercises/svg.html" beforeDir="false" afterPath="$PROJECT_DIR$/day 34 - 36/canvasExercises/svg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day 31 - 33/js/variables.js" beforeDir="false" afterPath="$PROJECT_DIR$/day 31 - 33/js/variables.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,8 +26,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day 31 - 33/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+            <state relative-caret-position="-580">
+              <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -35,17 +35,8 @@
       <file leaf-file-name="variables.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day 31 - 33/js/variables.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="60" lean-forward="true" selection-start-column="60" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="canvas.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day 34 - 36/canvas.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+            <state relative-caret-position="493">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -53,17 +44,8 @@
       <file leaf-file-name="table.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day 31 - 33/js/table.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="line.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/day 31 - 33/js/line.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
+            <state relative-caret-position="408">
+              <caret line="62" column="185" selection-start-line="62" selection-start-column="185" selection-end-line="62" selection-end-column="185" />
             </state>
           </provider>
         </entry>
@@ -77,20 +59,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkbox.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day 31 - 33/js/checkbox.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day 31 - 33/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bar.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day 31 - 33/js/bar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="line.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day 31 - 33/js/line.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="85" selection-start-line="2" selection-start-column="85" selection-end-line="2" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -131,10 +122,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/day 25 - 27/index2.html" />
         <option value="$PROJECT_DIR$/day 28 - 30/index.html" />
         <option value="$PROJECT_DIR$/day 31 - 33/ife31data.js" />
-        <option value="$PROJECT_DIR$/day 31 - 33/js/variables.js" />
         <option value="$PROJECT_DIR$/day 31 - 33/js/app.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/index.html" />
@@ -179,9 +168,11 @@
         <option value="$PROJECT_DIR$/day 34 - 36/canvasExercises/canvas.html" />
         <option value="$PROJECT_DIR$/day 34 - 36/canvasExercises/svg.html" />
         <option value="$PROJECT_DIR$/day 31 - 33/js/checkbox.js" />
+        <option value="$PROJECT_DIR$/day 31 - 33/js/line.js" />
+        <option value="$PROJECT_DIR$/day 31 - 33/js/variables.js" />
         <option value="$PROJECT_DIR$/day 31 - 33/index.html" />
         <option value="$PROJECT_DIR$/day 31 - 33/js/table.js" />
-        <option value="$PROJECT_DIR$/day 31 - 33/js/line.js" />
+        <option value="$PROJECT_DIR$/day 31 - 33/js/bar.js" />
       </list>
     </option>
   </component>
@@ -293,40 +284,6 @@
               <item name="倒计时" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="IFE2016" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="IFE2016" type="462c0819:PsiDirectoryNode" />
-              <item name="task1.10.1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaScriptExrcises" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaScriptExrcises" type="462c0819:PsiDirectoryNode" />
-              <item name="1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaScriptExrcises" type="462c0819:PsiDirectoryNode" />
-              <item name="手风琴效果" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaScriptExrcises" type="462c0819:PsiDirectoryNode" />
-              <item name="表单美化" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -404,12 +361,12 @@
       <workItem from="1527213597717" duration="73789000" />
       <workItem from="1527652044687" duration="1011000" />
       <workItem from="1527653167165" duration="22431000" />
-      <workItem from="1528428495870" duration="48474000" />
+      <workItem from="1528428495870" duration="56172000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="405030000" />
+    <option name="totallyTimeSpent" value="412728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -446,13 +403,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Learn CSS/No.7 - 使用 animate.css 实现登录框/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="125" column="24" lean-forward="true" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day2/exe1/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -569,6 +519,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1870">
           <caret line="173" column="53" selection-start-line="173" selection-start-column="53" selection-end-line="173" selection-end-column="53" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#5180#5186#0" expanded="true" />
+            <element signature="e#5225#5231#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -719,13 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day 34 - 36/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="244" column="8" selection-start-line="244" selection-start-column="8" selection-end-line="244" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -740,42 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day 34 - 36/canvasExercises/svg.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-          <folding>
-            <element signature="n#style#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#path#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#g#2;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#path#0;n#g#0;n#g#1;n#g#0;n#g#2;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#path#1;n#g#0;n#g#1;n#g#0;n#g#2;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#path#2;n#g#0;n#g#1;n#g#0;n#g#2;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#line#0;n#g#0;n#g#1;n#g#0;n#g#2;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#g#0;n#g#0;n#g#1;n#g#0;n#g#2;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#g#1;n#g#0;n#g#1;n#g#0;n#g#2;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#g#2;n#g#0;n#g#1;n#g#0;n#g#2;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#g#3;n#g#0;n#g#1;n#g#0;n#g#2;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#g#1;n#g#1;n#g#0;n#g#2;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#g#3;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#line#0;n#g#3;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#g#4;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#line#0;n#g#4;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#g#5;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#line#0;n#g#5;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#g#6;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#line#0;n#g#6;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/variables.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="60" lean-forward="true" selection-start-column="60" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day 34 - 36/canvas.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -783,24 +697,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day 31 - 33/index.html">
+    <entry file="file://$PROJECT_DIR$/day 34 - 36/canvasExercises/svg.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+        <state relative-caret-position="151">
+          <caret line="152" column="17" lean-forward="true" selection-start-line="152" selection-start-column="17" selection-end-line="152" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#path#0;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#g#2;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#g#3;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#line#0;n#g#3;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#g#4;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#line#0;n#g#4;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#g#5;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#line#0;n#g#5;n#svg#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/app.js">
+    <entry file="file://$PROJECT_DIR$/day 34 - 36/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/checkbox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+        <state relative-caret-position="6596">
+          <caret line="388" lean-forward="true" selection-start-line="388" selection-end-line="403" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -811,17 +729,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/checkbox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="36" column="4" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="37" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 31 - 33/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-580">
+          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/variables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/day 31 - 33/js/table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="408">
+          <caret line="62" column="185" selection-start-line="62" selection-start-column="185" selection-end-line="62" selection-end-column="185" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day 31 - 33/js/line.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
+        <state relative-caret-position="34">
+          <caret line="2" column="85" selection-start-line="2" selection-start-column="85" selection-end-line="2" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/bar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
         </state>
       </provider>
     </entry>

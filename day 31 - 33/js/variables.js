@@ -27,3 +27,4 @@ var productArr = [{name:'prodcut', value:'mobile', text:'手机'},
 	{name:'product', value:'speaker', text:'智能音箱'},
 	{name:'product', value:'all', text:'全选'}];
 var selectionNumber = 0;
+
