@@ -151,7 +151,7 @@ function setListener() {
 				source[0].region = target.childNodes[i].textContent;
 				continue;
 			}
-			source[0].sale.push(target.childNodes[i].textContent);
+			source[0].sale.push(target.childNodes[i].childNodes[0].value);
 		}
 
 		drawSVGAxis(position("50","250","520","2",'',"2","#000"));

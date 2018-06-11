@@ -4,14 +4,23 @@
 	<meta charset="UTF-8">
 	<title>我是精明的小卖家（1&2)</title>
 	<style>
+		input[type="text"] {
+			box-sizing: border-box;
+			padding-left: 10px;
+			outline: none;
+			border: none;
+			width: 60px;
+			height: 40px;
+		}
+
 		.box{
 			float: left;
 			display: inline-block;
-			max-width: 800px;
+			max-width: 900px;
 			margin: 0 20px 0 20px;
 			padding: 10px;
 			border: 1px solid seagreen;
-			max-height: 400px;
+			max-height: 450px;
 			overflow: auto;
 		}
 
@@ -36,8 +45,9 @@
 		}
 
 		table.dataintable td {
-			vertical-align:text-top;
-			padding:6px 15px 6px 6px;
+			vertical-align:center;
+			text-align: center;
+			width: 60px;
 			border:1px solid #aaa;
 		}
 
@@ -69,11 +79,14 @@
 			max-width: 600px;
 		}
 
-		#table tr:hover{
+		#table tr:hover,
+		#table tr:hover input{
 			background: #5CC9F5;
 			opacity: 0.9;
 			color: #fff;
 		}
+
+
 
 	</style>
 

@@ -4,41 +4,43 @@ function addToTable() {
 	getSelectedBtns();
 	var str = '';
 	//设置表头
-	var table = '<tr><th class="product">商品</th><th class="region">地区</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
+	var table = '<tr><th id="header">商品</th><th id="sub-header">地区</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
+	//根据表格语句生成表格
+	tableWrapper.innerHTML = table;
 	// 初始化融合表格参数为商品列在前, 地区列在后
 	var combineFactor = 'productArea';
 	var arrL = [selectedArea.length, selectedProduct.length];
+	var header = document.getElementById("header");
+	var subHeader = document.getElementById("sub-header");
 	// 遍历数据
 	for (var i in sourceData) {
 		// 转换arr为string, 并把选中项大于2的长度替换为m
 		switch (arrL.join('').replace(/[2-999]/g, 'm')) {
 			// 选中商品和地区数为 倒计时
 			case '11':
-				str += tableStr('productArea', sourceData[i]);
+				tableStr('productArea', sourceData[i]);
 				break;
 			// 选中地区数为1 , 商品数大于2
 			case '1m':
 				// 更改表头为地区前, 商品后
-				table = '<tr><th class="region">地区</th><th class="product">商品</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
-				str += tableStr('areaProduct', sourceData[i]);
+				header.textContent = "地区";
+				subHeader.textContent = "商品";
 				// 设置融合表格参数为地区在前, 商品在后
 				combineFactor = 'areaProduct';
+				tableStr('areaProduct', sourceData[i]);
 				break;
 			// 选中地区数大于2, 商品数为1
 			case 'm1':
-				str += tableStr('productArea', sourceData[i]);
+				tableStr('productArea', sourceData[i]);
 				break;
 			// 选中地区和商品数都大于2
 			case 'mm':
-				str += tableStr('productArea', sourceData[i]);
+				tableStr('productArea', sourceData[i]);
 				break;
 			default:
 				break;
 		}
 	}
-	table += str;
-	//根据表格语句生成表格
-	tableWrapper.innerHTML = table;
 	// 更新表格
 	drawLine(getData());
 	// 为动态添加的表格内容绑定事件
@@ -49,27 +51,39 @@ function addToTable() {
 
 // 获得表格语句
 function tableStr(order, obj) {
-	var str = '',
-		product = obj.product,
+	var product = obj.product,
 		sale = obj.sale,
 		region = obj.region;
 	// 判断地区和商品是否存在于selectedArea和selectedProduct中
 	if (selectedArea.indexOf(region) >= 0 && selectedProduct.indexOf(product) >= 0) {
-		switch (order) {
-			// 生成商品在前, 地区在后的数据行
-			case 'productArea':
-				str += '<tr><td class="header product">' + product + '</td><td class="region">' + region + '</td><td>' + sale[0] + '</td><td>' + sale[1] + '</td><td>' + sale[2] + '</td><td>' + sale[3] + '</td><td>' + sale[4] + '</td><td>' + sale[5] + '</td><td>' + sale[6] + '</td><td>' + sale[7] + '</td><td>' + sale[8] + '</td><td>' + sale[9] + '</td><td>' + sale[10] + '</td><td>' + sale[11] + '</td></tr>';
-				break;
-			// 生成地区在前, 商品在后的数据行
-			case'areaProduct':
-				str += '<tr><td class="header region">' + region + '</td><td class="product">' + product + '</td><td>' + sale[0] + '</td><td>' + sale[1] + '</td><td>' + sale[2] + '</td><td>' + sale[3] + '</td><td>' + sale[4] + '</td><td>' + sale[5] + '</td><td>' + sale[6] + '</td><td>' + sale[7] + '</td><td>' + sale[8] + '</td><td>' + sale[9] + '</td><td>' + sale[10] + '</td><td>' + sale[11] + '</td></tr>';
-				break;
-			default:
-				break;
+		console.log("append");
+
+		var tr = document.createElement("tr");
+		for (var i = 0; i < 14; i++){
+			var td = document.createElement("td");
+			var input = document.createElement("input");
+			if (i===0) {
+				// 生成商品在前, 地区在后的数据行
+				order === "productArea" ? td.setAttribute("class", "header product") : td.setAttribute("class", "header region");
+				td.textContent = order === "productArea" ? product : region;
+				tr.appendChild(td);
+				continue;
+			}
+			if (i===1) {
+				// 生成地区在前, 商品在后的数据行
+				order === "productArea" ? td.setAttribute("class", "region") : td.setAttribute("class", "product");
+				td.textContent = order === "productArea" ? region : product;
+				tr.appendChild(td);
+				continue;
+			}
+			input.setAttribute("type","text");
+			input.setAttribute("value", sale[i - 2]);
+			tr.appendChild(td);
+			td.appendChild(input);
 		}
+
+		tableWrapper.appendChild(tr);
 	}
-	// 返回表格语句
-	return str;
 }
 
 // 融合表格函数
