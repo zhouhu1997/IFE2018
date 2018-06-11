@@ -51,7 +51,7 @@
 
     <a href="//ife.baidu.com/course/detail/id/52">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2028%20-%2030/index.html">Demo<a/>
 
-* #### 2018.05.27 练习12 (我是精明的小卖家（一)
+* #### 2018.05.27 练习12 (我是精明的小卖家（一))
 
     <a href="//ife.baidu.com/course/detail/id/53">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2031%20-%2033/index.html">Demo<a/>
     
@@ -60,6 +60,9 @@
     
 * #### 2018.06.03 - 2018.06.04
     学习JavaScript
+
+* #### 2018.06.11  练习13 (我是精明的小卖家 (二))
+    <a href="//ife.baidu.com/course/detail/id/54">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2034%20-%2036/index.html">Demo<a/>
 
 ---
 
