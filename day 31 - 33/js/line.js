@@ -1,9 +1,3 @@
-var data = {
-	xAix : ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],
-	yAixDistance : Math.floor((getYAxisRange(sourceData)[1] + getYAxisRange(sourceData)[0])/ 10),
-	yAixRate : 250 / getYAxisRange(sourceData)[1]
-}
-
 function getData(){
 	var initData = [];
 
@@ -19,22 +13,23 @@ function getData(){
 		return initData;
 }
 
-function drawLine(data, sourceData) {
+function drawLine(sourceData) {
 	var canvas = document.getElementById("canvas"),
-		cxt = canvas.getContext("2d");
-
+		cxt = canvas.getContext("2d"),
+		yAixDistance = Math.floor((getYAxisRange(getData())[1] + getYAxisRange(getData())[0])/ 10),
+		yAixRate = 250 / getYAxisRange(getData())[1]
 	canvas.width = 600;
 	canvas.height = 350;
 	cxt.clearRect(0,0,514,350);
 	cxt.font = "12px Arial";
 
-	drawXYAix(cxt, data);
+	drawXYAix(cxt, yAixDistance, yAixRate);
 
 	for (var i = 0; i < sourceData.length; i++){
 		sourceData[i].sale.forEach(function (item, index, arr) {
 			// 根据数据画点和连线
 			cxt.save();
-			var yPosition = sourceData[i].sale[index] * data.yAixRate;
+			var yPosition = sourceData[i].sale[index] * yAixRate;
 			cxt.beginPath();
 			cxt.moveTo(0,0);
 			cxt.strokeStyle = "rgba(0,0,0,0)";
@@ -46,7 +41,7 @@ function drawLine(data, sourceData) {
 			cxt.beginPath();
 			cxt.strokeStyle = colorSet[i];
 			cxt.moveTo(35 * (index+1), -yPosition);
-			cxt.lineTo(35 * (index+2), -sourceData[i].sale[index+1] * data.yAixRate);
+			cxt.lineTo(35 * (index+2), -sourceData[i].sale[index+1] * yAixRate);
 			cxt.stroke();
 			cxt.restore();
 			// 注释
@@ -65,7 +60,7 @@ function drawLine(data, sourceData) {
 }
 
 
-function drawXYAix(cxt,data){
+function drawXYAix(cxt, yAixDistance, yAixRate){
 	cxt.translate(34, 300);
 	cxt.save();
 	cxt.strokeStyle = "#000";
@@ -79,16 +74,16 @@ function drawXYAix(cxt,data){
 	cxt.arc(0,0, 5, 0, Math.PI * 2);
 	cxt.fill();
 	cxt.textAlign = "center";
-	data.xAix.forEach(function (dis, i) {
+	xAix.forEach(function (dis, i) {
 		cxt.fillText(dis, 35 * (i+1), 20);
 	})
 	for (var i = 1; i <= 10; i++){
-		var yAxi = i * data.yAixDistance;
+		var yAxi = i * yAixDistance;
 		cxt.beginPath();
-		cxt.fillText(yAxi, -20, -yAxi * data.yAixRate);
+		cxt.fillText(yAxi, -20, -yAxi * yAixRate);
 		cxt.strokeStyle = "rgba(174,174,174, 0.5)";
-		cxt.moveTo(0, -yAxi * data.yAixRate);
-		cxt.lineTo(450,-yAxi * data.yAixRate);
+		cxt.moveTo(0, -yAxi * yAixRate);
+		cxt.lineTo(450,-yAxi * yAixRate);
 		cxt.stroke();
 	}
 	cxt.restore();
@@ -111,4 +106,4 @@ function getYAxisRange(sourceData){
 	return [low[low.length - 1],big[big.length - 1]];
 }
 
-drawLine(data, getData());
+drawLine(getData());

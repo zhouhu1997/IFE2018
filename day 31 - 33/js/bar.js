@@ -36,7 +36,7 @@ function position(x,y,width, height, fillStyle, strokeWidth, strokeStyle){
 	d.strokeWidth = strokeWidth;
 	d.strokeStyle = strokeStyle;
 	d.fillStyle = fillStyle;
-	d.xSet = data.xAix;
+	d.xSet = xAix;
 	return d;
 }
 
@@ -76,12 +76,12 @@ function drawBar(source) {
 }
 
 function drawXText(){
-	for (var i in d.xSet){
+	for (var i in xAix){
 		var aix = document.createElementNS(SVG_NS,"text");
 		aix.setAttribute("x",67 + (i * 42));
 		aix.setAttribute("y","270");
 		aix.setAttribute("fill","#000");
-		aix.textContent = d.xSet[i];
+		aix.textContent = xAix[i];
 		svg.appendChild(aix);
 	}
 }

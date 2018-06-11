@@ -40,7 +40,7 @@ function addToTable() {
 	//根据表格语句生成表格
 	tableWrapper.innerHTML = table;
 	// 更新表格
-	drawLine(data, getData());
+	drawLine(getData());
 	// 为动态添加的表格内容绑定事件
 	setListener();
 	// 调用融合表格函数

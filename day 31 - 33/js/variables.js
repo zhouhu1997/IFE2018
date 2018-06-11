@@ -28,4 +28,6 @@ var productArr = [{name:'prodcut', value:'mobile', text:'手机'},
 	{name:'product', value:'all', text:'全选'}];
 var selectionNumber = 0;
 var colorSet = ["#3759C8","#FFF954","#5BB54A","#D04E34","#FFC620","#C5DDEB","#979495","#222F3E","#B0F566"];
+var xAix = ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"];
+
 
