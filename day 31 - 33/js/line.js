@@ -21,8 +21,7 @@ function getData(){
 
 function drawLine(data, sourceData) {
 	var canvas = document.getElementById("canvas"),
-		cxt = canvas.getContext("2d"),
-		colorSet = ["#3759C8","#FFF954","#5BB54A","#D04E34","#FFC620","#C5DDEB","#979495","#222F3E","#B0F566"];
+		cxt = canvas.getContext("2d");
 
 	canvas.width = 600;
 	canvas.height = 450;

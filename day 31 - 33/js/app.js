@@ -4,3 +4,4 @@ generateCheckboxs(area,areaArr);
 generateCheckboxs(product,productArr);
 // 初始化 table
 addToTable();
+
