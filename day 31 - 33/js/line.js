@@ -1,7 +1,7 @@
 var data = {
 	xAix : ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],
 	yAixDistance : Math.floor((getYAxisRange(sourceData)[1] + getYAxisRange(sourceData)[0])/ 10),
-	yAixRate : 350 / getYAxisRange(sourceData)[1]
+	yAixRate : 250 / getYAxisRange(sourceData)[1]
 }
 
 function getData(){
@@ -24,8 +24,8 @@ function drawLine(data, sourceData) {
 		cxt = canvas.getContext("2d");
 
 	canvas.width = 600;
-	canvas.height = 450;
-	cxt.clearRect(0,0,514,450);
+	canvas.height = 350;
+	cxt.clearRect(0,0,514,350);
 	cxt.font = "12px Arial";
 
 	drawXYAix(cxt, data);
@@ -53,10 +53,10 @@ function drawLine(data, sourceData) {
 			cxt.save();
 			cxt.beginPath();
 			cxt.fillStyle = "#000";
-			cxt.fillText(`${sourceData[i].product}(${sourceData[i].region})`,450,-300 + (i * 30));
+			cxt.fillText(`${sourceData[i].product}(${sourceData[i].region})`,450,-250 + (i * 30));
 			cxt.fill();
 			cxt.fillStyle = colorSet[i];
-			cxt.fillRect(450, -320 + (i * 30), 50,5);
+			cxt.fillRect(450, -270 + (i * 30), 50,5);
 			cxt.fill();
 			cxt.restore();
 		})
@@ -66,15 +66,16 @@ function drawLine(data, sourceData) {
 
 
 function drawXYAix(cxt,data){
-	cxt.translate(34, 400);
+	cxt.translate(34, 300);
 	cxt.save();
 	cxt.strokeStyle = "#000";
 	cxt.beginPath();
 	cxt.moveTo(0,0);
-	cxt.lineTo(0, -400);
+	cxt.lineTo(0, -300);
+	cxt.moveTo(0,0);
+	cxt.lineTo(450, 0);
 	cxt.stroke();
 	cxt.beginPath();
-	cxt.lineTo(450, 0);
 	cxt.arc(0,0, 5, 0, Math.PI * 2);
 	cxt.fill();
 	cxt.textAlign = "center";
@@ -83,9 +84,13 @@ function drawXYAix(cxt,data){
 	})
 	for (var i = 1; i <= 10; i++){
 		var yAxi = i * data.yAixDistance;
+		cxt.beginPath();
 		cxt.fillText(yAxi, -20, -yAxi * data.yAixRate);
+		cxt.strokeStyle = "rgba(174,174,174, 0.5)";
+		cxt.moveTo(0, -yAxi * data.yAixRate);
+		cxt.lineTo(450,-yAxi * data.yAixRate);
+		cxt.stroke();
 	}
-	cxt.stroke();
 	cxt.restore();
 }
 
@@ -93,12 +98,12 @@ function getYAxisRange(sourceData){
 	var big = [];
 	var low = [];
 	for (var i in sourceData){
-		var sale = sourceData[i].sale;
-		sale.sort(function (x,y) {
+		var saleArr = sourceData[i].sale.concat();
+		saleArr.sort(function (x,y) {
 			return x-y;
 		});
-		big.push(sale[sale.length - 1]);
-		low.push(sale[0]);
+		big.push(saleArr[saleArr.length - 1]);
+		low.push(saleArr[0]);
 	}
 	big.sort(function (x,y) {
 		return x-y;

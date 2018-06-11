@@ -53,13 +53,11 @@ function emptyText(svg) {
 
 function drawBar(source) {
 	var d = getYAxisRange(source);
-	var distance = Math.ceil(d[1] / 10);
-	var rate = 400 / d[1];
+	var rate = 220 / d[1];
 	for (var i  = 0; i < 12; i++){
 		var aix = document.createElementNS(SVG_NS,"rect");
 		var aixText = document.createElementNS(SVG_NS,"text");
-		console.log(450 - (i + 1) * distance * rate);
-		var translateY = 450 - (source[0].sale[i] * rate);
+		var translateY = 250 - (source[0].sale[i] * rate);
 		var color = colorSet[Math.floor(Math.random()*9)];
 		console.log(color);
 		aix.setAttribute("transform", "translate(0,"+translateY+")");
@@ -81,7 +79,7 @@ function drawXText(){
 	for (var i in d.xSet){
 		var aix = document.createElementNS(SVG_NS,"text");
 		aix.setAttribute("x",67 + (i * 42));
-		aix.setAttribute("y","470");
+		aix.setAttribute("y","270");
 		aix.setAttribute("fill","#000");
 		aix.textContent = d.xSet[i];
 		svg.appendChild(aix);
@@ -92,7 +90,7 @@ function drawExpl(source) {
 	var aix = document.createElementNS(SVG_NS,"text");
 	aix.setAttribute("font-size","20px");
 	aix.setAttribute("x","40%");
-	aix.setAttribute("y","510");
+	aix.setAttribute("y","310");
 	aix.setAttribute("fill","#000");
 	aix.textContent = source[0].product+"("+source[0].region+")";
 	svg.appendChild(aix);
@@ -101,15 +99,25 @@ function drawExpl(source) {
 function drawYText(source){
 	var d = getYAxisRange(source);
 	var distance = Math.ceil(d[1] / 10);
-	var rate = 400 / d[1];
+	var rate = 220 / d[1];
 	for (var i  = 0; i < 11; i++){
 		var aix = document.createElementNS(SVG_NS,"text");
-		aix.setAttribute("transform", "translate(0,450)");
+		var aixLine = document.createElementNS(SVG_NS, "rect");
+		aix.setAttribute("transform", "translate(0,255)");
 		aix.setAttribute("x","20");
 		aix.setAttribute("y", -(i * distance) * rate);
 		aix.setAttribute("fill","#000");
 		aix.textContent =  i * distance;
 		svg.appendChild(aix);
+		aixLine.setAttribute("transform", "translate(0,250)");
+		aixLine.setAttribute("x","50");
+		aixLine.setAttribute("y",-(i * distance) * rate);
+		aixLine.setAttribute("height","1");
+		aixLine.setAttribute("width","520");
+		aixLine.setAttribute("stroke-width","1");
+		aixLine.setAttribute("stroke-style","#ccc");
+		aixLine.setAttribute("opacity", "0.1");
+		svg.appendChild(aixLine);
 	}
 }
 
@@ -146,8 +154,8 @@ function setListener() {
 			source[0].sale.push(target.childNodes[i].textContent);
 		}
 
-		drawSVGAxis(position("50","450","520","2",'',"2","#000"));
-		drawSVGAxis(position("50","25","2","425",'',"2","#000"));
+		drawSVGAxis(position("50","250","520","2",'',"2","#000"));
+		drawSVGAxis(position("50","10","2","240",'',"2","#000"));
 		drawXText();
 		drawYText(source);
 		drawExpl(source);
