@@ -11,7 +11,7 @@
 			outline: none;
 			border: none;
 			width: 100px;
-			height: 40px;
+			height: 30px;
 			background: rgba(0,0,0,0);
 		}
 
@@ -19,10 +19,22 @@
 			float: left;
 			display: inline-block;
 			margin: 5px;
-			padding: 10px;
+			padding: 5px;
 			border: 1px solid seagreen;
 			max-height: 450px;
 			overflow: auto;
+		}
+
+		.selector {
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+		}
+
+		.selector h3{
+			padding: 0;
+			margin: 0 10px 0 40px;
+			color: #E5004E;
 		}
 
 		.check-box-container div:first-of-type {
@@ -48,7 +60,7 @@
 		table.dataintable td {
 			vertical-align:center;
 			text-align: center;
-			width: 60px;
+			width: 70px;
 			border:1px solid #aaa;
 		}
 
@@ -93,7 +105,7 @@
 		#table i{
 			position: absolute;
 			right: 15px;
-			top: 32%;
+			top: 25%;
 			color: #eee;
 			display: none;
 			z-index: -1;
@@ -128,6 +140,12 @@
 
 </head>
 <body>
+	<div class="selector">
+		<h3>地区</h3>
+		<div id="area"></div>
+		<h3>产品</h3>
+		<div id="product"></div>
+	</div>
 	<div id="graph">
 		<div id="canvas-wrapper">
 			<canvas id="canvas"></canvas>
@@ -138,12 +156,6 @@
 		<div id="table-wrapper">
 			<table class="dataintable" id="table"></table>
 		</div>
-	</div>
-	<div class="box">
-		<h3>地区</h3>
-		<div id="area"></div>
-		<h3>产品</h3>
-		<div id="product"></div>
 	</div>
 	<div>
 	<script src="js/ife31data.js"></script>
