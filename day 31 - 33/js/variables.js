@@ -41,8 +41,12 @@ function checkString(value) {
 	return isNaN(Number(value));
 }
 
-function changeData(inputData, value) {
-	var insertInfo = inputData.split('-');
+function changeData(inputData) {
+	if (checkString(inputData.value)) {
+		inputData.value = inputData.defaultValue;
+		return;
+	}
+	var insertInfo = inputData.getAttribute("data-position").split('-');
 	var insertPlace = {
 		place: insertInfo[0],
 		region: insertInfo[1],
@@ -51,11 +55,122 @@ function changeData(inputData, value) {
 
 	for (var i in getUseData){
 		if (getUseData[i].region === insertPlace.region && getUseData[i].product === insertPlace.product){
-			getUseData[i].sale[insertPlace.place] = value;
+			getUseData[i].sale[insertPlace.place] = inputData.value;
 		}
 	}
 	localStorage.dataSet = JSON.stringify(getUseData);
-	console.log(JSON.parse(localStorage.dataSet));
+	inputData.blur();
+	drawLine(getData());
 }
 
-changeData("0-华北-手机", "100");
+function setListener() {
+	var table = document.getElementById("table");
+	var inputs = table.getElementsByTagName("input");
+
+	table.addEventListener("mouseover",function () {
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		var returnElement = "tbody,table,icon";
+		var source = [{
+			product: "",
+			region: "",
+			sale: []
+		}];
+
+		svg.innerHTML = "";
+
+		if (returnElement.indexOf(target.tagName.toLowerCase()) >= 0) return;
+		// 如果鼠标滑过input且该input不在输入状态的情况下, 显示铅笔icon
+		if (target.tagName === "INPUT" && target !== document.activeElement)  target.previousElementSibling.style.display = "block";
+		while (target.tagName.toLowerCase() !== "tr"){
+			target = target.parentNode;
+		}
+		for (var i = 0; i < target.childNodes.length; i++){
+			if (target.childNodes[i].tagName === "TH") return;
+
+			if (target.childNodes[i].className.indexOf("product") >= 0) {
+				source[0].product = target.childNodes[i].textContent;
+				continue;
+			}
+
+			if (target.childNodes[i].className.indexOf("region") >= 0) {
+				source[0].region = target.childNodes[i].textContent;
+				continue;
+			}
+
+			if (checkString(target.childNodes[i].childNodes[1].value)){
+				emptyText(svg,"输入数据有误");
+				return;
+			}
+
+			source[0].sale.push(target.childNodes[i].childNodes[1].value);
+		}
+
+		drawSVGAxis(position("50","250","520","2",'',"2","#000"));
+		drawSVGAxis(position("50","10","2","240",'',"2","#000"));
+		drawXText();
+		drawYText(source);
+		drawExpl(source);
+		drawBar(source);
+	});
+
+	table.addEventListener("mouseout", function () {
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		if (target.tagName === "INPUT" && target.tagName !== "I")  target.previousElementSibling.style.display = "none";
+		emptyText(svg,"在表格上移动鼠标以获取相应数据");
+	})
+
+	// 点击事件
+	table.addEventListener("click", function () {
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		if (target.tagName === "INPUT")  {
+			target.previousElementSibling.style.display = "none";
+			target.nextSibling.style.display = "flex";
+		}
+
+		if (target.tagName.toLowerCase() === "button"){
+			var input = target.parentNode.previousSibling;
+			if (target.textContent === "取消") return input.blur();
+			console.log(input);
+			changeData(input);
+		}
+	})
+
+	// 失去焦点事件
+	for (var i = 0; i < inputs.length; i++){
+		inputs[i].onblur = function () {
+			var that = this;
+			setTimeout(function () {
+				that.nextElementSibling.style.display = "none";
+			},100);
+			//if (checkString(this.value)) alert("输入不为数字");
+		}
+	}
+
+	table.addEventListener("keydown",function (e) {
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		if (target.tagName.toLowerCase() === "input"){
+			// 获取keycode
+			var keyCode = e.keyCode;
+			if (keyCode === 27){
+				// 阻止事件传递
+				e.preventDefault();
+				// 隐藏按钮
+				target.nextElementSibling.style.display = "none";
+				// 按下Esc键(27) 全选输入框内容
+				return target.blur();
+			} else if (/^13|38|40$/.test(keyCode)) {
+				if (keyCode === 13){
+					// 阻止事件传递
+					e.preventDefault();
+					target.nextElementSibling.style.display = "none";
+					return changeData(target);
+				}
+			}
+		}
+	})
+}
+

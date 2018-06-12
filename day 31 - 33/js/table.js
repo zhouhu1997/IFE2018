@@ -45,8 +45,6 @@ function addToTable() {
 	drawLine(getData());
 	// 为动态添加的表格内容绑定事件
 	setListener();
-	// 为input添加事件监听
-	inputEvent();
 	// 调用融合表格函数
 	return combineTable(combineFactor);
 }
@@ -128,30 +126,6 @@ function generateCheckboxs(parent, checkbox) {
 	}
 	// 设置innerHTML
 	parent.innerHTML = innerCheckbox;
-}
-
-// 监听input事件
-function inputEvent(){
-	var table = document.getElementById("table");
-	var inputs = table.getElementsByTagName("input");
-	for (var i = 0; i < inputs.length; i++){
-
-		inputs[i].onblur = function () {
-			if (checkString(this.value)) alert("输入不为数字");
-			this.value = this.defaultValue;
-			this.nextElementSibling.style.display = "none";
-		}
-	}
-
-	for (var i = 0; i < inputs.length; i++){
-		inputs[i].addEventListener("onchange",function () {
-		})
-	}
-
-	for (var i = 0; i < inputs.length; i++){
-		inputs[i].addEventListener("input",function () {
-		})
-	}
 }
 
 // 设置icon

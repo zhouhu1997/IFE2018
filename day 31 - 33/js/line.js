@@ -16,7 +16,7 @@ function getData(){
 function drawLine(sourceData) {
 	var canvas = document.getElementById("canvas"),
 		cxt = canvas.getContext("2d"),
-		yAixDistance = Math.floor((getYAxisRange(getData())[1] + getYAxisRange(getData())[0])/ 10),
+		yAixDistance = Math.floor((getYAxisRange(getData())[1] * 1 + getYAxisRange(getData())[0])/ 10),
 		yAixRate = 250 / getYAxisRange(getData())[1]
 	canvas.width = 600;
 	canvas.height = 350;
@@ -97,13 +97,12 @@ function getYAxisRange(sourceData){
 		saleArr.sort(function (x,y) {
 			return x-y;
 		});
-		big.push(saleArr[saleArr.length - 1]);
-		low.push(saleArr[0]);
+		big.push(saleArr[saleArr.length - 1] * 1);
+		low.push(saleArr[0] * 1);
 	}
 	big.sort(function (x,y) {
 		return x-y;
 	})
+
 	return [low[low.length - 1],big[big.length - 1]];
 }
-
-drawLine(getData());
