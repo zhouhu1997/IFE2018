@@ -1,4 +1,5 @@
 var svgContainer = document.getElementById("svg-wrapper");
+// svg标准
 var SVG_NS = "http://www.w3.org/2000/svg";
 var d = {};
 
@@ -11,11 +12,13 @@ function createSVG() {
 	svg1.setAttribute("style", "border:1px solid #000;");
 	svg1.setAttribute("version", "1.1");
 	svgContainer.appendChild(svg1);
+	// 默认svg样式
 	emptyText(svg1,"在表格上移动鼠标以获取相应数据");
 
 	return svg1;
 }
 
+// 画x,y轴函数
 function drawSVGAxis(d){
 	var aix = document.createElementNS(SVG_NS,"rect");
 
@@ -28,6 +31,7 @@ function drawSVGAxis(d){
 	svg.appendChild(aix);
 }
 
+// 设置x,y轴位置函数
 function position(x,y,width, height, fillStyle, strokeWidth, strokeStyle){
 	d.x = x;
 	d.y = y;
@@ -40,6 +44,7 @@ function position(x,y,width, height, fillStyle, strokeWidth, strokeStyle){
 	return d;
 }
 
+// svg无数据信息样式
 function emptyText(svg,text) {
 	svg.innerHTML = "";
 	var aix = document.createElementNS(SVG_NS,"text");
@@ -51,6 +56,7 @@ function emptyText(svg,text) {
 	svg.appendChild(aix);
 }
 
+// 画柱状图
 function drawBar(source) {
 	var d = getYAxisRange(source);
 	var rate = 220 / d[1];
@@ -74,6 +80,7 @@ function drawBar(source) {
 	}
 }
 
+//x轴标识
 function drawXText(){
 	for (var i in xAix){
 		var aix = document.createElementNS(SVG_NS,"text");
@@ -85,6 +92,7 @@ function drawXText(){
 	}
 }
 
+// 表格标题
 function drawExpl(source) {
 	var aix = document.createElementNS(SVG_NS,"text");
 	aix.setAttribute("font-size","20px");
@@ -95,6 +103,7 @@ function drawExpl(source) {
 	svg.appendChild(aix);
 }
 
+// y轴标识
 function drawYText(source){
 	var d = getYAxisRange(source);
 	var distance = Math.ceil(d[1] / 10);

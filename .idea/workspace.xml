@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/day 31 - 33/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day 31 - 33/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day 31 - 33/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/day 31 - 33/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day 31 - 33/js/bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/day 31 - 33/js/bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day 31 - 33/js/line.js" beforeDir="false" afterPath="$PROJECT_DIR$/day 31 - 33/js/line.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/day 31 - 33/js/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/day 31 - 33/js/table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/day 31 - 33/js/variables.js" beforeDir="false" afterPath="$PROJECT_DIR$/day 31 - 33/js/variables.js" afterDir="false" />
     </list>
@@ -23,44 +27,17 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day 31 - 33/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="132" column="19" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
+            <state relative-caret-position="136">
+              <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="table.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/day 31 - 33/js/table.js">
+      <file leaf-file-name="variables.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day 31 - 33/js/variables.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="79" column="24" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day 31 - 33/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="16" selection-start-column="16" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bar.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day 31 - 33/js/bar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="695">
-              <caret line="122" selection-start-line="122" selection-end-line="122" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="checkbox.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/day 31 - 33/js/checkbox.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2824">
-              <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+            <state relative-caret-position="217">
+              <caret line="125" column="18" lean-forward="true" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -68,8 +45,17 @@
       <file leaf-file-name="line.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day 31 - 33/js/line.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="462">
+              <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bar.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day 31 - 33/js/bar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -96,6 +82,7 @@
       <find>choiceTip</find>
       <find>console</find>
       <find>progr</find>
+      <find>position</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -155,12 +142,12 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/day 34 - 36/index.html" />
-        <option value="$PROJECT_DIR$/day 31 - 33/js/app.js" />
-        <option value="$PROJECT_DIR$/day 31 - 33/index.html" />
-        <option value="$PROJECT_DIR$/day 31 - 33/js/bar.js" />
-        <option value="$PROJECT_DIR$/day 31 - 33/js/line.js" />
-        <option value="$PROJECT_DIR$/day 31 - 33/js/variables.js" />
         <option value="$PROJECT_DIR$/day 31 - 33/js/table.js" />
+        <option value="$PROJECT_DIR$/day 31 - 33/js/app.js" />
+        <option value="$PROJECT_DIR$/day 31 - 33/js/line.js" />
+        <option value="$PROJECT_DIR$/day 31 - 33/index.html" />
+        <option value="$PROJECT_DIR$/day 31 - 33/js/variables.js" />
+        <option value="$PROJECT_DIR$/day 31 - 33/js/bar.js" />
       </list>
     </option>
   </component>
@@ -324,12 +311,12 @@
       <workItem from="1527213597717" duration="73789000" />
       <workItem from="1527652044687" duration="1011000" />
       <workItem from="1527653167165" duration="22431000" />
-      <workItem from="1528428495870" duration="104234000" />
+      <workItem from="1528428495870" duration="105321000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="460790000" />
+    <option name="totallyTimeSpent" value="461877000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -674,45 +661,10 @@
     <entry file="file://$PROJECT_DIR$/day 31 - 33/font-awesome-4.7.0 2/css/font-awesome.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/checkbox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2824">
-          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/line.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day 28 - 30/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11">
           <caret line="107" column="8" lean-forward="true" selection-start-line="107" selection-start-column="8" selection-end-line="108" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/bar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="122" selection-start-line="122" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/variables.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2681">
-          <caret line="183" column="11" selection-start-line="183" selection-start-column="11" selection-end-line="183" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -723,17 +675,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day 31 - 33/index.html">
+    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="132" column="19" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
+        <state relative-caret-position="-512">
+          <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/table.js">
+    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="79" column="24" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/checkbox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 31 - 33/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/variables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="125" column="18" lean-forward="true" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/line.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/bar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
         </state>
       </provider>
     </entry>

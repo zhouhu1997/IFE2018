@@ -82,9 +82,9 @@ function setListener() {
 	var table = document.getElementById("table");
 	var inputs = table.getElementsByTagName("input");
 
-	// 鼠标移入书剑
-	table.addEventListener("mouseover",function () {
-		var ev = ev || window.event;
+	// 鼠标移入事件
+	table.addEventListener("mouseover",function (e) {
+		var ev = ev || e || window.event;
 		var target = ev.target || ev.srcElement;
 		var returnElement = "tbody,table,icon";
 		var source = [{
@@ -137,8 +137,8 @@ function setListener() {
 	});
 
 	// 鼠标移除事件
-	table.addEventListener("mouseout", function () {
-		var ev = ev || window.event;
+	table.addEventListener("mouseout", function (e) {
+		var ev = ev || e || window.event;
 		var target = ev.target || ev.srcElement;
 		// 隐藏小图标
 		if (target.tagName === "INPUT" && target.tagName !== "I")  target.previousElementSibling.style.display = "none";
@@ -147,8 +147,8 @@ function setListener() {
 	})
 
 	// 点击事件
-	table.addEventListener("click", function () {
-		var ev = ev || window.event;
+	table.addEventListener("click", function (e) {
+		var ev = ev || e || window.event;
 		var target = ev.target || ev.srcElement;
 		// 点击input的事件
 		if (target.tagName === "INPUT")  {
@@ -183,7 +183,7 @@ function setListener() {
 
 	// 键盘事件
 	table.addEventListener("keydown",function (e) {
-		var ev = ev || window.event;
+		var ev = ev || e|| window.event;
 		var target = ev.target || ev.srcElement;
 		if (target.tagName.toLowerCase() === "input"){
 			// 获取keycode

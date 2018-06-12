@@ -81,9 +81,11 @@ function tableStr(order, obj) {
 			input.setAttribute("type","text");
 			input.setAttribute("value", sale[i - 2]);
 			input.setAttribute("data-position",(i-2)+"-"+region+"-"+product);
+			// 将icon,input, 按钮组添加进td里
 			td.appendChild(setIcon(icon));
 			td.appendChild(input);
 			td.appendChild(setButton(btnWrapper));
+			// 将td添加进tr中
 			tr.appendChild(td);
 		}
 
