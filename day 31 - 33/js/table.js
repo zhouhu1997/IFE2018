@@ -77,6 +77,7 @@ function tableStr(order, obj) {
 				tr.appendChild(td);
 				continue;
 			}
+			// 设置input属性
 			input.setAttribute("type","text");
 			input.setAttribute("value", sale[i - 2]);
 			input.setAttribute("data-position",(i-2)+"-"+region+"-"+product);
@@ -128,13 +129,13 @@ function generateCheckboxs(parent, checkbox) {
 	parent.innerHTML = innerCheckbox;
 }
 
-// 设置icon
+// 设置icon及其属性
 function setIcon(icon) {
 	icon.setAttribute("class","fa fa-pencil");
 	return icon;
 }
 
-// 设置按钮
+// 设置按钮及其属性
 function setButton(wrapper){
 	var btnYes = document.createElement("button");
 	var btnNo = document.createElement("button");
