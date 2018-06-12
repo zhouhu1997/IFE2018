@@ -143,10 +143,6 @@ function setListener() {
 		}
 		for (var i = 0; i < target.childNodes.length; i++){
 			if (target.childNodes[i].tagName === "TH") return;
-			if (!checkString(target.childNodes[i].textContent)){
-				emptyText(svg,"数据有误");
-				return
-			}
 
 			if (target.childNodes[i].className.indexOf("product") >= 0) {
 				source[0].product = target.childNodes[i].textContent;
@@ -157,6 +153,12 @@ function setListener() {
 				source[0].region = target.childNodes[i].textContent;
 				continue;
 			}
+
+			if (checkString(target.childNodes[i].childNodes[1].value)){
+				emptyText(svg,"输入数据有误");
+				return;
+			}
+
 			source[0].sale.push(target.childNodes[i].childNodes[1].value);
 		}
 

@@ -31,7 +31,7 @@ var colorSet = ["#3759C8","#FFF954","#5BB54A","#D04E34","#FFC620","#C5DDEB","#97
 var xAix = ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"];
 
 function setLocalStorage() {
-	localStorage.dataSet = JSON.stringify(sourceData);
+	if (!localStorage.dataSet) localStorage.dataSet = JSON.stringify(sourceData);
 }
 
 setLocalStorage();
@@ -40,3 +40,22 @@ var getUseData = JSON.parse(localStorage.dataSet) || sourceData;
 function checkString(value) {
 	return isNaN(Number(value));
 }
+
+function changeData(inputData, value) {
+	var insertInfo = inputData.split('-');
+	var insertPlace = {
+		place: insertInfo[0],
+		region: insertInfo[1],
+		product: insertInfo[2]
+	}
+
+	for (var i in getUseData){
+		if (getUseData[i].region === insertPlace.region && getUseData[i].product === insertPlace.product){
+			getUseData[i].sale[insertPlace.place] = value;
+		}
+	}
+	localStorage.dataSet = JSON.stringify(getUseData);
+	console.log(JSON.parse(localStorage.dataSet));
+}
+
+changeData("0-华北-手机", "100");

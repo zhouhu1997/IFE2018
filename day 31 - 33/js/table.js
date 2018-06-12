@@ -135,10 +135,10 @@ function inputEvent(){
 	var table = document.getElementById("table");
 	var inputs = table.getElementsByTagName("input");
 	for (var i = 0; i < inputs.length; i++){
-		var preValue = inputs[i].value;
+
 		inputs[i].onblur = function () {
 			if (checkString(this.value)) alert("输入不为数字");
-			this.value = preValue;
+			this.value = this.defaultValue;
 			this.nextElementSibling.style.display = "none";
 		}
 	}
