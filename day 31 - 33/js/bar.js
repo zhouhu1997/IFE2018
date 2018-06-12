@@ -11,7 +11,7 @@ function createSVG() {
 	svg1.setAttribute("style", "border:1px solid #000;");
 	svg1.setAttribute("version", "1.1");
 	svgContainer.appendChild(svg1);
-	emptyText(svg1);
+	emptyText(svg1,"在表格上移动鼠标以获取相应数据");
 
 	return svg1;
 }
@@ -40,14 +40,14 @@ function position(x,y,width, height, fillStyle, strokeWidth, strokeStyle){
 	return d;
 }
 
-function emptyText(svg) {
+function emptyText(svg,text) {
 	svg.innerHTML = "";
 	var aix = document.createElementNS(SVG_NS,"text");
 	aix.setAttribute("x","65");
 	aix.setAttribute("y","50%");
 	aix.setAttribute("font-size","30px");
 	aix.setAttribute("fill","#BB3922");
-	aix.textContent = "在表格上移动鼠标以获取相应数据";
+	aix.textContent = text;
 	svg.appendChild(aix);
 }
 
@@ -59,7 +59,6 @@ function drawBar(source) {
 		var aixText = document.createElementNS(SVG_NS,"text");
 		var translateY = 250 - (source[0].sale[i] * rate);
 		var color = colorSet[Math.floor(Math.random()*9)];
-		console.log(color);
 		aix.setAttribute("transform", "translate(0,"+translateY+")");
 		aix.setAttribute("x", 69+ (i * 42));
 		aix.setAttribute("y","0");
@@ -127,6 +126,7 @@ function setListener() {
 	table.addEventListener("mouseover",function () {
 		var ev = ev || window.event;
 		var target = ev.target || ev.srcElement;
+		var returnElement = "tbody,table,icon";
 		var source = [{
 			product: "",
 			region: "",
@@ -135,12 +135,18 @@ function setListener() {
 
 		svg.innerHTML = "";
 
-		if (target.tagName.toLowerCase() === "tbody" || target.tagName.toLowerCase() === "table") return;
+		if (returnElement.indexOf(target.tagName.toLowerCase()) >= 0) return;
+		// 如果鼠标滑过input且该input不在输入状态的情况下, 显示铅笔icon
+		if (target.tagName === "INPUT" && target !== document.activeElement)  target.previousElementSibling.style.display = "block";
 		while (target.tagName.toLowerCase() !== "tr"){
 			target = target.parentNode;
 		}
 		for (var i = 0; i < target.childNodes.length; i++){
 			if (target.childNodes[i].tagName === "TH") return;
+			if (!checkString(target.childNodes[i].textContent)){
+				emptyText(svg,"数据有误");
+				return
+			}
 
 			if (target.childNodes[i].className.indexOf("product") >= 0) {
 				source[0].product = target.childNodes[i].textContent;
@@ -151,7 +157,7 @@ function setListener() {
 				source[0].region = target.childNodes[i].textContent;
 				continue;
 			}
-			source[0].sale.push(target.childNodes[i].childNodes[0].value);
+			source[0].sale.push(target.childNodes[i].childNodes[1].value);
 		}
 
 		drawSVGAxis(position("50","250","520","2",'',"2","#000"));
@@ -163,6 +169,18 @@ function setListener() {
 	});
 
 	table.addEventListener("mouseout", function () {
-		emptyText(svg);
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		if (target.tagName === "INPUT" && target.tagName !== "I")  target.previousElementSibling.style.display = "none";
+		emptyText(svg,"在表格上移动鼠标以获取相应数据");
+	})
+
+	table.addEventListener("click", function () {
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		if (target.tagName === "INPUT")  {
+			target.previousElementSibling.style.display = "none";
+			target.nextSibling.style.display = "flex";
+		}
 	})
 }

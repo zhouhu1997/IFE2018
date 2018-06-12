@@ -1,7 +1,7 @@
 function getData(){
 	var initData = [];
 
-	sourceData.forEach(function (item) {
+	getUseData.forEach(function (item) {
 		for (var i in clickedBtns.area){
 			if (!clickedBtns.area[i]) continue;
 			for (var j in clickedBtns.product) {

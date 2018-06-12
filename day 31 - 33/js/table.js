@@ -2,7 +2,6 @@
 function addToTable() {
 	//调用函数获得选中的checkbox的集合
 	getSelectedBtns();
-	var str = '';
 	//设置表头
 	var table = '<tr><th id="header">商品</th><th id="sub-header">地区</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>';
 	//根据表格语句生成表格
@@ -13,12 +12,13 @@ function addToTable() {
 	var header = document.getElementById("header");
 	var subHeader = document.getElementById("sub-header");
 	// 遍历数据
-	for (var i in sourceData) {
+
+	for (var i in getUseData) {
 		// 转换arr为string, 并把选中项大于2的长度替换为m
 		switch (arrL.join('').replace(/[2-999]/g, 'm')) {
 			// 选中商品和地区数为 倒计时
 			case '11':
-				tableStr('productArea', sourceData[i]);
+				tableStr('productArea', getUseData[i]);
 				break;
 			// 选中地区数为1 , 商品数大于2
 			case '1m':
@@ -27,15 +27,15 @@ function addToTable() {
 				subHeader.textContent = "商品";
 				// 设置融合表格参数为地区在前, 商品在后
 				combineFactor = 'areaProduct';
-				tableStr('areaProduct', sourceData[i]);
+				tableStr('areaProduct', getUseData[i]);
 				break;
 			// 选中地区数大于2, 商品数为1
 			case 'm1':
-				tableStr('productArea', sourceData[i]);
+				tableStr('productArea', getUseData[i]);
 				break;
 			// 选中地区和商品数都大于2
 			case 'mm':
-				tableStr('productArea', sourceData[i]);
+				tableStr('productArea', getUseData[i]);
 				break;
 			default:
 				break;
@@ -45,6 +45,8 @@ function addToTable() {
 	drawLine(getData());
 	// 为动态添加的表格内容绑定事件
 	setListener();
+	// 为input添加事件监听
+	inputEvent();
 	// 调用融合表格函数
 	return combineTable(combineFactor);
 }
@@ -56,12 +58,13 @@ function tableStr(order, obj) {
 		region = obj.region;
 	// 判断地区和商品是否存在于selectedArea和selectedProduct中
 	if (selectedArea.indexOf(region) >= 0 && selectedProduct.indexOf(product) >= 0) {
-		console.log("append");
-
 		var tr = document.createElement("tr");
 		for (var i = 0; i < 14; i++){
 			var td = document.createElement("td");
 			var input = document.createElement("input");
+			var icon = document.createElement("i");
+			var btnWrapper = document.createElement("div");
+			td.style.position = "relative";
 			if (i===0) {
 				// 生成商品在前, 地区在后的数据行
 				order === "productArea" ? td.setAttribute("class", "header product") : td.setAttribute("class", "header region");
@@ -78,11 +81,14 @@ function tableStr(order, obj) {
 			}
 			input.setAttribute("type","text");
 			input.setAttribute("value", sale[i - 2]);
-			tr.appendChild(td);
+			input.setAttribute("data-position",(i-2)+"-"+region+"-"+product);
+			td.appendChild(setIcon(icon));
 			td.appendChild(input);
+			td.appendChild(setButton(btnWrapper));
+			tr.appendChild(td);
 		}
 
-		tableWrapper.appendChild(tr);
+		tableWrapper.childNodes[0].appendChild(tr);
 	}
 }
 
@@ -122,4 +128,50 @@ function generateCheckboxs(parent, checkbox) {
 	}
 	// 设置innerHTML
 	parent.innerHTML = innerCheckbox;
+}
+
+// 监听input事件
+function inputEvent(){
+	var table = document.getElementById("table");
+	var inputs = table.getElementsByTagName("input");
+	for (var i = 0; i < inputs.length; i++){
+		var preValue = inputs[i].value;
+		inputs[i].onblur = function () {
+			if (checkString(this.value)) alert("输入不为数字");
+			this.value = preValue;
+			this.nextElementSibling.style.display = "none";
+		}
+	}
+
+	for (var i = 0; i < inputs.length; i++){
+		inputs[i].addEventListener("onchange",function () {
+		})
+	}
+
+	for (var i = 0; i < inputs.length; i++){
+		inputs[i].addEventListener("input",function () {
+		})
+	}
+}
+
+// 设置icon
+function setIcon(icon) {
+	icon.setAttribute("class","fa fa-pencil");
+	return icon;
+}
+
+// 设置按钮
+function setButton(wrapper){
+	var btnYes = document.createElement("button");
+	var btnNo = document.createElement("button");
+	btnYes.setAttribute("class","btn-left");
+	btnYes.setAttribute("type","button");
+	btnYes.textContent = "确定"
+	btnNo.setAttribute("class","btn-right");
+	btnNo.setAttribute("type","button");
+	btnNo.textContent = "取消"
+	wrapper.setAttribute("class", "btn-wrapper");
+	wrapper.appendChild(btnYes);
+	wrapper.appendChild(btnNo);
+	return wrapper;
 }
