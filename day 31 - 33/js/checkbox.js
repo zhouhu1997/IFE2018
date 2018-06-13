@@ -211,6 +211,7 @@ function checkSelectedAll(obj){
 // 根据点击项获取hash值
 function getHash(obj) {
 	var str = '';
+
 	for (var i in obj.product){
 		if (obj.product[i]){
 			str += i;
@@ -223,9 +224,11 @@ function getHash(obj) {
 	return location.hash = str;
 }
 
-//
+// 根据hash值设置clickBtn中对应项的true&false
 function displayHashInfo() {
+	// 获取#号后的值
 	var hash = location.hash.split("#")[1];
+	// 讲unicode转为中文
 	hash = decodeURI(hash);
 	for (var i in clickedBtns.area) {
 		if (hash.indexOf(i) >= 0){ clickedBtns.area[i] = true;
