@@ -122,9 +122,10 @@ function combineTable(combineFactor) {
 // 生成checkbox
 function generateCheckboxs(parent, checkbox) {
 	var innerCheckbox = '';
+	var checkHash = false;
 	for (var i in checkbox) {
 		// 设置checkbox中第一个选项为check
-		var check = i === '0' ? 'checked=checked' : '';
+		var check = checkHash ? 'checked=checked' : '';
 		innerCheckbox += '<input type=checkbox name=' + checkbox[i].name + ' value=' + checkbox[i].value + ' ' + check + ' />' + checkbox[i].text + ' ';
 	}
 	// 设置innerHTML

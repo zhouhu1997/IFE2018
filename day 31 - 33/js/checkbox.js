@@ -29,6 +29,7 @@ area.addEventListener('click',function () {
 		if (checkSelectedAll(areaBtn)) checkAll(areaBtn);// 勾选所有地图checkbox的选项
 		// 渲染新的表格
 		addToTable();
+		getHash(clickedBtns);
 	}
 });
 
@@ -62,6 +63,7 @@ product.addEventListener('click',function () {
 		if (checkSelectedAll(productBtn)) checkAll(productBtn);// 勾选所有地图checkbox的选项
 		// 渲染新的表格
 		addToTable();
+		getHash(clickedBtns);
 	}
 })
 
@@ -204,4 +206,35 @@ function checkSelectedAll(obj){
 		}
 	}
 	return true;//如果全部选中返回true
+}
+
+// 根据点击项获取hash值
+function getHash(obj) {
+	var str = '';
+	for (var i in obj.product){
+		if (obj.product[i]){
+			str += i;
+		}
+	}
+
+	for (var i in obj.area){
+		if (obj.area[i]) str += i;
+	}
+	return location.hash = str;
+}
+
+//
+function displayHashInfo() {
+	var hash = location.hash.split("#")[1];
+	hash = decodeURI(hash);
+	for (var i in clickedBtns.area) {
+		if (hash.indexOf(i) >= 0){ clickedBtns.area[i] = true;
+		console.log(clickedBtns.area[i]);}
+	}
+
+	for (var i in clickedBtns.product) {
+		if (hash.indexOf(i) >= 0) {clickedBtns.product[i] = true;
+			console.log(clickedBtns.product[i]);}
+
+	}
 }
