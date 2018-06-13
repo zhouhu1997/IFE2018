@@ -9,18 +9,28 @@
 <button id="b">B</button>
 <button id="c">C</button>
 
-<div id="cont"></div>
+<button id="d">D</button>
+<button id="e">E</button>
+<button id="f">F</button>
+
+<p>contABC:</p>
+<div id="contABC"></div>
+<p>contDEF:</p>
+<div id="contDEF"></div>
 <script>
 	var buttons = document.getElementsByTagName("button");
-	var cont = document.getElementById("cont");
+	var contABC = document.getElementById("contABC");
+	var contDEF = document.getElementById("contDEF");
 	function getHashValue() {
 		var hashValue = location.hash.split('#')[1];
 		return hashValue;
 	}
 
 	function display() {
-		var content = getHashValue();
-		cont.textContent = content;
+		var content = getHashValue().split('');
+
+		contABC.textContent = "ABC".indexOf(content[0]) >= 0 ? content[0] : content[1];
+		contDEF.textContent = "DEF".indexOf(content[0]) >= 0 ? content[0] : content[1];
 	}
 
 	for (var i in buttons) {
