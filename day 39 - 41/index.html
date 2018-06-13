@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我是精明的小卖家</title>
+</head>
+<body>
+<button id="a">A</button>
+<button id="b">B</button>
+<button id="c">C</button>
+
+<div id="cont"></div>
+<script>
+	var buttons = document.getElementsByTagName("button");
+	var cont = document.getElementById("cont");
+	function getHashValue() {
+		var hashValue = location.hash.split('#')[1];
+		return hashValue;
+	}
+
+	function display() {
+		var content = getHashValue();
+		cont.textContent = content;
+	}
+
+	for (var i in buttons) {
+		buttons[i].onclick = function () {
+			location.hash = this.textContent;
+		}
+	}
+
+	window.onload = function(){
+		display();
+	}
+
+	window.onhashchange = function () {
+		display();
+	}
+</script>
+</body>
+</html>
