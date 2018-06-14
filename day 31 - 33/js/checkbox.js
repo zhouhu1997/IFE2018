@@ -259,17 +259,17 @@ function displayHashInfo() {
 
 var pushState = function(){
 	// 获取#号后的值
-	var query = location.href.split("#")[1];
+	var query = location.href.split("?")[1];
 
 	if (typeof query === "undefined") {
-		history.replaceState(null, document.title, location.href.split("#")[0] + "#手机-华北");
+		history.replaceState(null, document.title, location.href.split("?")[0] + "?手机-华北");
 		return pushState();
 	}
 
 	var product = decodeURI(query).split('-')[0] || "";
 	var area = decodeURI(query).split('-')[1] || "";
 	if (product.length <= 0 || area.length <= 0) {
-		history.replaceState(null, document.title, location.href.split("#")[0] + "#手机-华北");
+		history.replaceState(null, document.title, location.href.split("?")[0] + "?手机-华北");
 		return pushState();
 	}
 	for (var i in clickedBtns.area) {
@@ -305,5 +305,5 @@ function getState(obj) {
 		if (obj.area[i]) str += i;
 	}
 
-	return history.pushState({title:document.title}, document.title, location.href.split("#")[0] + "#" +str);
+	return history.pushState({title:document.title}, document.title, location.href.split("?")[0] + "?" +str);
 }

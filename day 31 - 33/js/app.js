@@ -1,7 +1,6 @@
 //displayHashInfo();
 if (history.pushState){
 	window.addEventListener("popstate",function () {
-		console.log("popstate");
 		pushState();
 		// 生成地区 checkbox
 		updateCheckBox(areaBtn);
