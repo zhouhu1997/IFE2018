@@ -120,17 +120,32 @@ function combineTable(combineFactor) {
 }
 
 // 生成checkbox
-function generateCheckboxs(parent, checkbox) {
+function generateCheckboxs(parent, checkbox, btns) {
 	var innerCheckbox = '';
 	for (var i in checkbox) {
 		// 根据clickedBtn中的true和false设置checkHash
 		var	checkHash = clickedBtns.product[checkbox[i].text] || clickedBtns.area[checkbox[i].text];
 		// 设置checkbox中第一个选项为check
 		var check = checkHash ? 'checked=checked' : '';
-		innerCheckbox += '<input type=checkbox name=' + checkbox[i].name + ' value=' + checkbox[i].value + ' ' + check + ' />' + checkbox[i].text + ' ';
+		innerCheckbox += '<input type=checkbox name=' + checkbox[i].name + ' data-text = '+checkbox[i].text+' value=' + checkbox[i].value + ' ' + check + ' />' + checkbox[i].text + ' ';
 	}
 	// 设置innerHTML
 	parent.innerHTML = innerCheckbox;
+	if (checkSelectedAll(btns)) checkAll(btns);
+}
+
+function updateCheckBox(checkbox) {
+	for (var i = 0; i < checkbox.length - 1; i++) {
+		// 根据clickedBtn中的true和false设置checkHash
+		var	checkHash = clickedBtns.product[checkbox[i].getAttribute("data-text")] || clickedBtns.area[checkbox[i].getAttribute("data-text")];
+		// 设置checkbox中第一个选项为check
+		if (checkHash) {
+			checkbox[i].checked = true;
+		} else {
+			checkbox[i].checked = false;
+		}
+	}
+	if (checkSelectedAll(checkbox)) checkAll(checkbox);
 }
 
 // 设置icon及其属性

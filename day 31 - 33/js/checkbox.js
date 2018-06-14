@@ -15,6 +15,7 @@ area.addEventListener('click',function () {
 				break;
 			case 'all':
 				if (target.checked){
+					console.log("hi");
 					// 勾选所有地图checkbox的选项
 					checkAll(areaBtn);
 				} else{
@@ -25,11 +26,11 @@ area.addEventListener('click',function () {
 			default:
 				break;
 		}
+		getHash(clickedBtns);
 		// 在地区checkbox点击地事件之后检查是否所有checkbox选中
 		if (checkSelectedAll(areaBtn)) checkAll(areaBtn);// 勾选所有地图checkbox的选项
 		// 渲染新的表格
 		addToTable();
-		getHash(clickedBtns);
 	}
 });
 
@@ -218,9 +219,12 @@ function getHash(obj) {
 		}
 	}
 
+	str += '-';
+
 	for (var i in obj.area){
 		if (obj.area[i]) str += i;
 	}
+
 	return location.hash = str;
 }
 
@@ -230,14 +234,24 @@ function displayHashInfo() {
 	var hash = location.hash.split("#")[1];
 	// 讲unicode转为中文
 	hash = decodeURI(hash);
+	var product = hash.split('-')[0] || "";
+	var area = hash.split('-')[1] || "";
+	if (product.length <= 0 || area.length <= 0){
+		location.hash = "手机-华北";
+	}
 	for (var i in clickedBtns.area) {
-		if (hash.indexOf(i) >= 0){ clickedBtns.area[i] = true;
-		console.log(clickedBtns.area[i]);}
+		if (area.indexOf(i) >= 0) {
+			clickedBtns.area[i] = true;
+		}else {
+			clickedBtns.area[i] = false;
+		}
 	}
 
-	for (var i in clickedBtns.product) {
-		if (hash.indexOf(i) >= 0) {clickedBtns.product[i] = true;
-			console.log(clickedBtns.product[i]);}
-
+	for (var j in clickedBtns.product) {
+		if (product.indexOf(j) >= 0) {
+			clickedBtns.product[j] = true;
+		} else{
+			clickedBtns.product[j] = false;
+		}
 	}
 }

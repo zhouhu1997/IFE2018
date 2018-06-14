@@ -7,12 +7,12 @@ var selectedProduct = [];
 var selectedArea = [];
 var clickedBtns = {
 	area: {
-		'华北': true,
+		'华北': false,
 		'华南': false,
 		'华东': false
 	},
 	product: {
-		'手机': true,
+		'手机': false,
 		'笔记本': false,
 		'智能音箱': false
 	}
