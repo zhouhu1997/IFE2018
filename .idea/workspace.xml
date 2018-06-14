@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/day 31 - 33/font-awesome-4.7.0 2/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day 31 - 33/font-awesome-4.7.0 2/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day 31 - 33/font-awesome-4.7.0 2/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day 31 - 33/font-awesome-4.7.0 2/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day 31 - 33/font-awesome-4.7.0 2/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day 31 - 33/font-awesome-4.7.0 2/fonts/fontawesome-webfont.woff2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/day 31 - 33/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/day 31 - 33/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/day 31 - 33/js/checkbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/day 31 - 33/js/checkbox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day 31 - 33/js/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/day 31 - 33/js/table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day 31 - 33/js/variables.js" beforeDir="false" afterPath="$PROJECT_DIR$/day 31 - 33/js/variables.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,17 +26,17 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/day 31 - 33/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+                <state relative-caret-position="-134">
+                  <caret line="123" column="26" lean-forward="true" selection-start-line="123" selection-start-column="26" selection-end-line="123" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/day 31 - 33/js/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+                <state relative-caret-position="221">
+                  <caret line="13" selection-start-line="13" selection-end-line="13" />
                 </state>
               </provider>
             </entry>
@@ -52,17 +44,8 @@
           <file leaf-file-name="variables.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/day 31 - 33/js/variables.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
+                <state relative-caret-position="-3004">
                   <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="checkbox.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/day 31 - 33/js/checkbox.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="549">
-                  <caret line="253" selection-start-line="253" selection-end-line="253" />
                 </state>
               </provider>
             </entry>
@@ -71,10 +54,19 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="table.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="checkbox.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/day 31 - 33/js/checkbox.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="164">
+                  <caret line="270" selection-start-line="270" selection-end-line="270" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="table.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/day 31 - 33/js/table.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
+                <state relative-caret-position="-267">
                   <caret line="123" selection-start-line="123" selection-end-line="123" />
                 </state>
               </provider>
@@ -105,6 +97,7 @@
       <find>console</find>
       <find>progr</find>
       <find>position</find>
+      <find>pushSta</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -165,11 +158,11 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/day 39 - 41/index.html" />
-        <option value="$PROJECT_DIR$/day 31 - 33/index.html" />
         <option value="$PROJECT_DIR$/day 31 - 33/js/variables.js" />
-        <option value="$PROJECT_DIR$/day 31 - 33/js/app.js" />
-        <option value="$PROJECT_DIR$/day 31 - 33/js/checkbox.js" />
         <option value="$PROJECT_DIR$/day 31 - 33/js/table.js" />
+        <option value="$PROJECT_DIR$/day 31 - 33/index.html" />
+        <option value="$PROJECT_DIR$/day 31 - 33/js/checkbox.js" />
+        <option value="$PROJECT_DIR$/day 31 - 33/js/app.js" />
       </list>
     </option>
   </component>
@@ -334,12 +327,12 @@
       <workItem from="1527652044687" duration="1011000" />
       <workItem from="1527653167165" duration="22431000" />
       <workItem from="1528428495870" duration="107610000" />
-      <workItem from="1528874533299" duration="23695000" />
+      <workItem from="1528874533299" duration="28908000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="487861000" />
+    <option name="totallyTimeSpent" value="493074000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -372,7 +365,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -709,38 +702,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day 31 - 33/index.html">
+    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        <state relative-caret-position="-267">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day 31 - 33/js/variables.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="-3004">
           <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day 31 - 33/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-134">
+          <caret line="123" column="26" lean-forward="true" selection-start-line="123" selection-start-column="26" selection-end-line="123" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day 31 - 33/js/checkbox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="253" selection-start-line="253" selection-end-line="253" />
+        <state relative-caret-position="164">
+          <caret line="270" selection-start-line="270" selection-end-line="270" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/table.js">
+    <entry file="file://$PROJECT_DIR$/day 31 - 33/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
