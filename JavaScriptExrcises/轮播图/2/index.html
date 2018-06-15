@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+		}
+
+		body{
+			padding: 20px;
+		}
+
+		#container {
+			position: relative;
+			margin: 0 auto;
+			width: 600px;
+			height: 400px;
+			overflow: hidden;
+		}
+
+		#list {
+			position: absolute;
+			z-index: 1;
+			width: 4200px;
+			height: 400px;
+		}
+
+		#list img {
+			float: left;
+			width: 600px;
+			height: 400px;
+		}
+
+		#buttons {
+			position: absolute;
+			left: 250px;
+			bottom: 20px;
+			z-index: 2;
+			height: 10px;
+			width: 100px;
+		}
+
+		#buttons span {
+			float: left;
+			margin-right: 5px;
+			width: 10px;
+			height: 10px;
+			border: 1px solid #fff;
+			border-radius: 50%;
+			background: #333;
+			cursor: pointer;
+		}
+
+		#buttons .on {
+			background: orangered;
+		}
+
+		.arrow {
+			display: none;
+			position: absolute;
+			top: 180px;
+			z-index: 2;
+			width: 40px;
+			height: 40px;
+			font-weight: bold;
+			line-height: 40px;
+			text-align: center;
+			color: #fff;
+			background-color: rgba(0,0,0,0.3);
+			cursor: pointer;
+		}
+
+		.arrow:hover {
+			background-color: rgba(0,0,0,0.7);
+		}
+
+		#container:hover .arrow{
+			display: block;
+		}
+
+		#prev {
+			left: 20px;
+		}
+
+		#next {
+			right: 20px;
+		}
+	</style>
+</head>
+<body>
+<div id="container">
+	<div id="list" style="left: 0px;">
+		<img src="img/1.jpg" alt="1" />
+		<img src="img/2.jpg" alt="2" />
+		<img src="img/3.jpg" alt="3" />
+		<img src="img/4.jpg" alt="4" />
+		<img src="img/5.jpg" alt="5" />
+	</div>
+	<div id="buttons">
+		<span data-index="1" class="on"></span>
+		<span data-index="2"></span>
+		<span data-index="3"></span>
+		<span data-index="4"></span>
+		<span data-index="5"></span>
+	</div>
+	<a href="javascript:;" id="prev" class="arrow">&lt;</a>
+	<a href="javascript:;" id="next" class="arrow">&gt;</a>
+</div>
+<script>
+	window.onload = function () {
+		var list = document.querySelector("#list"),
+			container = document.querySelector("#container"),
+			buttons = document.querySelector("#buttons").getElementsByTagName("span"),
+			prev = document.querySelector("#prev"),
+			next = document.querySelector("#next"),
+			index = 1,
+			timer;
+
+		function animate(offset) {
+			var nextLeft = parseInt(list.style.left) + offset;
+			list.style.left = nextLeft + "px";
+
+			if (nextLeft < -2400){
+				list.style.left = 0 +"px";
+			}
+
+		}
+
+		function play(){
+			timer = setInterval(function () {
+				next.onclick();
+			}, 2000);
+		}
+
+		function stop(){
+			clearInterval(timer);
+		}
+
+		function btnClass(){
+			for (var i = 0; i < buttons.length; i++){
+				if (buttons[i].className === "on"){
+					buttons[i].className = "";
+				}
+			}
+			buttons[index - 1].className = "on";
+		}
+
+		prev.onclick = function () {
+			index -= 1;
+			if (index < 1){
+				index = 5;
+			}
+			btnClass();
+			animate(600);
+		}
+
+		next.onclick = function () {
+			index += 1;
+			if (index > 5){
+				index = 1;
+			}
+			btnClass();
+			animate(-600);
+		}
+
+		function btnClickEvt(){
+			for (var i = 0; i < buttons.length; i++){
+
+				buttons[i].onclick = function () {
+					var clickIndex = parseInt(this.getAttribute("data-index"));
+					var offset = 600 * (index - clickIndex);
+					animate(offset);
+					index = clickIndex;
+					btnClass();
+				}
+
+			}
+		}
+
+		container.onmouseover = stop;
+		container.onmouseout = play;
+		play();
+		btnClickEvt();
+
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		body{
+			margin: 10px auto;
+			padding: 0;
+			width: 1224px;
+		}
+
+		#img-wrapper {
+			position: relative;
+			height: 630px;
+			width: 1224px;
+			overflow: hidden;
+		}
+
+		#banner {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 500px;
+			width: 9999px;
+		}
+
+		#banner img{
+			float: left;
+		}
+
+		#sub-banner {
+			box-sizing: border-box;
+			display: flex;
+			flex-wrap: wrap;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			-webkit-transition: all 2s;
+			-moz-transition: all 2s;
+			-ms-transition: all 2s;
+			-o-transition: all 2s;
+			transition: all 2s;
+		}
+
+
+		.banner-wrap {
+			display: block;
+			position: relative;
+			width: 204px;
+			height: 167px;
+		}
+
+		.sub-img{
+			height: 162px;
+			width: 204px;
+		}
+
+		.progress {
+			width: 204px;
+			height: 5px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="img-wrapper">
+		<div id="banner">
+			<img src="img/banner_00.jpg" alt="">
+			<img src="img/banner_01.jpg" alt="">
+			<img src="img/banner_02.jpg" alt="">
+			<img src="img/banner_03.jpg" alt="">
+			<img src="img/banner_04.jpg" alt="">
+			<img src="img/banner_05.jpg" alt="">
+		</div>
+		<div id="sub-banner">
+			<div class="banner-wrap" data-index="0">
+				<div class="sub-img"></div>
+				<div class="progress"></div>
+			</div>
+			<div class="banner-wrap" data-index="1">
+				<div class="sub-img"></div>
+				<div class="progress"></div>
+			</div>
+			<div class="banner-wrap" data-index="2">
+				<div class="sub-img"></div>
+				<div class="progress"></div>
+			</div>
+			<div class="banner-wrap" data-index="3">
+				<div class="sub-img"></div>
+				<div class="progress"></div>
+			</div>
+			<div class="banner-wrap" data-index="4">
+				<div class="sub-img"></div>
+				<div class="progress"></div>
+			</div>
+			<div class="banner-wrap" data-index="5">
+				<div class="sub-img"></div>
+				<div class="progress"></div>
+			</div>
+		</div>
+	</div>
+	<script>
+		window.onload = function () {
+			var timer = null;
+			var positionX = 0;
+			var mainBanner = document.getElementById("banner");
+			var bannerWraps = document.getElementsByClassName("banner-wrap");
+			var colorSet = ["#6F5B8E","#8EA2C5","#CA925B","#76A8A9","#B0758A","#8C8DCC"];
+			for (var i = 0; i < bannerWraps.length; i++){
+				bannerWraps[i].children[0].style.background = "url(img/sbanner_0"+i+".png) 204px 162px";
+				bannerWraps[i].children[1].style.background = colorSet[i];
+			}
+
+			setInterval(function () {
+				positionX -= 1;
+				mainBanner.style.left = positionX+"px";
+				if (positionX <= -6120){
+					positionX = 1224;
+				}
+			}, 10)
+
+
+
+		}
+	</script>
+</body>
+</html>
