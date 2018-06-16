@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/img/banner_00.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/img/banner_01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/img/banner_02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/img/banner_03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/img/banner_04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/img/banner_05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/img/sbanner_00.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/img/sbanner_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/img/sbanner_02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/img/sbanner_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/img/sbanner_04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/img/sbanner_05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/img/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/img/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/img/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/img/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/img/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,8 +23,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="120" column="17" selection-start-line="120" selection-start-column="17" selection-end-line="120" selection-end-column="17" />
+            <state relative-caret-position="427">
+              <caret line="115" column="31" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -50,8 +32,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="126" column="30" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
+            <state relative-caret-position="528">
+              <caret line="140" selection-start-line="140" selection-end-line="140" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#1858#1862#1" expanded="true" />
@@ -357,12 +339,12 @@
       <workItem from="1527652044687" duration="1011000" />
       <workItem from="1527653167165" duration="22431000" />
       <workItem from="1528428495870" duration="107610000" />
-      <workItem from="1528874533299" duration="41638000" />
+      <workItem from="1528874533299" duration="45142000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="505804000" />
+    <option name="totallyTimeSpent" value="509308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -755,15 +737,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="120" column="17" selection-start-line="120" selection-start-column="17" selection-end-line="120" selection-end-column="17" />
+        <state relative-caret-position="427">
+          <caret line="115" column="31" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="126" column="30" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
+        <state relative-caret-position="528">
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#1858#1862#1" expanded="true" />

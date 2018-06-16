@@ -122,10 +122,26 @@
 
 		function animate(offset) {
 			var nextLeft = parseInt(list.style.left) + offset;
-			list.style.left = nextLeft + "px";
+			var time = 300;
+			var interval = 10; // 间隔
+			var speed = offset / (time/interval); // 每次位移量
 
-			if (nextLeft < -2400){
-				list.style.left = 0 +"px";
+			if (nextLeft >= -2400){
+				function go() {
+					if (speed < 0 && parseInt(list.style.left) > nextLeft || (speed > 0 && parseInt(list.style.left)) < nextLeft){
+						list.style.left = parseInt(list.style.left) + speed + "px";
+						setTimeout(go, interval);
+					}
+				}
+				go();
+			} else {
+				function back() {
+					if ( parseInt(list.style.left) < 0){
+						list.style.left = parseInt(list.style.left) - (speed * 8)+"px";
+						setTimeout(back, interval);
+					}
+				}
+				back();
 			}
 
 		}
