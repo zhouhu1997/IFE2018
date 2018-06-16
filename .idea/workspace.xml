@@ -2,8 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/3/img/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/3/img/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/3/img/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/3/img/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/3/img/5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/img/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/img/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/img/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/img/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/img/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/3/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day 17 - 18/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day 17 - 18/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day 22 - 24/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day 22 - 24/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day 25 - 27/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day 25 - 27/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day 31 - 33/js/variables.js" beforeDir="false" afterPath="$PROJECT_DIR$/day 31 - 33/js/variables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/js/digit.js" beforeDir="false" afterPath="$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/js/digit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day19/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day19/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day20 - 21/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/day20 - 21/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,17 +41,17 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="115" column="31" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
+            <state relative-caret-position="1938">
+              <caret line="114" column="37" selection-start-line="114" selection-start-column="37" selection-end-line="114" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/index.html">
+        <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/3/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="140" selection-start-line="140" selection-end-line="140" />
+            <state relative-caret-position="401">
+              <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#1858#1862#1" expanded="true" />
@@ -90,7 +108,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/day20 - 21/index.html" />
         <option value="$PROJECT_DIR$/day 22 - 24/index.html" />
         <option value="$PROJECT_DIR$/learningWebPack/index.html" />
         <option value="$PROJECT_DIR$/learningWebPack/pulic/index.html" />
@@ -141,6 +158,7 @@
         <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/index.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/index.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/index.html" />
+        <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/3/index.html" />
       </list>
     </option>
   </component>
@@ -251,14 +269,14 @@
               <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
               <item name="JavaScriptExrcises" type="462c0819:PsiDirectoryNode" />
               <item name="轮播图" type="462c0819:PsiDirectoryNode" />
-              <item name="2" type="462c0819:PsiDirectoryNode" />
+              <item name="3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
               <item name="JavaScriptExrcises" type="462c0819:PsiDirectoryNode" />
               <item name="轮播图" type="462c0819:PsiDirectoryNode" />
-              <item name="2" type="462c0819:PsiDirectoryNode" />
+              <item name="3" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -282,11 +300,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/img" />
       <recent name="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2" />
       <recent name="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/img" />
       <recent name="$PROJECT_DIR$/day 31 - 33/font-awesome-4.7.0 2" />
       <recent name="$PROJECT_DIR$/day 31 - 33" />
-      <recent name="$PROJECT_DIR$/day 34 - 36/canvasExercises/倒计时/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -339,21 +357,22 @@
       <workItem from="1527652044687" duration="1011000" />
       <workItem from="1527653167165" duration="22431000" />
       <workItem from="1528428495870" duration="107610000" />
-      <workItem from="1528874533299" duration="45142000" />
+      <workItem from="1528874533299" duration="47640000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="509308000" />
+    <option name="totallyTimeSpent" value="511806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49871135" visible="true" weight="0.12684989" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49871135" visible="true" weight="0.12684989" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32820514" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.50128865" side_tool="true" weight="0.15856236" />
@@ -366,7 +385,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32860824" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,20 +399,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/day20 - 21/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="215" column="38" selection-start-line="215" selection-start-column="38" selection-end-line="215" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day 22 - 24/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1032">
-          <caret line="757" column="29" lean-forward="true" selection-start-line="757" selection-start-column="29" selection-end-line="757" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/learningWebPack/pulic/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -735,17 +739,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/img/2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="115" column="31" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
+        <state relative-caret-position="1938">
+          <caret line="114" column="37" selection-start-line="114" selection-start-column="37" selection-end-line="114" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/index.html">
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/3/img/1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/3/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="140" selection-start-line="140" selection-end-line="140" />
+        <state relative-caret-position="401">
+          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#1858#1862#1" expanded="true" />

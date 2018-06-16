@@ -124,9 +124,9 @@ function setListener() {
 		}
 
 		// 调用画x轴函数
-		drawSVGAxis(position("50","250","520","2",'',"2","#000"));
+		drawSVGAxis(position("50","250","520","3",'',"3","#000"));
 		// 调用画y轴函数
-		drawSVGAxis(position("50","10","2","240",'',"2","#000"));
+		drawSVGAxis(position("50","10","3","240",'',"3","#000"));
 		// 调用画x轴标识函数
 		drawXText();
 		// 调用画x轴标识函数
