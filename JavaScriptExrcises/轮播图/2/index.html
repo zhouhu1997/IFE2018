@@ -2,9 +2,220 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Title</title>
+	<title>轮播图 2</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0 auto;
+			text-decoration: none;
+		}
+
+		#container {
+			position: relative;
+			width: 600px;
+			height: 400px;
+			overflow: hidden;
+		}
+
+		#imgs {
+			position: absolute;
+			width: 4200px;
+			height: 400px;
+			z-index: 1;
+		}
+
+		#imgs img {
+			float: left;
+			width: 600px;
+			height: 400px;
+		}
+
+		#pots {
+			position: absolute;
+			height: 10px;
+			width: 100px;
+			left: 250px;
+			bottom: 20px;
+			z-index: 2;
+		}
+
+		#pots span {
+			float: left;
+			margin-right: 5px;
+			width: 10px;
+			height: 10px;
+			border: 1px solid #fff;
+			border-radius: 50%;
+			background: #333;
+			cursor: pointer;
+		}
+
+		#pots .on{
+			background: #D85E39;
+		}
+
+		.arrow {
+			display: none;
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			top: 180px;
+			z-index: 2;
+			font-weight: bold;
+			line-height: 40px;
+			text-align: center;
+			color: #fff;
+			background-color: rgba(0,0,0,0.3);
+			cursor: pointer;
+		}
+
+		.arrow:hover {
+			background-color: rgba(0,0,0,0.7);
+		}
+
+		#container:hover .arrow{
+			display: block;
+		}
+
+		#prev {
+			left: 20px;
+		}
+
+		#next {
+			right: 20px;
+		}
+
+		#prev {
+			left: 20px;
+		}
+
+		#next {
+			right: 20px;
+		}
+	</style>
 </head>
 <body>
+	<div id="container">
+		<div id="imgs">
+			<img src="img/1.jpg" alt="1">
+			<img src="img/2.jpg" alt="2">
+			<img src="img/3.jpg" alt="3">
+			<img src="img/4.jpg" alt="4">
+			<img src="img/5.jpg" alt="5">
+		</div>
+		<div id="pots">
+			<span data-index="1" class="on"></span>
+			<span data-index="2"></span>
+			<span data-index="3"></span>
+			<span data-index="4"></span>
+			<span data-index="5"></span>
+		</div>
+		<a href="javascript:;" id="prev" class="arrow">&lt;</a>
+		<a href="javascript:;" id="next" class="arrow">&gt;</a>
+	</div>
+	<script>
+		var container = document.getElementById("container"),
+			imgs = document.getElementById("imgs"),
+			tags = document.getElementById("pots").getElementsByTagName("span"),
+			prev = document.getElementById("prev"),
+			next = document.getElementById("next"),
+			index = 1,
+			timer = null,
+			imgTimer = null,
+			animated = false;
+		imgs.style.left = "0";
 
+		function animation(offset) {
+			var time = 300,
+				interval = 10,
+				nextLeft = parseInt(imgs.style.left) + offset,
+				speed = offset / (time / interval);
+			animated = true;
+			function move() {
+				if ((nextLeft < parseInt(imgs.style.left)|| parseInt(imgs.style.left) < nextLeft) && parseInt(imgs.style.left) <= 0){
+					imgs.style.left = parseInt(imgs.style.left) + speed + "px";
+				}else {
+					animated = false;
+					if (nextLeft > -3000){
+						imgs.style.left = nextLeft + 'px';
+					} else {
+						imgs.style.left = "0px";
+					}
+					clearInterval(timer);
+				}
+			}
+
+			if (nextLeft > -3000){
+				timer = setInterval(move, interval);
+
+			} else{
+				speed = 2400 / (time / interval);
+				timer = setInterval(move, interval);
+			}
+
+		}
+
+		function play() {
+			imgTimer = setInterval(function () {
+				next.onclick();
+			}, 2000);
+		}
+
+		function stop() {
+			clearInterval(imgTimer);
+		}
+
+		function activePot() {
+			for (var i = 0; i < tags.length; i++){
+				if (tags[i].className === "on"){
+					tags[i].className = "";
+				}
+			}
+			tags[index - 1].className = "on";
+		}
+
+		function clickPotEvt(){
+			for (var i = 0; i < tags.length; i++){
+				tags[i].onclick = function () {
+					var clickIndex = parseInt(this.getAttribute("data-index"));
+					var offset = (index - clickIndex) * container.offsetWidth;
+					index = clickIndex;
+					activePot();
+					animation(offset);
+
+				}
+			}
+		}
+
+		prev.onclick = function() {
+			if (!animated){
+				index -= 1;
+				if (index < 1){
+					index = 5;
+					animation(- (index - 1) * 600 );
+				} else {
+					animation(600);
+				}
+				activePot();
+			}
+		}
+
+		next.onclick = function() {
+			if (!animated){
+				index += 1;
+				if (index > 5){
+					index = 1;
+				}
+				activePot();
+				animation(-600);
+			}
+		}
+
+		container.onmouseover = stop;
+		container.onmouseout = play;
+		clickPotEvt();
+		play();
+
+	</script>
 </body>
 </html>

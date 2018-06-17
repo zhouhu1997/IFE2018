@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播 4</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+		}
+
+		body{
+			padding: 20px;
+		}
+
+		#container {
+			position: relative;
+			margin: 0 auto;
+			width: 850px;
+			height: 210px;
+			overflow: hidden;
+		}
+
+		#list {
+			position: absolute;
+			z-index: 1;
+			top: 50px;
+			left: -850px;
+			width: 7000px;
+			height: 210px;
+		}
+
+		#list > img {
+			float: left;
+			margin: 0 10px;
+			width: 150px;
+			height: 150px;
+		}
+
+		.arrow {
+			display: none;
+			position: absolute;
+			top: 90px;
+			z-index: 2;
+			width: 40px;
+			height: 80px;
+			font-weight: bold;
+			line-height: 80px;
+			text-align: center;
+			color: #fff;
+			background-color: rgba(0,0,0,0.3);
+			cursor: pointer;
+		}
+
+		.arrow:hover {
+			background-color: rgba(0,0,0,0.7);
+		}
+
+		#container:hover .arrow{
+			display: block;
+		}
+
+		#prev {
+			left: -10px;
+		}
+
+		#next {
+			right: -10px;
+		}
+	</style>
+</head>
+<body>
+<div id="container">
+	<div id="list">
+		<img src="img/21.jpg" alt="7" />
+		<img src="img/22.jpg" alt="8" />
+		<img src="img/23.jpg" alt="9" />
+		<img src="img/24.jpg" alt="10" />
+		<img src="img/25.jpg" alt="11" />
+		<img src="img/1.jpg" alt="1" />
+		<img src="img/2.jpg" alt="2" />
+		<img src="img/3.jpg" alt="3" />
+		<img src="img/4.jpg" alt="4" />
+		<img src="img/5.jpg" alt="5" />
+		<img src="img/21.jpg" alt="7" />
+		<img src="img/22.jpg" alt="8" />
+		<img src="img/23.jpg" alt="9" />
+		<img src="img/24.jpg" alt="10" />
+		<img src="img/25.jpg" alt="11" />
+		<img src="img/1.jpg" alt="1" />
+		<img src="img/2.jpg" alt="2" />
+		<img src="img/3.jpg" alt="3" />
+		<img src="img/4.jpg" alt="4" />
+		<img src="img/5.jpg" alt="5" />
+	</div>
+	<a href="javascript:;" id="prev" class="arrow">&lt;</a>
+	<a href="javascript:;" id="next" class="arrow">&gt;</a>
+</div>
+<script>
+	window.onload = function () {
+		var list = document.querySelector("#list"),
+			container = document.querySelector("#container"),
+			prev = document.querySelector("#prev"),
+			next = document.querySelector("#next"),
+			timer,
+			animated = false;
+
+		function animate(offset) {
+			var nextLeft = parseInt(getStyle(list, "left")) + offset;
+			var time = 300;
+			var interval = 10; // 间隔
+			var speed = offset / (time/interval); // 每次位移量
+			animated  = true;
+
+			function forward() {
+				if ((speed < 0 && parseInt(getStyle(list, "left")) > nextLeft)|| (speed > 0 && parseInt(getStyle(list, "left")) < nextLeft)){
+					list.style.left = parseInt(getStyle(list, "left")) + speed + "px";
+					setTimeout(forward, interval);
+				}else {
+					animated = false;
+					list.style.left = nextLeft + 'px';
+
+					if (nextLeft > -850){
+						list.style.left = -1700 + "px";
+					}
+
+					if (nextLeft < -1700){
+						list.style.left = -850 + "px";
+					}
+				}
+			}
+			forward();
+		}
+
+		function play(){
+			timer = setInterval(function () {
+				next.onclick();
+			}, 3000);
+		}
+
+		function stop(){
+			clearInterval(timer);
+		}
+
+		//获得元素的样式
+		function getStyle(elem,cssname){
+			if(window.getComputedStyle){
+				return window.getComputedStyle(elem)[cssname];
+			}else{
+				return elem.currentStyle[cssname];
+			}
+		}
+
+		prev.onclick = function () {
+			console.log("prev");
+			if (!animated) {
+				animate(850);
+			}
+		}
+
+		next.onclick = function () {
+			if (!animated) {
+				animate(-850);
+			}
+		}
+
+		container.onmouseover = stop;
+		container.onmouseout = play;
+		play();
+
+
+
+	}
+</script>
+</body>
+</html>

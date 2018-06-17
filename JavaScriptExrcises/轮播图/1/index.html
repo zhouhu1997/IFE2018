@@ -36,11 +36,6 @@
 			position: absolute;
 			left: 0;
 			bottom: 0;
-			-webkit-transition: all 2s;
-			-moz-transition: all 2s;
-			-ms-transition: all 2s;
-			-o-transition: all 2s;
-			transition: all 2s;
 		}
 
 
@@ -112,13 +107,97 @@
 				bannerWraps[i].children[1].style.background = colorSet[i];
 			}
 
-			setInterval(function () {
-				positionX -= 10;
-				mainBanner.style.left = positionX+"px";
-				if (positionX <= -6120){
-					positionX = 1224;
+			function animation(offset) {
+				var time = 300,
+					interval = 10,
+					nextLeft = parseInt(imgs.style.left) + offset,
+					speed = offset / (time / interval);
+				animated = true;
+				function move() {
+					if ((nextLeft < parseInt(imgs.style.left)|| parseInt(imgs.style.left) < nextLeft) && parseInt(imgs.style.left) <= 0){
+						imgs.style.left = parseInt(imgs.style.left) + speed + "px";
+					}else {
+						animated = false;
+						if (nextLeft > -3000){
+							imgs.style.left = nextLeft + 'px';
+						} else {
+							imgs.style.left = "0px";
+						}
+						clearInterval(timer);
+					}
 				}
-			}, 10)
+
+				if (nextLeft > -3000){
+					timer = setInterval(move, interval);
+
+				} else{
+					speed = 2400 / (time / interval);
+					timer = setInterval(move, interval);
+				}
+
+			}
+
+			function play() {
+				imgTimer = setInterval(function () {
+					next.onclick();
+				}, 2000);
+			}
+
+			function stop() {
+				clearInterval(imgTimer);
+			}
+
+			function activePot() {
+				for (var i = 0; i < tags.length; i++){
+					if (tags[i].className === "on"){
+						tags[i].className = "";
+					}
+				}
+				tags[index - 1].className = "on";
+			}
+
+			function clickPotEvt(){
+				for (var i = 0; i < tags.length; i++){
+					tags[i].onclick = function () {
+						var clickIndex = parseInt(this.getAttribute("data-index"));
+						var offset = (index - clickIndex) * container.offsetWidth;
+						index = clickIndex;
+						activePot();
+						animation(offset);
+
+					}
+				}
+			}
+
+			prev.onclick = function() {
+				if (!animated){
+					index -= 1;
+					if (index < 1){
+						index = 5;
+						animation(- (index - 1) * 600 );
+					} else {
+						animation(600);
+					}
+					activePot();
+				}
+			}
+
+			next.onclick = function() {
+				if (!animated){
+					index += 1;
+					if (index > 5){
+						index = 1;
+					}
+					activePot();
+					animation(-600);
+				}
+			}
+
+			container.onmouseover = stop;
+			container.onmouseout = play;
+			clickPotEvt();
+			play();
+
 
 
 
