@@ -129,10 +129,11 @@
 			var time = 300,
 				interval = 10,
 				nextLeft = parseInt(imgs.style.left) + offset,
-				speed = offset / (time / interval);
+				speed = nextLeft > -3000 ? offset / (time / interval) : 2400 / (time / interval),
+				isLastIndex = nextLeft > -3000;
 			animated = true;
 			function move() {
-				if ((nextLeft < parseInt(imgs.style.left)|| parseInt(imgs.style.left) < nextLeft) && parseInt(imgs.style.left) <= 0){
+				if (((nextLeft < parseInt(imgs.style.left) && (speed < 0 || !isLastIndex))|| (parseInt(imgs.style.left) < nextLeft && speed > 0)) && parseInt(imgs.style.left) <= 0){
 					imgs.style.left = parseInt(imgs.style.left) + speed + "px";
 				}else {
 					animated = false;
@@ -144,14 +145,7 @@
 					clearInterval(timer);
 				}
 			}
-
-			if (nextLeft > -3000){
-				timer = setInterval(move, interval);
-
-			} else{
-				speed = 2400 / (time / interval);
-				timer = setInterval(move, interval);
-			}
+			timer = setInterval(move, interval);
 
 		}
 
