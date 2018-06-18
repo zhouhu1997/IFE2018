@@ -2,9 +2,217 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Title</title>
+	<title>旋转木马</title>
 </head>
-<body>
+<style>
+	* {
+		padding: 0;
+		margin: 0;
+		text-decoration: none;
+	}
 
+	#container {
+		position: relative;
+		width: 980px;
+		height: 240px;
+		margin: 50px auto;
+	}
+
+	.img-wrap {
+		position: relative;
+		width: 100%;
+		height: 240px;
+		list-style: none;
+	}
+
+	.img-wrap li{
+		overflow: hidden;
+		position: absolute;
+		border-radius: 20px;
+	}
+
+	.img-wrap li img {
+		width: 550px;
+		height: 240px;
+	}
+
+	.img-wrap li[data-index="1"]{
+		left: 0;
+		top: 67px;
+		z-index: 1;
+		height: 105px;
+		width: 240px;
+	}
+
+	.img-wrap li[data-index="2"]{
+		left: 100px;
+		top: 42px;
+		z-index: 2;
+		height: 157px;
+		width: 360px;
+	}
+
+	.img-wrap li[data-index="3"]{
+		left: 215px;
+		top: 0;
+		z-index: 3;
+	}
+
+	.img-wrap li[data-index="4"]{
+		left: 505px;
+		top: 42px;
+		z-index: 2;
+		height: 157px;
+		width: 360px;
+	}
+
+	.img-wrap li[data-index="5"]{
+		left: 704px;
+		top: 67px;
+		z-index: 1;
+		height: 105px;
+		width: 240px;
+	}
+
+	#pots {
+		position: absolute;
+		height: 17px;
+		width: 150px;
+		left: calc((100% - 150px)/2);
+		bottom: -30px;
+		z-index: 2;
+	}
+
+	#pots span {
+		float: left;
+		margin-right: 5px;
+		width: 15px;
+		height: 15px;
+		border: 1px solid #fff;
+		border-radius: 50%;
+		background: #333;
+		cursor: pointer;
+	}
+
+	#pots .on{
+		background: #D85E39;
+	}
+
+
+</style>
+<body>
+	<div id="container">
+		<ul class="img-wrap" id="img-list">
+			<li data-index="1"><a href="javascript:;"><img src="img/1.jpg" alt="1"></a></li>
+			<li data-index="2"><a href="javascript:;"><img src="img/2.jpg" alt="2"></a></li>
+			<li data-index="3"><a href="javascript:;"><img src="img/3.jpg" alt="3"></a></li>
+			<li data-index="4"><a href="javascript:;"><img src="img/4.jpg" alt="4"></a></li>
+			<li data-index="5"><a href="javascript:;"><img src="img/5.jpg" alt="5"></a></li>
+		</ul>
+		<div id="pots">
+			<span></span>
+			<span></span>
+			<span class="on"></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<script>
+		function getStyle(elem, css) {
+			if (window.getComputedStyle){
+				return window.getComputedStyle(elem)[css];
+			} else{
+				return elem.currentStyle[css];
+			}
+		}
+
+		window.onload = function () {
+			var imgsLi = document.getElementById("img-list").getElementsByTagName("li");
+			var pots = document.getElementById("pots").getElementsByTagName("span");
+
+			var imgsLen = imgsLi.length;
+			var index = Math.floor(imgsLen/2);
+			var arr = [];
+
+			for (var i = 0; i < imgsLen; i++){
+				arr.push({
+					left: getStyle(imgsLi[i],"left"),
+					top: getStyle(imgsLi[i],"top"),
+					width: getStyle(imgsLi[i],"width"),
+					height: getStyle(imgsLi[i],"height"),
+					zIndex: getStyle(imgsLi[i],"zIndex"),
+				})
+			}
+
+			var timer = setInterval(function () {
+				index++;
+				index %= imgsLen;
+				scroll(index);
+			}, 5000);
+
+			for (var i = 0; i < imgsLen; i++){
+				pots[i].index = i;
+				pots[i].onmouseover = function(){
+					clearInterval(timer);
+					index = this.index;
+					scroll(index);
+				}
+				pots[i].onmouseout = function(){
+					timer = setInterval(function () {
+						index++;
+						index %= imgsLen;
+						scroll(index);
+					}, 5000);
+				}
+			}
+
+			function scroll(num) {
+				changePot(num);
+				var newArr = center(arr.slice(0), index);
+				for (var i=0;i<imgsLen;i++){
+					imgsLi[i].style.zIndex = newArr[i].zIndex;
+					act(imgsLi[i],newArr[i])
+				}
+			}
+
+			function center(originArr, index) {
+				var step = index - Math.floor(imgsLen/2);
+				for (var i = 0; i < Math.abs(step); i++){
+					if (step < 0 ){
+						originArr.push(originArr.shift());
+					} else{
+						originArr.unshift(originArr.pop())
+					}
+				}
+				return originArr;
+			}
+
+			function changePot(num) {
+				for (var i = 0; i < imgsLen; i++){
+					pots[i].className = "";
+				}
+				pots[num].className = "on";
+			}
+
+			function act(elem, elemStyles) {
+				if (elem.timer) {clearInterval(elem.timer)}
+				elem.timer = setInterval(function () {
+					var stop = true;
+					for (var p in elemStyles){
+						var current = parseInt(getStyle(elem,p));
+						var target = parseInt(elemStyles[p]);
+						var speed = (target-current)/8;
+
+						speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+						if (current!==target){stop = false;}
+						elem.style[p]=current + speed + "px";
+					}
+					if (stop){
+						clearInterval(elem.timer);
+					}
+				}, 16.7)
+			}
+		}
+	</script>
 </body>
 </html>
