@@ -157,11 +157,13 @@
 						clearInterval(timer);
 					}
 				}
+				console.log(!animated+ "outside");
 
 				timer = setInterval(move, interval);
 			}
 
 			function progressBar() {
+				if (progress) clearInterval(progress);
 				var position = 0;
 				function go() {
 					position += 0.26;
@@ -175,8 +177,8 @@
 
 			function play() {
 				imgTimer = setInterval(function () {
-					progressTimer[index - 1].style.width = "0";
 					if (!animated){
+						progressTimer[index - 1].style.width = "0";
 						index += 1;
 						if (index > 6){
 							index = 1;
@@ -195,13 +197,19 @@
 			function clickPotEvt(){
 				for (var i = 0; i < bannerWraps.length; i++){
 					bannerWraps[i].onclick = function () {
-						var clickIndex = parseInt(this.getAttribute("data-index"));
-						progressTimer[index - 1].style.width = "0";
-						var offset = (index - clickIndex) * container.offsetWidth;
-						index = clickIndex;
-						animation(offset);
-						clearInterval(progress);
-						progressBar();
+						if (!animated){
+							var clickIndex = parseInt(this.getAttribute("data-index"));
+							progressTimer[index - 1].style.width = "0";
+							var offset = (index - clickIndex) * container.offsetWidth;
+							if (timer) {
+								banner.style.left = -(index - 1) * 1224+ "px"
+								clearInterval(timer);
+							}
+							index = clickIndex;
+							animation(offset);
+							console.log(!animated);
+							progressBar();
+						}
 					}
 				}
 			}

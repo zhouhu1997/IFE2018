@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/5/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/5/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/6/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/6/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -47,19 +46,33 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/5/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+            <state relative-caret-position="-45">
+              <caret line="84" column="9" lean-forward="true" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="274">
               <caret line="86" column="32" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="652">
+              <caret line="204" column="64" selection-start-line="204" selection-start-column="64" selection-end-line="204" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="banner_00.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/img/banner_00.jpg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
@@ -156,10 +169,10 @@
         <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/3/index.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/4/index.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/index.html" />
-        <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/index.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/index.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/6/index.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/5/index.html" />
+        <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/index.html" />
       </list>
     </option>
   </component>
@@ -249,6 +262,21 @@
               <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
               <item name="JavaScriptExrcises" type="462c0819:PsiDirectoryNode" />
               <item name="轮播图" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaScriptExrcises" type="462c0819:PsiDirectoryNode" />
+              <item name="轮播图" type="462c0819:PsiDirectoryNode" />
+              <item name="1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaScriptExrcises" type="462c0819:PsiDirectoryNode" />
+              <item name="轮播图" type="462c0819:PsiDirectoryNode" />
+              <item name="1" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
@@ -388,12 +416,12 @@
       <workItem from="1527652044687" duration="1011000" />
       <workItem from="1527653167165" duration="22431000" />
       <workItem from="1528428495870" duration="107610000" />
-      <workItem from="1528874533299" duration="84553000" />
+      <workItem from="1528874533299" duration="86280000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="548719000" />
+    <option name="totallyTimeSpent" value="550446000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -430,13 +458,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/HTML对联练习/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="293" column="12" selection-start-line="293" selection-start-column="12" selection-end-line="293" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/1/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -694,13 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="183" column="38" selection-start-line="183" selection-start-column="38" selection-end-line="183" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/4/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
@@ -737,17 +751,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/5/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="86" column="32" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/5/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45">
+          <caret line="84" column="9" lean-forward="true" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/img/banner_00.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/1/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="204" column="64" selection-start-line="204" selection-start-column="64" selection-end-line="204" selection-end-column="64" />
         </state>
       </provider>
     </entry>
