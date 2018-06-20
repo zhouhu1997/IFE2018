@@ -136,7 +136,7 @@
 			}
 
 			function animation(offset) {
-				var time = 616,
+				var time = 313,
 					interval = 10,
 					nextLeft = parseInt(getStyle(banner,"left")) + offset,
 					speed = nextLeft > -7344 ? offset / (time / interval) : 7344 / (time / interval),
@@ -157,8 +157,6 @@
 						clearInterval(timer);
 					}
 				}
-				console.log(!animated+ "outside");
-
 				timer = setInterval(move, interval);
 			}
 
@@ -167,7 +165,7 @@
 				var position = 0;
 				function go() {
 					position += 0.26;
-					progressTimer[index - 1].style.width = position+"%";
+					progressTimer[index -1].style.width = position+"%";
 					if (parseInt(progressTimer[index - 1].style.width)>= 100) {
 						clearInterval(progress);
 					}
@@ -177,6 +175,7 @@
 
 			function play() {
 				imgTimer = setInterval(function () {
+					console.log("play");
 					if (!animated){
 						progressTimer[index - 1].style.width = "0";
 						index += 1;
@@ -198,16 +197,11 @@
 				for (var i = 0; i < bannerWraps.length; i++){
 					bannerWraps[i].onclick = function () {
 						if (!animated){
-							var clickIndex = parseInt(this.getAttribute("data-index"));
+							var clickIndex = this.dataset.index;
 							progressTimer[index - 1].style.width = "0";
 							var offset = (index - clickIndex) * container.offsetWidth;
-							if (timer) {
-								banner.style.left = -(index - 1) * 1224+ "px"
-								clearInterval(timer);
-							}
 							index = clickIndex;
 							animation(offset);
-							console.log(!animated);
 							progressBar();
 						}
 					}
