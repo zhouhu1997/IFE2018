@@ -25,21 +25,25 @@ Employee.prototype.doJob = function() {
 	console.log(this.name+" doing the job");
 }
 
-function Waiter(name, salary, id){
-	Employee.call(this, name, salary, id);
-	this.doJob = function (behavior) {
-		if (Array.isArray(behavior)){
-			console.log(this.name+" 点菜啦");
-		} else {
-			console.log(this.name+" 上菜啦")
+class Waiter extends Employee{
+	constructor(name, salary, id){
+		super(name, salary, id);
+		this.doJob = function (behavior) {
+			if (Array.isArray(behavior)){
+				console.log(this.name+" 点菜啦");
+			} else {
+				console.log(this.name+" 上菜啦")
+			}
 		}
 	}
 }
 
-function Cook(name, salary, id) {
-	Employee.call(this, name, salary, id);
-	this.doJob = function () {
-		console.log(this.name+"("+this.id+") 做菜啦");
+class Cook extends Employee{
+	constructor(name, salary, id){
+		super(name, salary, id);
+		this.doJob = function () {
+			console.log(this.name+"("+id+") 做菜啦");
+		}
 	}
 }
 
