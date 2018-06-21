@@ -47,7 +47,7 @@ var SingletonWaiter = (function(){
 			if (Array.isArray(order)){
 				console.log(this.name+"(服务员): 您点了一份"+order[0].name);
 			} else {
-				console.log(this.name+"(服务员): "+order+" 来了")
+				console.log(this.name+"(服务员): "+order+"来了")
 			}
 		}
 	}
@@ -60,7 +60,7 @@ var SingletonWaiter = (function(){
 			return init;
 		},
 		welcome: function () {
-			console.log(init.name+"(服务员): 顾客你好, 欢迎光临");
+			console.log(init.name+"(服务员): 顾客你好,欢迎光临!");
 		}
 	}
 })();
@@ -70,7 +70,7 @@ var SingletonCook = (function () {
 	function Cook(name, salary, id) {
 		Employee.call(this, name, salary, id);
 		this.doJob = function (order) {
-			console.log(this.name+"(厨师): 一份"+order.name+"! 开始做了");
+			console.log(this.name+"(厨师):一份"+order.name+"!开始做了");
 		}
 	}
 	return {
@@ -82,7 +82,7 @@ var SingletonCook = (function () {
 			return init;
 		},
 		finishDish: function (order) {
-			console.log(init.name+"(厨师): "+order.name+" 做好了, 快上菜");
+			console.log(init.name+"(厨师):"+order.name+"做好了,上菜吧");
 		}
 	}
 })();
@@ -96,24 +96,21 @@ function Customer(name) {
 }
 
 Customer.prototype.eat = function () {
-	console.log("顾客"+this.name+": Eat");
+	console.log("顾客"+this.name+":我要开动了");
 }
 
 Customer.prototype.order = function () {
-	console.log("顾客"+this.name+": 点菜");
+	console.log("顾客"+this.name+":点菜");
 	customerOrder = dishs[parseInt(Math.random() * dishs.length)];
 	if (customerOrder){
-		console.log("顾客"+this.name+": 我要点一份 "+customerOrder.name);
+		console.log("顾客"+this.name+":我要点一份"+customerOrder.name);
 	}
 }
 
 Customer.prototype.checkout = function () {
-	console.log("顾客"+this.name+": 结账");
+	console.log("顾客"+this.name+":结账");
 }
 
-Customer.prototype.come = function () {
-	console.log("顾客"+this.name+": 决定在这里吃饭! 我来了");
-}
 
 function Dish(props){
 	this.name = props.name;
@@ -132,15 +129,18 @@ function inherits(Child, Parent){
 var dishs = [new Dish({name:"奶茶",ben:5,price:20}), new Dish({name:"麻辣烫",ben:10,price: 30}), new Dish({name:"黄焖鸡",ben:10,price:35}), new Dish({name:"芝芝桃桃",ben:10,price:30}),new Dish({name:"麻辣火锅",ben:30,price:100})];
 var customerOrder = null;
 var numberOfCustomers = parseInt((Math.random() * 10) + 1) ;
-var customerNo = 1;
+var queue = [];
 var intervalId = null;
 console.log("今天有"+numberOfCustomers+"名顾客");
+for (var i  = 1; i <= numberOfCustomers; i++){
+	queue.push(new Customer(i));
+}
 intervalId = setInterval(function () {
-	if (customerNo <= numberOfCustomers){
-		var customer = new Customer(customerNo);
+	if (queue.length){
+		var customer = queue.shift();
 		if (customer){
 			console.log("-----------------");
-			customer.come();
+			console.log("====顾客"+customer.name+"请就餐.===");
 			SingletonWaiter.welcome();
 			customer.order();
 			SingletonWaiter.getWaiter().doJob([customerOrder]);
@@ -152,7 +152,6 @@ intervalId = setInterval(function () {
 			console.log("-----------------");
 
 		}
-		customerNo++;
 	} else{
 		console.log("营业结束!");
 		clearInterval(intervalId);
