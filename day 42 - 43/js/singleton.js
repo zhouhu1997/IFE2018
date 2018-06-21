@@ -43,11 +43,11 @@ var SingletonWaiter = (function(){
 	var init = null;
 	function Waiter(name, salary, id) {
 		Employee.call(this, name, salary, id);
-		this.doJob = function (behavior) {
-			if (Array.isArray(behavior)){
-				console.log(this.name+" 点菜啦");
+		this.doJob = function (order) {
+			if (Array.isArray(order)){
+				console.log(this.name+"(服务员): 您点了一份"+order[0].name);
 			} else {
-				console.log(this.name+" 上菜啦")
+				console.log(this.name+"(服务员): "+order+" 来了")
 			}
 		}
 	}
@@ -60,7 +60,7 @@ var SingletonWaiter = (function(){
 			return init;
 		},
 		welcome: function () {
-			console.log("顾客你好, 欢迎光临");
+			console.log(init.name+"(服务员): 顾客你好, 欢迎光临");
 		}
 	}
 })();
@@ -69,8 +69,8 @@ var SingletonCook = (function () {
 	var init = null;
 	function Cook(name, salary, id) {
 		Employee.call(this, name, salary, id);
-		this.doJob = function () {
-			console.log(this.name+"("+this.id+") 做菜啦");
+		this.doJob = function (order) {
+			console.log(this.name+"(厨师): 一份"+order.name+"! 开始做了");
 		}
 	}
 	return {
@@ -80,6 +80,9 @@ var SingletonCook = (function () {
 				init = new Cook(name, salary, id);
 			}
 			return init;
+		},
+		finishDish: function (order) {
+			console.log(init.name+"(厨师): "+order.name+" 做好了, 快上菜");
 		}
 	}
 })();
@@ -93,19 +96,23 @@ function Customer(name) {
 }
 
 Customer.prototype.eat = function () {
-	console.log("Eat");
+	console.log("顾客"+this.name+": Eat");
 }
 
 Customer.prototype.order = function () {
-	console.log("点菜");
+	console.log("顾客"+this.name+": 点菜");
+	customerOrder = dishs[parseInt(Math.random() * dishs.length)];
+	if (customerOrder){
+		console.log("顾客"+this.name+": 我要点一份 "+customerOrder.name);
+	}
 }
 
 Customer.prototype.checkout = function () {
-	console.log("结账");
+	console.log("顾客"+this.name+": 结账");
 }
 
 Customer.prototype.come = function () {
-	console.log("顾客"+this.name+"决定在这里吃饭! 我来了");
+	console.log("顾客"+this.name+": 决定在这里吃饭! 我来了");
 }
 
 function Dish(props){
@@ -122,13 +129,32 @@ function inherits(Child, Parent){
 	Child.prototype.constructor = Child;
 }
 
-var dishs = [new Dish({name:"奶擦",ben:5,price:20}), new Dish({name:"麻辣烫",ben:10,price: 30}), new Dish({name:"黄焖鸡",ben:10,price:35}), new Dish({name:"芝芝桃桃",ben:10,price:30}),new Dish({name:"麻辣火锅",ben:30,price:100})];
+var dishs = [new Dish({name:"奶茶",ben:5,price:20}), new Dish({name:"麻辣烫",ben:10,price: 30}), new Dish({name:"黄焖鸡",ben:10,price:35}), new Dish({name:"芝芝桃桃",ben:10,price:30}),new Dish({name:"麻辣火锅",ben:30,price:100})];
+var customerOrder = null;
 var numberOfCustomers = parseInt((Math.random() * 10) + 1) ;
-for (var i = 1; i <= numberOfCustomers; i++){
-	var customer = new Customer(1);
-	if (customer){
-		customer.come();
-		SingletonWaiter.welcome();
-		customer.order();
+var customerNo = 1;
+var intervalId = null;
+console.log("今天有"+numberOfCustomers+"名顾客");
+intervalId = setInterval(function () {
+	if (customerNo <= numberOfCustomers){
+		var customer = new Customer(customerNo);
+		if (customer){
+			console.log("-----------------");
+			customer.come();
+			SingletonWaiter.welcome();
+			customer.order();
+			SingletonWaiter.getWaiter().doJob([customerOrder]);
+			SingletonCook.getCook().doJob(customerOrder);
+			SingletonCook.finishDish(customerOrder);
+			SingletonWaiter.getWaiter().doJob(customerOrder.name);
+			customer.eat();
+			customer.checkout();
+			console.log("-----------------");
+
+		}
+		customerNo++;
+	} else{
+		console.log("营业结束!");
+		clearInterval(intervalId);
 	}
-}
+}, 2000);
