@@ -76,6 +76,8 @@
 * #### 2018.06.22  练习17 (开一家餐厅吧 (二))
     <a href="//ife.baidu.com/course/detail/id/59">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2042%20-%2043/index.html">Demo<a/>
 
+* #### 2018.06.23
+    看javascript高级程序设计
 ---
 
 ### 设计学院
