@@ -40,14 +40,14 @@
 	</style>
 </head>
 <body>
-	<!--练习 1-->
+	<!--练习 倒计时-->
 	<div class="box">
 		<h1>练习 1</h1>
 		<input type="text" id="name" onkeypress="key(event)">
 		<button id="submit-btn">Submit</button>
 	</div>
 
-	<!--练习 2-->
+	<!--练习 3-->
 	<div class="box">
 		<h1>练习 2</h1>
 		<label>
@@ -103,7 +103,7 @@
 		<button id="picStop">停</button>
 	</div>
 	<script>
-		// 练习 1
+		// 练习 倒计时
 		var submitBtn = document.querySelector('#submit-btn');
 		var input = document.querySelector('#name');
 
@@ -113,31 +113,39 @@
 		})
 
 		//设置按键函数
-		function key(event) {
-			if (event.keyCode == 27) {  // 27 是 ESC 键
+		input.addEventListener('keydown',function (e) {
+			// 获取keycode
+			var keyCode = e.keyCode;
+
+			if (keyCode === 27) {  // 27 是 ESC 键
+				// 阻止事件传递
+				e.preventDefault();
 				input.value = '';
 			}
 
-			if (event.keyCode === 13) {  // 13 是 Enter 键
+			if (keyCode === 13) {  // 13 是 Enter 键
+				// 阻止事件传递
+				e.preventDefault();
 				console.log(input.value);
 				input.value = '';
 			}
-		}
+		})
 
-		//练习 2
+
+		//练习 3
 		var school = document.querySelector('#school');
 		var company = document.querySelector('#company');
 		var schoolList = document.querySelector('#school-select');
 		var companyList = document.querySelector('#company-select');
 
 		school.addEventListener('click',function () {
-			schoolList.className = 'active';
-			companyList.className = '';
+			schoolList.classList.add('active');
+			companyList.classList.remove('active');
 		})
 
 		company.addEventListener('click',function () {
-			companyList.className = 'active';
-			schoolList.className = '';
+			companyList.classList.add('active');
+			schoolList.classList.remove('active');
 		})
 
 		//练习 3
@@ -169,7 +177,11 @@
 			var interval = setInterval(function () {
 				style.opacity = num;
 				// 有个困惑就是 如果获得的是var style = obj4.style.opacity的话, obj4.style.opacity !== style;
-				var true2 = (style === obj4.style.opacity) ? 'yes':'no';
+				/*
+				**  倒计时. var style = obj4.style.opacity获得的是opacity的值 (string类型)
+				*   3. var style = obj4.style 获得的是style对象(object类型)
+				*   第一个 使用num = num + step修改的是string的值 而不是style对象中的opacity所以不生效.
+				 */
 				num = num + step;
 				// 判断定时器结束条件
 				if (num < 0 || num >1){
@@ -179,7 +191,7 @@
 					isFadeOut = !isFadeOut;
 					clearInterval(interval);
 				}
-			}, 200);
+			}, 100);
 		})
 
 		//练习 5

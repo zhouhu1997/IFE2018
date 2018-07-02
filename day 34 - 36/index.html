@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas</title>
+	<style>
+		#canvas {
+			border: 1px solid #e3e3e3;
+		}
+
+		#selector {
+			list-style: none;
+			height: 100px;
+		}
+
+		#selector li {
+			float: left;
+			height: 60px;
+			width: 70px;
+			border-radius: 10px;
+			margin-right: 20px;
+			text-align: center;
+			background: #7DB74B;
+
+		}
+
+		#selector li a{
+			text-decoration: none;
+			line-height: 60px;
+			color: #fff;
+		}
+
+		#svg-wrapper {
+			display: none;
+		}
+
+		#tool-box {
+			position: absolute;
+			top: 180px;
+			bottom: 0;
+			left: 0;
+			width: 250px;
+			border: 1px solid #ccc;
+		}
+
+		#tool-box h2 {
+			margin: 0;
+			background: #EEE;
+			font-size: 16px;
+			height: 24px;
+			line-height: 24px;
+			padding: 5px 10px;
+		}
+
+		#tool-box form {
+			padding: 10px;
+		}
+
+		#svgContainer {
+			position: absolute;
+			left: 260px;
+			top: 180px;
+			bottom: 10px;
+			right: 10px;
+			-webkit-box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+			-moz-box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+			box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+		}
+
+		label {
+			display: inline-block;
+			width: 80px;
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>此处为canvas和svg练习, <a href="https://nanjiang327.github.io/IFE2018/day%2031%20-%2033/index.html" target="_blank">小卖家作业请点我</a></h1>
+		<ul id="selector">
+			<li><a href="#">Canvas</a></li>
+			<li><a href="#">SVG</a></li>
+		</ul>
+	</div>
+	<canvas id="canvas"></canvas>
+	<div id="svg-wrapper">
+		<div id="tool-box">
+			<h2>创建</h2>
+			<form id="create-shape">
+				<button type="button" data-create="rect">Rect</button>
+				<button type="button" data-create="circle">Circle</button>
+				<button type="button" data-create="ellipse">Ellipse</button>
+				<button type="button" data-create="line">Line</button>
+				<br>
+				<button type="button" data-create="delete">Delete Selected Element</button>
+			</form>
+			<h2>形状</h2>
+			<form id="shape-attrs">
+				请先创建图形
+			</form>
+			<h2>外观和变换</h2>
+			<form id="look-and-transform">
+				<p>
+					<label for="fill">填充</label>
+					<input type="color" value="#ffffff" id="fill">
+				</p>
+				<p>
+					<label for="strokeWidth">描边</label>
+					<input type="color" value="#ff0000" id="stroke">
+					<input type="range" value="1" id="strokeWidth">
+				</p>
+				<p>
+					<label for="translateX">translateX</label>
+					<input type="range" min="-400" max="400" value="0" id="translateX">
+
+					<label for="translateY">translateY</label>
+					<input type="range" min="-400" max="400" value="0" id="translateY">
+
+					<label for="rotate">rotate</label>
+					<input type="range" min="-400" max="400" value="0" id="rotate">
+
+					<label for="scale">scale</label>
+					<input type="range" min="-1" max="2" step="0.01" value="1" id="scale">
+				</p>
+			</form>
+		</div>
+		<div id="svgContainer"></div>
+	</div>
+</body>
+<script>
+	var tags = document.getElementsByTagName("a");
+		for (var i = 0; i < tags.length; i++){
+			if (i === 0) {
+				tags[i].addEventListener("click", function () {
+					canvas.style.display = "block";
+					svgWrapper.style.display = "none"
+				})
+			}else {
+				tags[i].addEventListener("click", function () {
+					canvas.style.display = "none";
+					svgWrapper.style.display = "block"
+				})
+			}
+		}
+
+</script>
+<script>
+	var canvas = document.getElementById("canvas");
+	var WIDTH = 800;
+	var HEIGHT = 800;
+	var RADIUS = 200;
+	canvas.height = HEIGHT;
+	canvas.width = WIDTH;
+	var cxt = canvas.getContext("2d");
+
+	function drawBg(){
+		cxt.save();
+		cxt.translate(WIDTH / 2, HEIGHT / 2);
+		cxt.beginPath();
+		cxt.arc(0, 0, RADIUS, 0, Math.PI * 2);
+		cxt.lineWidth = 5;
+		cxt.strokeStyle = "#000";
+		cxt.stroke();
+
+		var num = [3,4,5,6,7,8,9,10,11,12,1,2];
+		cxt.fillStyle = "#000";
+		cxt.font = "45px Arial";
+		cxt.textAlign = "center";
+		cxt.textBaseline = "middle";
+		num.forEach(function (number, i) {
+			var rad = Math.PI * 2 / 12 * i;
+			var x = Math.cos(rad) * (RADIUS - 50);
+			var y = Math.sin(rad) * (RADIUS - 50);
+			cxt.fillText(number, x, y);
+		})
+
+		for (var i = 0; i < 60; i++){
+			cxt.beginPath();
+			var rad = Math.PI * 2 / 60 * i;
+			var x = Math.cos(rad) * (RADIUS - 18);
+			var y = Math.sin(rad) * (RADIUS - 18);
+			cxt.arc(x,y, 4, 0, Math.PI * 2);
+			cxt.fillStyle = i % 5 === 0 ? "#000" : "#ccc";
+			cxt.fill();
+		}
+
+	}
+
+	function drawHour(hour, min){
+		cxt.save();
+		cxt.beginPath();
+		cxt.strokeStyle = "#000";
+		var rad = 2 * Math.PI / 12 * hour;
+		var mrad = 2 * Math.PI / 60 /12 * min;
+		cxt.rotate(rad + mrad);
+		cxt.lineWidth = 6;
+		cxt.lineCap = "round";
+		cxt.moveTo(0,0);
+		cxt.lineTo(0, - RADIUS / 2);
+		cxt.stroke();
+		cxt.restore();
+	}
+
+	function drawMinutes(min){
+		cxt.save();
+		cxt.beginPath();
+		cxt.strokeStyle = "#ccc";
+		var rad = 2 * Math.PI / 60 * min;
+		cxt.rotate(rad);
+		cxt.lineWidth = 4;
+		cxt.lineCap = "round";
+		cxt.moveTo(0,0);
+		cxt.lineTo(0, - RADIUS + 30);
+		cxt.stroke();
+		cxt.restore();
+	}
+
+	function drawSec(sec){
+		cxt.save();
+		cxt.beginPath();
+		cxt.strokeStyle = "#BB3922";
+		var rad = 2 * Math.PI / 60 * sec;
+		cxt.rotate(rad);
+		cxt.lineWidth = 4;
+		cxt.lineCap = "round";
+		cxt.moveTo(0,0);
+		cxt.lineTo(0, - RADIUS + 30);
+		cxt.stroke();
+		cxt.restore();
+	}
+
+	setInterval(function () {
+		var now = new Date();
+		var hour = now.getHours();
+		var min = now.getMinutes();
+		var sec = now.getSeconds();
+
+		cxt.moveTo(0,0);
+		cxt.clearRect(0,0, WIDTH, HEIGHT);
+		drawBg();
+		drawHour(hour, min);
+		drawMinutes(min);
+		drawSec(sec);
+
+		cxt.beginPath();
+		cxt.fillStyle = "#000";
+		cxt.arc(0, 0, 10, 0, Math.PI * 2);
+		cxt.fill();
+		cxt.restore();
+
+	}, 50)
+</script>
+<script>
+	var svgContainer = document.getElementById("svgContainer");
+	var translateX = document.getElementById("translateX");
+	var translateY = document.getElementById("translateY");
+	var rotate = document.getElementById("rotate");
+	var fill = document.getElementById("fill");
+	var stroke = document.getElementById("stroke");
+	var strokeWidth = document.getElementById("strokeWidth");
+	var scale = document.getElementById("scale");
+	var svgWrapper = document.getElementById("svg-wrapper");
+	var SVG_NS = "http://www.w3.org/2000/svg";
+	var shapeInfo = {
+		rect: 'x:10,y:10,width:200,height:100,rx:0,ry:0',
+		circle: 'cx:200,cy:200,r:50',
+		ellipse: 'cx:200,cy:200,rx:80,ry:30',
+		line:'x1:10,y1:10,x2:100,y2:100'
+	};
+
+	var defaultAttrs = {
+		fill: '#ffffff',
+		stroke: '#ff0000'
+	};
+
+	var createForm = document.getElementById('create-shape');
+	var attrForm = document.getElementById('shape-attrs');
+	var lookForm = document.getElementById('look-and-transform');
+	var svg = createSVG();
+	var selected = null;
+
+	createForm.addEventListener('click', function () {
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		if (target.tagName.toLowerCase() === 'button' && target.getAttribute('data-create') !== 'delete') {
+			create(target.getAttribute('data-create'));
+		} else{
+			deleteItem();
+		}
+	})
+
+	attrForm.addEventListener('input', function () {
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		if (target.tagName.toLowerCase() === 'input'){
+			var handle = target;
+			selected.setAttribute(handle.name, handle.value);
+		}
+	})
+
+	lookForm.addEventListener('input', function () {
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		if (target.tagName.toLowerCase() !== "input") return;
+		if (!selected) return;
+		selected.setAttribute('fill',fill.value);
+		selected.setAttribute('stroke',stroke.value);
+		selected.setAttribute('stroke-width',strokeWidth.value);
+		selected.setAttribute('transform',encodeTranform({
+			tx: translateX.value,
+			ty: translateY.value,
+			scale: scale.value,
+			rotate: rotate.value
+		}));
+	})
+
+
+	function createSVG() {
+		var svg1 = document.createElementNS(SVG_NS,'svg');
+		svg1.style.width = '100%';
+		svg1.style.height = '100%';
+		svgContainer.appendChild(svg1);
+
+		svg1.addEventListener('click', function() {
+			var ev = ev || window.event;
+			var target = ev.target || ev.srcElement;
+
+			if (target.tagName.toLowerCase() in shapeInfo){
+				select(target);
+			}
+		})
+		return svg1;
+	}
+
+	function create(name) {
+		var shape = document.createElementNS(SVG_NS, name);
+		svg.appendChild(shape);
+		select(shape);
+	}
+
+	function deleteItem() {
+		if (!selected) return;
+		attrForm.innerHTML = '选中图形已删除';
+		selected.style.display = "none";
+	}
+
+	function select(shape){
+		var attrs = shapeInfo[shape.tagName].split(',');
+		var attr, name, value;
+
+		attrForm.innerHTML = "";
+		while(attrs.length){
+			attr = attrs.shift().split(":");
+			name = attr[0];
+			value = shape.getAttribute(name) || attr[1];
+			createHandle(shape,name, value);
+			shape.setAttribute(name, value);
+		}
+
+		for (name in defaultAttrs){
+			value = shape.getAttribute(name) || defaultAttrs[name];
+			shape.setAttribute(name, value);
+		}
+		selected = shape;
+		updateLookHandle();
+	}
+
+	function createHandle(shape, name, value) {
+		if (name === 'width') console.log(value);
+		var label = document.createElement('label');
+		label.textContent = name;
+
+		var handle = document.createElement('input');
+		handle.setAttribute('name',name);
+		handle.setAttribute('type','range');
+		handle.setAttribute('value', value);
+		handle.setAttribute('min', '0');
+		handle.setAttribute('max', '800');
+
+		attrForm.appendChild(label);
+		attrForm.appendChild(handle);
+	}
+
+	function updateLookHandle() {
+		fill.value = selected.getAttribute('fill');
+		stroke.value = selected.getAttribute('stroke');
+		var t = decodeTransform(selected.getAttribute("transform"));
+		translateX.value = t ? t.tx : 0;
+		translateY.value = t ? t.ty : 0;
+		rotate.value = t ? t.rotate : 0;
+		scale.value = t ? t.scale : 1;
+	}
+
+	function decodeTransform(transString) {
+		var match = /translate\((\d+),(\d+)\)\srotate\((\d+)\)\sscale\((\d+)\)/.exec(transString);
+		return match ? {
+			tx: +match[1],
+			ty: +match[2],
+			rotate: +match[3],
+			scale: +match[4]
+		} : null;
+	}
+
+	function encodeTranform(transObject) {
+		return ['translate(', transObject.tx,',',transObject.ty,') ',
+			'rotate(',transObject.rotate,') ',
+			'scale(',transObject.scale,')'].join('');
+	}
+
+
+</script>
+</html>

@@ -42,7 +42,45 @@
 * #### 2018.05.22 练习9 (JavaScript里面的居民们)
 
     <a href="//ife.baidu.com/course/detail/id/50">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2022%20-%2024/index.html">Demo<a/>
+    
+* #### 2018.05.23 练习10 (倒数开始 滴答滴 滴答滴)
 
+    <a href="//ife.baidu.com/course/detail/id/51">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2025%20-%2027/index.html">Demo<a/>
+    
+* #### 2018.05.24 练习11 (给爱的人发个邮件吧)
+
+    <a href="//ife.baidu.com/course/detail/id/52">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2028%20-%2030/index.html">Demo<a/>
+
+* #### 2018.05.27 练习12 (我是精明的小卖家（一))
+
+    <a href="//ife.baidu.com/course/detail/id/53">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2031%20-%2033/index.html">Demo<a/>
+    
+* #### 2018.05.29 - 2018.06.02
+    学习JavaScript
+    
+* #### 2018.06.03 - 2018.06.04
+    学习JavaScript
+
+* #### 2018.06.11  练习13 (我是精明的小卖家 (二))
+    <a href="//ife.baidu.com/course/detail/id/55">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2034%20-%2036/index.html">Demo<a/>
+
+* #### 2018.06.12  练习14 (我是精明的小卖家 (三))
+    <a href="//ife.baidu.com/course/detail/id/56">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2031%20-%2033/index.html">Demo<a/>
+
+* #### 2018.06.14  练习15 (我是精明的小卖家 (四))
+    <a href="//ife.baidu.com/course/detail/id/57">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2031%20-%2033/index.html">Demo<a/>
+
+* #### 2018.06.20  练习16 (开一家餐厅吧 (一))
+    <a href="//ife.baidu.com/course/detail/id/58">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2042%20-%2043/index.html">Demo<a/>
+
+* #### 2018.06.22  练习17 (开一家餐厅吧 (二))
+    <a href="//ife.baidu.com/course/detail/id/59">作业</a> <a href="https://nanjiang327.github.io/IFE2018/day%2042%20-%2043/index.html">Demo<a/>
+
+* #### 2018.06.23
+    看javascript高级程序设计
+
+* #### 2018.06.29
+    看javascript高级程序设计
 ---
 
 ### 设计学院

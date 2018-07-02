@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第二十五天到第二十七天 倒数开始 滴答滴 滴答滴</title>
+	<style>
+		.box{
+			margin: 0 auto 10px auto;
+			border: 1px solid cornflowerblue;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<h1>练习 1</h1>
+		<p>结果看console</p>
+		<button id="btn1"> Go</button>
+	</div>
+
+	<div class="box">
+		<h1>编码练习 2.1</h1>
+		<p id="time"></p>
+	</div>
+	<div class="box">
+		<h1>编码练习 2.2</h1>
+		<p id="time2"></p>
+	</div>
+
+	<div class="box" id="selections">
+		<h1>编码练习 3</h1>
+		<select id="year-select">
+		</select>
+
+		<select id="month-select">
+		</select>
+
+		<select id="day-select">
+		</select>
+
+		<select id="hour-select">
+		</select>
+
+		<select id="minute-select">
+		</select>
+
+		<select id="second-select">
+		</select>
+
+		<p id="result-wrapper"></p>
+	</div>
+
+<script>
+	// go
+	function Go() {
+		console.log("Go");
+	}
+	// 走走走
+	function GoSteps(n) {
+		console.log('----- GoStep(' + n + ') -----')
+		// 缺少参数默认执行一次Go()
+		if (n === undefined) {
+			return Go();
+		}
+		// 当n < 0为真才继续执行
+		if (n < 0) return false;
+		// 参数处理成整数，向下取整
+		n = Math.floor(n);
+		// 循环触发
+		while (n--) {
+			Go();
+		}
+	}
+	// 点击触发
+	document.getElementById('btn1').onclick = function () {
+		GoSteps(10); // Go 10次
+		GoSteps(1); // Go 1次
+		GoSteps(); // Go 1次，认为缺少参数时，默认参数为1
+		GoSteps(0);  // 0次
+		GoSteps(-1);  // 0次
+		GoSteps(1.4);  // Go 1次
+		GoSteps(1.6);  // Go 1次
+		GoSteps(-1);  // 0次
+		GoSteps(true);  // Go 1次
+		GoSteps(false);  // 0次
+		GoSteps("Test");  // 0次
+		GoSteps(NaN);  // 0次
+		GoSteps(null);  // 0次
+	}
+
+	// 练习 3
+    // 公用方法
+	// 位数补全
+	function checkTime(i)
+	{
+		if (i<10)
+		{i="0" + i}
+		return i;
+	}
+
+	// 转换星期格式
+    function weekDays(i, form) {
+		var day = '';
+		switch (form){
+			case 'cn':
+				day = weekday[i];
+				break;
+			case 'en':
+				day = weekday2[i];
+				break;
+			default:
+				break;
+		}
+		return day;
+	}
+
+
+    //定义变量
+
+	var time = document.querySelector('#time');
+	var time2 = document.querySelector('#time2');
+	var weekday= ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+	var weekday2 = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+
+	//设置 timeInterval
+	setInterval(function () {
+		var date = new Date();
+		time.textContent = displayTime(':','cn',date);
+		time2.textContent = displayTime('-','en',date);
+	},100)
+
+	/*
+	 * @param {string} timeFormat
+	 * @param {string} weekdayFormat
+	 * @param {Date} date
+	 **输出时间 设置timeFormat可以设置年月日输出格式, weekdayFormat可以设置星期的输出格式, date为输入时间
+	 */
+	function displayTime(timeFormat,weekdayFormat,date) {
+		var result = '';
+		//选择年月日输出格式
+		switch (timeFormat){
+			case ':':
+				result = `现在时间是 ${date.getFullYear()} 年 ${checkTime(date.getMonth() + 1)} 月 ${checkTime(date.getDate())} 日 ${weekDays(date.getDay(), weekdayFormat)} ${checkTime(date.getHours())}:${checkTime(date.getMinutes())}:${checkTime(date.getSeconds())}`;
+				break;
+			case '-':
+				//选择小时输出格式
+				var hours =  '';
+				hours = date.getHours() <=12 ? `${checkTime(date.getHours())}:${checkTime(date.getMinutes())}:${checkTime(date.getSeconds())} AM` : `${checkTime(date.getHours() - 12)}:${checkTime(date.getMinutes())}:${checkTime(date.getSeconds())} PM`;
+				result = `现在时间是 ${date.getFullYear()}-${checkTime(date.getMonth()+ 1)}-${checkTime(date.getDate())} ${weekDays(date.getDay(), weekdayFormat)} ${hours}`;
+				break;
+			default:
+				break;
+		}
+		return result;
+	}
+
+	// 练习 3
+    //定义变量
+	var year = document.querySelector('#year-select');
+	var month = document.querySelector('#month-select');
+	var day = document.querySelector('#day-select');
+	var hour = document.querySelector('#hour-select');
+	var minute = document.querySelector('#minute-select');
+	var second = document.querySelector('#second-select');
+	var selections = document.querySelector('#selections');
+	var result = document.querySelector('#result-wrapper');
+	var dayLength = 31;
+	var timeInterval = null;
+	var initHtml = function dateSelector(startNumber, endNumber){
+		var string = '';
+		for (var i = startNumber; i <= endNumber; i++){
+			string += '\<option value\='+i+'\>'+checkTime(i)+'\<\/option\>\n';
+		}
+		return string;
+	}
+
+	// 写入html函数
+	function init() {
+		year.innerHTML = initHtml(2001,2032);
+		month.innerHTML = initHtml(1,12);
+		day.innerHTML = initHtml(1,31);
+		hour.innerHTML =  initHtml(0,23);
+		minute.innerHTML =  initHtml(0,59);
+		second.innerHTML =  initHtml(0,59);
+		showTime();
+	}
+	//初始化, 写入html
+	init();
+
+	// 计算时间
+	function showTime(){
+		var dateString = year.value + '-' + month.value + '-' + day.value + ' ' + hour.value + ':' + minute.value + ':' + second.value;
+		var resultDate = new Date(dateString);
+		timeInterval = setInterval(function () {
+			// 获得现在时间
+			var now = new Date();
+			// 计算天时分秒相差值
+			var diff = now.getTime() / 1000 - resultDate.getTime() / 1000;
+			if (diff < 0) diff = Math.abs(diff);
+			var dayDiff = parseInt(diff / 86400, 10); // 一天86400秒
+			diff = diff % 86400;
+			var hoursDiff = parseInt(diff / 3600, 10); // 一小时 3600 秒
+			diff = diff % 3600;
+			var minDiff = parseInt(diff / 60, 10); // 一分钟 60 秒
+			diff = diff % 60;
+			var secDiff = parseInt(diff % 60, 10);
+
+			// 根据日期的将来还是过去为result设置输出
+			if (now > resultDate){
+				result.textContent =  `现在距离 ${year.value}年${checkTime(month.value)}月${checkTime(day.value)}日 ${weekDays(resultDate.getDay(), 'cn')} ${checkTime(hour.value)}:${checkTime(minute.value)}:${checkTime(second.value)} 已经过去了 ${dayDiff} 天 ${hoursDiff} 小时 ${minDiff} 分 ${secDiff} 秒`;
+			}else {
+				result.textContent =  `现在距离 ${year.value}年${checkTime(month.value)}月${checkTime(day.value)}日 ${weekDays(resultDate.getDay(), 'cn')} ${checkTime(hour.value)}:${checkTime(minute.value)}:${checkTime(second.value)} 还有 ${dayDiff} 天 ${hoursDiff} 小时 ${minDiff} 分 ${secDiff} 秒`;
+			}
+		},100);
+	}
+
+	// 为select添加事件委托以减少代码量
+	selections.addEventListener('change',function () {
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		if (target.nodeName.toLowerCase() === 'select'){
+			if (timeInterval) window.clearInterval(timeInterval);//清楚计时器
+			switch (target.id){
+				case 'year-select':
+					if (month.value === '2'){
+						// 判断闰年
+						month29Day();
+					}
+					showTime();
+					break;
+				case 'month-select':
+					// 有31号的月份
+					var month31days = ['1','3','5','7','8','10','12'];
+					if (month.value === '2'){
+						// 调用判断闰年的方法
+						month29Day();
+					} else if (month31days.indexOf(month.value) > 0){
+						//设置天数为31天
+						// 通过添加dom, 而不是更新整个dom来尽量减少dom操作
+						changeDay(31)
+					}else{
+						//设置天数为30天
+						changeDay(30);
+					}
+					showTime();
+					break;
+				default:
+					showTime();
+					break;
+			}
+		}
+	})
+
+	// 判断是否为闰年函数
+	function month29Day() {
+		if ((year.value % 4 === 0 && year.value % 100 !== 0)){
+			//设置天数为29天
+			changeDay(29);
+		}else{
+			//设置天数为28天
+			changeDay(28);
+		}
+	}
+
+	// 动态添加或者删除dom , 而不是更改整个dom, 以此减少dom的操作
+	function changeDay(setDay) {
+		var dayDiff = 0;
+		// 判断是添加日期还是删除日期
+		if (setDay > dayLength){
+			dayDiff = setDay - dayLength
+			for (var i = 0; i < dayDiff; i++){
+				day.options.add(new Option((dayLength + 1).toString(),(dayLength + 1).toString()));
+				dayLength++;
+			}
+		} else if(setDay < dayLength){
+			dayDiff = dayLength - setDay;
+			for (var i = 0; i < dayDiff; i++){
+				day.options.remove(dayLength - 1);
+				dayLength--;
+			}
+		}
+
+	}
+
+</script>
+</body>
+</html>

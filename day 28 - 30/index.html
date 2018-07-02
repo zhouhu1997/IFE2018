@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>第二十八天到第三十天 给爱的人发个邮件吧</title>
+</head>
+<style>
+	.wrapper{
+		background: #2C3545;
+		border-radius: 20px;
+		position: relative;
+		width: 800px;
+		height: 300px;
+		margin: 0 auto;
+		padding: 10px;
+	}
+
+	.wrapper h1{
+		color: #ffffff;
+	}
+
+	.wrapper a{
+		position: absolute;
+		left: 350px;
+		bottom: 10px;
+		color: #ffffff;
+	}
+
+	.wrapper a:hover{
+		color: #7DB74B;
+	}
+
+	#email-input{
+		position: absolute;
+		left: 50px;
+		top: 85px;
+		width: 200px;
+		padding: 8px;
+		font-size: 12px;
+		border: 1px solid #E1E1E1;
+	}
+
+	/* 取消input在有焦点的情况下的outline*/
+	#email-input:focus{
+		outline:none;
+	}
+
+	#email-sug-wrapper{
+		display: none;
+		margin: 0;
+		padding-left: 0;
+		position: absolute;
+		left: 50px;
+		top: 118px;
+		border-left: 1px solid #E1E1E1;
+		border-right: 1px solid #E1E1E1;
+		border-bottom: 1px solid #E1E1E1;
+		list-style: none;
+	}
+
+	#email-sug-wrapper li{
+		height: 25px;
+		line-height: 25px;
+		width: 200px;
+		padding: 0 8px;
+		font-size: 12px;
+		color: #C6C9C5;
+		overflow-x: hidden;
+	}
+
+	/* 选中li的样式*/
+	#email-sug-wrapper .selected{
+		background: #C5DDEB;
+		color: #ffffff;
+	}
+	/*鼠标hover的样式*/
+	#email-sug-wrapper li:hover{
+		background: #F5C7CF;
+		color: #ffffff;
+	}
+
+</style>
+<body>
+<div class="wrapper">
+	<h1>第二十八天到第三十天 给爱的人发个邮件吧</h1>
+	<a href="./流程图.pdf" target="_blank">点击查看流程图</a>
+	<input id="email-input" type="text" placeholder="Enter your e-mail">
+	<ul id="email-sug-wrapper" class="email-sug">
+	</ul>
+</div>
+<script>
+	var postfixList = ['163.com', 'gmail.com', '126.com', 'qq.com', '263.net'];
+	var input = document.querySelector('#email-input');
+	var sug = document.querySelector('#email-sug-wrapper');
+	var nowSelectTipIndex = 0;
+
+	// 默认获取焦点
+	input.focus();
+
+	input.addEventListener('input',function () {
+		displayPostfixList();
+		// 根据input里的内容判断是否隐藏菜单
+		(input.value).toString().trim() === '' ? hideList() : displayList();
+	})
+
+	// 用ul做为事件代理, 获取捕获按下li的行为
+	sug.addEventListener('click', function () {
+		var ev = ev || window.event;
+		var target = ev.target || ev.srcElement;
+		if (target.nodeName.toLowerCase() === 'li'){
+			//设置input value为选中li的内容
+			choiceTip(target.innerHTML);
+			//隐藏菜单
+			hideList();
+		}
+	});
+
+	// 为input添加keydown的事件监听
+	input.addEventListener('keydown',function (e) {
+		// 获取keycode
+		var keyCode = e.keyCode;
+		if (keyCode === 27){
+			// 阻止事件传递
+			e.preventDefault();
+			// 按下Esc键(27) 全选输入框内容
+			return input.select();
+		} else if (/^13|38|40$/.test(keyCode)) {
+			//获取所有 li
+			var lis = document.getElementsByTagName('li');
+			// 获取选中项
+			var selectedIndex = lis[nowSelectTipIndex];
+			// 获取li的最后一项的index
+			var lisLastIndex = lis.length - 1;
+			// 按下回去 将所选内容添加到输入框
+			if (keyCode === 13){
+				// 阻止事件传递
+				e.preventDefault();
+				//将input的value设置为选中内容
+				choiceTip(selectedIndex.innerHTML);
+				//回车后隐藏菜单
+				return hideList();
+			}
+
+			//在判断 上下 按键之前移除选中项的selected class属性
+			selectedIndex.classList.remove('selected');
+
+			if (keyCode === 40){
+				//按下如果是最后一项 返回第一项
+				nowSelectTipIndex = nowSelectTipIndex === lisLastIndex ? 0 : nowSelectTipIndex + 1;
+			} else{
+				//按上如果是第一项放回最后一项
+				nowSelectTipIndex = nowSelectTipIndex === 0 ? lisLastIndex : nowSelectTipIndex - 1;
+			}
+			// 为选中项添加 selected class 属性
+			lis[nowSelectTipIndex].classList.add('selected');
+
+		}
+	});
+
+	// 获取用户输入内容并trim后返回
+	function getUserInput(){
+		return (input.value).toString().trim();
+	}
+
+	// 重置选中状态
+	var resetSelectTipIndex = function() {
+		nowSelectTipIndex = 0;
+	}
+
+	// 构建生成提示列表
+	function createLi(obj) {
+		var arr = getUserInput().split('@');
+		var l = obj.length;
+		var html = [];
+		for (var i = 0; i < l; i ++) {
+			var str = arr.length > 1 ?  arr[0] + '@' +obj[i] : getUserInput() +'@'+ obj[i];
+			// 默认第一项选中状态
+			var li = (i === nowSelectTipIndex ? '<li class="selected">' : '<li>') + htmlEncode(str) + '</li>';
+			html.push(li);
+		}
+		// 拼接所有li
+		return html.join('');
+	}
+
+	// 生成列表
+	function displayPostfixList(){
+		var filterList = [];
+		// 重置选中状态
+		resetSelectTipIndex();
+		//用来拼接的用户输入内容 = 获取用户输入
+		var str = getUserInput().split('@')[1];
+		// 不存在的话 li为整个postfixList
+		if (!str) return sug.innerHTML = createLi(postfixList);
+		else{
+			// 获得用户输入的值的长度
+			var strl = str.length;
+			for (var i in postfixList){
+				var val = postfixList[i];
+				// 挨个字符对比
+				for (var j = 0; j < strl; j ++) {
+					if (val[j] !== str[j]) break;
+					// 匹配最后一个字符成功后添加符合项
+					if (j === strl - 1) filterList.push(postfixList[i]);
+				}
+			}
+			// 匹配成功返回filterList
+			return sug.innerHTML = createLi(filterList);
+		}
+	}
+
+	// 隐藏菜单
+	function hideList() {
+		sug.style.display = 'none';
+	}
+
+	//显示菜单
+	function displayList() {
+		sug.style.display = 'block';
+	}
+
+	// html转码
+	var htmlEncode = function(html) {
+		var s = "";
+		if (html.length === 0) return "";
+		s = html.replace(/&/g, "&amp;");
+		s = s.replace(/</g, "&lt;");
+		s = s.replace(/>/g, "&gt;");
+		s = s.replace(/ /g, "&nbsp;");
+		s = s.replace(/\'/g, "&#39;");
+		s = s.replace(/\"/g, "&quot;");
+		return s;
+	}
+
+	// html解码
+	var htmlDecode = function(html) {
+		var s = "";
+		if (html.length === 0) return "";
+		s = html.replace(/&amp;/g, "&");
+		s = s.replace(/&lt;/g, "<");
+		s = s.replace(/&gt;/g, ">");
+		s = s.replace(/&nbsp;/g, " ");
+		s = s.replace(/&#39;/g, "\'");
+		s = s.replace(/&quot;/g, "\"");
+		return s;
+	}
+
+	// 用户选择提示并显示在input
+	var choiceTip = function(val) {
+		input.value = htmlDecode(val);
+		// 获取焦点
+		input.focus();
+	}
+
+</script>
+</body>
+</html>

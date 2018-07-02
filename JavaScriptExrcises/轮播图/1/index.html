@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		body{
+			margin: 10px auto;
+			padding: 0;
+			width: 1224px;
+		}
+
+		#container {
+			position: relative;
+			height: 630px;
+			width: 1224px;
+			overflow: hidden;
+		}
+
+		#banner {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 500px;
+			width: 9999px;
+		}
+
+		#banner img{
+			float: left;
+		}
+
+		#sub-banner {
+			box-sizing: border-box;
+			display: flex;
+			flex-wrap: wrap;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+
+
+		.banner-wrap {
+			display: block;
+			position: relative;
+			width: 204px;
+			height: 167px;
+		}
+
+		.sub-img{
+			height: 162px;
+			width: 204px;
+		}
+
+		.progress {
+			width: 204px;
+			height: 5px;
+		}
+
+		.timer {
+			margin: 0;
+			width: 0;
+			height: 5px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="banner">
+			<img src="img/banner_00.jpg" alt="">
+			<img src="img/banner_01.jpg" alt="">
+			<img src="img/banner_02.jpg" alt="">
+			<img src="img/banner_03.jpg" alt="">
+			<img src="img/banner_04.jpg" alt="">
+			<img src="img/banner_05.jpg" alt="">
+		</div>
+		<div id="sub-banner">
+			<div class="banner-wrap" data-index="1">
+				<div class="sub-img"></div>
+				<div class="progress">
+					<p class="timer"></p>
+				</div>
+			</div>
+			<div class="banner-wrap" data-index="2">
+				<div class="sub-img"></div>
+				<div class="progress">
+					<p class="timer"></p>
+				</div>
+			</div>
+			<div class="banner-wrap" data-index="3">
+				<div class="sub-img"></div>
+				<div class="progress">
+					<p class="timer"></p>
+				</div>
+			</div>
+			<div class="banner-wrap" data-index="4">
+				<div class="sub-img"></div>
+				<div class="progress">
+					<p class="timer"></p>
+				</div>
+			</div>
+			<div class="banner-wrap" data-index="5">
+				<div class="sub-img"></div>
+				<div class="progress">
+					<p class="timer"></p>
+				</div>
+			</div>
+			<div class="banner-wrap" data-index="6">
+				<div class="sub-img"></div>
+				<div class="progress">
+					<p class="timer"></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		window.onload = function () {
+			var timer = null;
+			var imgTimer = null;
+			var progress = null;
+			var container = document.getElementById("container");
+			var banner = document.getElementById("banner");
+			var bannerWraps = document.getElementsByClassName("banner-wrap");
+			var progressTimer = document.getElementsByClassName("timer");
+			var colorSet = ["#6F5B8E","#8EA2C5","#CA925B","#76A8A9","#B0758A","#8C8DCC"];
+			var colorSet2 = ["#3A1D70","#2A4985","#9F572D","#385D5D","#88334A","#454893"];
+			var animated = false;
+			var index = 1;
+			for (var i = 0; i < bannerWraps.length; i++){
+				bannerWraps[i].children[0].style.background = "url(img/sbanner_0"+i+".png) 204px 162px";
+				bannerWraps[i].children[1].style.background = colorSet[i];
+			}
+
+			for (var i = 0; i < progressTimer.length; i++){
+				progressTimer[i].style.background = colorSet2[i];
+			}
+
+			function animation(offset) {
+				var time = 313,
+					interval = 10,
+					nextLeft = parseInt(getStyle(banner,"left")) + offset,
+					speed = nextLeft > -7344 ? offset / (time / interval) : 7344 / (time / interval),
+					isLastIndex = nextLeft > -7344,
+
+				animated = true;
+				function move() {
+					if (((nextLeft < parseInt(getStyle(banner,"left")) && (speed < 0 || !isLastIndex))|| (parseInt(getStyle(banner,"left")) < nextLeft) && speed > 0) && parseInt(getStyle(banner,"left")) <= 0){
+						banner.style.left = parseInt(getStyle(banner,"left")) + speed + "px";
+					}else {
+						animated = false;
+						if (nextLeft > -7344){
+							banner.style.left = nextLeft + 'px';
+						} else {
+							banner.style.left = "0px";
+						}
+						progressTimer[index - 1].style.width = "0";
+						clearInterval(timer);
+					}
+				}
+				timer = setInterval(move, interval);
+			}
+
+			function progressBar() {
+				if (progress) clearInterval(progress);
+				var position = 0;
+				function go() {
+					position += 0.26;
+					progressTimer[index -1].style.width = position+"%";
+					if (parseInt(progressTimer[index - 1].style.width)>= 100) {
+						clearInterval(progress);
+					}
+				}
+				progress = setInterval(go, 10);
+			}
+
+			function play() {
+				imgTimer = setInterval(function () {
+					console.log("play");
+					if (!animated){
+						progressTimer[index - 1].style.width = "0";
+						index += 1;
+						if (index > 6){
+							index = 1;
+						}
+						animation(-1224);
+						progressBar();
+					}
+				}, 4000);
+			}
+
+			function stop() {
+				clearInterval(imgTimer);
+			}
+
+
+			function clickPotEvt(){
+				for (var i = 0; i < bannerWraps.length; i++){
+					bannerWraps[i].onclick = function () {
+						if (!animated){
+							var clickIndex = this.dataset.index;
+							progressTimer[index - 1].style.width = "0";
+							var offset = (index - clickIndex) * container.offsetWidth;
+							index = clickIndex;
+							animation(offset);
+							progressBar();
+						}
+					}
+				}
+			}
+
+			//获得元素的样式
+			function getStyle(elem,cssname){
+				if(window.getComputedStyle){
+					return window.getComputedStyle(elem)[cssname];
+				}else{
+					return elem.currentStyle[cssname];
+				}
+			}
+
+			container.onmouseover = stop;
+			container.onmouseout = play;
+			progressBar();
+			clickPotEvt();
+			play();
+
+		}
+	</script>
+</body>
+</html>

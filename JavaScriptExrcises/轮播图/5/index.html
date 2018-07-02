@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>淡入淡出</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		#container {
+			position: relative;
+			margin: 0 auto;
+			width: 711px;
+			height: 342px;
+		}
+
+		#container img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+		}
+
+		#container img:nth-child(1){
+			opacity: 1;
+		}
+
+		#menu {
+			font-size: 0;
+			position: absolute;
+			top: 312px;
+			left: 0;
+			height: 30px;
+			width: 100%;
+		}
+
+		#menu span{
+			font-size: 16px;
+			display: inline-block;
+			height: 30px;
+			width: calc(100%/4);
+			text-align: center;
+			line-height: 30px;
+			background: rgba(255,255,255,0.2);
+			color: #fff;
+			cursor: pointer;
+		}
+
+		#menu .on{
+			background: rgba(216,94,57,0.9);
+		}
+
+	</style>
+</head>
+<body>
+	<div id="container">
+			<img src="img/3.jpg" alt="">
+			<img src="img/4.jpg" alt="">
+			<img src="img/1.jpg" alt="">
+			<img src="img/2.jpg" alt="">
+		<div id="menu">
+			<span class="on">聚蟹客&nbsp;中秋好礼</span>
+			<span>赚网&nbsp;相思惠明月</span>
+			<span>草莓网&nbsp;彩妆大促</span>
+			<span>中秋送礼&nbsp;浓情促销</span>
+		</div>
+	</div>
+	<script>
+		var imgs = document.getElementById("container").getElementsByTagName("img");
+		var tags = document.getElementById("menu").getElementsByTagName("span");
+		var currentIndex = 0;
+		var prevIndex = 0;
+		var intervalId = null;
+		var animated = false;
+
+		function getActiveSpan() {
+			for (var i = 0; i < tags.length; i++){
+				if (tags[i].className === "on"){
+					tags[i].className = "";
+				}
+				tags[currentIndex].className = "on";
+			}
+		}
+
+		for (var i = 0; i < tags.length; i++){
+			tags[i].index = i;
+			tags[i].onclick = function () {
+				if (!animated){
+					if (intervalId) clearInterval(intervalId);
+					prevIndex = currentIndex;
+					currentIndex = this.index;
+					animation();
+					intervalId = setInterval(function () {
+						prevIndex = currentIndex;
+						currentIndex = prevIndex + 1;
+						animation();
+					}, 2000);
+				}
+			}
+		}
+		
+		function animation() {
+			if (timer) clearInterval(timer);
+			var incSpeed = 0.04;
+			var opacity1 = 1;
+			var opacity2 = 0;
+			var timer = null;
+			animated = true;
+			if (currentIndex >= imgs.length){
+				currentIndex = 0;
+			}
+
+			function fade() {
+				opacity1 -= incSpeed;
+				opacity2 += incSpeed;
+				getActiveSpan();
+
+				imgs[prevIndex].style.opacity = opacity1+"";
+				imgs[currentIndex].style.opacity = opacity2+"";
+
+				if (opacity2 >= 1 || opacity1 <= 0){
+					animated = false;
+					imgs[prevIndex].style.opacity = "0";
+					imgs[currentIndex].style.opacity = "1";
+
+					clearInterval(timer);
+				}
+			}
+
+			timer = setInterval(fade, 10);
+		}
+
+		intervalId = setInterval(function () {
+			prevIndex = currentIndex;
+			currentIndex = prevIndex + 1;
+			animation();
+		}, 2000);
+	</script>
+</body>
+</html>

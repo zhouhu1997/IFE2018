@@ -125,23 +125,20 @@
 	</div>
 
 </body>
-<!--练习 1-->
+<!--练习 倒计时-->
 <script>
 	//公用方法
 	var checkBtn = function(btnA, btnB){
 		return (btnA.checked === false && btnB.checked === false) ? 'noBtnChecked' : btnA.checked ? 'A' : 'B';;
 	};
 
-	//练习 1
+	//练习 倒计时
 	var result = document.querySelector('#result');
 	var numberABtn = document.querySelector('#radio-a');
 	var numberBBtn = document.querySelector('#radio-b');
 
-	var checkNum = function(numA, numB){
-		var resultSet = [];
-		resultSet[0] = isNaN(numA) ? false : typeof numA === 'number';
-		resultSet[1] = isNaN(numB) ? false : typeof numB === 'number';
-		return resultSet;
+	var checkNum = function(num){
+		return isNaN(num) ? false : typeof num === 'number'
 	};
 
 
@@ -149,6 +146,7 @@
 	document.querySelector('#btn-set').addEventListener('click',function () {
 		var numberA = document.querySelector('#num-a');
 		var numberB = document.querySelector('#num-b');
+		var num = 0;
 		// 判断哪个按钮选中
 
 		//获取a和b的输入值
@@ -163,56 +161,41 @@
 			if (target.nodeName.toLocaleLowerCase() === 'button'){
 				switch (target.id){
 					case 'btn1':
-						if (checkBtn(numberABtn, numberBBtn) === 'A'){
-							result.textContent = checkNum(numberA, numberB)[0] ? `输出为 ${numberA}` : '输入不为数字, 请重新输入';
-						}else{
-							result.textContent = checkNum(numberA, numberB)[1] ? `输出为 ${numberB}` : '输入不为数字, 请重新输入';
-						}
+						num = checkBtn(numberABtn, numberBBtn) === 'A' ? numberA : numberB;
+						result.textContent = checkNum(numberA) ? `输出为 ${num}` : '输入不为数字, 请重新输入';
 						break;
 					case 'btn2':
-						result.textContent = checkNum(numberA, numberB)[0] ? `输出为 ${numberA.toFixed(numberB)}` : '输入不为数字, 请重新输入';
+						result.textContent = checkNum(numberA) ? `输出为 ${numberA.toFixed(numberB)}` : '输入不为数字, 请重新输入';
 						break;
 					//绝对值
 					case 'btn3':
-						if (checkBtn(numberABtn, numberBBtn) === 'A'){
-							result.textContent = checkNum(numberA, numberB)[0] ? `输出为 ${Math.abs(numberA)}` : '输入不为数字, 请重新输入';
-						}else{
-							result.textContent = checkNum(numberA, numberB)[1] ? `输出为 ${Math.abs(numberB)}` : '输入不为数字, 请重新输入';
-						}
+						num = checkBtn(numberABtn, numberBBtn) === 'A' ? numberA : numberB;
+						result.textContent = checkNum(num) ? `输出为 ${Math.abs(num)}` : '输入不为数字, 请重新输入';
 						break;
 					//向上进行四舍五入
 					case 'btn4':
-						if (checkBtn(numberABtn, numberBBtn) === 'A'){
-							result.textContent = checkNum(numberA, numberB)[0] ? `输出为 ${Math.ceil(numberA)}` : '输入不为数字, 请重新输入';
-						}else{
-							result.textContent = checkNum(numberA, numberB)[1] ? `输出为 ${Math.ceil(numberB)}` : '输入不为数字, 请重新输入';
-						}
+						num = checkBtn(numberABtn, numberBBtn) === 'A' ? numberA : numberB;
+						result.textContent = checkNum(num) ? `输出为 ${Math.ceil(num)}` : '输入不为数字, 请重新输入';
 						break;
 					//向下进行四舍五入
 					case 'btn5':
-						if (checkBtn(numberABtn, numberBBtn) === 'A'){
-							result.textContent = checkNum(numberA, numberB)[0] ? `输出为 ${Math.floor(numberA)}` : '输入不为数字, 请重新输入';
-						}else{
-							result.textContent = checkNum(numberA, numberB)[1] ? `输出为 ${Math.floor(numberB)}` : '输入不为数字, 请重新输入';
-						}
+						num = checkBtn(numberABtn, numberBBtn) === 'A' ? numberA : numberB;
+						result.textContent = checkNum(num) ? `输出为 ${Math.floor(num)}` : '输入不为数字, 请重新输入';
 						break;
 					//把数四舍五入为最接近的整数
 					case 'btn6':
-						if (checkBtn(numberABtn, numberBBtn) === 'A'){
-							result.textContent = checkNum(numberA, numberB)[0] ? `输出为 ${Math.round(numberA)}` : '输入不为数字, 请重新输入';
-						}else{
-							result.textContent = checkNum(numberA, numberB)[1] ? `输出为 ${Math.round(numberB)}` : '输入不为数字, 请重新输入';
-						}
+						num = checkBtn(numberABtn, numberBBtn) === 'A' ? numberA : numberB;
+						result.textContent = checkNum(num) ? `输出为 ${Math.round(num)}` : '输入不为数字, 请重新输入';
 						break;
 					// 取A 和 B 中的 最大值
 					case 'btn7':
-						if(checkNum(numberA,numberB)[0] && checkNum(numberA,numberB)){
+						if(checkNum(numberA) && checkNum(numberB)){
 							result.textContent = numberA > numberB ? `输出为 ${numberA}` : `输出为 ${numberB}`;
 						}
 						break;
 					// 取A 和 B 中的 最小值
 					case 'btn8':
-						if(checkNum(numberA,numberB)[0] && checkNum(numberA,numberB)){
+						if(checkNum(numberA) && checkNum(numberB)){
 							result.textContent = numberA > numberB ? `输出为 ${numberB}` : `输出为 ${numberA}`;
 						}
 						break;
@@ -224,9 +207,9 @@
 	})
 </script>
 
-<!--//练习 2-->
+<!--//练习 3-->
 <script>
-	//练习 2
+	//练习 3
 	var result2 = document.querySelector('#result2');
 	var numberABtn2 = document.querySelector('#radio-a2');
 	var numberBBtn2 = document.querySelector('#radio-b2');
@@ -237,6 +220,7 @@
 		var numberB = document.querySelector('#num-b2');
 		var strA = document.querySelector('#str-a').value;
 		var strB = document.querySelector('#str-b').value;
+		var tempStr = '';
 		var ev = ev || window.event;
 		var target = ev.target || ev.srcElement;
 
@@ -254,11 +238,8 @@
 						result2.textContent = `字符串长度为 ${strA.length}`;
 						break;
 					case 'btn22':
-						if (checkBtn(numberABtn2, numberBBtn2) === 'A'){
-							result2.textContent = `字符串当前输入中的第三个字符 ${strA.charAt(3)}`;
-						}else{
-							result2.textContent = `字符串当前输入中的第三个字符 ${strB.charAt(3)}`;
-						}
+						tempStr = checkBtn(numberABtn2, numberBBtn2) === 'A' ? strA : strB;
+						result2.textContent = `字符串当前输入中的第三个字符 ${tempStr.charAt(3)}`;
 						break;
 					case 'btn23':
 						result2.textContent = '2个文字框连接一起 '+strA + strB;
@@ -270,47 +251,29 @@
 						result2.textContent = `A中的内容, 在B内容中第一次出现的位置 ${strB.indexOf(strA)}`;
 						break;
 					case 'btn26':
-						if (checkBtn(numberABtn2, numberBBtn2) === 'A'){
-							result2.textContent = `使用slice获取选中输入框的部分内容 ${strA.slice(numberA, numberB)}`
-						}else{
-							result2.textContent = `使用slice获取选中输入框的部分内容 ${strB.slice(numberA, numberB)}`
-						}
+						tempStr = checkBtn(numberABtn2, numberBBtn2) === 'A' ? strA : strB;
+						result2.textContent = `使用slice获取选中输入框的部分内容 ${tempStr.slice(numberA, numberB)}`
 						break;
 					// 获取行数
 					case 'btn27':
-						if (checkBtn(numberABtn2, numberBBtn2) === 'A'){
-							result2.textContent = `使用框行数 ${strA.split(/\n/).length} 行`
-						}else{
-							result2.textContent = `使用框行数 ${strB.split(/\n/).length} 行`
-						}
+						tempStr = checkBtn(numberABtn2, numberBBtn2) === 'A' ? strA : strB;
+						result2.textContent = `使用框行数 ${tempStr.split(/\n/).length} 行`
 						break;
 					case 'btn28':
-						if (checkBtn(numberABtn2, numberBBtn2) === 'A'){
-							result2.textContent = `使用slice获取选中输入框的部分内容 ${strA.substr(numberA, numberB)}`
-						}else{
-							result2.textContent = `使用slice获取选中输入框的部分内容 ${strB.substr(numberA, numberB)}`
-						}
+						tempStr = checkBtn(numberABtn2, numberBBtn2) === 'A' ? strA : strB;
+						result2.textContent = `使用slice获取选中输入框的部分内容 ${tempStr.substr(numberA, numberB)}`
 						break;
 					case 'btn29':
-						if (checkBtn(numberABtn2, numberBBtn2) === 'A'){
-							result2.textContent = `大写: ${strA.toUpperCase()}`
-						}else{
-							result2.textContent = `大写: ${strB.toUpperCase()}`
-						}
+						tempStr = checkBtn(numberABtn2, numberBBtn2) === 'A' ? strA : strB;
+						result2.textContent = `大写: ${tempStr.toUpperCase()}`
 						break;
 					case 'btn210':
-						if (checkBtn(numberABtn2, numberBBtn2) === 'A'){
-							result2.textContent = `小写: ${strA.toLowerCase()}`
-						}else{
-							result2.textContent = `小写: ${strA.toLowerCase()}`
-						}
+						tempStr = checkBtn(numberABtn2, numberBBtn2) === 'A' ? strA : strB;
+						result2.textContent = `小写: ${tempStr.toLowerCase()}`
 						break;
 					case 'btn211':
-						if (checkBtn(numberABtn2, numberBBtn2) === 'A'){
-							result2.textContent = `去除半角空格 ${strA.replace(/ /g,'')}`
-						}else{
-							result2.textContent = `去除半角空格 ${strB.replace(/ /g,'')}`
-						}
+						tempStr = checkBtn(numberABtn2, numberBBtn2) === 'A' ? strA : strB;
+						result2.textContent = `去除半角空格 ${tempStr.replace(/ /g,'')}`
 						break;
 					case 'btn212':
 						if (checkBtn(numberABtn2, numberBBtn2) === 'A'){
@@ -343,7 +306,7 @@
 	console.log('\n\n\n 练习3 \n\n\n');
 	console.log(diyTrim(' a f b    ')); // ->a f b
 	console.log(diyTrim('    ffdaf    ')); // ->ffdaf
-	console.log(diyTrim('1    ')); // ->1
+	console.log(diyTrim('1    ')); // ->倒计时
 	console.log(diyTrim('　　f')); // ->f
 	console.log(diyTrim('  　  a f b 　　 ')); // ->a f b
 	console.log(diyTrim(' ')); // ->
@@ -453,7 +416,7 @@
     getListWithLRD();
 	
 	// 假设id和name均不会重复，根据输入name找到对应的id
-	function findIdByName(name, obj) {
+	function findIdByName(name) {
 		var loop = function (obj) {
           // 对象不存在时返回
           if (!obj) return false;
@@ -468,7 +431,7 @@
 	}
 
 	// 假设id和name均不会重复，根据输入id找到对应的name
-	function findNameById(id, obj) {
+	function findNameById(id) {
 		//  创建循环方法
         var loop = function (obj) {
           // 对象不存在时返回
@@ -762,7 +725,7 @@
 			"Music": 88
 		}
 	}
-	for (key in scoreObject) {
+	for (var key in scoreObject) {
 		var person = scoreObject[key];
 		arrs.push([key, person.Math, person.English, person.Music]);
 	}
